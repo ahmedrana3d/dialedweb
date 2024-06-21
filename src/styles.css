@@ -100,6 +100,78 @@ section {
   color:#dcd7ff;
 }
 
+/* ACCORDION */
+
+.accordion-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion {
+  background-color: transparent;
+  cursor: pointer;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0vw;
+  padding-bottom: 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.6s ease;
+  border-radius: 35px;
+}
+
+.accordion-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.accordion-icon {
+  background-color: #e7e3fd;
+  width: 2vw;
+  height: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #111111;
+}
+
+.accordion:hover {
+  background-color: #ecf0f5;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-text-accordion {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 2vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 
 /* NAVIGATION BAR */
 .navigation {
