@@ -27,7 +27,7 @@ const useAnimateText = (textSelector) => {
           {
             rotationX: 0,
             opacity: 1,
-            duration: 1.5,
+            duration: 1.25,
             ease: 'back.out',
             scrollTrigger: {
               trigger: element,
@@ -38,7 +38,7 @@ const useAnimateText = (textSelector) => {
         );
 
         gsap.from(chars, {
-          yPercent: 100,
+          yPercent: 50,
           stagger: 0.03,
           // stagger: {
           //   each: 0.03, // Adjusted stagger for smoother animation
@@ -46,7 +46,7 @@ const useAnimateText = (textSelector) => {
           // },
           opacity: 0,
           ease: 'power1.out',
-          duration: 1.5,
+          duration: 0.5,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
