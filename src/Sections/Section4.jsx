@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import RotatingHeader from "../SpinningText";
 
 export const Section4 = () => {
 
@@ -6,7 +7,7 @@ export const Section4 = () => {
       <>
         <section className="four">
             <div className="four-content">
-                
+            <RotatingHeader text="Vision" />
             </div>
         </section>
       </>

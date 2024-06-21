@@ -71,6 +71,26 @@ const useAnimateText = (textSelector) => {
             },
           }
         );
+
+        gsap.fromTo(
+          element,
+          {
+            opacity: 1,
+          },
+          {
+            opacity: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 20%',
+              end: 'top 5%',
+              scrub: true,
+              toggleActions: 'play reverse play reverse',
+            },
+          }
+        );
+
+
       });
     }
 

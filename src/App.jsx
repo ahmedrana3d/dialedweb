@@ -1,12 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Lenis from "@studio-freight/lenis";
 import { useProgress } from "@react-three/drei";
 import { Section1 } from "./Sections/Section1";
 import { Section2 } from "./Sections/Section2";
 import { Section3 } from "./Sections/Section3";
 import { Section4 } from "./Sections/Section4";
 import { Section5 } from "./Sections/Section5";
+import Lenis from "@studio-freight/lenis";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -24,6 +23,7 @@ const LoadingScreen = () => {
 };
 
 function App() {
+
   const lenis = new Lenis({
     duration: 1,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

@@ -9,7 +9,7 @@ export const Section1 = () => {
 
     return (
       <>
-        <section className="one">
+        <section className="one panel">
           <div className="navigation">
             <div className="navigation-left">
             

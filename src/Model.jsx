@@ -2,11 +2,14 @@ import React, { useRef, useEffect, Suspense, useLayoutEffect } from 'react'
 import { useGLTF, useAnimations, useAspect, useVideoTexture, useTexture, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 import gsap from 'gsap'
+import { useThree } from "@react-three/fiber";
 
 export default function Model(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('./laptopscreen.glb')
   const { actions } = useAnimations(animations, group)
+
+  const { camera } = useThree()
 
   useEffect(() => {
     if (actions.ScreenOpen) {
@@ -25,6 +28,25 @@ export default function Model(props) {
   const tl = gsap.timeline()
   let mm  = gsap.matchMedia();
 
+  const cameraLoads = () => {
+    gsap.to(camera.position, {
+      duration: 5,
+      x: 0,
+      y: 0,
+      z: 10,
+      ease: 'power3.out',
+    });
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      cameraLoads();
+    }, 800);
+
+    // Cleanup the timer in case the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
   useLayoutEffect(() => {
 
     mm.add({
@@ -42,7 +64,7 @@ export default function Model(props) {
         scrollTrigger: {
           trigger: ".two",
           start: "top bottom",
-          end: "bottom 90%",
+          end: "bottom 100%",
           scrub: true,
           immediateRender: false,
         },
@@ -55,22 +77,33 @@ export default function Model(props) {
         scrollTrigger: {
           trigger: ".two",
           start: "top bottom",
-          end: "top top",
+          end: "bottom 100%",
           scrub: true,
           immediateRender: false,
         },
       })
 
       .to(laptop.current.rotation, {
-        x: Math.PI * 0.05,
+        x: Math.PI * 0.1,
+        y: 0,
         scrollTrigger: {
           trigger: ".two",
           start: "top bottom",
-          end: "top top",
+          end: "bottom 100%",
           scrub: true,
           immediateRender: false,
         },
       })
+      .to(".experience", {
+        position: "absolute",
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      });
 
     })
     
@@ -78,11 +111,10 @@ export default function Model(props) {
 
   return (
     <>
-    <OrbitControls target={ [ -3, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-    <PerspectiveCamera makeDefault position={ [ 0, 0, 10 ] } />
+    <OrbitControls target={ [ -4, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group ref={laptop} name="Macbook" position={[0, -0.860394 , 0]} scale={0.15}>
+        <group ref={laptop} name="Macbook" rotation={ [ Math.PI * 0.05,  0, 0 ] } position={[0, -0.860394 , 0]} scale={0.15}>
           <mesh
             name="Circle001"
             castShadow
