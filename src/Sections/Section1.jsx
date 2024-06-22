@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import CanvasContainer from "../CanvasContainer";
 import { Section6 } from "./Section6";
 import { motion, AnimatePresence } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Sparkles } from "@react-three/drei";
 import useTextEffect from "../OneTextEffect";
+import { easing } from "maath"
 
 export const Section1 = () => {
 
@@ -15,27 +16,33 @@ export const Section1 = () => {
         <section className="one panel">
           <div className="experience-one" >
             <Canvas >
-              <Sparkles scale={ 15 } size={ 3 } count={ 50 } color={ "#dcd7ff" } far={ 10 } />
+              <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#dcd7ff" } far={ 10 } speed={ 1 } />
+              <Rig />
             </Canvas>
           </div>
           <div className="navigation">
             <motion.button
               className="navigation-left"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.075 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <h1 className="navigation-text" >MENU</h1>
-              <i class="fa-solid fa-bars"></i>
+              <div className="navigation-left-content" >
+                <span className="navigation-text" >MENU</span>
+                <span className="navigation-text" >MENU</span>
+              </div>
             </motion.button>
             <h1 className="navigation-logo-text" >DIALEDWEB</h1>
             <motion.button
               className="navigation-right"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.075 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <h1 className="navigation-text" >GET IN TOUCH</h1>
+              <div className="navigation-right-content" >
+                <span className="navigation-text" >GET IN TOUCH</span>
+                <span className="navigation-text" >GET IN TOUCH</span>
+              </div>
             </motion.button>
           </div>
           <div className="one-content" >
@@ -49,4 +56,19 @@ export const Section1 = () => {
         </section>
       </>
     )
+}
+
+function Rig() {
+  useFrame((state, delta) => {
+    // Calculate the target camera position based on the pointer's x and y position
+    const targetX = state.pointer.x * 0.5; // Adjust this multiplier as needed for the desired horizontal movement
+    const targetY = state.pointer.y * 0.5;
+    const targetZ = 8 + Math.atan(state.pointer.x * 2);
+  
+    // Smoothly move the camera to the target position
+    easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
+  
+    // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
+    state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
+  });
 }
