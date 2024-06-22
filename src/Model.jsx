@@ -6,7 +6,7 @@ import { useThree } from "@react-three/fiber";
 
 export default function Model(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./laptopscreen.glb')
+  const { nodes, materials, animations } = useGLTF('./lap.glb')
   const { actions } = useAnimations(animations, group)
 
   const { camera } = useThree()
@@ -272,7 +272,7 @@ export default function Model(props) {
               castShadow
               receiveShadow
               geometry={nodes.Circle002_1.geometry}
-              material={nodes.Circle002_1.material}
+              material={materials.Screen}
             />
             <mesh
               name="Circle002_2"
@@ -293,7 +293,7 @@ export default function Model(props) {
               castShadow
               receiveShadow
               geometry={nodes.Circle002_4.geometry}
-              material={nodes.Circle002_4.material}
+              material={materials.DisplayGlass}
             />
             <mesh
               name="AppleLogo000"
@@ -316,14 +316,14 @@ export default function Model(props) {
               scale={[1, 1.013, 1.001]}
             />
             <mesh
-              name="Plane"
+              name="PlainMesh"
               castShadow
               receiveShadow
-              geometry={nodes.Plane.geometry}
-              material={nodes.Plane.material}
-              position={[-0.001, -0.06, -1.911]}
-              scale={[2.507, 1.668, 1.556]}
-              rotation={ [ 0, Math.PI * 1, 0 ] }
+              geometry={nodes.PlainMesh.geometry}
+              material={materials.red}
+              position={[-0.001, -0.062, -1.912]}
+              rotation={[0, Math.PI * 1, 0]}
+              scale={[2.507, 2.507, 1.553]}
             >
               <Suspense fallback={<FallbackMaterial url="10.jpg" />}>
                 <VideoMaterial url="10.mp4" />
@@ -337,7 +337,7 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('./laptopscreen.glb')
+useGLTF.preload('./lap.glb')
 
 function VideoMaterial({ url }) {
   const texture = useVideoTexture(url)
