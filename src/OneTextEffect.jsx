@@ -5,9 +5,9 @@ import { useEffect } from "react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const useAnimateText = (textSelector) => {
+const useTextEffect = (textSelector) => {
   useEffect(() => {
-    function animateText(selector) {
+    function textEffect(selector) {
       document.querySelectorAll(selector).forEach((element) => {
         gsap.set(element, {
           transformPerspective: 500,
@@ -29,6 +29,7 @@ const useAnimateText = (textSelector) => {
             opacity: 1,
             duration: 1.25,
             ease: 'back.out',
+            delay: 1,
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
@@ -47,6 +48,7 @@ const useAnimateText = (textSelector) => {
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,
+          delay: 1,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
@@ -62,6 +64,7 @@ const useAnimateText = (textSelector) => {
           {
             opacity: 1,
             ease: 'none',
+            delay: 1,
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
@@ -83,7 +86,7 @@ const useAnimateText = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 20%',
-              end: 'top 0%',
+              end: 'top 5%',
               scrub: true,
               toggleActions: 'play reverse play reverse',
             },
@@ -95,7 +98,7 @@ const useAnimateText = (textSelector) => {
     }
 
     // Apply animation to all elements with the given selector
-    animateText(textSelector);
+    textEffect(textSelector);
 
     // Cleanup function to remove ScrollTriggers on component unmount
     return () => {
@@ -104,4 +107,4 @@ const useAnimateText = (textSelector) => {
   }, [textSelector]);
 };
 
-export default useAnimateText;
+export default useTextEffect;
