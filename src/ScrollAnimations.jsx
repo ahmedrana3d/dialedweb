@@ -348,9 +348,27 @@ const useDivAnimation = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            toggleActions: 'play none none reset',
           },
         });
+
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 80%',
+              end: "top 60%",
+              scrub: true,
+              toggleActions: 'play reverse play reverse',
+            },
+          }
+        );
 
         gsap.fromTo(
           element,
@@ -362,7 +380,7 @@ const useDivAnimation = (textSelector) => {
             ease: 'none',
             scrollTrigger: {
               trigger: element,
-              start: 'top 40%',
+              start: 'top 5%',
               end: 'top 0%',
               scrub: true,
               toggleActions: 'play reverse play reverse',
