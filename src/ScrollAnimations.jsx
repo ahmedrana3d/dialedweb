@@ -379,7 +379,7 @@ const useDivAnimation = (textSelector) => {
             ease: 'none',
             scrollTrigger: {
               trigger: element,
-              start: 'top 5%',
+              start: 'top 20%',
               end: 'top 0%',
               scrub: true,
               toggleActions: 'play reverse play reverse',
