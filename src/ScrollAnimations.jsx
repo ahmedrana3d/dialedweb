@@ -196,7 +196,7 @@ const RotatingHeader = ({ text }) => {
 
     // Build animations
     const duration = 0.4;
-    const stagger = { each: 0.02, ease: "none", from: "start" };
+    const stagger = { each: 0.02, ease: "fade", from: "start" };
 
     tl.to(originalSplit.chars, { duration: duration, rotationX: 90, transformOrigin: "50% 50% -50", stagger: { each: 0.0125, ease: "none", from: "start" } });
     tl.to(originalSplit.chars, { duration: duration, opacity: 0, stagger: stagger, ease: "power3" }, 0);

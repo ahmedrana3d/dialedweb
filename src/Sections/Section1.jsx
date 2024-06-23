@@ -6,6 +6,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Sparkles } from "@react-three/drei";
 import { useTextEffect } from "../ScrollAnimations";
 import { easing } from "maath"
+import { EffectComposer } from "@react-three/postprocessing";
+import { Fluid } from "@whatisjery/react-fluid-distortion";
 
 export const Section1 = () => {
 
@@ -18,6 +20,9 @@ export const Section1 = () => {
             <Canvas >
               <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
               <Rig />
+              <EffectComposer>
+                <Fluid showBackground={ false } />
+              </EffectComposer>
             </Canvas>
           </div>
           <div className="navigation">
