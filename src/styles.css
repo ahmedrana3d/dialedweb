@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
+@font-face {
+  font-family: 'SF';
+  src: url('SF.OTF') format('OTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +19,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,9 +29,6 @@ body {
   background-repeat: no-repeat; 
   background-attachment: fixed;
   background-color: #040217;
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg=='), auto;
-
-
 }
 
 ::-webkit-scrollbar {
@@ -68,8 +73,8 @@ section {
 
 .headline {
   font-size: 5vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "SF", sans-serif;
+  font-weight: 600;
   margin: 0;
   line-height: 1;
   color: #fcfeea;
@@ -78,11 +83,23 @@ section {
 .headline-purple {
   font-family: "EB Garamond", sans-serif;
   color:#dcd7ff;
+  font-weight: 500;
+  font-size: 5vw;
+  margin: 0;
 }
 
 .headline-blue {
   font-family: "EB Garamond", sans-serif;
   color:#01f1ff;
+  font-weight: 500;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  color: #fefeff;
+  line-height: 145%;
 }
 
 
@@ -97,8 +114,8 @@ section {
 }
 
 .rotatingHeader h1{
-	font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: "SF", sans-serif;
+  font-weight: 600;
 	color: #fefeff;
 	font-size: 5vw;
 	margin:0;
@@ -112,6 +129,7 @@ section {
   font-family: "EB Garamond", sans-serif;
   font-style: italic;
   color:#dcd7ff;
+  font-weight: 500;
 }
 
 /* ACCORDION */
@@ -380,15 +398,39 @@ section {
 }
 
 .three-content {
-  width: 90%;
+  width: 100%;
   height: 100vh;
-  margin-left: 5%;
-  margin-right: 5%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
+  align-items: center;
+}
+
+.three-content-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 5%;
+}
+
+.three-content-right {
+  width: 50%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.three-content-right-visual {
+  width: 100%;
+  height: 45vh;
+  background-color: #fefeff;
+  border-radius: 25px;
 }
 
 /* SECTION FOUR */
@@ -417,6 +459,8 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 3;
 }
 
 .five-content {

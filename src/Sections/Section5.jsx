@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Accordion from "../Accordion";
+import { RotatingHeader } from "../ScrollAnimations";
 
 export const Section5 = () => {
 
@@ -7,10 +8,7 @@ export const Section5 = () => {
       <>
         <section className="five">
             <div className="five-content">
-                <Accordion
-                  title="Vision"
-                  content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-                />
+            <RotatingHeader text="Vision" />
             </div>
         </section>
       </>

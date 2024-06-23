@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import RotatingHeader from "./SpinningText";
+import {  RotatingHeader } from "./ScrollAnimations";
 
 function Accordion(props) {
   const [active, setActive] = useState(false);

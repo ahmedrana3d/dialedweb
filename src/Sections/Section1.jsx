@@ -4,7 +4,7 @@ import { Section6 } from "./Section6";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Sparkles } from "@react-three/drei";
-import useTextEffect from "../OneTextEffect";
+import { useTextEffect } from "../ScrollAnimations";
 import { easing } from "maath"
 
 export const Section1 = () => {
@@ -16,7 +16,7 @@ export const Section1 = () => {
         <section className="one panel">
           <div className="experience-one" >
             <Canvas >
-              <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#dcd7ff" } far={ 10 } speed={ 1 } />
+              <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
               <Rig />
             </Canvas>
           </div>
