@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import {  RotatingHeader } from "../ScrollAnimations";
 import { Canvas } from "@react-three/fiber";
-import { Float } from "@react-three/drei";
+import { Environment, Float } from "@react-three/drei";
 import BalloonModel from "../BalloonModel";
 
 export const Section4 = () => {
@@ -13,10 +13,11 @@ export const Section4 = () => {
           <div className="four-content-two"/>
           <div className="four-content-three"/>
           <div className="four-experience">
-            <Canvas>
+            <Canvas makeDefault camera={{ position: [0, 0 ,10], fov: 35 }} >
               <Float>
                 <BalloonModel />
               </Float>
+              <Environment preset="apartment" />
             </Canvas>
           </div>
         </section>
