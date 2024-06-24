@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, Suspense } from "react";
 import {  RotatingHeader } from "../ScrollAnimations";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls } from "@react-three/drei";
@@ -15,9 +15,11 @@ export const Section4 = () => {
           <div className="four-content-three"/>
           <div className="four-experience">
             <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
-              <Float speed={0} >
-                <BalloonModel />
-              </Float>
+              <Suspense fallback >
+                <Float speed={2} >
+                  <BalloonModel />
+                </Float>
+              </Suspense>
               <Environment preset="apartment" />
               <OrbitControls enableZoom={ false } />
             </Canvas>

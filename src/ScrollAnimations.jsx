@@ -32,7 +32,7 @@ const useAnimateText = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
-              toggleActions: 'play none none reset',
+              toggleActions: 'play none none reverse',
             },
           }
         );
@@ -40,55 +40,15 @@ const useAnimateText = (textSelector) => {
         gsap.from(chars, {
           yPercent: 50,
           stagger: 0.03,
-          // stagger: {
-          //   each: 0.03, // Adjusted stagger for smoother animation
-          //   ease: 'power1.out', // Added ease for each stagger
-          // },
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
-            toggleActions: 'play none none reset',
+            toggleActions: 'play none none reverse',
           },
         });
-
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 100%',
-              end: 'top 60%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
-
-        gsap.fromTo(
-          element,
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 20%',
-              end: 'top 0%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
 
 
       });
@@ -120,7 +80,7 @@ const useSmallTextAnimation = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 80%',
-            toggleActions: 'play none none reset',
+            toggleActions: 'play none none reverse',
           },
         });
 
@@ -300,73 +260,6 @@ const useTextEffect = (textSelector) => {
   }, [textSelector]);
 };
 
-const useDivAnimation = (textSelector) => {
-  useEffect(() => {
-    function divAnimation(selector) {
-      document.querySelectorAll(selector).forEach((element) => {
-
-        gsap.from(element, {
-          xPercent: 150,
-          ease: "power3.out",
-          duration: 1,
-          opacity: 0,
-          scrollTrigger: {
-            trigger: element,
-            start: 'top 80%',
-            toggleActions: 'play none none reset',
-          },
-        });
-
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 80%',
-              end: "top 60%",
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
-
-        gsap.fromTo(
-          element,
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 20%',
-              end: 'top 0%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
-
-
-      });
-    }
-
-    // Apply animation to all elements with the given selector
-    divAnimation(textSelector);
-
-    // Cleanup function to remove ScrollTriggers on component unmount
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, [textSelector]);
-};
-
 const useImageAnimation = (selector) => {
   useEffect(() => {
     const options = {
@@ -404,4 +297,4 @@ const useImageAnimation = (selector) => {
   }, [selector]);
 };
 
-export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useDivAnimation, useImageAnimation };
+export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useImageAnimation };
