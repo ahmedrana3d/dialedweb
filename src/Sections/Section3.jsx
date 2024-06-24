@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useAnimateText, useSmallTextAnimation, useImageAnimation } from "../ScrollAnimations";
 
 export const Section3 = () => {
@@ -9,10 +9,25 @@ export const Section3 = () => {
 
   useImageAnimation('.reveal');
 
+  const [isVisibleOne, setIsVisibleOne] = useState(false);
+  const oneRef = useRef(null);
+
+  useEffect(() => {
+    const observerOne = new IntersectionObserver(([entry]) => {
+        setIsVisibleOne(entry.isIntersecting);
+    });
+
+    observerOne.observe(oneRef.current);
+
+    return () => {
+        observerOne.unobserve(oneRef.current);
+    };
+}, []);
+
   return (
     <>
       <section className="three">
-        <div className="three-content">
+        <div className={`three-content ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>
           <div className="three-content-left">
             <h1 className="headline-purple split">Our Mission</h1>
             <p className="description small-text-animate">

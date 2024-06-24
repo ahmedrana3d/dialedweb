@@ -46,10 +46,38 @@ export const Section1 = () => {
           <div className="one-content" >
             <div className="one-content-left">
               <h1 className="headline anim" >Crafting Digital <br /> <span className="headline-purple" >Masterpieces</span></h1>
+              <div className="one-content-buttons" >
+                <motion.button
+                  className="one-button"
+                  whileHover={{ scale: 1.075 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="one-button-content" >
+                    <span className="navigation-text" >WATCH OUR REEL</span>
+                    <span className="navigation-text" >WATCH OUR REEL</span>
+                  </div>
+                  <div className="navigation-arrow-box">
+                    <i class="fa-solid fa-location-arrow"></i>
+                  </div>
+                </motion.button>
+                <motion.button
+                  className="one-button-transparent"
+                  whileHover={{ scale: 1.075 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <div className="one-button-content" >
+                    <span className="navigation-text" >OUR MISSION</span>
+                    <span className="navigation-text" >OUR MISSION</span>
+                  </div>
+                  <div className="navigation-arrow-box-blue">
+                    <i class="fa-solid fa-location-arrow"></i>
+                  </div>
+                </motion.button>
+              </div>
             </div>
-            <div className="one-content-right">
-              
-            </div>
+            <div className="one-content-right" />
           </div>
         </section>
       </>

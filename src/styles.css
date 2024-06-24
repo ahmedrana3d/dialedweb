@@ -9,9 +9,10 @@
 }
 
 @font-face {
-  font-family: 'Capraia'; /* Name you want to use for the font */
-  src: url('capraia.otf') format('opentype'); /* Path to your font file */
-  /* You can also specify other font formats (woff, woff2, etc.) for better browser compatibility */
+  font-family: 'Capraia';
+  src: url('capraia.otf') format('OpenType');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -243,7 +244,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.25vw;
-  padding: 0 1.5%;
+  padding: 0 1.5vw;
   border-radius: 25px;
   border: none;
   cursor: pointer;
@@ -366,6 +367,7 @@ section {
   height: 100%;
   width: 50%;
   justify-content: center;
+  gap: 3vh;
 }
 
 .one-content-left h1 {
@@ -378,6 +380,111 @@ section {
   flex-direction: column;
   height: 100%;
   width: 50%;
+}
+
+.one-content-buttons {
+  display: flex;
+  gap: 1vw;
+}
+
+.one-button {
+  width: fit-content;
+  height: 2.75vw;
+  background-color: #fcfeea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25vw;
+  padding: 0 0.75vw;
+  padding-left: 1.5vw;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  gap: 0.5vw;
+}
+
+.one-button-transparent {
+  width: fit-content;
+  height: 2.75vw;
+  background-color: #dcd7ff15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25vw;
+  padding: 0 0.75vw;
+  padding-left: 1.5vw;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  gap: 0.5vw;
+  color: #fcfeea;
+  border: 2px solid #fcfeea50;
+}
+
+.one-button:hover, .one-button-transparent:hover {
+  box-shadow: 0 0 20px 5px rgba(252, 254, 234, 0.4);
+}
+
+.one-button-content {
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
+}
+
+.one-button-content span {
+  display: block;
+  transition: 0.75s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.one-button-content span:nth-child(2) {
+  position: absolute;
+}
+
+.one-button:hover .one-button-content span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.one-button:hover .one-button-content span:nth-child(2) {
+  transform: translateY(-100%);
+}
+
+.one-button-transparent:hover .one-button-content span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.one-button-transparent:hover .one-button-content span:nth-child(2) {
+  transform: translateY(-100%);
+}
+
+
+.navigation-arrow-box {
+  width: 2vw;
+  height: 2vw;
+  background-color: #dcd7ff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-solid {
+  font-size: 0.75vw;
+  color: #040217;
+}
+
+.navigation-arrow-box-blue {
+  width: 2vw;
+  height: 2vw;
+  background-color: #01f1ff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* SECTION TWO */
@@ -422,14 +529,21 @@ section {
   position: relative;
   z-index: auto;
   margin-bottom: 30vh;
+  justify-content: center;
 }
 
 .three-content {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.three-content.visible {
+  opacity: 1;
 }
 
 .three-content-left {
