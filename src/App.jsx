@@ -59,13 +59,13 @@ function App() {
 
         <div className="experience-one" >
           <Canvas >
-            <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
+            <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
             <Rig />
             {/* <mesh>
               <sphereGeometry />
             </mesh> */}
             <EffectComposer>
-              <Fluid showBackground={ false } intensity={ 1 }  />
+              <Fluid showBackground={ false } intensity={ 0.5 } radius={ 0.1 } fluidColor="#a09bcb" />
             </EffectComposer>
           </Canvas>
         </div>

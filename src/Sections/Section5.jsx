@@ -8,7 +8,6 @@ export const Section5 = () => {
       <>
         <section className="five">
             <div className="five-content">
-            <RotatingHeader text="Vision" />
             </div>
         </section>
       </>

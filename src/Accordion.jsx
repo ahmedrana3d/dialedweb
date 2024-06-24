@@ -23,9 +23,6 @@ function Accordion(props) {
       >
         <div className="accordion-top">
           <RotatingHeader text={props.title} />
-          <div className="accordion-icon" >
-            <i className={`fa-solid fa-arrow-down ${active ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }} ></i>
-          </div>
         </div>
         <div
           ref={content}

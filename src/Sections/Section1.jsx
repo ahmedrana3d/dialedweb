@@ -55,18 +55,3 @@ export const Section1 = () => {
       </>
     )
 }
-
-function Rig() {
-  useFrame((state, delta) => {
-    // Calculate the target camera position based on the pointer's x and y position
-    const targetX = state.pointer.x * 0.5; // Adjust this multiplier as needed for the desired horizontal movement
-    const targetY = state.pointer.y * 0.5;
-    const targetZ = 8 + Math.atan(state.pointer.x * 2);
-  
-    // Smoothly move the camera to the target position
-    easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
-  
-    // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
-    state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
-  });
-}

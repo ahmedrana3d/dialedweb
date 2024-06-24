@@ -124,42 +124,6 @@ const useSmallTextAnimation = (textSelector) => {
           },
         });
 
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 80%',
-              end: 'top 60%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
-
-        gsap.fromTo(
-          element,
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 40%',
-              end: 'top 0%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
-
 
       });
     }
@@ -176,33 +140,35 @@ const useSmallTextAnimation = (textSelector) => {
 
 const RotatingHeader = ({ text }) => {
   const headerRef = useRef(null);
+  const headerTextRef = useRef(null);
 
   useEffect(() => {
     const header = headerRef.current;
+    const headerText = headerTextRef.current;
     const original = header.querySelector("h1");
     const tl = gsap.timeline({ paused: true });
 
     // Clone the original h1 tag
     const clone = original.cloneNode(true);
     header.appendChild(clone);
-    gsap.set(clone, { yPercent: -120 });
+    gsap.set(clone, { yPercent: -100 });
 
     // Split text of original and clone into characters
     const originalSplit = SplitText.create(original, { type: "chars" });
     const cloneSplit = SplitText.create(clone, { type: "chars" });
 
     // Initial position of clones
-    gsap.set(cloneSplit.chars, { rotationX: -90, opacity: 0, transformOrigin: "50% 50% -50" });
+    gsap.set(cloneSplit.chars, { rotationX: -90, opacity: 0, transformOrigin: "50% 50% -20" });
 
     // Build animations
     const duration = 0.4;
     const stagger = { each: 0.02, ease: "fade", from: "start" };
 
-    tl.to(originalSplit.chars, { duration: duration, rotationX: 90, transformOrigin: "50% 50% -50", stagger: { each: 0.0125, ease: "none", from: "start" } });
+    tl.to(originalSplit.chars, { duration: duration, rotationX: 90, transformOrigin: "50% 50% -20", stagger: { each: 0.0125, ease: "none", from: "start" } });
     tl.to(originalSplit.chars, { duration: duration, opacity: 0, stagger: stagger, ease: "power3" }, 0);
 
     tl.to(cloneSplit.chars, { duration: 0.05, stagger: stagger }, 0.001);
-    tl.to(cloneSplit.chars, { duration: 0.75, opacity: 1, ease: "fade", stagger: 0.025 }, 0.001);
+    tl.to(cloneSplit.chars, { duration: 0.25, opacity: 1, ease: "none", stagger: 0.025 }, 0.001);
     tl.to(cloneSplit.chars, { duration: duration, rotationX: 0, stagger: stagger }, 0);
 
     // Hover effect: play timeline on mouseenter and reverse on mouseleave
@@ -227,7 +193,7 @@ const RotatingHeader = ({ text }) => {
 
   return (
     <div className="rotatingHeader" ref={headerRef}>
-      <h1>{text}</h1>
+      <h1 ref={headerTextRef} >{text}</h1>
     </div>
   );
 };
