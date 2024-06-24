@@ -103,6 +103,28 @@ export default function Model(props) {
           scrub: true,
           immediateRender: false,
         },
+      })
+
+      .to(".four-experience", {
+        position: "fixed",
+        scrollTrigger: {
+          trigger: ".four-content-two",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(".four-experience", {
+        position: "relative",
+        scrollTrigger: {
+          trigger: ".five",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
       });
 
     })

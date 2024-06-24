@@ -44,7 +44,6 @@ body {
 section {
   width: 100%;
   height: 100vh;
-  z-index: 1;
   pointer-events: all;
   background-color: transparent;
 }
@@ -54,7 +53,8 @@ section {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  left: 0;
+  z-index: 1;
 }
 
 .experience {
@@ -62,7 +62,7 @@ section {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 6;
+  z-index: 1;
 }
 
 .mobile-scroll {
@@ -221,7 +221,6 @@ section {
   left: 0;
   position: absolute;
   z-index: auto;
-  z-index: 20;
 }
 
 .navigation-left {
@@ -237,6 +236,8 @@ section {
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .navigation-left:hover {
@@ -279,6 +280,8 @@ section {
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .navigation-right:hover {
@@ -308,6 +311,11 @@ section {
   transform: translateY(-100%);
 }
 
+.navigation-center {
+  position: relative;
+  z-index: 1;
+}
+
 .navigation-text {
   font-size: 0.8vw;
   font-family: "Inter", sans-serif;
@@ -329,7 +337,7 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: auto;
 }
 
 .one-content {
@@ -337,7 +345,6 @@ section {
   height: 80%;
   display: flex;
   flex-direction: row;
-  z-index: 1;
   margin: 5% 10%;
 }
 
@@ -347,7 +354,11 @@ section {
   height: 100%;
   width: 50%;
   justify-content: center;
-  z-index: 4;
+}
+
+.one-content-left h1 {
+  position: relative;
+  z-index:1;
 }
 
 .one-content-right {
@@ -397,7 +408,7 @@ section {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 3;
+  z-index: auto;
 }
 
 .three-content {
@@ -405,18 +416,22 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  z-index: 1;
   align-items: center;
 }
 
 .three-content-left {
   width: 50%;
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 10%;
   padding-right: 5%;
+}
+
+.three-content-left h1, p {
+  position: relative;
+  z-index: 4;
 }
 
 .three-content-right {
@@ -434,26 +449,47 @@ section {
   height: 45vh;
   background-color: #fefeff;
   border-radius: 25px;
+  position: relative;
+  z-index: 4;
 }
 
 /* SECTION FOUR */
 
 .four {
-  height: 100vh;
+  height: 300vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 3;
+  z-index: auto;
 }
 
-.four-content {
-  width: 90%;
+.four-experience {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
   height: 100vh;
-  margin-left: 5%;
-  margin-right: 5%;
+  z-index: 2;
+}
+
+.four-content-one {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  z-index: 1;
+}
+
+.four-content-two {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.four-content-three {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 /* SECTION FIVE */

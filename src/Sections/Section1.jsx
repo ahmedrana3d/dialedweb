@@ -15,16 +15,7 @@ export const Section1 = () => {
 
     return (
       <>
-        <section className="one panel">
-          <div className="experience-one" >
-            <Canvas >
-              <Sparkles position={ [ 0, 0, 0 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
-              <Rig />
-              <EffectComposer>
-                <Fluid showBackground={ false } />
-              </EffectComposer>
-            </Canvas>
-          </div>
+        <section className="one">
           <div className="navigation">
             <motion.button
               className="navigation-left"
@@ -37,7 +28,9 @@ export const Section1 = () => {
                 <span className="navigation-text" >MENU</span>
               </div>
             </motion.button>
-            <h1 className="navigation-logo-text" >DIALEDWEB</h1>
+            <div className="navigation-center" >
+              <h1 className="navigation-logo-text" >DIALEDWEB</h1>
+            </div>
             <motion.button
               className="navigation-right"
               whileHover={{ scale: 1.075 }}
