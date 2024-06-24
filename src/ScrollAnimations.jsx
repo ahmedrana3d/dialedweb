@@ -201,7 +201,7 @@ const RotatingHeader = ({ text }) => {
     tl.to(originalSplit.chars, { duration: duration, rotationX: 90, transformOrigin: "50% 50% -50", stagger: { each: 0.0125, ease: "none", from: "start" } });
     tl.to(originalSplit.chars, { duration: duration, opacity: 0, stagger: stagger, ease: "power3" }, 0);
 
-    tl.to(cloneSplit.chars, { duration: 0.5, stagger: stagger }, 0.001);
+    tl.to(cloneSplit.chars, { duration: 0.05, stagger: stagger }, 0.001);
     tl.to(cloneSplit.chars, { duration: 0.75, opacity: 1, ease: "fade", stagger: 0.025 }, 0.001);
     tl.to(cloneSplit.chars, { duration: duration, rotationX: 0, stagger: stagger }, 0);
 
@@ -401,4 +401,41 @@ const useDivAnimation = (textSelector) => {
   }, [textSelector]);
 };
 
-export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useDivAnimation };
+const useImageAnimation = (selector) => {
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4,
+    };
+
+    const revealCallback = (entries) => {
+      entries.forEach((entry) => {
+        const container = entry.target;
+
+        if (entry.isIntersecting) {
+          container.classList.add("animating");
+        } else {
+          if (entry.boundingClientRect.top > 0) {
+            container.classList.remove("animating");
+          }
+        }
+      });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, options);
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        revealObserver.unobserve(element);
+      });
+    };
+  }, [selector]);
+};
+
+export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useDivAnimation, useImageAnimation };
