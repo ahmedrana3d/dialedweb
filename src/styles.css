@@ -673,7 +673,7 @@ video {
   position: relative;
   width: 100%; /* Make the wrapper responsive */
   height: 100vh; /* Make the wrapper responsive */
-  z-index: auto;
+  z-index: 1;
 }
 
 .item {
@@ -686,7 +686,7 @@ video {
   font-family: "Roboto", sans-serif;
   border-radius: 100%;
   background-color: #dcd7ff;
-  z-index: 4;
+  z-index: 14;
   display: flex;
   align-items: center;
   justify-content: center;
