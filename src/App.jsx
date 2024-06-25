@@ -23,7 +23,12 @@ const LoadingScreen = ({ onLoaded }) => {
 
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
-<Spline scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
+      <div className="loading-screen__container">
+        <h1 className="loading-screen__title animated-text">DIALEDWEB</h1>
+        <div className="progress__container">
+          <div className="progress__bar" style={{ width: `${progress}%` }}></div>
+        </div>
+      </div>
     </div>
   );
 };
