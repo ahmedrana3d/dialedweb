@@ -110,7 +110,6 @@ const useSmallTextAnimation = (textSelector) => {
         let chars = mySplitText.chars;
 
         gsap.from(chars, {
-          stagger: 0.002,
           ease: "power3.out",
           duration: 1,
           opacity: 0,

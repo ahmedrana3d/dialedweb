@@ -664,7 +664,7 @@ img {
 .five {
   height: 150vh;
   position: relative;
-  z-index: 3;
+  z-index: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,6 +675,7 @@ img {
   position: relative;
   width: 100%; /* Make the wrapper responsive */
   height: 100vh; /* Make the wrapper responsive */
+  z-index: auto;
 }
 
 .item {
@@ -687,7 +688,8 @@ img {
   font-family: "Roboto", sans-serif;
   border-radius: 100%;
   background-color: #dcd7ff;
-  z-index: 1;
+  z-index: 4;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
