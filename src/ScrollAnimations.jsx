@@ -2,8 +2,9 @@ import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+gsap.registerPlugin(SplitText, ScrollTrigger, MotionPathPlugin);
 
 const useAnimateText = (textSelector) => {
   useEffect(() => {
@@ -49,6 +50,42 @@ const useAnimateText = (textSelector) => {
             toggleActions: 'play none none reverse',
           },
         });
+
+        // gsap.fromTo(
+        //   element,
+        //   {
+        //     opacity: 0,
+        //   },
+        //   {
+        //     opacity: 1,
+        //     ease: 'none',
+        //     scrollTrigger: {
+        //       trigger: element,
+        //       start: 'top 100%',
+        //       end: 'top 60%',
+        //       scrub: true,
+        //       toggleActions: 'play reverse play reverse',
+        //     },
+        //   }
+        // );
+
+        // gsap.fromTo(
+        //   element,
+        //   {
+        //     opacity: 1,
+        //   },
+        //   {
+        //     opacity: 0,
+        //     ease: 'none',
+        //     scrollTrigger: {
+        //       trigger: element,
+        //       start: 'top 20%',
+        //       end: 'top 5%',
+        //       scrub: true,
+        //       toggleActions: 'play reverse play reverse',
+        //     },
+        //   }
+        // );
 
 
       });
@@ -182,7 +219,7 @@ const useTextEffect = (textSelector) => {
             opacity: 1,
             duration: 1.25,
             ease: 'back.out',
-            delay: 1,
+            delay: 1.25,
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
@@ -201,7 +238,7 @@ const useTextEffect = (textSelector) => {
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,
-          delay: 1,
+          delay: 1.25,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
@@ -297,4 +334,67 @@ const useImageAnimation = (selector) => {
   }, [selector]);
 };
 
-export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useImageAnimation };
+const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathSelector) => {
+  useEffect(() => {
+    function setupCircleAnimation() {
+      const circlePath = MotionPathPlugin.convertToPath(circlePathSelector, false)[0];
+      circlePath.id = "circlePath";
+      document.querySelector(svgSelector).prepend(circlePath);
+
+      const items = document.querySelectorAll(itemSelector);
+      gsap.set(items, {
+        motionPath: {
+          path: circlePath,
+          align: circlePath,
+          alignOrigin: [0.5, 0.5],
+          end: i => i / items.length
+        }
+      });
+
+      const tl = gsap.timeline({
+        paused: true,
+        defaults: { duration: 1, ease: 'none' }
+      });
+
+      tl.to(wrapperSelector, {
+        rotation: 360,
+        transformOrigin: 'center'
+      });
+
+      tl.to(items, {
+        rotation: "-=360",
+        transformOrigin: 'center'
+      }, 0);
+
+      tl.to(wrapperSelector, {
+        scale: 0.5,
+        transformOrigin: 'center'
+      }, 0);
+
+      tl.to(items, {
+        scale: 0.5,
+        transformOrigin: 'center'
+      }, 0);
+
+      ScrollTrigger.create({
+        trigger: ".five",
+        start: 'top bottom',
+        end: 'bottom center',
+        scrub: true,
+        animation: tl
+      });
+    }
+
+    // Apply animation setup to elements with the given selectors
+    setupCircleAnimation();
+
+    // Cleanup function to remove ScrollTriggers on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, [wrapperSelector, itemSelector, svgSelector, circlePathSelector]);
+};
+
+
+
+export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useImageAnimation, circleAnimation };

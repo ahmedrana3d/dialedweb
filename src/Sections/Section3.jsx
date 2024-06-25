@@ -9,25 +9,10 @@ export const Section3 = () => {
 
   useImageAnimation('.reveal');
 
-  const [isVisibleOne, setIsVisibleOne] = useState(false);
-  const oneRef = useRef(null);
-
-  useEffect(() => {
-    const observerOne = new IntersectionObserver(([entry]) => {
-        setIsVisibleOne(entry.isIntersecting);
-    });
-
-    observerOne.observe(oneRef.current);
-
-    return () => {
-        observerOne.unobserve(oneRef.current);
-    };
-}, []);
-
   return (
     <>
       <section className="three">
-        <div className={`three-content ${isVisibleOne ? 'visible' : ''}`} ref={oneRef}>
+        <div className="three-content">
           <div className="three-content-left">
             <h1 className="headline-purple split">Our Mission</h1>
             <p className="description small-text-animate">
@@ -41,7 +26,7 @@ export const Section3 = () => {
           <div className="three-content-right">
               <div className="reveal">
                 <div className="image-wrap">
-                  <img src='/threeimg.png' alt="Animated" />
+                  <img src='/img.png' alt="Animated" />
                 </div>
               </div>
           </div>
