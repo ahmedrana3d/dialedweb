@@ -125,7 +125,7 @@ section {
   font-family: "SF", sans-serif;
   font-weight: bold;
 	color: #fefeff;
-	font-size: 2.5vw;
+	font-size: 2.25vw;
 	margin:0;
 	padding: 0;
 	line-height: 0.5;
@@ -163,6 +163,8 @@ section {
   width: 100%;
   position: relative;
   z-index: 4;
+  background-color: #dcd7ff15;
+  border-radius: 50px;
 }
 
 .accordion-top {
@@ -172,7 +174,8 @@ section {
   justify-content: center;
   width: 100%;
   gap: 1vw;
-  padding-top: 1vw;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
 }
 
 .accordion-icon {
@@ -231,8 +234,18 @@ section {
   align-items: center;
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   z-index: auto;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navigation.scrolled {
+  background-color: transparent; /* Change to your preferred color */
+  height: 8vh; /* Adjust to your desired height */
+  backdrop-filter: blur(7px);
+  z-index: 10;
+  border-bottom: 1px solid #fcfeea25;
 }
 
 .navigation-left {
@@ -527,7 +540,6 @@ section {
   flex-direction: column;
   position: relative;
   z-index: auto;
-  margin-bottom: 30vh;
   justify-content: center;
 }
 
@@ -655,7 +667,7 @@ video {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25vh;
+  gap: 17.5vh;
 }
 
 /* SECTION FIVE */
@@ -678,8 +690,8 @@ video {
 }
 
 .item {
-  width: 15vw;
-  height: 15vw;
+  width: 17.5vw;
+  height: 17.5vw;
   color: white;
   text-align: center;
   line-height: 100%; /* Make the line-height responsive */

@@ -13,10 +13,29 @@ export const Section1 = () => {
 
   useTextEffect(".anim");
 
+  const [navScrolled, setNavScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+        const scrollThreshold = 10;
+        if (window.scrollY > scrollThreshold) {
+            setNavScrolled(true);
+        } else {
+            setNavScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+}, []);
+
     return (
       <>
         <section className="one">
-          <div className="navigation">
+          <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
             <motion.button
               className="navigation-left"
               whileHover={{ scale: 1.075 }}

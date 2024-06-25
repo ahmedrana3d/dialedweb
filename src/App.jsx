@@ -101,7 +101,7 @@ function App() {
               <sphereGeometry />
             </mesh> */}
             <EffectComposer>
-              <Fluid showBackground={ false } intensity={ 0.5 } radius={ 0.1 } fluidColor="#a09bcb" />
+              <Fluid showBackground={ false } intensity={ 0.35 } radius={ 0.05 } fluidColor="#a09bcb" />
             </EffectComposer>
           </Canvas>
         </div>

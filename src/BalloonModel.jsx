@@ -57,9 +57,9 @@ export default function BalloonModel({ ...props }) {
     })
 
     .to(balloon.current.scale, {
-      x: 2.5,
-      y: 2.5,
-      z: 2.5,
+      x: 2,
+      y: 2,
+      z: 2,
       scrollTrigger: {
         trigger: ".four-content-two",
         start: "top bottom",
@@ -70,7 +70,7 @@ export default function BalloonModel({ ...props }) {
     })
 
     .to(balloon.current.position, {
-      y: 3.5,
+      y: 6,
       scrollTrigger: {
         trigger: ".four-content-two",
         start: "top center",
