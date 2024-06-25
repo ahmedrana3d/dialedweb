@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
 
 export default function BalloonModel({ ...props }) {
-  const { nodes, materials } = useSpline('https://prod.spline.design/tUV43rmeroDbN-6P/scene.splinecode')
+  const { nodes, materials } = useSpline('https://prod.spline.design/jLZEpaewguEWDwHO/scene.splinecode')
 
   const balloon = useRef()
   const tl = gsap.timeline()
@@ -91,7 +91,7 @@ export default function BalloonModel({ ...props }) {
       <color attach="background" args={['#3f3a81']} />
       <group {...props} dispose={null}>
         <scene name="Scene 1">
-          <group ref={balloon} name="Group" position={[5, 0, 0]}>
+        <group ref={balloon} name="Group" position={[5, 0, 0]}>
             <group name="Balloon" position={[0, -0.5, 0]} scale={0.01}>
               <mesh
                 name="Cord"
@@ -143,6 +143,7 @@ export default function BalloonModel({ ...props }) {
     </>
   )
 }
+
 
 
 

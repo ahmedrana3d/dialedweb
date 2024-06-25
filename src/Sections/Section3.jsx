@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useAnimateText, useSmallTextAnimation, useImageAnimation } from "../ScrollAnimations";
+import { useAnimateText, useSmallTextAnimation } from "../ScrollAnimations";
 
 export const Section3 = () => {
 
   useAnimateText('.split');
 
   useSmallTextAnimation(".small-text-animate");
-
-  useImageAnimation('.reveal');
 
   return (
     <>
@@ -22,13 +20,6 @@ export const Section3 = () => {
               technology, delivering modern, intuitive <br /> websites that drive
               business’s international success.
             </p>
-          </div>
-          <div className="three-content-right">
-              <div className="reveal">
-                <div className="image-wrap">
-                  <img src='/img.png' alt="Animated" />
-                </div>
-              </div>
           </div>
         </div>
       </section>
