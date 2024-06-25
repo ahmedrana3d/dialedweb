@@ -356,12 +356,12 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
       });
 
       tl.to(wrapperSelector, {
-        rotation: 360,
+        rotation: 180,
         transformOrigin: 'center'
       });
 
       tl.to(items, {
-        rotation: "-=360",
+        rotation: "-=180",
         transformOrigin: 'center'
       }, 0);
 

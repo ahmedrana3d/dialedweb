@@ -25,7 +25,7 @@ export const Section3 = () => {
           <div className="three-content-right">
               <div className="reveal">
                 <div className="image-wrap">
-                  <img src='/img.png' alt="Animated" />
+                  <video src="/vid.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" className="background-video" loop ></video>
                 </div>
               </div>
           </div>
