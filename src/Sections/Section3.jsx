@@ -3,6 +3,8 @@ import { useAnimateText, useSmallTextAnimation, useImageAnimation } from "../Scr
 
 export const Section3 = () => {
 
+  useAnimateText('.split');
+
   useImageAnimation('.reveal');
 
   return (
@@ -10,6 +12,7 @@ export const Section3 = () => {
       <section className="three">
         <div className="three-content">
           <div className="three-content-left">
+            <h1 className="headline-purple split">Our Mission</h1>
           </div>
           <div className="three-content-right">
               <div className="reveal">
