@@ -45,7 +45,7 @@ export const Section1 = () => {
           </div>
           <div className="one-content" >
             <div className="one-content-left">
-              <h1 className="headline anim" >Crafting Digital <br /> <span className="headline-purple" >Masterpieces</span></h1>
+              <h1 className="headline anim" >Crafting Digital <br /> <span className="headline-purple" >Capraia</span></h1>
               <div className="one-content-buttons" >
                 <motion.button
                   className="one-button"

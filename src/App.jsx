@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Sparkles, useProgress } from "@react-three/drei";
 import { Section1 } from "./Sections/Section1";
 import { Section2 } from "./Sections/Section2";
@@ -11,8 +11,14 @@ import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { easing } from "maath"
 
-const LoadingScreen = () => {
+const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
+
+  useEffect(() => {
+    if (progress === 100) {
+      onLoaded();
+    }
+  }, [progress, onLoaded]);
 
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
@@ -28,28 +34,57 @@ const LoadingScreen = () => {
 
 function App() {
 
-  const lenis = new Lenis({
-    duration: 1,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: "vertical",
-    gestureDirection: "vertical",
-    smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
-    infinite: false,
-  });
+  const [lenis, setLenis] = useState(null);
 
-  function raf(time) {
-    lenis.raf(time);
+  useEffect(() => {
+    const lenisInstance = new Lenis({
+      duration: 1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 0.5,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
+    setLenis(lenisInstance);
 
-  requestAnimationFrame(raf);
+    return () => {
+      lenisInstance.destroy();
+    };
+  }, []);
+
+  const handleLoaded = () => {
+    setTimeout(() => {
+      if (lenis) {
+        lenis.start();
+      }
+      document.body.style.overflow = 'auto';
+    }, 1000); // Delay for 1 second
+  };
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.stop();
+    }
+    document.body.style.overflow = 'hidden';
+  }, [lenis]);
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
 
   return (
       <>
-        <LoadingScreen />
+        <LoadingScreen onLoaded={handleLoaded} />
 
         <Section1 />
         <Section2 />

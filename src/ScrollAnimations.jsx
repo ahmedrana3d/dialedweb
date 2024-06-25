@@ -366,19 +366,19 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
       }, 0);
 
       tl.to(wrapperSelector, {
-        scale: 0.5,
+        scale: 0.75,
         transformOrigin: 'center'
       }, 0);
 
       tl.to(items, {
-        scale: 0.5,
+        scale: 0.75,
         transformOrigin: 'center'
       }, 0);
 
       ScrollTrigger.create({
         trigger: ".five",
         start: 'top bottom',
-        end: 'bottom center',
+        end: 'center center',
         scrub: true,
         animation: tl
       });
