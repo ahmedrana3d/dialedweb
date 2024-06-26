@@ -15,7 +15,7 @@ export const Section5 = () => {
     <>
       <section className="five">
         <div className="five-content">
-          <h1 className="five-text" >Our Team</h1>
+          <img src="/ourteam.png" className="five-image" alt="" />
         </div>
         <div className="wrapper">
           <div className="item" id="box1">1</div>

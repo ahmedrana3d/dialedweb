@@ -845,6 +845,10 @@ svg {
   color: wheat;
 }
 
+.five-image {
+  width: 20vw;
+}
+
 .five-text {
   font-size: 5vw;
   font-family: "SF", sans-serif;
