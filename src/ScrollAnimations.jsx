@@ -378,7 +378,7 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
       ScrollTrigger.create({
         trigger: ".five",
         start: 'top bottom',
-        end: 'center center',
+        end: '45% center',
         scrub: true,
         animation: tl
       });
