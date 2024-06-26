@@ -11,6 +11,7 @@ import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { easing } from "maath"
 import Spline from '@splinetool/react-spline';
+import { Section6 } from "./Sections/Section6";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -92,6 +93,7 @@ function App() {
         <Section3 />
         <Section4 />
         <Section5 />
+        <Section6 />
 
         <div className="experience-one" >
           <Canvas >
