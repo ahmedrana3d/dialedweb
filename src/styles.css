@@ -383,8 +383,8 @@ section {
 
 .menu {
   position: absolute;
-  top: 0;
   top: 10vh;
+  left: 5%;
   width: 20vw;
   display: flex;
   flex-direction: column;
@@ -397,9 +397,9 @@ section {
 .menuNav {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   border-radius: 0.625em;
-  padding: 1em 0.5125em;
+  padding: 1vw;
+  gap: 1vw;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -1085,7 +1085,6 @@ svg {
   display: grid;
   place-items: center;
   text-align: center;
-  background-image: url('/gradient.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -1097,7 +1096,7 @@ svg {
 
 .loading-video {
   position: relative;
-  width: 100%;
+  width: 50%;
 }
 
 .loading-screen--hidden {

@@ -189,8 +189,7 @@ useEffect(() => {
                   />
                 </div>
               </div>
-              <div className="menuSocial mt-2" ref={menuSocialRef}>
-                <Icons />
+              <div className="menuSocial" ref={menuSocialRef}>
               </div>
             </div>
           </div>
@@ -297,23 +296,4 @@ useEffect(() => {
         </section>
       </>
     )
-}
-
-function Icons() {
-  return (
-    <ul className="flex justify-center text-center gap-6">
-      <div className="socialButton">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-        </a>
-      </div>
-      <div className="socialButton">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-        </a>
-      </div>
-      <div className="socialButton">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-        </a>
-      </div>
-    </ul>
-  );
 }
