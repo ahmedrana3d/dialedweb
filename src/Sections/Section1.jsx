@@ -155,32 +155,27 @@ useEffect(() => {
 
         <div className="menu-container" >
         <div className="menu ">
-          <div
-            key="menuContent"
-            className="menuContent flex flex-col"
-            ref={menuContentRef}
-          >
+          <div key="menuContent" className="menuContent" ref={menuContentRef}>
             <div className="menuNav" ref={menuNavRef}>
               <div className="menu-button" >
                 <span className="menu-text" >HOME</span>
-                <span className="menu-text" >HOME</span>
+                <span className="menu-text" >HOME <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
               <div className="menu-button" >
                 <span className="menu-text" >PROJECTS</span>
-                <span className="menu-text" >PROJECTS</span>
+                <span className="menu-text" >PROJECTS <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
               <div className="menu-button" >
                 <span className="menu-text" >LEARN</span>
-                <span className="menu-text" >LEARN</span>
+                <span className="menu-text" >LEARN <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
               <div className="menu-button" >
                 <span className="menu-text" >GET IN TOUCH</span>
-                <span className="menu-text" >GET IN TOUCH</span>
+                <span className="menu-text" >GET IN TOUCH <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
             </div>
-            <div ref={menuContainerRef}>
-              <div className="menuContainer mt-2">
-                <h1 className="emailText">Book Your Consultation</h1>
+              <div ref={menuContainerRef} className="menuContainer">
+                <h1 className="menu-text">Book Your Consultation</h1>
                 <div className="inputContainer">
                   <input
                     type="email"
@@ -189,8 +184,10 @@ useEffect(() => {
                   />
                 </div>
               </div>
-              <div className="menuSocial" ref={menuSocialRef}>
-              </div>
+            <div className="menuSocial" ref={menuSocialRef}>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
             </div>
           </div>
         </div>
