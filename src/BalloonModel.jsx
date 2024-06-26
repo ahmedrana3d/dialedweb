@@ -1,5 +1,5 @@
 import useSpline from '@splinetool/r3f-spline'
-import { OrthographicCamera } from '@react-three/drei'
+import { OrbitControls, OrthographicCamera } from '@react-three/drei'
 import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
 
@@ -7,11 +7,11 @@ export default function BalloonModel({ ...props }) {
   const { nodes, materials } = useSpline('https://prod.spline.design/jLZEpaewguEWDwHO/scene.splinecode')
 
   const balloon = useRef()
-  const tl = gsap.timeline()
-  let mm  = gsap.matchMedia();
+  const controlsRef = useRef()
+  const tl = gsap.timeline({ paused: true })
+  let mm = gsap.matchMedia();
 
   useLayoutEffect(() => {
-
     mm.add({
       isDesktop: "(min-width: 800px)",
       isMobile: "(max-width: 799px)"
@@ -19,79 +19,93 @@ export default function BalloonModel({ ...props }) {
       let { isMobile, isDesktop } = context.conditions;
 
       tl
-      
-      .to(balloon.current.position, {
-        x: 0,
-        z: 0,
-        scrollTrigger: {
-          trigger: ".four-content-one",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
+        .to(balloon.current.position, {
+          x: 0,
+          y: 0,
+          z: 0,
+          scrollTrigger: {
+            trigger: ".four-content-one",
+            start: "top bottom",
+            end: "bottom 100%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
-    .to(balloon.current.scale, {
-      x: 1.5,
-      y: 1.5,
-      z: 1.5,
-      scrollTrigger: {
-        trigger: ".four-content-one",
-        start: "top bottom",
-        end: "bottom 100%",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+        .to(balloon.current.scale, {
+          x: 1.5,
+          y: 1.5,
+          z: 1.5,
+          scrollTrigger: {
+            trigger: ".four-content-one",
+            start: "top bottom",
+            end: "bottom 100%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
-    .to(balloon.current.rotation, {
-      y: Math.PI * 2,
-      scrollTrigger: {
-        trigger: ".four-content-one",
-        start: "top bottom",
-        end: "bottom 100%",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+        .to(balloon.current.rotation, {
+          y: Math.PI * 2,
+          scrollTrigger: {
+            trigger: ".four-content-one",
+            start: "top bottom",
+            end: "bottom 100%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
-    .to(balloon.current.scale, {
-      x: 2,
-      y: 2,
-      z: 2,
-      scrollTrigger: {
-        trigger: ".four-content-two",
-        start: "top bottom",
-        end: "bottom 100%",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+        .to(balloon.current.scale, {
+          x: 2,
+          y: 2,
+          z: 2,
+          scrollTrigger: {
+            trigger: ".four-content-two",
+            start: "top bottom",
+            end: "bottom 100%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
-    .to(balloon.current.position, {
-      y: 6,
-      scrollTrigger: {
-        trigger: ".four-content-two",
-        start: "top center",
-        end: "bottom -35%",
-        scrub: true,
-        immediateRender: false,
-      },
-    })
+        .to(balloon.current.position, {
+          x: -5,
+          y: 3,
+          z: 0,
+          scrollTrigger: {
+            trigger: ".four-content-two",
+            start: "top center",
+            end: "bottom -35%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
+        .to(balloon.current.rotation, {
+          y: Math.PI * 4,
+          scrollTrigger: {
+            trigger: ".four-content-two",
+            start: "top center",
+            end: "bottom -35%",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
 
+      // Play the timeline
+      tl.play();
+    });
 
-  })
-    
-  }, [])
+  }, []);
 
   return (
     <>
+    <OrbitControls target={ [ 0, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <color attach="background" args={['#3f3a81']} />
       <group {...props} dispose={null}>
         <scene name="Scene 1">
-        <group ref={balloon} name="Group" position={[5, 0, 0]}>
+        <group ref={balloon} name="Group" position={[5, -3, 0]}>
             <group name="Balloon" position={[0, -0.5, 0]} scale={0.01}>
               <mesh
                 name="Cord"

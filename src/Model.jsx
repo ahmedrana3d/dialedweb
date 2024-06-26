@@ -56,46 +56,10 @@ export default function Model(props) {
       let { isMobile, isDesktop } = context.conditions;
 
       tl
-      
-      .to(controlsRef.current.target, {
-        x: 0,
-        y: 0,
-        z: 0,
-        scrollTrigger: {
-          trigger: ".two",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
-      .to(laptop.current.scale, {
-        x: 0.25,
-        y: 0.25,
-        z: 0.25,
-        scrollTrigger: {
-          trigger: ".two",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
 
       .to(laptop.current.rotation, {
-        x: Math.PI * 0.1,
-        y: 0,
-        scrollTrigger: {
-          trigger: ".two",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-      .to(".experience", {
-        position: "absolute",
+        x: 0,
+        y: Math.PI * -0.3,
         scrollTrigger: {
           trigger: ".three",
           start: "top bottom",
@@ -105,27 +69,27 @@ export default function Model(props) {
         },
       })
 
-      .to(".four-experience", {
-        position: "fixed",
-        scrollTrigger: {
-          trigger: ".four-content-two",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
+      // .to(".four-experience", {
+      //   position: "fixed",
+      //   scrollTrigger: {
+      //     trigger: ".four-content-two",
+      //     start: "top bottom",
+      //     end: "bottom 100%",
+      //     scrub: true,
+      //     immediateRender: false,
+      //   },
+      // })
 
-      .to(".four-experience", {
-        position: "relative",
-        scrollTrigger: {
-          trigger: ".five",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      });
+      // .to(".four-experience", {
+      //   position: "relative",
+      //   scrollTrigger: {
+      //     trigger: ".five",
+      //     start: "top bottom",
+      //     end: "bottom 100%",
+      //     scrub: true,
+      //     immediateRender: false,
+      //   },
+      // });
 
     })
     
@@ -133,7 +97,7 @@ export default function Model(props) {
 
   return (
     <>
-    <OrbitControls target={ [ -4, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
+    <OrbitControls target={ [ 0, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group ref={laptop} name="Macbook" rotation={ [ Math.PI * 0.05,  Math.PI * -0.1, 0 ] } position={[0, -0.860394 , 0]} scale={0.15}>

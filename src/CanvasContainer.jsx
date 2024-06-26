@@ -5,7 +5,7 @@ export default function CanvasContainer() {
 
     return (
         <>
-         <Canvas shadows camera={{ position: [0, 0, 20], fov: 35 }} >
+         <Canvas shadows camera={{ position: [15, 2, 5], fov: 35 }} >
             <Experience />
          </Canvas>
         </>
