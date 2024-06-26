@@ -97,8 +97,8 @@ export default function Model(props) {
         opacity: 1,
           scrollTrigger: {
             trigger: ".three-content-box",
-            start: "top bottom+=200", // Start when the bottom of the viewport touches the bottom of .project-one
-            end: "bottom top",
+            start: "top bottom", // Start when the bottom of the viewport touches the bottom of .project-one
+            end: "center center",
             scrub: true,
             immediateRender: false,
           },
