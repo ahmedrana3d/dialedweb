@@ -9,8 +9,95 @@ import { easing } from "maath"
 import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import Model from "../Model";
+import gsap from "gsap";
+import CustomEase from "gsap/CustomEase";
+
+gsap.registerPlugin(CustomEase);
+
+const customEase = CustomEase.create("customEase", ".4,0,.1,1")
 
 export const Section1 = () => {
+
+  // NAV OVERLAY
+  const [menu, setMenu] = useState(false);
+  const menuContentRef = useRef(null);
+  const menuNavRef = useRef(null);
+  const menuContainerRef = useRef(null);
+  const menuSocialRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo(
+      ".menu",
+      { display: "none" },
+      { display: "block", duration: 0.5, ease: customEase },
+      0
+    );
+
+    tl.fromTo(
+      menuContentRef.current,
+      { opacity: 0, gap: "150px" },
+      { opacity: 1, duration: 0.5, gap: "10px", ease: customEase },
+      0
+    );
+
+    tl.fromTo(
+      menuNavRef.current,
+      { transform: "translate3d(0, 5.5em, 0) rotate(3.5deg)" },
+      {
+        transform: "translate3d(0, 0, 0) rotate(0deg)",
+        duration: 0.5,
+        ease: customEase,
+      },
+      0
+    );
+
+    tl.fromTo(
+      menuContainerRef.current,
+      { transform: "translate3d(0, 5.5em, 0) rotate(-3.5deg)" },
+      {
+        transform: "translate3d(0, 0, 0) rotate(0deg)",
+        duration: 0.5,
+        ease: customEase,
+      },
+      0
+    );
+
+    tl.fromTo(
+      menuSocialRef.current,
+      { transform: "translate3d(0, 5.5em, 0) rotate(-3.5deg)" },
+      {
+        transform: "translate3d(0, 0, 0) rotate(0deg)",
+        duration: 0.5,
+        ease: customEase,
+      },
+      0
+    );
+
+    // Function to handle opening and closing
+    const handleOpen = (isClosed) => {
+      if (isClosed) {
+        tl.play();
+      } else {
+        tl.progress(1).reverse();
+      }
+    };
+
+    handleOpen(menu);
+
+    return () => {
+      tl.kill();
+    };
+  }, [menu]);
+
+  const navLinks = [
+    { title: "HOME", path: "/" },
+    { title: "PROJECTS", path: "/project" },
+    { title: "LEARN", path: "/" },
+    { title: "GET IN TOUCH", path: "/contact" },
+  ];
+  // OTHER
 
   useTextEffect(".anim");
 
@@ -65,12 +152,60 @@ useEffect(() => {
     return (
       <>
         <section className="one">
+
+        <div className="menu-container" >
+        <div className="menu ">
+          <div
+            key="menuContent"
+            className="menuContent flex flex-col"
+            ref={menuContentRef}
+          >
+            <div className="menuNav" ref={menuNavRef}>
+              <div className="menu-button" >
+                <span className="menu-text" >HOME</span>
+                <span className="menu-text" >HOME</span>
+              </div>
+              <div className="menu-button" >
+                <span className="menu-text" >PROJECTS</span>
+                <span className="menu-text" >PROJECTS</span>
+              </div>
+              <div className="menu-button" >
+                <span className="menu-text" >LEARN</span>
+                <span className="menu-text" >LEARN</span>
+              </div>
+              <div className="menu-button" >
+                <span className="menu-text" >GET IN TOUCH</span>
+                <span className="menu-text" >GET IN TOUCH</span>
+              </div>
+            </div>
+            <div ref={menuContainerRef}>
+              <div className="menuContainer mt-2">
+                <h1 className="emailText">Book Your Consultation</h1>
+                <div className="inputContainer">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="emailinput"
+                  />
+                </div>
+              </div>
+              <div className="menuSocial mt-2" ref={menuSocialRef}>
+                <Icons />
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
           <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
             <motion.button
               className="navigation-left"
               whileHover={{ scale: 1.075 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              onClick={() => {
+                setMenu(!menu);
+              }}
             >
               <div className="navigation-left-content" >
                 <span className="navigation-text" >MENU</span>
@@ -102,7 +237,7 @@ useEffect(() => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <div className="one-button-content" >
+                  <div className="navigation-left-content" >
                     <span className="navigation-text" >WATCH OUR REEL</span>
                     <span className="navigation-text" >WATCH OUR REEL</span>
                   </div>
@@ -116,7 +251,7 @@ useEffect(() => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <div className="one-button-content" >
+                  <div className="navigation-left-content" >
                     <span className="navigation-text" >OUR MISSION</span>
                     <span className="navigation-text" >OUR MISSION</span>
                   </div>
@@ -162,4 +297,23 @@ useEffect(() => {
         </section>
       </>
     )
+}
+
+function Icons() {
+  return (
+    <ul className="flex justify-center text-center gap-6">
+      <div className="socialButton">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+        </a>
+      </div>
+      <div className="socialButton">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+        </a>
+      </div>
+      <div className="socialButton">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+        </a>
+      </div>
+    </ul>
+  );
 }

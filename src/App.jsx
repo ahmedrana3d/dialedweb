@@ -24,10 +24,11 @@ const LoadingScreen = ({ onLoaded }) => {
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        <h1 className="loading-screen__title animated-text">DIALEDWEB</h1>
+        {/* <h1 className="loading-screen__title animated-text">DIALEDWEB</h1>
         <div className="progress__container">
           <div className="progress__bar" style={{ width: `${progress}%` }}></div>
-        </div>
+        </div> */}
+        <video className="loading-video" src="/loadingvid.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop ></video>
       </div>
     </div>
   );
