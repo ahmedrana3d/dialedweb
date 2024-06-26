@@ -697,19 +697,24 @@ video {
 .three-content-box {
   height: 50vh;
   width: 40vw;
-  background-color: #d8d3ff;
+  background-color: #070E2B50;
   border-radius: 50px;
   display: flex;
   border: #fefeff48 solid 1px;
   z-index: 10;
   opacity: 0.5;
   padding: 2.5% 2.5%;
+  backdrop-filter: blur(10px);
+  justify-content: space-between;
 }
 
 .three-content-box-left, .three-content-box-right {
-  width: 50%;
+  width: 47.5%;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .three-video-frame {
@@ -721,6 +726,44 @@ video {
   width: 100%;
   border-radius: 25px;
   position: relative;
+}
+
+.three-title {
+  font-size: 2vw;
+  opacity: 0;
+}
+
+.three-description {
+  font-size: 0.5vw;
+}
+
+.typewriter-box {
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
+.typewriter {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.5vw;
+  line-height: 145%;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.typewriter-main {
+  display: inline-block;
+}
+
+.typewriter-text {
+  font-family: "Capraia", sans-serif;
+  color:#dcd7ff;
+  font-weight: 400;
+  padding-left: 0.25vw;
 }
 
 
@@ -961,6 +1004,10 @@ html.lenis {
 
 
 
+}
+
+.purple {
+  color: #fefeff;
 }
 
 

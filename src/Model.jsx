@@ -3,6 +3,8 @@ import { useGLTF, useAnimations, useAspect, useVideoTexture, useTexture, OrbitCo
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { useThree } from "@react-three/fiber";
+import { TextPlugin } from 'gsap/TextPlugin';
+gsap.registerPlugin(TextPlugin)
 
 export default function Model(props) {
   const group = useRef()
@@ -93,7 +95,7 @@ export default function Model(props) {
 
       .to(".three-content-box", {
         width: "70vw",
-        height: "70vh",
+        height: "60vh",
         opacity: 1,
           scrollTrigger: {
             trigger: ".three-content-box",
@@ -103,6 +105,55 @@ export default function Model(props) {
             immediateRender: false,
           },
         })
+
+        .to(".three-title", {
+          fontSize: "5vw",
+          opacity: 1,
+            scrollTrigger: {
+              trigger: ".three-content-box",
+              start: "top bottom", // Start when the bottom of the viewport touches the bottom of .project-one
+              end: "center center",
+              scrub: true,
+              immediateRender: false,
+            },
+          })
+
+          .to(".three-description", {
+            fontSize: "1.25vw",
+            opacity: 1,
+              scrollTrigger: {
+                trigger: ".three-content-box",
+                start: "top bottom", // Start when the bottom of the viewport touches the bottom of .project-one
+                end: "center center",
+                scrub: true,
+                immediateRender: false,
+              },
+            })
+
+            .to(".typewriter", {
+              fontSize: "1.25vw",
+              opacity: 1,
+                scrollTrigger: {
+                  trigger: ".three-content-box",
+                  start: "top bottom", // Start when the bottom of the viewport touches the bottom of .project-one
+                  end: "center center",
+                  scrub: true,
+                  immediateRender: false,
+                },
+              })
+
+                // Adding the new GSAP animation code
+    const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
+
+    let masterTl = gsap.timeline({repeat: -1}).pause();
+    
+    words.forEach(word => {
+      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1});
+      tl.to('.typewriter-text', {duration: 1, text: word});
+      masterTl.add(tl);
+    });
+    
+    masterTl.play();
 
     })
     

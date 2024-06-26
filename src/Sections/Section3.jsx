@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAnimateText, useSmallTextAnimation, useImageAnimation } from "../ScrollAnimations";
+import Typewriter from 'typewriter-effect';
 
 export const Section3 = () => {
 
@@ -11,6 +12,19 @@ export const Section3 = () => {
         <div className="three-content">
           <div className="three-content-box" >
             <div className="three-content-box-left">
+              <h1 className="headline-purple three-title split">Our Mission</h1>
+              <p className="description three-description purple">
+                Our mission at DialedWeb is to innovate and enhance digital
+                experiences by crafting tailored, user-centric web solutions.
+                We elevate and engage audiences through creativity and
+                technology, delivering modern, intuitive websites that drive
+                business’s international success.
+              </p>
+              <div className="typewriter-box" >
+                <h1 className="typewriter" >
+                  <span class='typewriter-main'>We<span class="typewriter-text"></span></span>
+                </h1>
+              </div>
             </div>
             <div className="three-content-box-right">
               <div className="three-video-frame">
