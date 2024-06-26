@@ -91,6 +91,19 @@ export default function Model(props) {
       //   },
       // });
 
+      .to(".three-content-box", {
+        width: "70vw",
+        height: "70vh",
+        opacity: 1,
+          scrollTrigger: {
+            trigger: ".three-content-box",
+            start: "top bottom+=200", // Start when the bottom of the viewport touches the bottom of .project-one
+            end: "bottom top",
+            scrub: true,
+            immediateRender: false,
+          },
+        })
+
     })
     
   }, [])
