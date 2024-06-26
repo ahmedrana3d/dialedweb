@@ -227,7 +227,7 @@ section {
   top: 0;
   left: 0;
   position: fixed;
-  z-index: auto;
+  z-index: 2;
   border-bottom: 1px solid transparent;
   transition: background-color 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
 }
