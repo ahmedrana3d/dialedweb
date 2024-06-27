@@ -106,7 +106,7 @@ useAnimateText(".six-title");
 
             </div>
             <div className="six-spline">
-              <Spline scene="https://prod.spline.design/PcB3KICHfLuffJGZ/scene.splinecode" />
+            <Spline scene="https://prod.spline.design/Z94S6q7TqP0ihzAY/scene.splinecode" />
             </div>
           </div>
         </section>
