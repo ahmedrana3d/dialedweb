@@ -456,7 +456,7 @@ input {
   color: #f0f1fa;
   border-radius: 25px;
   padding: 1vw;
-  background-color: #fefeff;
+  background-color: #dcd7ff;
   display: flex;
   justify-content: space-evenly;
 }
@@ -535,18 +535,19 @@ input {
 }
 
 .one-content {
-  width: 80%;
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: row;
-  margin: 5% 10%;
+  margin: 5% 0%;
 }
 
 .one-content-left {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 50%;
+  width: 40%;
+  margin-left: 10%;
   justify-content: center;
   gap: 3vh;
 }
@@ -570,7 +571,7 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .one-content-buttons {
@@ -1014,12 +1015,86 @@ video {
   line-height: 100%; /* Make the line-height responsive */
   font-size: 2vw;
   font-family: "Roboto", sans-serif;
-  border-radius: 100%;
+  border-radius: 50px;
   background-color: #dcd7ff;
   z-index: 14;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1vh;
+}
+
+.item-image {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-image-1 {
+  background-image: url('/lorenzo.PNG');
+}
+
+.item-image-2 {
+  background-image: url('/matvey.PNG');
+}
+
+.item-image-3 {
+  background-image: url('/idan.PNG');
+}
+
+.fa-users {
+  font-size: 5vw;
+  color: #fefeff;
+}
+
+.item-image-5 {
+  background-image: url('/idan.PNG');
+}
+
+.item-1 {
+  background-color: #24477d;
+}
+
+.item-2 {
+  background-color: #fa7c37;
+}
+
+.item-3 {
+  background-color: #6722a0;
+}
+
+.item-4 {
+  background-color: #16a2fd;
+}
+
+.item-5 {
+  background-color: #7fdea2;
+}
+
+.item-6 {
+  background-color: #f496ad;
+}
+
+.item-job {
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.75vw;
+  color: #fefeff;
+  line-height: 100%;
+  margin: 0;
+}
+
+.item-name {
+  font-family: "Capraia", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  color: #fefeff;
+  line-height: 100%;
+  margin: 0;
 }
 
 svg {

@@ -186,7 +186,7 @@ useEffect(() => {
               </div>
             <div className="menuSocial" ref={menuSocialRef}>
               <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
               <i class="fa-brands fa-linkedin"></i>
             </div>
           </div>
@@ -271,22 +271,22 @@ useEffect(() => {
           <div className="one-content-logos">
             <div className='scroller' data-direction="left" data-speed="slow" >
             <div className="scroller__inner">
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
-              <img src="logo.png" alt="" />
+              <img src="gsap.png" alt="" />
+              <img src="spline.png" alt="" />
+              <img src="threejs.png" alt="" />
+              <img src="figma.png" alt="" />
+              <img src="react.png" alt="" />
+              <img src="hostinger.png" alt="" />
+              <img src="webflow.png" alt="" />
+              <img src="shopify.png" alt="" />
+              <img src="gsap.png" alt="" />
+              <img src="spline.png" alt="" />
+              <img src="threejs.png" alt="" />
+              <img src="figma.png" alt="" />
+              <img src="react.png" alt="" />
+              <img src="hostinger.png" alt="" />
+              <img src="webflow.png" alt="" />
+              <img src="shopify.png" alt="" />
             </div>
             </div>
           </div>

@@ -372,7 +372,7 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
       }, 0);
 
       tl.to(items, {
-        scale: 0.75,
+        scale: 0.8,
         transformOrigin: 'center'
       }, 0);
 
