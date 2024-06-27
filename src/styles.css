@@ -34,7 +34,6 @@ body,
 }
 
 body {
-  /* background-image: url('/gradient.jpg'); */
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -241,7 +240,7 @@ section {
 }
 
 .navigation.scrolled {
-  background-color: transparent; /* Change to your preferred color */
+  background-color: #04021710; /* Change to your preferred color */
   height: 8vh; /* Adjust to your desired height */
   backdrop-filter: blur(7px);
   z-index: 200;
@@ -536,6 +535,7 @@ input {
   flex-direction: column;
   z-index: auto;
   position: relative;
+  background-color: #040217;
 }
 
 .one-content {
@@ -544,6 +544,7 @@ input {
   display: flex;
   flex-direction: row;
   margin: 5% 0%;
+  background-color: #040217;
 }
 
 .one-content-left {
@@ -554,11 +555,13 @@ input {
   margin-left: 10%;
   justify-content: center;
   gap: 3vh;
+  background-color: #040217;
 }
 
 .one-content-left h1 {
   position: relative;
   z-index:1;
+  background-color: #040217;
 }
 
 .one-content-right {
@@ -567,6 +570,7 @@ input {
   height: 100%;
   width: 50%;
   position: relative;
+  background-color: #040217;
 }
 
 .experience {
@@ -575,7 +579,8 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
+  background-color: #040217;
 }
 
 .one-content-buttons {
@@ -895,8 +900,8 @@ video {
 .three-content-box {
   height: 50vh;
   width: 60vw;
-  background-color: #070E2B50;
-  backdrop-filter: blur(10px);
+  background-color: #04021710;
+  backdrop-filter: blur(5px);
   border-radius: 50px;
   display: flex;
   border: #fefeff48 solid 1px;
@@ -1068,27 +1073,27 @@ video {
 }
 
 .item-1 {
-  background-color: #24477d;
+  background-color: #fefeff10;
 }
 
 .item-2 {
-  background-color: #fa7c37;
+  background-color: #fefeff10;
 }
 
 .item-3 {
-  background-color: #6722a0;
+  background-color: #fefeff10;
 }
 
 .item-4 {
-  background-color: #16a2fd;
+  background-color: #fefeff10;
 }
 
 .item-5 {
-  background-color: #7fdea2;
+  background-color: #fefeff10;
 }
 
 .item-6 {
-  background-color: #f496ad;
+  background-color: #fefeff10;
 }
 
 .item-job {
@@ -1225,11 +1230,11 @@ svg {
 }
 
 .service-name-box {
-  border: 1px solid #dcd7ff50;
   border-radius: 50px;
   width: fit-content;
   height: fit-content;
   padding: 0.75vw;
+  background-color: #fefeff10;
 }
 
 .service-description {
@@ -1299,6 +1304,12 @@ svg {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.eight-main-title {
+  position: relative;
+  z-index: 4;
+  color: #fefeff90;
 }
 
 .eight-title {

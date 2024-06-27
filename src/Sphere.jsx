@@ -25,11 +25,23 @@ export function Sphere(props) {
         z: 1,
         scrollTrigger: {
           trigger: ".eight",
-          start: "top bottom",
+          start: "top center",
           end: "bottom 100%",
           scrub: true,
           immediateRender: false,
-          markers: true
+        },
+      })
+
+      .to(sphereRef.current.position, {
+        x: 0,
+        y: 0,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".eight",
+          start: "top 60%",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
         },
       })
 
@@ -38,14 +50,14 @@ export function Sphere(props) {
   }, [])
 
   return (
-    <group ref={sphereRef} {...props} scale={0} dispose={null}>
-      <group scale={0.015}>
+    <group ref={sphereRef} position={ [ 5, -5, 0 ] } {...props} scale={0} dispose={null}>
+      <group scale={0.0075}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Sphere.geometry}
         >
-            <meshNormalMaterial />
+            <meshStandardMaterial metalness={1} roughness={ 1 } color={ "#dcd7ff" }  />
         </mesh>
       </group>
     </group>
