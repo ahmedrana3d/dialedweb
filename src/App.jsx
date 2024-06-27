@@ -107,21 +107,7 @@ function App() {
               <sphereGeometry />
             </mesh> */}
             <EffectComposer>
-              <Fluid
-                    radius={0.03}
-                    curl={10}
-                    swirl={5}
-                    distortion={1}
-                    force={2}
-                    pressure={0.94}
-                    densityDissipation={0.98}
-                    velocityDissipation={0.99}
-                    intensity={0.3}
-                    rainbow={false}
-                    blend={0}
-                    showBackground={false}
-                    fluidColor='#a09bcb'
-                />
+              <Fluid radius={0.03} curl={10} swirl={5} distortion={1} force={2} pressure={0.94} densityDissipation={0.98} velocityDissipation={0.99} intensity={0.3} rainbow={false} blend={0} showBackground={false} fluidColor='#a09bcb'/>
             </EffectComposer>
           </Canvas>
         </div>
