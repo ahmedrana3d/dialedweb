@@ -17,7 +17,7 @@ useAnimateText(".six-title");
               </div>
               <div className="service-box">
                 <div className="service-box-left">
-                  <h1 className="service-title" >Website Design</h1>
+                  <h1 className="service-title" >Website Design & Development</h1>
                 </div>
                 <div className="service-box-right">
                   <div className="service-name-box">

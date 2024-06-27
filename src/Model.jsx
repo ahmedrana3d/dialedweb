@@ -51,6 +51,8 @@ export default function Model(props) {
 
   useLayoutEffect(() => {
 
+    const cont = document.querySelector(".carousel");
+
     mm.add({
       isDesktop: "(min-width: 800px)",
       isMobile: "(max-width: 799px)"
@@ -82,6 +84,19 @@ export default function Model(props) {
             scrub: true,
             immediateRender: false,
           },
+      })
+
+      .to(".carousel-content", {
+        ease: "none",
+        x: () => -(cont.scrollWidth - window.innerWidth),
+        scrollTrigger: {
+          trigger: cont,
+          pin: cont,
+          start: "center center",
+          end: () => "+=" + (cont.scrollWidth - window.innerWidth),
+          scrub: true,
+          invalidateOnRefresh: true,
+        }
       })
 
     const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
