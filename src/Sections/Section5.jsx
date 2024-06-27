@@ -28,15 +28,15 @@ export const Section5 = () => {
             <h1 className="item-job" >Founder & CEO</h1>
             <p className="item-name" >Lorenzo Noya</p>
           </div>
-          <div className="item item-2" id="box3">
-            <div className="item-image item-image-2"/>
-            <h1 className="item-job" >Founder & COO</h1>
-            <p className="item-name" >Matvey Vasilyev</p>
-          </div>
-          <div className="item item-3" id="box4">
+          <div className="item item-3" id="box3">
             <div className="item-image item-image-3"/>
             <h1 className="item-job" >Founder & CEO</h1>
             <p className="item-name" >Idan Zeidman</p>
+          </div>
+          <div className="item item-2" id="box4">
+            <div className="item-image item-image-2"/>
+            <h1 className="item-job" >Founder & COO</h1>
+            <p className="item-name" >Matvey Vasilyev</p>
           </div>
           <div className="item item-4" id="box5">
             <i class="fa-solid fa-users"></i>
