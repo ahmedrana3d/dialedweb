@@ -38,13 +38,13 @@ export const Section1 = () => {
     tl.fromTo(
       menuContentRef.current,
       { opacity: 0, gap: "150px" },
-      { opacity: 1, duration: 0.5, gap: "10px", ease: customEase },
+      { opacity: 1, duration: 0.5, gap: "1vw", ease: customEase },
       0
     );
 
     tl.fromTo(
       menuNavRef.current,
-      { transform: "translate3d(0, 5.5em, 0) rotate(3.5deg)" },
+      { transform: "translate3d(0, 5vh, 0) rotate(5deg)" },
       {
         transform: "translate3d(0, 0, 0) rotate(0deg)",
         duration: 0.5,
@@ -55,7 +55,7 @@ export const Section1 = () => {
 
     tl.fromTo(
       menuContainerRef.current,
-      { transform: "translate3d(0, 5.5em, 0) rotate(-3.5deg)" },
+      { transform: "translate3d(0, 5vh, 0) rotate(-5deg)" },
       {
         transform: "translate3d(0, 0, 0) rotate(0deg)",
         duration: 0.5,
@@ -66,7 +66,7 @@ export const Section1 = () => {
 
     tl.fromTo(
       menuSocialRef.current,
-      { transform: "translate3d(0, 5.5em, 0) rotate(-3.5deg)" },
+      { transform: "translate3d(0, 5vh, 0) rotate(5deg)" },
       {
         transform: "translate3d(0, 0, 0) rotate(0deg)",
         duration: 0.5,
