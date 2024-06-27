@@ -71,13 +71,13 @@ export default function Model(props) {
         },
       })
 
-      // .to(".four-experience", {
-      //   position: "fixed",
+      // .to(".six-content", {
+      //   opacity: 1,
+      //   ease: "power1",
+      //   duration: 3,
       //   scrollTrigger: {
-      //     trigger: ".four-content-two",
+      //     trigger: ".six-content",
       //     start: "top bottom",
-      //     end: "bottom 100%",
-      //     scrub: true,
       //     immediateRender: false,
       //   },
       // })
