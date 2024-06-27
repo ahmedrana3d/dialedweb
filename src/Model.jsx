@@ -71,28 +71,6 @@ export default function Model(props) {
         },
       })
 
-      // .to(".six-content", {
-      //   opacity: 1,
-      //   ease: "power1",
-      //   duration: 3,
-      //   scrollTrigger: {
-      //     trigger: ".six-content",
-      //     start: "top bottom",
-      //     immediateRender: false,
-      //   },
-      // })
-
-      // .to(".four-experience", {
-      //   position: "relative",
-      //   scrollTrigger: {
-      //     trigger: ".five",
-      //     start: "top bottom",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // });
-
       .to(".three-content-box", {
         width: "70vw",
         height: "60vh",
@@ -106,42 +84,6 @@ export default function Model(props) {
           },
       })
 
-      // .to(".three-title", {
-      //   fontSize: "5vw",
-      //   opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: ".three-content-box",
-      //       start: "top bottom",
-      //       end: "center center",
-      //       scrub: true,
-      //       immediateRender: false,
-      //     },
-      // })
-
-      // .to(".three-description", {
-      //   fontSize: "1.25vw",
-      //   opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: ".three-content-box",
-      //       start: "top bottom",
-      //       end: "center center",
-      //       scrub: true,
-      //       immediateRender: false,
-      //   },
-      // })
-
-      // .to(".typewriter", {
-      //   fontSize: "1.25vw",
-      //   opacity: 1,
-      //     scrollTrigger: {
-      //       trigger: ".three-content-box",
-      //         start: "top bottom",
-      //         end: "center center",
-      //         scrub: true,
-      //         immediateRender: false,
-      //     },
-      // })
-      
     const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
 
     let masterTl = gsap.timeline({repeat: -1}).pause();

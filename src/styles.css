@@ -34,7 +34,7 @@ body,
 }
 
 body {
-  background-image: url('/gradient.jpg');
+  /* background-image: url('/gradient.jpg'); */
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -244,7 +244,7 @@ section {
   background-color: transparent; /* Change to your preferred color */
   height: 8vh; /* Adjust to your desired height */
   backdrop-filter: blur(7px);
-  z-index: 10;
+  z-index: 200;
   border-bottom: 1px solid #fcfeea25;
 }
 
@@ -758,7 +758,7 @@ input {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 150;
+  z-index: 250;
   background-color: #04021750;
   backdrop-filter: blur(10px);
   display: flex;
@@ -1280,12 +1280,13 @@ svg {
 /* SECTION EIGHT */
 
 .eight {
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: auto;
-  margin-top: 20vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .eight-content {

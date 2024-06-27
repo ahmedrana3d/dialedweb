@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Sparkles, useProgress } from "@react-three/drei";
 import { Section1 } from "./Sections/Section1";
 import { Section2 } from "./Sections/Section2";
@@ -14,6 +14,8 @@ import Spline from '@splinetool/react-spline';
 import { Section6 } from "./Sections/Section6";
 import { Section7 } from "./Sections/Section7";
 import { Section8 } from "./Sections/Section8";
+import gsap from 'gsap'
+import { Sphere } from "./Sphere";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -109,6 +111,7 @@ function App() {
             <EffectComposer>
               <Fluid radius={0.03} curl={10} swirl={5} distortion={1} force={2} pressure={0.94} densityDissipation={0.98} velocityDissipation={0.99} intensity={0.3} rainbow={false} blend={0} showBackground={false} fluidColor='#a09bcb'/>
             </EffectComposer>
+            <Sphere />
           </Canvas>
         </div>
 
