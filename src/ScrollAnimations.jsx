@@ -33,7 +33,7 @@ const useAnimateText = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
-              toggleActions: 'play none none reverse',
+              toggleActions: 'play none none reset',
             },
           }
         );
@@ -41,13 +41,17 @@ const useAnimateText = (textSelector) => {
         gsap.from(chars, {
           yPercent: 50,
           stagger: 0.03,
+          // stagger: {
+          //   each: 0.03, // Adjusted stagger for smoother animation
+          //   ease: 'power1.out', // Added ease for each stagger
+          // },
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
-            toggleActions: 'play none none reverse',
+            toggleActions: 'play none none reset',
           },
         });
 

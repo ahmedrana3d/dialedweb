@@ -4,7 +4,7 @@ import { useAnimateText } from "../ScrollAnimations";
 
 export const Section6 = () => {
 
-useAnimateText(".split");
+useAnimateText(".six-title");
 
     return (
       <>
@@ -13,7 +13,7 @@ useAnimateText(".split");
             <div className="services-container">
 
               <div className="service-box-top">
-                  <h1 className="headline-purple split" >Our Services</h1>
+                  <h1 className="headline-purple six-title" >Our Services</h1>
               </div>
               <div className="service-box">
                 <div className="service-box-left">

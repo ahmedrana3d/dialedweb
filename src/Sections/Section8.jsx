@@ -6,13 +6,13 @@ import { useAnimateText } from "../ScrollAnimations";
 
 export const Section8 = () => {
 
-  useAnimateText(".split");
+  useAnimateText(".eight-main-title");
 
     return (
       <>
         <section className="eight">
             <div className="eight-content">
-            <h1 className="headline-purple eight-title split" >Have an idea in mind for your business?</h1>
+            <h1 className="headline-purple eight-main-title" >Have an idea in mind for <br /> your business?</h1>
             <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>
             <div className="eight-buttons">
                 <motion.button

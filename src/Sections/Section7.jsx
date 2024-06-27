@@ -26,13 +26,13 @@ export const Section7 = () => {
     }
   ];
 
-  useAnimateText(".split");
+  useAnimateText(".seven-title");
 
     return (
       <>
         <section className="seven">
           <div className="seven-content">
-            <h1 className="headline-purple split" >Our Methodology</h1>
+            <h1 className="headline-purple seven-title" >Our Methodology</h1>
               <div className="seven-accordion">
                 {accordionsData.map((accordion, index) => (
                   <Accordion
