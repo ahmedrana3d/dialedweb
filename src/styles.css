@@ -92,6 +92,15 @@ section {
   font-style: italic;
 }
 
+.headline-purple-big {
+  font-family: 'GT Alpina Trial', sans-serif;
+  color: #AAA3FF;
+  font-weight: 400;
+  font-size: 10vw;
+  margin: 0;
+  font-style: italic;
+}
+
 .headline-blue {
   font-family: 'GT Alpina Trial', sans-serif;
   color:#01f1ff;
@@ -968,7 +977,7 @@ video {
 }
 
 .four {
-  height: 100vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -985,7 +994,7 @@ video {
 
 .four-content {
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -994,6 +1003,82 @@ video {
   padding-bottom: 10%;
   justify-content: space-between;
   gap: 3vh;
+}
+
+.why-us-container {
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vw;
+  gap: 20vh;
+}
+
+.why-us-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+
+.why-us-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-us-title {
+  font-size: 4.5vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  color: #fcfeea;
+}
+
+.why-us-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+
+.why-us-right-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 1vw;
+}
+
+.why-us-icon {
+  font-size: 1.25vw;
+  color: #AAA3FF;
+}
+
+.why-us-right-row-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.why-us-text-title {
+  font-size: 1.25vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  color: #AAA3FF;
+}
+
+.why-us-text-description {
+  font-size: 1.25vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+  color: #fcfeea;
+  line-height: 125%;
 }
 
 /* SECTION FIVE */
