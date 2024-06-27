@@ -149,6 +149,11 @@ useEffect(() => {
   }
 }, []);
 
+const [fullPageVisible, setFullPageVisible] = useState(false);
+const handleFullPageToggle = () => {
+  setFullPageVisible(!fullPageVisible);
+};
+
     return (
       <>
         <section className="one">
@@ -232,6 +237,7 @@ useEffect(() => {
                   whileHover={{ scale: 1.075 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  onClick={handleFullPageToggle}
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >WATCH OUR REEL</span>
@@ -291,6 +297,34 @@ useEffect(() => {
             </div>
           </div>
         </section>
+
+        <AnimatePresence>
+        {fullPageVisible && (
+          <motion.div
+            className="showreel-overlay"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <video className="showreel-video" src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop ></video>
+
+            <motion.button
+              className="navigation-left showreel-button"
+              whileHover={{ scale: 1.075 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              onClick={handleFullPageToggle}
+            >
+              <div className="navigation-left-content" >
+                <span className="navigation-text" >CLOSE</span>
+                <span className="navigation-text" >CLOSE</span>
+              </div>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       </>
     )
 }

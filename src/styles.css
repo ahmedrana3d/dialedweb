@@ -748,6 +748,31 @@ input {
   }
 }
 
+.showreel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 150;
+  background-color: #04021750;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showreel-video {
+  position: relative;
+  width: 70%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.showreel-button {
+  position: absolute;
+  bottom: 2vh;
+}
 
 /* SECTION TWO */
 
