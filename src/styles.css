@@ -1008,8 +1008,8 @@ video {
 }
 
 .carousel-content {
-  width: 35vw;
-  height: 90vh;
+  width: 30vw;
+  height: 80vh;
   background-color: transparent;
   flex: 0 0 auto;
   display: flex;
@@ -1051,74 +1051,70 @@ video {
   background-color: #fefeff10;
   align-self: center;
   border-radius: 50px;
-  border: 5px solid #fefeff00;
+  border: 2px solid #fefeff00;
   pointer-events: all;
   transition: 0.25s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  padding: 2vw;
   cursor: pointer;
-  background-size: cover; /* Ensure the background image covers the entire div */
-  background-position: center; /* Center the background image */
-}
-
-.carousel-image-info {
-  width: auto;
-  margin-left: 5%;
-  margin-bottom: 5%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-}
-
-.carousel-image-info-details {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.carousel-image-info-details-box {
-  width: auto;
-  padding-top: 0.25vw;
-  padding-bottom: 0.25vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  border: rgba(254, 254, 255, 0.25) solid 1px;
-  background-color: rgba(255, 255, 255, 0.001);
-  backdrop-filter: blur(2.5px);
+  gap: 2vw;
 }
 
 .carousel-image:hover {
-  border: 5px solid #AAA3FF;
+  border: 2px solid #AAA3FF;
 }
 
-.carousel-image-one {
-  background-image: url('/neue1.jpg'); /* Replace '/pic1.jpg' with your image URL */
+.carousel-person-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; 
+  border-radius: 25px; 
 }
 
-.carousel-image-two {
-  background-image: url('/valmiera.jpeg'); /* Replace '/pic1.jpg' with your image URL */
+.idan {
+  background-image: url('/idan.PNG');
 }
 
-.carousel-image-three {
-  background-image: url('/neue3.jpg'); /* Replace '/pic1.jpg' with your image URL */
+.lorenzo {
+  background-image: url('/lorenzo.PNG');
 }
 
-.carousel-image-four {
-  background-image: url('/neue4.jpg'); /* Replace '/pic1.jpg' with your image URL */
+.matvey {
+  background-image: url('/matvey.PNG');
 }
 
-.carousel-image-five {
-  background-image: url('/neue5.jpg'); /* Replace '/pic1.jpg' with your image URL */
+.carousel-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.carousel-title {
+  margin: 0;
+  font-family: "SF", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.5vw;
+  color: #fefeff;
+}
+
+.carousel-description {
+  margin: 0;
+  font-family: "GTAlpina", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5vw;
+  color: #AAA3FF;
+}
+
+.carousel-border {
+  width: 1px;
+  height: 100%;
+  background-color: #fefeff;
+}
+
 
 .carousel-text-end {
   display: flex;

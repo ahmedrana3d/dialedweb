@@ -19,38 +19,41 @@ export const Section5 = () => {
             </div>
         </div>
 
-        <div className="carousel-content" onClick={() => handleClick('https://room-example.vercel.app/')} >
-            <div className="carousel-image carousel-image-one" >
-                <div className="carousel-image-info" >
-                </div>
+        <div className="carousel-content" >
+            <div className="carousel-image" >
+              <div className="carousel-person-image idan" />
+              <div className="carousel-text-row">
+                <h1 className="carousel-title" >Founder & CEO</h1>
+                <div className="carousel-border" />
+                <h1 className="carousel-description" >Idan Zeidman</h1>
+              </div>
             </div>
         </div>
 
-        <div className="carousel-content" onClick={() => handleClick('https://youtu.be/UpCZ1Y45Sww?si=W9_mbyFBgpBkWDbE')} >
-            <div className="carousel-image carousel-image-two" >
-                <div className="carousel-image-info" >
-                </div>
+        <div className="carousel-content" >
+            <div className="carousel-image" >
+              <div className="carousel-person-image lorenzo" />
+              <div className="carousel-text-row">
+                <h1 className="carousel-title" >Founder & CEO</h1>
+                <div className="carousel-border" />
+                <h1 className="carousel-description" >Lorenzo Noya</h1>
+              </div>
             </div>
         </div>
 
-        <div className="carousel-content" onClick={() => handleClick('https://youtu.be/UpCZ1Y45Sww?si=W9_mbyFBgpBkWDbE')} >
-            <div className="carousel-image carousel-image-three" >
-                <div className="carousel-image-info" >
-                </div>
+        <div className="carousel-content" >
+            <div className="carousel-image" >
+              <div className="carousel-person-image matvey" />
+              <div className="carousel-text-row">
+                <h1 className="carousel-title" >Founder & COO</h1>
+                <div className="carousel-border" />
+                <h1 className="carousel-description" >Matvey Vasilyev</h1>
+              </div>
             </div>
         </div>
 
-        <div className="carousel-content" onClick={() => handleClick('https://youtu.be/UpCZ1Y45Sww?si=W9_mbyFBgpBkWDbE')} >
-            <div className="carousel-image carousel-image-four" >
-                <div className="carousel-image-info" >
-                </div>
-            </div>
-        </div>
-
-        <div className="carousel-content" onClick={() => handleClick('https://youtu.be/UpCZ1Y45Sww?si=W9_mbyFBgpBkWDbE')} >
-            <div className="carousel-image carousel-image-five" >
-                <div className="carousel-image-info" >
-                </div>
+        <div className="carousel-content" >
+            <div className="carousel-image" >
             </div>
         </div>
 
