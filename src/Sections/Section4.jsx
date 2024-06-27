@@ -38,10 +38,10 @@ export const Section4 = () => {
 
     return (
       <>
+        <section className="balloonStart" >
+
+        </section>
         <section className="four">
-          <div className="four-content-one"/>
-          <div className="four-content-two"/>
-          <div className="four-content-three"/>
           <div className="four-experience">
             <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
               <Suspense fallback >

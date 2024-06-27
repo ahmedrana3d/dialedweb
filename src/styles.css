@@ -957,17 +957,22 @@ video {
 }
 
 .typewriter-text {
-  font-family: "Capraia", sans-serif;
+  font-family: 'GT Alpina Trial', sans-serif;
   color:#dcd7ff;
   font-weight: 400;
+  font-style: italic;
   padding-left: 0.25vw;
 }
 
 
 /* SECTION FOUR */
 
+.balloonStart {
+  height: 200vh;
+}
+
 .four {
-  height: 265vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -980,27 +985,6 @@ video {
   width: 100vw;
   height: 100vh;
   z-index: 1;
-}
-
-.four-content-one {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.four-content-two {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.four-content-three {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
 }
 
 .four-content {

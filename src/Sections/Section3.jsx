@@ -12,7 +12,7 @@ export const Section3 = () => {
         <div className="three-content">
           <div className="three-content-box" >
             <div className="three-content-box-left">
-              <h1 className="headline three-title">Our Mission</h1>
+              <h1 className="headline-purple three-title">Our Mission</h1>
               <p className="description three-description purple">
                 Our mission at DialedWeb is to innovate and enhance digital
                 experiences by crafting tailored, user-centric web solutions.

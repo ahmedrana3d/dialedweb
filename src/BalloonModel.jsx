@@ -7,8 +7,7 @@ export default function BalloonModel({ ...props }) {
   const { nodes, materials } = useSpline('https://prod.spline.design/jLZEpaewguEWDwHO/scene.splinecode')
 
   const balloon = useRef()
-  const controlsRef = useRef()
-  const tl = gsap.timeline({ paused: true })
+  const tl = gsap.timeline()
   let mm = gsap.matchMedia();
 
   useLayoutEffect(() => {
@@ -20,48 +19,36 @@ export default function BalloonModel({ ...props }) {
 
       tl
         .to(balloon.current.position, {
-          x: 0,
-          y: 0,
+          x: -4.5,
+          y: -3,
           z: 0,
           scrollTrigger: {
-            trigger: ".four-content-one",
-            start: "top bottom",
-            end: "bottom 100%",
+            trigger: ".balloonStart",
+            start: "top center",
+            end: "bottom top",
             scrub: true,
             immediateRender: false,
           },
         })
 
-        .to(balloon.current.scale, {
-          x: 1.5,
-          y: 1.5,
-          z: 1.5,
-          scrollTrigger: {
-            trigger: ".four-content-one",
-            start: "top bottom",
-            end: "bottom 100%",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
+        // .to(balloon.current.scale, {
+        //   x: 1.25,
+        //   y: 1.25,
+        //   z: 1.25,
+        //   scrollTrigger: {
+        //     trigger: ".balloonStart",
+        //     start: "top center",
+        //     end: "center center",
+        //     markers: true,
+        //     scrub: true,
+        //     immediateRender: false,
+        //   },
+        // })
 
         .to(balloon.current.rotation, {
-          y: Math.PI * 2,
+          y: Math.PI * 3,
           scrollTrigger: {
-            trigger: ".four-content-one",
-            start: "top bottom",
-            end: "bottom 100%",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
-
-        .to(balloon.current.position, {
-          x: -5,
-          y: 0,
-          z: 0,
-          scrollTrigger: {
-            trigger: ".four-content-two",
+            trigger: ".balloonStart",
             start: "top bottom",
             end: "bottom top",
             scrub: true,
@@ -69,31 +56,41 @@ export default function BalloonModel({ ...props }) {
           },
         })
 
-        .to(balloon.current.rotation, {
-          y: Math.PI * 4,
-          scrollTrigger: {
-            trigger: ".four-content-two",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-            immediateRender: false,
-          },
-        })
+        // .to(balloon.current.position, {
+        //   x: -5,
+        //   y: 0,
+        //   z: 0,
+        //   scrollTrigger: {
+        //     trigger: ".four-content-two",
+        //     start: "top bottom",
+        //     end: "bottom top",
+        //     scrub: true,
+        //     immediateRender: false,
+        //   },
+        // })
 
-      // Play the timeline
-      tl.play();
+        // .to(balloon.current.rotation, {
+        //   y: Math.PI * 4,
+        //   scrollTrigger: {
+        //     trigger: ".four-content-two",
+        //     start: "top bottom",
+        //     end: "bottom top",
+        //     scrub: true,
+        //     immediateRender: false,
+        //   },
+        // })
+
     });
 
   }, []);
 
   return (
     <>
-    <OrbitControls target={ [ 0, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <color attach="background" args={['#3f3a81']} />
       <group {...props} dispose={null}>
         <scene name="Scene 1">
-        <group ref={balloon} name="Group" position={[5, -3, 0]}>
-            <group name="Balloon" position={[0, -0.5, 0]} scale={0.01}>
+        <group ref={balloon} name="Group" position={[4.5, 1, 0]}>
+            <group name="Balloon" position={[0, 0.5, 0]} scale={0.01}>
               <mesh
                 name="Cord"
                 geometry={nodes.Cord.geometry}
