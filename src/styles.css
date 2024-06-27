@@ -158,17 +158,19 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: background-color 0.6s ease;
+  transition: 0.5s ease;
   border-radius: 35px;
   width: 100%;
   position: relative;
   z-index: 4;
   background-color: #fefeff10;
   border-radius: 50px;
+  border: 2px solid transparent;
 }
 
 .accordion:hover {
   background-color: #fefeff25;
+  border: 2px solid #AAA3FF;
 }
 
 .accordion-top {
@@ -1017,10 +1019,6 @@ video {
   z-index: 13;
 }
 
-.short {
-  width: 36.5vw;
-}
-
 .carousel-text-start {
   display: flex;
   flex-direction: column;
@@ -1071,6 +1069,17 @@ video {
   background-size: cover;
   background-position: center; 
   border-radius: 25px; 
+}
+
+.short {
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-text-image {
+  width: 75%;
 }
 
 .idan {

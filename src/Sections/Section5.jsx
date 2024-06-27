@@ -12,10 +12,7 @@ export const Section5 = () => {
 
         <div className="carousel-content short" >
             <div className="carousel-text-start" >
-                <div>
-                    <h1 className="headline-purple" >Our Team</h1>
-                    <p className="description" >Valik meie loodud töödest,<br/> mis on mitmekordistanud<br/> ettevõtete kasumeid.</p>
-                </div>
+                <img className="carousel-text-image" src="ourteam.png" alt="" />
             </div>
         </div>
 
@@ -52,9 +49,7 @@ export const Section5 = () => {
             </div>
         </div>
 
-        <div className="carousel-content" >
-            <div className="carousel-image" >
-            </div>
+        <div className="carousel-content short" >
         </div>
 
         {/* <div className="carousel-content" >
