@@ -7,6 +7,35 @@ import Accordion from "../Accordion";
 
 export const Section4 = () => {
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const accordionsData = [
+    {
+      title: "Innovation and Expertise",
+      content: "We combine cutting-edge technology with creative design to deliver exceptional web solutions."
+    },
+    {
+      title: "Global Reach",
+      content: "We have the capability to deliver projects for clients around the world, understanding diverse market needs and preferences."
+    },
+    {
+      title: "Custom Solutions",
+      content: "Every project is unique, and we provide tailored services to meet your specific needs."
+    },
+    {
+      title: "Cutting-Edge Technology",
+      content: "We harness the most advanced tools and technologies to provide state-of-the-art solutions."
+    },
+    {
+      title: "Brand Elevation",
+      content: "We elevate your brand's online presence with modern, functional websites."
+    },
+    {
+      title: "Quick Turnaround",
+      content: "We ensure timely completion of projects without sacrificing quality, providing you with swift, dependable results that meet your deadlines."
+    }
+  ];
+
     return (
       <>
         <section className="four">
@@ -25,34 +54,16 @@ export const Section4 = () => {
             </Canvas>
           </div>
           <div className="four-content">
-            <div className="four-content-left">
-              <Accordion 
-                title="Innovation and Expertise"
-                content="We combine cutting-edge technology with creative design to deliver exceptional web solutions."
+            {accordionsData.map((accordion, index) => (
+              <Accordion
+                key={index}
+                index={index}
+                title={accordion.title}
+                content={accordion.content}
+                isActive={activeIndex === index}
+                onToggle={() => setActiveIndex(activeIndex === index ? null : index)}
               />
-              <Accordion 
-                title="Global Reach"
-                content="We have the capability to deliver projects for clients around the world, understanding diverse market needs and preferences."
-              />
-              <Accordion 
-                title="Custom Solutions"
-                content="Every project is unique, and we provide tailored services to meet your specific needs."
-              />                            
-            </div>
-            <div className="four-content-left">
-              <Accordion 
-                title="Cutting-Edge Technology"
-                content="We harness the most advanced tools and technologies to provide state-of-the-art solutions."
-              />
-              <Accordion 
-                title="Brand Elevation"
-                content="We elevate your brand's online presence with modern, functional websites."
-              />
-              <Accordion 
-                title="Quick Turnaround"
-                content="We ensure timely completion of projects without sacrificing quality, providing you with swift, dependable results that meet your deadlines."
-              />                            
-            </div>
+            ))}
           </div>
         </section>
       </>

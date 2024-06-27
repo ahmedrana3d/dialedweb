@@ -134,13 +134,14 @@ const useSmallTextAnimation = (textSelector) => {
   }, [textSelector]);
 };
 
-const RotatingHeader = ({ text }) => {
+const RotatingHeader = ({ text, hoverTargetRef }) => {
   const headerRef = useRef(null);
   const headerTextRef = useRef(null);
 
   useEffect(() => {
     const header = headerRef.current;
     const headerText = headerTextRef.current;
+    const hoverTarget = hoverTargetRef.current;
     const original = header.querySelector("h1");
     const tl = gsap.timeline({ paused: true });
 
@@ -176,20 +177,20 @@ const RotatingHeader = ({ text }) => {
       tl.reverse();
     };
 
-    header.addEventListener("mouseenter", handleMouseEnter);
-    header.addEventListener("mouseleave", handleMouseLeave);
+    hoverTarget.addEventListener("mouseenter", handleMouseEnter);
+    hoverTarget.addEventListener("mouseleave", handleMouseLeave);
 
     // Cleanup listeners
     return () => {
-      header.removeEventListener("mouseenter", handleMouseEnter);
-      header.removeEventListener("mouseleave", handleMouseLeave);
+      hoverTarget.removeEventListener("mouseenter", handleMouseEnter);
+      hoverTarget.removeEventListener("mouseleave", handleMouseLeave);
     };
 
-  }, [text]);
+  }, [text, hoverTargetRef]);
 
   return (
     <div className="rotatingHeader" ref={headerRef}>
-      <h1 ref={headerTextRef} >{text}</h1>
+      <h1 ref={headerTextRef}>{text}</h1>
     </div>
   );
 };

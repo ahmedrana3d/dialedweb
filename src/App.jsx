@@ -12,6 +12,8 @@ import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { easing } from "maath"
 import Spline from '@splinetool/react-spline';
 import { Section6 } from "./Sections/Section6";
+import { Section7 } from "./Sections/Section7";
+import { Section8 } from "./Sections/Section8";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -94,6 +96,8 @@ function App() {
         <Section4 />
         <Section5 />
         <Section6 />
+        <Section7 />
+        <Section8 />
 
         <div className="experience-one" >
           <Canvas >
