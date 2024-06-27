@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: 'Capraia';
-  src: url('capraia-book-italic.otf') format('OpenType');
+  font-family: 'GTAlpina';
+  src: url('GT_Alpina_Regular.otf') format('OpenType');
 }
 
 * {
@@ -138,6 +138,7 @@ section {
   font-family: 'GT Alpina Trial', sans-serif;
   color:#dcd7ff;
   font-weight: 400;
+  letter-spacing: 0.1vw;
 }
 
 /* ACCORDION */
