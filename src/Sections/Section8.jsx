@@ -2,13 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import Accordion from "../Accordion";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAnimateText } from "../ScrollAnimations";
 
 export const Section8 = () => {
+
+  useAnimateText(".split");
+
     return (
       <>
         <section className="eight">
-          <div className="eight-content">
-            <h1 className="headline-purple eight-title" >Have an idea in mind for your business?</h1>
+            <div className="eight-content">
+            <h1 className="headline-purple eight-title split" >Have an idea in mind for your business?</h1>
             <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>
             <div className="eight-buttons">
                 <motion.button

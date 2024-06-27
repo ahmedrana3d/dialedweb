@@ -1269,13 +1269,13 @@ svg {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: auto;
   margin-top: 20vh;
+  z-index: auto;
 }
 
 .seven-content {
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 5vh;

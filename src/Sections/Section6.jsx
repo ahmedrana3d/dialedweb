@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
+import { useAnimateText } from "../ScrollAnimations";
 
 export const Section6 = () => {
+
+useAnimateText(".split");
 
     return (
       <>
@@ -10,7 +13,7 @@ export const Section6 = () => {
             <div className="services-container">
 
               <div className="service-box-top">
-                  <h1 className="headline-purple" >Our Services</h1>
+                  <h1 className="headline-purple split" >Our Services</h1>
               </div>
               <div className="service-box">
                 <div className="service-box-left">

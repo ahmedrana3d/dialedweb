@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import Accordion from "../Accordion";
+import { useAnimateText } from "../ScrollAnimations";
 
 export const Section7 = () => {
 
@@ -25,22 +26,24 @@ export const Section7 = () => {
     }
   ];
 
+  useAnimateText(".split");
+
     return (
       <>
         <section className="seven">
           <div className="seven-content">
-            <h1 className="headline-purple" >Our Methodology</h1>
+            <h1 className="headline-purple split" >Our Methodology</h1>
               <div className="seven-accordion">
-              {accordionsData.map((accordion, index) => (
-              <Accordion
-                key={index}
-                index={index}
-                title={accordion.title}
-                content={accordion.content}
-                isActive={activeIndex === index}
-                onToggle={() => setActiveIndex(activeIndex === index ? null : index)}
-              />
-            ))}
+                {accordionsData.map((accordion, index) => (
+                  <Accordion
+                    key={index}
+                    index={index}
+                    title={accordion.title}
+                    content={accordion.content}
+                    isActive={activeIndex === index}
+                    onToggle={() => setActiveIndex(activeIndex === index ? null : index)}
+                  />
+                ))}
               </div>
           </div>
         </section>

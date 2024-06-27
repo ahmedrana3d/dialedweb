@@ -154,6 +154,15 @@ const handleFullPageToggle = () => {
   setFullPageVisible(!fullPageVisible);
 };
 
+useEffect(() => {
+  // Fade in animation for the button when component mounts
+  gsap.fromTo(
+    ".one-button, .one-button-transparent",
+    { opacity: 0 },
+    { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
+  );
+}, []);
+
     return (
       <>
         <section className="one">
