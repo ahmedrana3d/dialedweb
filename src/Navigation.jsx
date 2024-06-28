@@ -2,15 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(CustomEase);
 
-const customEase = CustomEase.create("customEase", ".4,0,.1,1")
+const customEase = CustomEase.create("customEase", ".4,0,.1,1");
 
 export const Navigation = () => {
-
-    const location = useLocation();
+  const location = useLocation();
 
   // NAV OVERLAY
   const [menu, setMenu] = useState(false);
@@ -85,108 +84,125 @@ export const Navigation = () => {
     };
   }, [menu]);
 
+  useEffect(() => {
+    // Close the menu when the location changes
+    if (menu) {
+      setMenu(false);
+    }
+  }, [location.pathname]);
 
   const [navScrolled, setNavScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-        const scrollThreshold = 10;
-        if (window.scrollY > scrollThreshold) {
-            setNavScrolled(true);
-        } else {
-            setNavScrolled(false);
-        }
+      const scrollThreshold = 10;
+      if (window.scrollY > scrollThreshold) {
+        setNavScrolled(true);
+      } else {
+        setNavScrolled(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-        window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-}, []);
+  }, []);
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handleContactNavigate = () => {
-  navigate('/contact'); // Navigate to SectionBUYNOW
-};
+  const handleContactNavigate = () => {
+    if (location.pathname === "/contact") {
+      navigate("/");
+    } else {
+      navigate("/contact");
+    }
+  };
 
-    return (
-      <>
-        <div className="menu-container" >
-        <div className="menu ">
+  return (
+    <>
+      <div className="menu-container">
+        <div className="menu">
           <div key="menuContent" className="menuContent" ref={menuContentRef}>
             <div className="menuNav" ref={menuNavRef}>
-              <Link to="/" className="menu-text" >
-                <div className="menu-button" >
-                    <span className="menu-text" >HOME</span>
-                    <span className="menu-text" >HOME <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
+              <Link to="/" className="menu-text">
+                <div className="menu-button">
+                  <span className="menu-text">HOME</span>
+                  <span className="menu-text">
+                    HOME <i className="fa-solid fa-location-arrow menu-icon"></i>
+                  </span>
                 </div>
               </Link>
-              <div className="menu-button" >
-                <span className="menu-text" >PROJECTS</span>
-                <span className="menu-text" >PROJECTS <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
+              <div className="menu-button">
+                <span className="menu-text">PROJECTS</span>
+                <span className="menu-text">
+                  PROJECTS <i className="fa-solid fa-location-arrow menu-icon"></i>
+                </span>
               </div>
-              <div className="menu-button" >
-                <span className="menu-text" >LEARN</span>
-                <span className="menu-text" >LEARN <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
+              <div className="menu-button">
+                <span className="menu-text">LEARN</span>
+                <span className="menu-text">
+                  LEARN <i className="fa-solid fa-location-arrow menu-icon"></i>
+                </span>
               </div>
-              <Link to="/contact" className="menu-text" >  
-                <div className="menu-button" >
-                    <span className="menu-text" >GET IN TOUCH</span>
-                    <span className="menu-text" >GET IN TOUCH <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
+              <Link to="/contact" className="menu-text">
+                <div className="menu-button">
+                  <span className="menu-text">GET IN TOUCH</span>
+                  <span className="menu-text">
+                    GET IN TOUCH <i className="fa-solid fa-location-arrow menu-icon"></i>
+                  </span>
                 </div>
               </Link>
             </div>
-              <div ref={menuContainerRef} className="menuContainer">
-                <h1 className="menu-text">Book Your Consultation</h1>
-                <div className="inputContainer">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="emailinput"
-                  />
-                </div>
+            <div ref={menuContainerRef} className="menuContainer">
+              <h1 className="menu-text">Book Your Consultation</h1>
+              <div className="inputContainer">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="emailinput"
+                />
               </div>
+            </div>
             <div className="menuSocial" ref={menuSocialRef}>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-youtube"></i>
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
-          <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
-            <motion.button
-              className="navigation-left"
-              whileHover={{ scale: 1.075 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              onClick={() => {
-                setMenu(!menu);
-              }}
-            >
-              <div className="navigation-left-content" >
-                <span className="navigation-text" >MENU</span>
-                <span className="navigation-text" >MENU</span>
-              </div>
-            </motion.button>
-            <div className="navigation-center" >
-              <img src="/Keycap.png" className="navigation-image" alt="" />
-            </div>
-            <motion.button
-              className="navigation-right"
-              whileHover={{ scale: 1.075 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <div className="navigation-right-content" onClick={ handleContactNavigate } >
-                <span className="navigation-text" >GET IN TOUCH</span>
-                <span className="navigation-text" >GET IN TOUCH</span>
-              </div>
-            </motion.button>
+      <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
+        <motion.button
+          className="navigation-left"
+          whileHover={{ scale: 1.075 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          onClick={() => {
+            setMenu(!menu);
+          }}
+        >
+          <div className="navigation-left-content">
+            <span className="navigation-text">MENU</span>
+            <span className="navigation-text">MENU</span>
           </div>
-
-      </>
-    )
-}
+        </motion.button>
+        <div className="navigation-center">
+          <img src="/Keycap.png" className="navigation-image" alt="" />
+        </div>
+        <motion.button
+          className="navigation-right"
+          whileHover={{ scale: 1.075 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
+          <div className="navigation-right-content" onClick={handleContactNavigate}>
+            <span className="navigation-text">GET IN TOUCH</span>
+            <span className="navigation-text">GET IN TOUCH</span>
+          </div>
+        </motion.button>
+      </div>
+    </>
+  );
+};
