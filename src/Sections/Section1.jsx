@@ -154,6 +154,11 @@ const handleFullPageToggle = () => {
   setFullPageVisible(!fullPageVisible);
 };
 
+const [contactVisible, setContactVisible] = useState(false);
+const handleContactVisible = () => {
+  setContactVisible(!contactVisible);
+};
+
 useEffect(() => {
   // Fade in animation for the button when component mounts
   gsap.fromTo(
@@ -231,7 +236,7 @@ useEffect(() => {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <div className="navigation-right-content" >
+              <div className="navigation-right-content" onClick={handleContactVisible} >
                 <span className="navigation-text" >GET IN TOUCH</span>
                 <span className="navigation-text" >GET IN TOUCH</span>
               </div>
@@ -325,6 +330,32 @@ useEffect(() => {
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={handleFullPageToggle}
+            >
+              <div className="navigation-left-content" >
+                <span className="navigation-text" >CLOSE</span>
+                <span className="navigation-text" >CLOSE</span>
+              </div>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {contactVisible && (
+          <motion.div
+            className="contact-overlay"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+
+            <motion.button
+              className="navigation-left showreel-button"
+              whileHover={{ scale: 1.075 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              onClick={handleContactVisible}
             >
               <div className="navigation-left-content" >
                 <span className="navigation-text" >CLOSE</span>

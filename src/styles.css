@@ -70,6 +70,22 @@ section {
   display: none;
 }
 
+/* CONTACT OVERLAY */
+
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 250;
+  background-color: #04021750;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* TEXTS */
 
 .headline {
@@ -1012,6 +1028,7 @@ video {
   padding-bottom: 10%;
   justify-content: space-between;
   gap: 3vh;
+  pointer-events: none;
 }
 
 .why-us-container {

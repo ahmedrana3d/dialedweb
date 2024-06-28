@@ -90,7 +90,7 @@ export default function BalloonModel({ ...props }) {
       <group {...props} dispose={null}>
         <scene name="Scene 1">
         <group ref={balloon} name="Group" position={[4.5, 1, 0]}>
-            <group name="Balloon" position={[0, 0.5, 0]} scale={0.0135}>
+            <group name="Balloon" position={[0, 0.5, 0]} scale={0}>
               <mesh
                 name="Cord"
                 geometry={nodes.Cord.geometry}
