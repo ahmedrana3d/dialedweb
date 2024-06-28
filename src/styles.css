@@ -79,11 +79,147 @@ section {
   width: 100vw;
   height: 100vh;
   z-index: 250;
-  background-color: #04021750;
+  background-color: #040217;
   backdrop-filter: blur(10px);
   display: flex;
+}
+
+.contact-overlay-left {
+  display: flex;
+  flex-direction: column;
+  width: 37.5vw;
+  height: 100%;
+  padding: 2vw 5vw;
+}
+
+.contact-overlay-title {
+  font-size: 5vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #fcfeea;
+}
+
+.contact-overlay-left-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 2.5vw;
+  gap: 1vw;
+}
+
+.contact-person-box {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #fefeff50;
+  border-radius: 10px;
+  display: flex;
+  padding: 1.25vw;
+  gap: 1vw;
+  align-items: center;
+}
+
+.contact-person-image {
+  width: 4vw;
+  height: 4vw;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%; 
+}
+
+.contact-description-box {
+  display: flex;
+  width: 19.5vw;
+}
+
+.contact-overlay-description {
+  font-size: 0.95vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff75;
+  line-break: 125%;
+}
+
+.white-text {
+  color: #fefeff;
+}
+
+.contact-overlay-right {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  padding: 2vw;
+}
+
+.contact-options-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-option-1 {
+  width: 31%;
+  height: 4vw;
+  background-color: #fefeff20;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.25vw;
+  border-radius: 10px;
+}
+
+.option-icon {
+  font-size: 1.5vw;
+  color: #fefeff;
+}
+
+.option-text {
+  font-size: 0.85vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff75;
+  line-break: 125%;
+}
+
+.contact-phone {
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  padding: 1vw;
+  flex-direction: column;
+  background-color: #fefeff20;
+  border-radius: 10px;
+}
+
+.phone-text {
+  font-size: 1vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff;
+  line-break: 125%;
+}
+
+.contact-address {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding: 1vw;
+  flex-direction: column;
+  background-color: #fefeff20;
+  border-radius: 10px;
+}
+
+.contact-button {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
 }
 
 /* TEXTS */

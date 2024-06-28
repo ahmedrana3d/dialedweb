@@ -11,6 +11,7 @@ import { Fluid } from "@whatisjery/react-fluid-distortion";
 import Model from "../Model";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
+import Spline from '@splinetool/react-spline';
 
 gsap.registerPlugin(CustomEase);
 
@@ -349,17 +350,71 @@ useEffect(() => {
             exit={{ opacity: 0, scale: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
+            <div className="contact-overlay-left">
+              <h1 className="contact-overlay-title" >Contact</h1>
+              <div className="contact-overlay-left-box">
 
+                <div className="contact-person-box">
+                  <div className="contact-person-image idan" />
+                  <div className="contact-description-box">
+                    <p className="contact-overlay-description" >Would you like to get in touch with the management directly? <span className="white-text" > Then send me an email to support@dialedworldwide.com</span></p>
+                  </div>
+                </div>
+
+                <div className="contact-person-box">
+                  <div className="contact-person-image lorenzo" />
+                  <div className="contact-description-box">
+                    <p className="contact-overlay-description" >Would you like to get in touch with the management directly? <span className="white-text" > Then send me an email to support@dialedworldwide.com</span></p>
+                  </div>
+                </div>
+
+                <div className="contact-options-box">
+                  <div className="contact-option-1">
+                    <i class="fa-solid fa-phone option-icon"></i>
+                    <p className="option-text" >Call</p>
+                  </div>
+                  <div className="contact-option-1">
+                    <i class="fa-solid fa-envelope option-icon"></i>
+                    <p className="option-text email" >Call</p>
+                  </div>
+                  <div className="contact-option-1">
+                    <i class="fa-solid fa-location-arrow option-icon"></i>
+                    <p className="option-text" >Route</p>
+                  </div>
+                </div>
+
+                <div className="contact-phone">
+                  <p className="option-text" >Phone</p>
+                  <p className="phone-text" >+41 52 212 30 71</p>
+                </div>
+
+                <div className="contact-phone">
+                  <p className="option-text" >Email</p>
+                  <p className="phone-text" >support@dialedworldwide.com</p>
+                </div>
+
+                <div className="contact-address">
+                  <p className="option-text" >Address</p>
+                  <p className="phone-text" >DialedWEB</p>
+                  <p className="phone-text" >Address</p>
+                  <p className="phone-text" >Address</p>
+                </div>
+
+              </div>
+            </div>
+            <div className="contact-overlay-right">
+              <Spline scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
+            </div>
             <motion.button
-              className="navigation-left showreel-button"
+              className="navigation-left contact-button"
               whileHover={{ scale: 1.075 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={handleContactVisible}
             >
               <div className="navigation-left-content" >
-                <span className="navigation-text" >CLOSE</span>
-                <span className="navigation-text" >CLOSE</span>
+                <span className="navigation-text" ><i class="fa-solid fa-x"></i></span>
+                <span className="navigation-text" ><i class="fa-solid fa-x"></i></span>
               </div>
             </motion.button>
           </motion.div>
