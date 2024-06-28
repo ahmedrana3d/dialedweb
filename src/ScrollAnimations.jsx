@@ -127,7 +127,7 @@ const useAnimateTextDelay = (textSelector) => {
           {
             rotationX: 0,
             opacity: 1,
-            delay: 0.85,
+            delay: 0.6,
             duration: 1.25,
             ease: 'back.out',
             scrollTrigger: {
@@ -141,7 +141,7 @@ const useAnimateTextDelay = (textSelector) => {
         gsap.from(chars, {
           yPercent: 50,
           stagger: 0.03,
-          delay: 0.85,
+          delay: 0.6,
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,

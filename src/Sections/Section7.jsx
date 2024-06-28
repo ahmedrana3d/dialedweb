@@ -18,7 +18,7 @@ export const Section7 = () => {
     },
     {
       title: "Development",
-      content: "In the development phase, our team of experts use the detailed blueprints and designs - beginning the process of bringing them to life. Using cutting-edge technologies our professionals work to write clean & efficient code to build robust and complex products. We focus on creating a seamless user experience and ensure that the platform is secure, fast, and reliable. Every feature is developed with precision to meet your specific requirements, setting the foundation for successful implementation."
+      content: "In the development phase, our team of experts use the detailed blueprints and designs - beginning the process of bringing them to life. Using cutting-edge technologies our professionals work to write clean & efficient code to build robust and complex products. We focus on creating a seamless user experience and ensure that the platform is secure, fast, and reliable. Every feature is developed with precision to meet your specific requirements."
     },
     {
       title: "Implementation",

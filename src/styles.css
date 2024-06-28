@@ -222,9 +222,9 @@ section {
 }
 
 .small-text-accordion {
-  font-family: 'EB Garamond', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   line-height: 115%;
   padding-left: 0px;
   padding-right: 0px;
@@ -1142,7 +1142,7 @@ video {
 .carousel-image {
   position: relative;
   width: 100%;
-  height: 75%;
+  height: 60vh;
   background-color: #fefeff10;
   align-self: center;
   border-radius: 50px;
@@ -1152,6 +1152,7 @@ video {
   display: flex;
   flex-direction: column;
   padding: 2vw;
+  justify-content: space-evenly;
   cursor: pointer;
   gap: 2vw;
 }
@@ -1162,7 +1163,7 @@ video {
 
 .carousel-person-image {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   background-size: cover;
   background-position: center; 
   border-radius: 25px; 
@@ -1199,6 +1200,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 5vh;
 }
 
 .carousel-title {
