@@ -189,7 +189,7 @@ useEffect(() => {
                 <span className="menu-text" >LEARN</span>
                 <span className="menu-text" >LEARN <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
-              <div className="menu-button" >
+              <div className="menu-button"  onClick={handleContactVisible} >
                 <span className="menu-text" >GET IN TOUCH</span>
                 <span className="menu-text" >GET IN TOUCH <i class="fa-solid fa-location-arrow menu-icon"></i> </span>
               </div>
@@ -234,10 +234,10 @@ useEffect(() => {
             <motion.button
               className="navigation-right"
               whileHover={{ scale: 1.075 }}
-              whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              onClick={handleContactVisible}
             >
-              <div className="navigation-right-content" onClick={handleContactVisible} >
+              <div className="navigation-right-content" >
                 <span className="navigation-text" >GET IN TOUCH</span>
                 <span className="navigation-text" >GET IN TOUCH</span>
               </div>
@@ -251,7 +251,6 @@ useEffect(() => {
                 <motion.button
                   className="one-button"
                   whileHover={{ scale: 1.075 }}
-                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={handleFullPageToggle}
                 >
@@ -266,7 +265,6 @@ useEffect(() => {
                 <motion.button
                   className="one-button-transparent"
                   whileHover={{ scale: 1.075 }}
-                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <div className="navigation-left-content" >
@@ -328,7 +326,6 @@ useEffect(() => {
             <motion.button
               className="navigation-left showreel-button"
               whileHover={{ scale: 1.075 }}
-              whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={handleFullPageToggle}
             >
@@ -408,7 +405,6 @@ useEffect(() => {
             <motion.button
               className="navigation-left contact-button"
               whileHover={{ scale: 1.075 }}
-              whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               onClick={handleContactVisible}
             >

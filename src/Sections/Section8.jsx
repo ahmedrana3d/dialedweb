@@ -18,7 +18,6 @@ export const Section8 = () => {
                 <motion.button
                   className="one-button"
                   whileHover={{ scale: 1.075 }}
-                  whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
                   <div className="navigation-left-content" >
