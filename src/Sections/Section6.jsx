@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
-import { useAnimateTextDelay } from "../ScrollAnimations";
+import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 
 export const Section6 = () => {
 
-  useAnimateTextDelay(".six-title");
+  useAnimateText(".six-title")
 
     return (
       <>

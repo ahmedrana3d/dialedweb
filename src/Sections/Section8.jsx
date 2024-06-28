@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import Accordion from "../Accordion";
 import { motion, AnimatePresence } from "framer-motion";
-import { useAnimateTextDelay } from "../ScrollAnimations";
+import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 
 export const Section8 = () => {
 
-  useAnimateTextDelay(".eight-main-title")
+  useAnimateText(".eight-main-title")
 
     return (
       <>

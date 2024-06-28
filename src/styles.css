@@ -26,11 +26,10 @@
 html,
 body,
 #root {
-  width: 100%;
+  width: 99.9%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -987,7 +986,7 @@ video {
 }
 
 .four {
-  height: 275vh;
+  height: 325vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1004,7 +1003,7 @@ video {
 
 .four-content {
   width: 100%;
-  height: 275vh;
+  height: 305vh;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -1018,7 +1017,7 @@ video {
 
 .why-us-container {
   width: 100%;
-  height: 275vh;
+  height: 305vh;
   display: flex;
   flex-direction: column;
   margin-top: 5vw;
@@ -1094,90 +1093,103 @@ video {
 
 /* SECTION FIVE */
 
-.carousel {
+.five-horizontal {
+  position: relative;
+  height: 250vh;
+}
+
+.five-horizontal-sticky {
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-direction: row;
-  gap: 2.5vw;
-  background-color: transparent;
-  height: 125vh;
+  height: 100vh;
   align-items: center;
-  opacity: 1;
+  overflow: hidden;
   z-index: 3;
 }
 
-.carousel-content {
+.five-horizontal-div {
+  display: flex;
+  gap: 4vw;
+  z-index: auto;
+}
+
+.five-horizontal-card {
+  position: relative;
+  height: 30vw;
   width: 30vw;
-  height: 80vh;
-  background-color: transparent;
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-  z-index: 13;
-}
-
-.carousel-text-start {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 12%;
-  background-color: transparent;
-  height: 65%;
-  align-self: center;
-  justify-content: center;
-}
-
-.carousel-button {
-  width: 12.5vw;
-  height: 4vw;
-  display: flex;
-  background-color: transparent;
-  border-radius: 50px;
-  border: #bb87fd solid 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.carousel-image {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background-color: #fefeff10;
-  align-self: center;
-  border-radius: 50px;
-  border: 2px solid #fefeff00;
-  pointer-events: all;
-  transition: 0.5s ease;
-  display: flex;
-  flex-direction: column;
   padding: 2vw;
-  justify-content: space-evenly;
-  cursor: pointer;
-  gap: 2vw;
+  overflow: hidden;
+  background-color: #fefeff10;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: 0.5s ease;
+  z-index: 4;
 }
 
-.carousel-image:hover {
+.five-horizontal-card:hover {
   border: 2px solid #AAA3FF;
 }
 
-.carousel-person-image {
+.five-horizontal-card-first {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  padding: 2vw;
+  overflow: hidden;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.five-card-text-image {
+  position: relative;
+  width: 20vw;
+}
+
+.five-card-image {
   width: 100%;
-  height: 40vh;
+  height: 23vw;
   background-size: cover;
   background-position: center; 
   border-radius: 25px; 
 }
 
-.short {
-  width: 30vw;
-  align-items: center;
-  justify-content: center;
+.five-card-text-box {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 3vw;
+  align-items: center;
 }
 
-.carousel-text-image {
-  width: 75%;
+.five-card-title {
+  margin: 0;
+  font-family: "SF", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.25vw;
+  color: #fefeff;
+}
+
+.five-card-description {
+  margin: 0;
+  font-family: "GTAlpina", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25vw;
+  color: #AAA3FF;
+}
+
+.five-card-border {
+  width: 1px;
+  height: 2vw;
+  background-color: #fefeff;
 }
 
 .idan {
@@ -1196,50 +1208,6 @@ video {
   background-image: url('/gab.PNG');
 }
 
-.carousel-text-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5vh;
-}
-
-.carousel-title {
-  margin: 0;
-  font-family: "SF", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  font-size: 1.25vw;
-  color: #fefeff;
-}
-
-.carousel-description {
-  margin: 0;
-  font-family: "GTAlpina", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 1.25vw;
-  color: #AAA3FF;
-}
-
-.carousel-border {
-  width: 1px;
-  height: 100%;
-  background-color: #fefeff;
-}
-
-
-.carousel-text-end {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 0%;
-  background-color: transparent;
-  height: 65%;
-  width: 100%;
-  align-self: center;
-  background-color: transparent;
-  align-items: center;
-}
 /* SECTION SIX */
 
 .six {
@@ -1249,6 +1217,7 @@ video {
   position: relative;
   z-index: auto;
   justify-content: center;
+  margin-top: 20vh;
 }
 
 .six-content {
@@ -1356,8 +1325,8 @@ video {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 20vh;
   z-index: auto;
+  margin-top: 20vh;
 }
 
 .seven-content {
@@ -1382,7 +1351,6 @@ video {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
   z-index: auto;
   align-items: center;
   justify-content: center;
@@ -1486,12 +1454,12 @@ video {
 /* SMOOTH SCROLLING */
 
 
-html.lenis {
+html.lenis, html.lenis body {
   height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto;
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -1502,10 +1470,9 @@ html.lenis {
   overflow: hidden;
 }
 
-.lenis.lenis-scrolling iframe {
+.lenis.lenis-smooth iframe {
   pointer-events: none;
 }
-
 
 /* MOBILE STYLING */
 

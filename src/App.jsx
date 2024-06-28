@@ -44,25 +44,20 @@ function App() {
   const [lenis, setLenis] = useState(null);
 
   useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      mouseMultiplier: 0.5,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-    });
 
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+    
     function raf(time) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
+      lenis.raf(time)
+      requestAnimationFrame(raf)
     }
-
-    requestAnimationFrame(raf);
-    setLenis(lenisInstance);
+    
+    requestAnimationFrame(raf)
+    setLenis(lenis);
 
     return () => {
       lenisInstance.destroy();

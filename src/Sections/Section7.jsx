@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import Accordion from "../Accordion";
-import { useAnimateTextDelay } from "../ScrollAnimations";
+import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 
 export const Section7 = () => {
 
@@ -26,7 +26,7 @@ export const Section7 = () => {
     }
   ];
 
-  useAnimateTextDelay(".seven-titles")
+  useAnimateText(".seven-titles")
 
     return (
       <>
