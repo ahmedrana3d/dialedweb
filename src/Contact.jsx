@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Spline from '@splinetool/react-spline';
 
@@ -61,7 +61,9 @@ export const Contact = () => {
               </div>
             </div>
             <div className="contact-overlay-right">
-              <Spline scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
+                <Suspense >
+                    <Spline loading="eager" scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
+              </Suspense>
             </div>
         </div>
 

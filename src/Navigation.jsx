@@ -189,9 +189,11 @@ export const Navigation = () => {
             <span className="navigation-text">MENU</span>
           </div>
         </motion.button>
-        <div className="navigation-center">
-          <img src="/Keycap.png" className="navigation-image" alt="" />
-        </div>
+        <Link to="/" className="navigation-center" >
+            <div className="navigation-center">
+                <img src="/Keycap.png" className="navigation-image" alt="" />
+            </div>
+        </Link>
         <motion.button
           className="navigation-right"
           whileHover={{ scale: 1.075 }}
