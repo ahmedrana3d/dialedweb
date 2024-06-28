@@ -157,7 +157,7 @@ const handleFullPageToggle = () => {
 useEffect(() => {
   // Fade in animation for the button when component mounts
   gsap.fromTo(
-    ".one-button, .one-button-transparent",
+    ".one-button, .one-button-transparent, .one-description",
     { opacity: 0 },
     { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
   );
@@ -240,6 +240,7 @@ useEffect(() => {
           <div className="one-content" >
             <div className="one-content-left">
               <h1 className="headline anim" >Crafting Digital <br /> <span className="headline-purple" >Masterpieces</span></h1>
+              <p className="one-description" >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
               <div className="one-content-buttons" >
                 <motion.button
                   className="one-button"

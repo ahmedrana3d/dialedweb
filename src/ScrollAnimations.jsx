@@ -105,6 +105,66 @@ const useAnimateText = (textSelector) => {
   }, [textSelector]);
 };
 
+const useAnimateTextDelay = (textSelector) => {
+  useEffect(() => {
+    function animateTextDelay(selector) {
+      document.querySelectorAll(selector).forEach((element) => {
+        gsap.set(element, {
+          transformPerspective: 500,
+          transformOrigin: 'center bottom',
+          rotationX: 70,
+        });
+
+        let mySplitText = new SplitText(element, { type: 'chars' });
+        let chars = mySplitText.chars;
+
+        gsap.fromTo(
+          element,
+          {
+            rotationX: 70,
+            opacity: 0,
+          },
+          {
+            rotationX: 0,
+            opacity: 1,
+            delay: 0.85,
+            duration: 1.25,
+            ease: 'back.out',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 50%',
+              toggleActions: 'play none none reset',
+            },
+          }
+        );
+
+        gsap.from(chars, {
+          yPercent: 50,
+          stagger: 0.03,
+          delay: 0.85,
+          opacity: 0,
+          ease: 'power1.out',
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 50%',
+            toggleActions: 'play none none reset',
+          },
+        });
+
+      });
+    }
+
+    // Apply animation to all elements with the given selector
+    animateTextDelay(textSelector);
+
+    // Cleanup function to remove ScrollTriggers on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [textSelector]);
+};
+
 const useSmallTextAnimation = (textSelector) => {
   useEffect(() => {
     function smallTextAnimation(selector) {
@@ -401,4 +461,4 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
 
 
 
-export { useSmallTextAnimation, useAnimateText, RotatingHeader, useTextEffect, useImageAnimation, circleAnimation };
+export { useSmallTextAnimation, useAnimateText, useAnimateTextDelay, RotatingHeader, useTextEffect, useImageAnimation, circleAnimation };

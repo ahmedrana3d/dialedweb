@@ -49,7 +49,15 @@ export const Section5 = () => {
             </div>
         </div>
 
-        <div className="carousel-content short" >
+        <div className="carousel-content" >
+            <div className="carousel-image" >
+              <div className="carousel-person-image gabriella" />
+              <div className="carousel-text-row">
+                <h1 className="carousel-title" >Social Media & <br /> Public Relations</h1>
+                <div className="carousel-border" />
+                <h1 className="carousel-description" >Gabriella Brookfield</h1>
+              </div>
+            </div>
         </div>
 
         {/* <div className="carousel-content" >

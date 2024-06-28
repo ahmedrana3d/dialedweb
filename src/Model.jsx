@@ -74,8 +74,8 @@ export default function Model(props) {
       })
 
       .to(".three-content-box", {
-        width: "70vw",
-        height: "60vh",
+        width: "90vw",
+        height: "65vh",
         opacity: 1,
           scrollTrigger: {
             trigger: ".three-content-box",
