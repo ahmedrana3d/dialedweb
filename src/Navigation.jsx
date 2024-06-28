@@ -196,8 +196,9 @@ export const Navigation = () => {
           className="navigation-right"
           whileHover={{ scale: 1.075 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          onClick={handleContactNavigate}
         >
-          <div className="navigation-right-content" onClick={handleContactNavigate}>
+          <div className="navigation-right-content">
             <span className="navigation-text">GET IN TOUCH</span>
             <span className="navigation-text">GET IN TOUCH</span>
           </div>
