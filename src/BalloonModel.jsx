@@ -23,7 +23,7 @@ export default function BalloonModel({ ...props }) {
           y: -3,
           z: 0,
           scrollTrigger: {
-            trigger: ".balloonStart",
+            trigger: ".four-content",
             start: "top center",
             end: "bottom top",
             scrub: true,
@@ -48,7 +48,7 @@ export default function BalloonModel({ ...props }) {
         .to(balloon.current.rotation, {
           y: Math.PI * 3,
           scrollTrigger: {
-            trigger: ".balloonStart",
+            trigger: ".four-content",
             start: "top bottom",
             end: "bottom 10%",
             scrub: true,
