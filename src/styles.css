@@ -739,14 +739,14 @@ input::placeholder {
 }
 
 .grey {
-  color: #fefeff75;
+  color: #fefeff;
 }
 
 .one-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
-  color: #fefeff;
+  color: #fefeff75;
   line-height: 145%;
   margin: 0;
 }
