@@ -10,18 +10,11 @@ const Contact = () => {
 
         <div className="contact-overlay" >
             <div className="contact-overlay-left">
-              <h1 className="contact-overlay-title" >Contact</h1>
+              <h1 className="contact-overlay-title" >Get in touch</h1>
               <div className="contact-overlay-left-box">
 
                 <div className="contact-person-box">
-                  <div className="contact-person-image idan" />
-                  <div className="contact-description-box">
-                    <p className="contact-overlay-description" >Would you like to get in touch with the management directly? <span className="white-text" > Then send me an email to support@dialedworldwide.com</span></p>
-                  </div>
-                </div>
-
-                <div className="contact-person-box">
-                  <div className="contact-person-image lorenzo" />
+                  <div className="contact-person-image gabriella" />
                   <div className="contact-description-box">
                     <p className="contact-overlay-description" >Would you like to get in touch with the management directly? <span className="white-text" > Then send me an email to support@dialedworldwide.com</span></p>
                   </div>

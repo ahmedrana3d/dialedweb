@@ -118,7 +118,7 @@ section {
 }
 
 .contact-overlay-title {
-  font-size: 5vw;
+  font-size: 4vw;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   margin: 0;
@@ -1688,6 +1688,405 @@ html.lenis, html.lenis body {
     z-index: 20;
     background-color: transparent;
   }
+
+  /* TEXTS */
+
+.headline {
+  font-size: 3rem;
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+  color: #fcfeea;
+  font-style: italic;
+}
+
+.headline-purple {
+  font-family: 'GT Alpina Trial', sans-serif;
+  color:#AAA3FF;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.headline-purple-big {
+  font-family: 'GT Alpina Trial', sans-serif;
+  color: #AAA3FF;
+  font-weight: 400;
+  font-size: 5rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.headline-blue {
+  font-family: 'GT Alpina Trial', sans-serif;
+  color:#01f1ff;
+  font-weight: 400;
+  font-size: 5rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fefeff;
+  line-height: 145%;
+}
+
+  /* NAVIGATION BAR */
+
+.navigation-left {
+  width: 2rem;
+  height: 2rem;
+}
+
+.navigation-right {
+  width: 2rem;
+  height: 2rem;
+}
+
+.navigation-image {
+  height: 50%;
+}
+
+.fa-bars, .fa-envelope {
+  font-size: 1rem;
+}
+
+/* NAVIGATION OVERLAY */
+
+.menu {
+  width: 65vw;
+  gap: 5vh;
+  border-radius: 15px;
+}
+
+.menuNav {
+  border-radius: 15px;
+  padding: 4vw 2vw;
+  gap: 2vw;
+}
+
+.menuContainer {
+  border-radius: 15px;
+  padding: 4vw 3vw;
+  padding-bottom: 3vw;
+  gap: 4vw;
+}
+
+.emailinput {
+  padding: 2vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 15px;
+}
+
+.menuSocial {
+  border-radius: 15px;
+  padding: 4vw 2vw;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  padding: 1vw;
+  border-radius: 15px;
+}
+
+.menuContent {
+  gap: 5vh;
+  height: 100%;
+}
+
+.menu-text {
+  font-size: 2rem;
+}
+
+.menu-button {
+  padding: 0.25vw 1vw;
+  height: fit-content;
+}
+
+.menu-button:hover {
+  border-radius: 15px;
+}
+
+
+.menu-button:hover span:nth-child(1) {
+  transform: translateY(0%);
+}
+
+.menu-button:hover span:nth-child(2) {
+  transform: translateY(0%);
+}
+
+/* SECTION ONE */
+
+.one-content {
+  width: 100%;
+  height: 90vh;
+  flex-direction: column;
+  margin: 10vh 0%;
+}
+
+.one-content-left {
+  height: 100%;
+  width: 90%;
+  margin-left: 5%;
+  gap: 3vh;
+}
+
+.one-description {
+  font-size: 1rem;
+  line-height: 125%;
+  width: 90%;
+}
+
+.one-content-right {
+  height: 100%;
+  width: 100%;
+}
+
+.one-content-buttons {
+  gap: 3vw;
+}
+
+.one-button {
+  height: 2.25rem;
+  padding: 0 2vw;
+  padding-left: 2vw;
+  gap: 1vw;
+}
+
+.one-button-transparent {
+  height: 2.25rem;
+  padding: 0 2vw;
+  gap: 1vw;
+  border: 1px solid #fcfeea50;
+}
+
+
+.navigation-arrow-box {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navigation-arrow-box-blue {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.one-content-logos {
+  bottom: 7.5vh;
+  z-index: 100;
+}
+
+.scroller__inner {
+  gap: 15vw;
+}
+
+.scroller__inner img {
+  height: 3vh;
+}
+
+.showreel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 250;
+  background-color: #04021750;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showreel-video {
+  position: relative;
+  width: 70%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.showreel-button {
+  position: absolute;
+  bottom: 12vh;
+}
+
+.navigation-text {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.fa-solid {
+  font-size: 0.75rem;
+  color: #040217;
+}
+
+/* CONTACT OVERLAY */
+
+.contact-overlay {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  z-index: 1;
+  background-color: #040217;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.contact-overlay-left {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
+  padding: 0vw 5vw;
+}
+
+.contact-overlay-title {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #fcfeea;
+}
+
+.contact-overlay-left-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 2.5vw;
+  gap: 4vw;
+}
+
+.contact-person-box {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #fefeff50;
+  border-radius: 10px;
+  display: flex;
+  padding: 4vw;
+  gap: 4vw;
+  align-items: center;
+}
+
+.contact-person-image {
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%; 
+}
+
+.contact-description-box {
+  display: flex;
+  width: 70%;
+}
+
+.contact-overlay-description {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff75;
+  line-break: 125%;
+}
+
+.white-text {
+  color: #fefeff;
+}
+
+.contact-overlay-right {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  padding: 2vw;
+}
+
+.contact-options-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-option-1 {
+  width: 31%;
+  height: 4rem;
+  background-color: #fefeff20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25vw;
+  border-radius: 10px;
+}
+
+.option-icon {
+  font-size: 1.25rem;
+  color: #fefeff;
+}
+
+.option-text {
+  font-size: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff75;
+  line-break: 125%;
+}
+
+.contact-phone {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  padding: 4vw;
+  flex-direction: column;
+  background-color: #fefeff20;
+  border-radius: 10px;
+}
+
+.phone-text {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fefeff;
+  line-break: 125%;
+}
+
+.contact-address {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding: 4vw;
+  flex-direction: column;
+  background-color: #fefeff20;
+  border-radius: 10px;
+}
+
+.contact-button {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+}
+
 
 
 

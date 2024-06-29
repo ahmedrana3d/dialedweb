@@ -57,6 +57,8 @@ useEffect(() => {
   );
 }, []);
 
+const isMobile = window.innerWidth <= 768;
+
     return (
       <>
         <section className="one">
@@ -147,8 +149,15 @@ useEffect(() => {
               onClick={handleFullPageToggle}
             >
               <div className="navigation-left-content" >
-                <span className="navigation-text" >CLOSE</span>
-                <span className="navigation-text" >CLOSE</span>
+
+                {isMobile ? (
+                  <i class="fa-solid fa-x"></i>
+                ) : (
+                <>
+                  <span className="navigation-text" >CLOSE</span>
+                  <span className="navigation-text" >CLOSE</span>
+                </>
+                )}
               </div>
             </motion.button>
           </motion.div>

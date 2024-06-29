@@ -120,6 +120,8 @@ export const Navigation = () => {
     }
   };
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <>
       <div className="menu-container">
@@ -129,29 +131,21 @@ export const Navigation = () => {
               <Link to="/" className="menu-text">
                 <div className="menu-button">
                   <span className="menu-text">HOME</span>
-                  <span className="menu-text">
-                    HOME <i className="fa-solid fa-location-arrow menu-icon"></i>
-                  </span>
+                  <span className="menu-text">HOME</span>
                 </div>
               </Link>
               <div className="menu-button">
                 <span className="menu-text">PROJECTS</span>
-                <span className="menu-text">
-                  PROJECTS <i className="fa-solid fa-location-arrow menu-icon"></i>
-                </span>
+                <span className="menu-text">PROJECTS</span>
               </div>
               <div className="menu-button">
                 <span className="menu-text">LEARN</span>
-                <span className="menu-text">
-                  LEARN <i className="fa-solid fa-location-arrow menu-icon"></i>
-                </span>
+                <span className="menu-text">LEARN</span>
               </div>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button">
                   <span className="menu-text">GET IN TOUCH</span>
-                  <span className="menu-text">
-                    GET IN TOUCH <i className="fa-solid fa-location-arrow menu-icon"></i>
-                  </span>
+                  <span className="menu-text">GET IN TOUCH</span>
                 </div>
               </Link>
             </div>
@@ -185,8 +179,14 @@ export const Navigation = () => {
           }}
         >
           <div className="navigation-left-content">
-            <span className="navigation-text">MENU</span>
-            <span className="navigation-text">MENU</span>
+            {isMobile ? (
+              <i className="fa-solid fa-bars"></i>
+            ) : (
+              <>
+                <span className="navigation-text">MENU</span>
+                <span className="navigation-text">MENU</span>
+              </>
+            )}
           </div>
         </motion.button>
         <Link to="/" className="navigation-center" >
@@ -201,8 +201,14 @@ export const Navigation = () => {
           onClick={handleContactNavigate}
         >
           <div className="navigation-right-content">
-            <span className="navigation-text">GET IN TOUCH</span>
-            <span className="navigation-text">GET IN TOUCH</span>
+            {isMobile ? (
+              <i class="fa-solid fa-envelope"></i>
+            ) : (
+              <>
+                <span className="navigation-text">GET IN TOUCH</span>
+                <span className="navigation-text">GET IN TOUCH</span>
+              </>
+            )}
           </div>
         </motion.button>
       </div>

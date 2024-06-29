@@ -110,10 +110,12 @@ export default function Model(props) {
     
   }, [])
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <>
     <OrbitControls target={ [ 0, 0, 0 ] } ref={controlsRef} minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
-    <group position={ [ -1, 0, 0 ] } ref={group} {...props} dispose={null}>
+    <group position={ [ isMobile ? 0 : -1, 0, 0 ] } ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group ref={laptop} name="Macbook" rotation={ [ Math.PI * 0.05,  Math.PI * -0.1, 0 ] } position={[0, -0.860394 , 0]} scale={0.14}>
           <mesh
@@ -322,7 +324,7 @@ export default function Model(props) {
               receiveShadow
               geometry={nodes.PlainMesh.geometry}
               material={materials.red}
-              position={[-0.001, -0.062, -1.912]}
+              position={[-0.001, 0, -1.912]}
               rotation={[0, Math.PI * 1, 0]}
               scale={[2.507, 2.507, 1.553]}
             >
