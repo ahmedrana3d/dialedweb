@@ -81,19 +81,6 @@ export default function Model(props) {
           },
       })
 
-      // .to(".carousel-content", {
-      //   ease: "none",
-      //   x: () => -(cont.scrollWidth - window.innerWidth),
-      //   scrollTrigger: {
-      //     trigger: cont,
-      //     pin: cont,
-      //     start: "center center",
-      //     end: () => "+=" + (cont.scrollWidth - window.innerWidth),
-      //     scrub: true,
-      //     invalidateOnRefresh: true,
-      //   }
-      // })
-
     const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
 
     let masterTl = gsap.timeline({repeat: -1}).pause();

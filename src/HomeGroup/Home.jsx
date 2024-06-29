@@ -48,8 +48,8 @@ export default transition(Home);
 function Rig() {
     useFrame((state, delta) => {
       // Calculate the target camera position based on the pointer's x and y position
-      const targetX = state.pointer.x * 0.25; // Adjust this multiplier as needed for the desired horizontal movement
-      const targetY = state.pointer.y * 0.25;
+      const targetX = state.pointer.x * 0.15; // Adjust this multiplier as needed for the desired horizontal movement
+      const targetY = state.pointer.y * 0.15;
       const targetZ = 8 + Math.atan(state.pointer.x * 2);
     
       // Smoothly move the camera to the target position

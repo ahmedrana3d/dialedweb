@@ -46,12 +46,51 @@ export function Sphere(props) {
       })
 
       .to(sphereRef.current.scale, {
+        x: 0,
+        y: 0,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top center",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(sphereRef.current.position, {
+        x: -7,
+        y: 5,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(sphereRef.current.scale, {
         x: 1,
         y: 1,
         z: 1,
         scrollTrigger: {
           trigger: ".eight",
           start: "top center",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(sphereRef.current.position, {
+        x: 5,
+        y: -5,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".four",
+          start: "top bottom",
           end: "bottom 100%",
           scrub: true,
           immediateRender: false,
@@ -71,6 +110,31 @@ export function Sphere(props) {
         },
       })
 
+      .to(".three-content-box", {
+        width: "90vw",
+        height: "65vh",
+        opacity: 1,
+          scrollTrigger: {
+            trigger: ".three-content-box",
+            start: "top bottom",
+            end: "center center",
+            scrub: true,
+            immediateRender: false,
+          },
+      })
+
+    const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
+
+    let masterTl = gsap.timeline({repeat: -1}).pause();
+    
+    words.forEach(word => {
+      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1});
+      tl.to('.typewriter-text', {duration: 1, text: word});
+      masterTl.add(tl);
+    });
+    
+    masterTl.play();
+
     })
     
   }, [])
@@ -83,7 +147,7 @@ export function Sphere(props) {
           receiveShadow
           geometry={nodes.Sphere.geometry}
         >
-            <meshStandardMaterial metalness={1} roughness={ 1 } color={ "#dcd7ff" }  />
+            <meshStandardMaterial metalness={1} roughness={ 0.9 } color={ "#dcd7ff" }  />
         </mesh>
       </group>
     </group>
