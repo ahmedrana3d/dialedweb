@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import Lenis from "@studio-freight/lenis";
 import { Navigation } from "./Navigation";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Contact } from "./Contact";
-import { Home } from "./HomeGroup/Home";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./HomeGroup/Home"
+import Contact from "./Contact"
+import { AnimatePresence } from "framer-motion";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -71,22 +72,24 @@ function App() {
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
-  }, []);
+  }, [])
+
+  const location = useLocation()
 
   return (
-    <Router>
       <>
         <LoadingScreen onLoaded={handleLoaded} />
 
         <Navigation />
 
-        <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/contact" element={ <Contact /> } />
-        </Routes>
+        <AnimatePresence mode="wait" >
+          <Routes location={location} key={location.pathname} >
+            <Route index element={ <Home /> } />
+            <Route path="/contact" element={ <Contact /> } />
+          </Routes>
+        </AnimatePresence>
 
       </>
-      </Router>
   );
 }
 

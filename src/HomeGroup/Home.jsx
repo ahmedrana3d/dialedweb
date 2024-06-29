@@ -12,8 +12,9 @@ import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { Sphere } from "../Sphere";
 import { easing } from "maath"
+import transition from "../Transition";
 
-export const Home = () => {
+const Home = () => {
 
 
     return (
@@ -41,6 +42,8 @@ export const Home = () => {
       </>
     )
 }
+
+export default transition(Home);
 
 function Rig() {
     useFrame((state, delta) => {

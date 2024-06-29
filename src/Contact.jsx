@@ -1,8 +1,9 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Spline from '@splinetool/react-spline';
+import transition from "./Transition";
 
-export const Contact = () => {
+const Contact = () => {
 
     return (
       <>
@@ -70,3 +71,5 @@ export const Contact = () => {
       </>
     )
 }
+
+export default transition(Contact);
