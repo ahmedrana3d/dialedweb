@@ -77,7 +77,7 @@ export function Sphere(props) {
 
   return (
     <group ref={sphereRef} position={ [ 5, -5, 0 ] } {...props} scale={0} dispose={null}>
-      <group scale={0.0075}>
+      <group scale={0.0065}>
         <mesh
           castShadow
           receiveShadow
