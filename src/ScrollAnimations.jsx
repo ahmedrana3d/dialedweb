@@ -283,7 +283,7 @@ const useTextEffect = (textSelector) => {
             opacity: 1,
             duration: 1.25,
             ease: 'back.out',
-            delay: 1.25,
+            delay: 0.75,
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
@@ -302,7 +302,7 @@ const useTextEffect = (textSelector) => {
           opacity: 0,
           ease: 'power1.out',
           duration: 0.5,
-          delay: 1.25,
+          delay: 0.75,
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',

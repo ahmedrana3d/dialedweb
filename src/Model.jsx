@@ -41,12 +41,7 @@ export default function Model(props) {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      cameraLoads();
-    }, 800);
-
-    // Cleanup the timer in case the component unmounts
-    return () => clearTimeout(timer);
+    cameraLoads();
   }, []);
 
   useLayoutEffect(() => {
