@@ -24,6 +24,32 @@ export function Sphere(props) {
         y: 1,
         z: 1,
         scrollTrigger: {
+          trigger: ".one",
+          start: "top center",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(sphereRef.current.position, {
+        x: 0,
+        y: 0,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".one",
+          start: "top 60%",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(sphereRef.current.scale, {
+        x: 1,
+        y: 1,
+        z: 1,
+        scrollTrigger: {
           trigger: ".eight",
           start: "top center",
           end: "bottom 100%",

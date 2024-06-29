@@ -64,7 +64,7 @@ const isMobile = window.innerWidth <= 768;
         <section className="one">
           <div className="one-content" >
             <div className="one-content-left">
-              <h1 className="headline anim" >Crafting Digital <br /> <span className="headline-purple" >Masterpieces</span></h1>
+              <h1 className="headline anim grey" >Crafting Digital <br /> <span className="headline-purple grey" >Masterpieces</span></h1>
               <p className="one-description" >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
               <div className="one-content-buttons" >
                 <motion.button
@@ -94,16 +94,6 @@ const isMobile = window.innerWidth <= 768;
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
                 </motion.button>
-              </div>
-            </div>
-            <div className="one-content-right" >
-              <div className="experience" >
-                <Canvas camera={{ position: [15, 2, 5], fov: 35 }} >  
-                  <Float speed={ 0.5 } fallback rotationIntensity={ 0 } >
-                    <Model />
-                  </Float>
-                  <Environment preset="warehouse" />
-                </Canvas>
               </div>
             </div>
           </div>

@@ -729,27 +729,31 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 40%;
-  margin-left: 10%;
+  width: 100%;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   gap: 3vh;
-  background-color: #040217;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.grey {
+  color: #fefeff75;
 }
 
 .one-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.25vw;
-  color: #fefeff75;
+  color: #fefeff;
   line-height: 145%;
   margin: 0;
-  width: 85%;
 }
 
 .one-content-left h1 {
   position: relative;
   z-index:1;
-  background-color: #040217;
 }
 
 .one-content-right {
@@ -793,6 +797,7 @@ input::placeholder {
   position: relative;
   z-index: 2;
   gap: 0.5vw;
+  pointer-events: all;
 }
 
 .one-button-transparent {
@@ -813,6 +818,7 @@ input::placeholder {
   gap: 0.5vw;
   color: #fcfeea;
   border: 2px solid #fcfeea50;
+  pointer-events: all;
 }
 
 .one-button:hover, .one-button-transparent:hover {
@@ -881,6 +887,8 @@ input::placeholder {
   left: 0;
   width: 100%;
   height: 6vh;
+  z-index: 4;
+  pointer-events: none;
 }
 
 .scroller {
