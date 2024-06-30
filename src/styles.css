@@ -26,7 +26,7 @@
 html,
 body,
 #root {
-  width: 99%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -56,6 +56,7 @@ section {
   height: 100vh;
   pointer-events: all;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .experience-one {
@@ -1272,6 +1273,7 @@ video {
 .five-horizontal {
   position: relative;
   height: 250vh;
+  overflow-x: visible;
 }
 
 .five-horizontal-sticky {
