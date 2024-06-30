@@ -1,6 +1,8 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { useGLTF, PerspectiveCamera } from '@react-three/drei'
 import gsap from 'gsap'
+import { TextPlugin } from 'gsap/TextPlugin';
+gsap.registerPlugin(TextPlugin)
 
 export function Sphere(props) {
   const { nodes, materials } = useGLTF('./spheremodel.gltf')
@@ -10,6 +12,18 @@ export function Sphere(props) {
   let mm  = gsap.matchMedia();
 
   useLayoutEffect(() => {
+
+    const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
+
+    let masterTl = gsap.timeline({repeat: -1}).pause();
+    
+    words.forEach(word => {
+      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1});
+      tl.to('.typewriter-text', {duration: 1, text: word});
+      masterTl.add(tl);
+    });
+    
+    masterTl.play();
 
     mm.add({
       isDesktop: "(min-width: 800px)",
@@ -83,18 +97,6 @@ export function Sphere(props) {
           immediateRender: false,
         },
       })
-
-    const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
-
-    let masterTl = gsap.timeline({repeat: -1}).pause();
-    
-    words.forEach(word => {
-      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1});
-      tl.to('.typewriter-text', {duration: 1, text: word});
-      masterTl.add(tl);
-    });
-    
-    masterTl.play();
 
     })
     
