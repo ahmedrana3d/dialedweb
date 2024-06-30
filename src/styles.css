@@ -1514,7 +1514,7 @@ video {
   height: fit-content;
   width: fit-content;
   padding: 1vw;
-  background-color: #AAA3FF;
+  background-color: #040217;
   border-radius: 50px;
 }
 
@@ -1524,7 +1524,7 @@ video {
   font-weight: 400;
   margin: 0;
   line-height: 105%;
-  color: #040217;
+  color: #fefeff;
 }
 
 .six-title {
