@@ -38,6 +38,7 @@ body {
   background-repeat: no-repeat; 
   background-attachment: fixed;
   background-color: #040217;
+  /* background-image: url('gradient.jpg'); */
 }
 
 ::-webkit-scrollbar {
@@ -103,8 +104,6 @@ section {
   width: 100vw;
   height: 90vh;
   z-index: 1;
-  background-color: #040217;
-  backdrop-filter: blur(10px);
   display: flex;
   margin-top: 10vh;
 }
@@ -717,7 +716,6 @@ input::placeholder {
   flex-direction: column;
   z-index: auto;
   position: relative;
-  background-color: #040217;
 }
 
 .one-content {
@@ -726,7 +724,6 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   margin: 5% 0%;
-  background-color: #040217;
 }
 
 .one-content-left {

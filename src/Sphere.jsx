@@ -3,7 +3,7 @@ import { useGLTF, PerspectiveCamera } from '@react-three/drei'
 import gsap from 'gsap'
 
 export function Sphere(props) {
-  const { nodes, materials } = useGLTF('/spheremodel.gltf')
+  const { nodes, materials } = useGLTF('./spheremodel.gltf')
 
   const sphereRef = useRef()
   const tl = gsap.timeline()
@@ -106,8 +106,6 @@ export function Sphere(props) {
     <group ref={sphereRef} position={ [ 0, 0, 0 ] } {...props} scale={1} dispose={null}>
       <group scale={ isMobile ? 0.0035 : 0.0065}>
         <mesh
-          castShadow
-          receiveShadow
           geometry={nodes.Sphere.geometry}
         >
             <meshStandardMaterial metalness={1} roughness={ 0.9 } color={ "#dcd7ff" }  />
@@ -117,4 +115,4 @@ export function Sphere(props) {
   )
 }
 
-useGLTF.preload('/spheremodel.gltf')
+useGLTF.preload('./spheremodel.gltf')
