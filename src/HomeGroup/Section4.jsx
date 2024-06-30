@@ -12,7 +12,7 @@ export const Section4 = () => {
     return (
       <>
         <section className="four">
-          <div className="four-experience">
+          {/* <div className="four-experience">
             <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
               <Suspense fallback >
                 <Float speed={2} >
@@ -22,7 +22,7 @@ export const Section4 = () => {
               <Environment preset="apartment" />
               <OrbitControls enableZoom={ false } />
             </Canvas>
-          </div>
+          </div> */}
           <div className="four-content">
             <h1 className="headline-purple-big four-animate-text" >Why Us</h1>
             <div className="why-us-container">

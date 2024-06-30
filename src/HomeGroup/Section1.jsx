@@ -95,7 +95,7 @@ const isMobile = window.innerWidth <= 768;
               </div>
             </div>
           </div>
-          <div className="one-content-logos">
+          {/* <div className="one-content-logos">
             <div className='scroller' data-direction="left" data-speed="slow" >
             <div className="scroller__inner">
               <img src="gsap.png" alt="" />
@@ -116,7 +116,7 @@ const isMobile = window.innerWidth <= 768;
               <img src="shopify.png" alt="" />
             </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <AnimatePresence>
