@@ -2455,6 +2455,7 @@ input {
   z-index: 4;
   pointer-events: none;
   color: #fefeff;
+  font-size: 2rem;
 }
 
 .eight-title {
