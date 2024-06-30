@@ -800,6 +800,7 @@ input::placeholder {
   z-index: 2;
   gap: 0.5vw;
   pointer-events: all;
+  color: #040217;
 }
 
 .one-button-transparent {
@@ -821,6 +822,7 @@ input::placeholder {
   color: #fcfeea;
   border: 2px solid #fcfeea50;
   pointer-events: all;
+  color: #fefeff;
 }
 
 .one-button:hover, .one-button-transparent:hover {
@@ -1161,7 +1163,7 @@ video {
 }
 
 .four {
-  height: 325vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1178,8 +1180,8 @@ video {
 
 .four-content {
   width: 100%;
-  height: 305vh;
-  position: absolute;
+  height: fit-content;
+  position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -1192,7 +1194,7 @@ video {
 
 .why-us-container {
   width: 100%;
-  height: 305vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin-top: 5vw;
@@ -1515,17 +1517,18 @@ video {
 /* SECTION SEVEN */
 
 .seven {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: auto;
   margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 .seven-content {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 5vh;
@@ -2118,18 +2121,19 @@ input {
 }
 
 .four {
-  height: 300vh;
+  height: fit-content;
 }
 
 .four-content {
-  height: 275vh;
+  position: relative;
+  height: fit-content;
   padding: 0% 5%;
   padding-bottom: 5%;
   gap: 3vh;
 }
 
 .why-us-container {
-  height: 275vh;
+  height: fit-content;
   margin-top: 5vh;
 }
 
@@ -2302,17 +2306,18 @@ input {
 /* SECTION SEVEN */
 
 .seven {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: auto;
   margin-top: 20vh;
+  margin-bottom: 0;
 }
 
 .seven-content {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 5vh;
