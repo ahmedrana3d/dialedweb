@@ -95,6 +95,11 @@ const isMobile = window.innerWidth <= 768;
               </div>
             </div>
           </div>
+          <div className="marquee-inner">
+            <div className="marquee-part">
+              
+            </div>
+          </div>
           {/* <div className="one-content-logos">
             <div className='scroller' data-direction="left" data-speed="slow" >
             <div className="scroller__inner">

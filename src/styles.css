@@ -1450,26 +1450,20 @@ video {
   align-self: center;
 }
 
-.six-title {
-  font-size: 4vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1;
-  color: #040217;
-}
-
-.six-content-top-row {
+.six-content-bottom {
+  width: 100%;
+  height: 25vw;
   display: flex;
   gap: 0.5vw;
+  z-index: 3;
+  pointer-events: none;
 }
 
-.six-content-top-small {
-  width: 22vw;
+.six-content-bottom-big {
+  width: 45vw;
   height: 100%;
-  border-radius: 15px;
   pointer-events: all;
-  perspective: 800px;
+  perspective: 2000px;
 }
 
 .six-outside:hover > .six-inside {
@@ -1481,7 +1475,7 @@ video {
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 1500ms;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
@@ -1503,34 +1497,53 @@ video {
 
 .back {
   transform: rotateY(180deg);
+  background-color: #fefeff;
+  padding: 2vw;
 }
 
-.six-description {
+.back-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.back-content-box {
+  height: fit-content;
+  width: fit-content;
+  padding: 1vw;
+  background-color: #AAA3FF;
+  border-radius: 50px;
+}
+
+.six-back-description {
+  font-size: 1vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 105%;
+  color: #040217;
+}
+
+.six-title {
   font-size: 4vw;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   margin: 0;
   line-height: 1;
+  color: #040217;
+}
+
+.six-description {
+  font-size: 2.25vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 105%;
   color: #fefeff;
 }
-
-.six-content-bottom {
-  width: 100%;
-  height: 25vw;
-  display: flex;
-  gap: 0.5vw;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.six-content-bottom-big {
-  width: 45vw;
-  height: 100%;
-  border-radius: 15px;
-  pointer-events: all;
-  perspective: 1200px;
-}
-
 
 
 

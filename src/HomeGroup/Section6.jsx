@@ -18,24 +18,25 @@ export const Section6 = () => {
                   <h1 className="six-title" >Our services</h1>
                 </div>
               </div>
-              <div className="six-content-top-row">
-                <div className="six-content-top-small six-outside">
-                  <div className="six-inside" >
-                    <div className="front" >
-                      <h1 className="six-description" >front</h1>
-                    </div>
-                    <div className="back">
-                      <h1 className="six-description" >back</h1>
-                    </div>
+              <div className="six-content-bottom-big six-outside">
+                <div className="six-inside" >
+                  <div className="front" >
+                    <h1 className="six-description" >Website design & Development</h1>
                   </div>
-                </div>
-                <div className="six-content-top-small six-outside">
-                  <div className="six-inside" >
-                    <div className="front" >
-                      <h1 className="six-description" >front</h1>
-                    </div>
-                    <div className="back">
-                      <h1 className="six-description" >back</h1>
+                  <div className="back">
+                    <div className="back-content">
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >E-commerce integration</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Interactive 3D configurators & customizers</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Front-End UI/UX Design</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Storytelling functionalities</h1>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -46,20 +47,55 @@ export const Section6 = () => {
               <div className="six-content-bottom-big six-outside">
                 <div className="six-inside" >
                   <div className="front" >
-                    <h1 className="six-description" >front</h1>
+                    <h1 className="six-description" >Data Organization & Visualization</h1>
                   </div>
                   <div className="back">
-                    <h1 className="six-description" >back</h1>
+                    <div className="back-content">
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Performance Analysis</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >SEO Audit</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Technical Diagnostics</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Security Assessment</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >UI/UX Evaluation</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Content Assessment</h1>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="six-content-bottom-big six-outside">
                 <div className="six-inside" >
                   <div className="front" >
-                    <h1 className="six-description" >front</h1>
+                    <h1 className="six-description" >Architectural & Product Animation</h1>
                   </div>
                   <div className="back">
-                    <h1 className="six-description" >back</h1>
+                    <div className="back-content">
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Interior & exterior renderings</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Architectural walkthrough & tours</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Augmented Reality (AR) Experiences</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Virtual Reality (VR) Experiences</h1>
+                      </div>
+                      <div className="back-content-box">
+                        <h1 className="six-back-description" >Product Renderings & Animations</h1>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
