@@ -13,7 +13,10 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-60%"]);
+  const isMobile = window.innerWidth <= 768;
+
+  const endTransform = isMobile ? "-100%" : "-60%"; // Use "-30%" for mobile and "-60%" for larger screens
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", endTransform]);
 
   return (
     <section ref={targetRef} className="five-horizontal">

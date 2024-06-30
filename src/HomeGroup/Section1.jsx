@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import CanvasContainer from "../CanvasContainer";
 import { Section6 } from "./Section6";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float, Sparkles } from "@react-three/drei";
 import { useTextEffect } from "../ScrollAnimations";
-import Model from "../Model";
 import gsap from "gsap";
 import Spline from '@splinetool/react-spline';
 import { Link, useNavigate } from 'react-router-dom';

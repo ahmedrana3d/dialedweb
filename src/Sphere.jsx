@@ -20,32 +20,6 @@ export function Sphere(props) {
       tl
 
       .to(sphereRef.current.scale, {
-        x: 1,
-        y: 1,
-        z: 1,
-        scrollTrigger: {
-          trigger: ".one",
-          start: "top center",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
-      .to(sphereRef.current.position, {
-        x: 0,
-        y: 0,
-        z: 0,
-        scrollTrigger: {
-          trigger: ".one",
-          start: "top 60%",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
-      .to(sphereRef.current.scale, {
         x: 0,
         y: 0,
         z: 0,
@@ -110,19 +84,6 @@ export function Sphere(props) {
         },
       })
 
-      .to(".three-content-box", {
-        width: "90vw",
-        height: "65vh",
-        opacity: 1,
-          scrollTrigger: {
-            trigger: ".three-content-box",
-            start: "top bottom",
-            end: "center center",
-            scrub: true,
-            immediateRender: false,
-          },
-      })
-
     const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
 
     let masterTl = gsap.timeline({repeat: -1}).pause();
@@ -139,9 +100,11 @@ export function Sphere(props) {
     
   }, [])
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
-    <group ref={sphereRef} position={ [ 5, -5, 0 ] } {...props} scale={0} dispose={null}>
-      <group scale={0.0065}>
+    <group ref={sphereRef} position={ [ 0, 0, 0 ] } {...props} scale={1} dispose={null}>
+      <group scale={ isMobile ? 0.0035 : 0.0065}>
         <mesh
           castShadow
           receiveShadow
