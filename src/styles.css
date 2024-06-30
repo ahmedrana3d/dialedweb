@@ -1692,7 +1692,7 @@ html.lenis, html.lenis body {
   /* TEXTS */
 
 .headline {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-family: "SF", sans-serif;
   font-weight: bold;
   margin: 0;
@@ -1705,7 +1705,7 @@ html.lenis, html.lenis body {
   font-family: 'GT Alpina Trial', sans-serif;
   color:#AAA3FF;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.75rem;
   margin: 0;
   font-style: italic;
 }
@@ -1862,14 +1862,14 @@ input {
 
 .one-button {
   height: 2.25rem;
-  padding: 0 2vw;
-  padding-left: 2vw;
+  padding: 5vw 3vw;
+  padding-left: 3vw;
   gap: 1vw;
 }
 
 .one-button-transparent {
   height: 2.25rem;
-  padding: 0 2vw;
+  padding: 5vw 3vw;
   gap: 1vw;
   border: 1px solid #fcfeea50;
 }
@@ -1929,7 +1929,7 @@ input {
 }
 
 .navigation-text {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
