@@ -90,8 +90,8 @@ export const Section6 = () => {
 
             </div>
             <div className="six-spline">
-              <div className="mobile-scroll"></div>
-              <Spline scene="https://prod.spline.design/e-ojs0qqziUg38sU/scene.splinecode" />
+              {/* <div className="mobile-scroll"></div>
+              <Spline scene="https://prod.spline.design/e-ojs0qqziUg38sU/scene.splinecode" /> */}
             </div>
           </div>
         </section>

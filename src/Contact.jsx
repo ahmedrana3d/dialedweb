@@ -58,7 +58,7 @@ const Contact = () => {
                 {/* <Suspense >
                     <Spline loading="eager" scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
               </Suspense> */}
-              <video className="contact-video" src="/loadingvid.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" ></video>
+              <video className="contact-video" src="/loading.gif" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" ></video>
             </div>
         </div>
 
