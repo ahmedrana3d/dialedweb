@@ -10,7 +10,7 @@ const Contact = () => {
 
         <div className="contact-overlay" >
             <div className="contact-overlay-left">
-              <h1 className="contact-overlay-title" >Get in touch</h1>
+              <h1 className="contact-overlay-title" >Get in Touch</h1>
               <div className="contact-overlay-left-box">
 
                 <div className="contact-person-box">

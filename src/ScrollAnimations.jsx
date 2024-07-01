@@ -55,23 +55,23 @@ const useAnimateText = (textSelector) => {
           },
         });
 
-        // gsap.fromTo(
-        //   element,
-        //   {
-        //     opacity: 0,
-        //   },
-        //   {
-        //     opacity: 1,
-        //     ease: 'none',
-        //     scrollTrigger: {
-        //       trigger: element,
-        //       start: 'top 100%',
-        //       end: 'top 60%',
-        //       scrub: true,
-        //       toggleActions: 'play reverse play reverse',
-        //     },
-        //   }
-        // );
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 100%',
+              end: 'top 60%',
+              scrub: true,
+              toggleActions: 'play reverse play reverse',
+            },
+          }
+        );
 
         // gsap.fromTo(
         //   element,
