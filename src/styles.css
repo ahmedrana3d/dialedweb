@@ -2258,51 +2258,24 @@ input {
 
 /* SECTION FIVE */
 
-.five-horizontal {
+.five {
+  z-index: 13;
   position: relative;
-  height: 325vh;
+  padding: 0 0vw;
+  height: 60vh;
 }
 
-.five-horizontal-div {
-  gap: 10vw;
-  height: 85vw;
+.five-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.five-horizontal-card {
-  height: 85vw;
-  width: 85vw;
-  border-radius: 25px;
-}
-
-.five-horizontal-card-first {
-  height: 85vw;
-  width: 70vw;
-}
-
-.five-card-text-image {
-  width: 50vw;
-}
-
-.five-card-image {
-  height: 70vw;
-  border-radius: 12.5px;
-}
-
-.five-card-text-box {
-  margin-top: 1vw;
-  height: 10vw;
-}
-
-.five-card-title {
-  font-size: 0.9rem;
-}
-
-.five-card-description {
-  font-size: 0.9rem;
-}
-
-.five-card-border {
-  height: 5vw;
+.five-box {
+  pointer-events: all;
+  width: 100%;
+  height: 100%;
 }
 
 /* SECTION SIX */

@@ -7,14 +7,17 @@ import * as THREE from 'three'
 import { easing } from 'maath'
 
 export const Section5 = () => {
+
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <section className="five" >
       <div className="five-content">
-        {/* <h1 className="headline-purple" >Our Team</h1> */}
+        <div className="mobile-scroll"></div>
         <div className="five-box" >
-          <Canvas camera={{ position: [0, 3, 10], fov: 15 }}>
+          <Canvas camera={{ position: [0, 3, isMobile ? 15 : 10], fov: 15 }}>
             <Carousel />
-            <OrbitControls enableZoom={ false } maxPolarAngle={ Math.PI * 0.5 } minPolarAngle={ 1 } />
+            <OrbitControls enableZoom={ false } enablePan={ false } enableRotate={ isMobile ? false : true } maxPolarAngle={ Math.PI * 0.45 } minPolarAngle={ 1 } />
             <Environment preset="dawn" />
             <Banner position={[0, -0.15, 0]} />
           </Canvas>
