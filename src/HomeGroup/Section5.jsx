@@ -14,7 +14,7 @@ export const Section5 = () => {
         <div className="five-box" >
           <Canvas camera={{ position: [0, 3, 10], fov: 15 }}>
             <Carousel />
-            <OrbitControls enableZoom={ false } />
+            <OrbitControls enableZoom={ false } maxPolarAngle={ Math.PI * 0.5 } minPolarAngle={ 1 } />
             <Environment preset="dawn" />
             <Banner position={[0, -0.15, 0]} />
           </Canvas>
@@ -25,14 +25,25 @@ export const Section5 = () => {
 };
 
 function Carousel({ radius = 1.4, count = 8 }) {
-  return Array.from({ length: count }, (_, i) => (
-    <Card
-      key={i}
-      url={`/team${Math.floor(i % 4) + 1}.jpg`}
-      position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
-      rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
-    />
-  ))
+  const ref = useRef()
+
+  useFrame((state, delta) => {
+    // Rotate the carousel group
+    ref.current.rotation.y += 0.1 * delta
+  })
+
+  return (
+    <group ref={ref}>
+      {Array.from({ length: count }, (_, i) => (
+        <Card
+          key={i}
+          url={`/team${Math.floor(i % 4) + 1}.jpg`}
+          position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
+          rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
+        />
+      ))}
+    </group>
+  )
 }
 
 function Card({ url, ...props }) {
