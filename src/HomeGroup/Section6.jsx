@@ -15,7 +15,7 @@ export const Section6 = () => {
               <div className="six-content-top-big">
                 <div className="six-content-top-big-content">
                   <div className="six-content-circle" />
-                  <h1 className="six-title" >Our services</h1>
+                  <h1 className="six-title" >Our Services</h1>
                 </div>
               </div>
               <div className="six-content-row">
@@ -177,7 +177,7 @@ export const Section6 = () => {
                           <h1 className="six-back-description" >SVG Sequences</h1>
                         </div>
                         <div className="back-content-box">
-                          <h1 className="six-back-description" >VFX</h1>
+                          <h1 className="six-back-description" >FX</h1>
                         </div>
                         <div className="back-content-box">
                           <h1 className="six-back-description" >Motion Graphics</h1>

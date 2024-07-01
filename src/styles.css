@@ -640,6 +640,7 @@ section {
   padding: 1vw 1vw;
   gap: 1vw;
   background-color: #fefeff;
+  pointer-events: all;
 }
 
 .menuContainer {
@@ -650,6 +651,7 @@ section {
   padding: 1.5vw 2vw;
   gap: 1.25vw;
   background-color: #fefeff;
+  pointer-events: all;
 }
 
 .inputContainer {
@@ -674,7 +676,7 @@ input {
   resize: none;
   color: #fff;
   border: 1px solid #AAA3FF;
-  background-color: #AAA3FF;
+  background-color: #040217;
   border: none;
 }
 
@@ -687,14 +689,15 @@ input::placeholder {
   color: #f0f1fa;
   border-radius: 25px;
   padding: 1vw;
-  background-color: #AAA3FF;
+  background-color: #fefeff;
   display: flex;
   justify-content: space-evenly;
+  pointer-events: all;
 }
 
 .nav-brands {
   font-size: 2vw;
-  color: #fefeff;
+  color: #040217;
   cursor: pointer;
   padding: 1vw;
   border-radius: 15px;
@@ -702,8 +705,8 @@ input::placeholder {
 }
 
 .nav-brands:hover {
-  background-color: #f0f1fa;
-  color: #AAA3FF;
+  background-color: #040217;
+  color: #fefeff;
   box-shadow: 0 0 20px 5px rgba(252, 254, 234, 0.4);
 }
 
@@ -1180,9 +1183,9 @@ video {
 }
 
 .typewriter-text {
-  font-family: 'GT Alpina Trial', sans-serif;
+  font-family: 'SF', sans-serif;
   color:#AAA3FF;
-  font-weight: 400;
+  font-weight: bold;
   font-style: italic;
   padding-left: 0.25vw;
 }
