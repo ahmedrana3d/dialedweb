@@ -1,6 +1,6 @@
-import { Environment, OrbitControls, Image } from "@react-three/drei";
+import { Environment, OrbitControls, Image, useTexture, useScroll } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import '../OurTeamMesh'
 import * as THREE from 'three'
@@ -16,6 +16,7 @@ export const Section5 = () => {
             <Carousel />
             <OrbitControls enableZoom={ false } />
             <Environment preset="dawn" />
+            <Banner position={[0, -0.15, 0]} />
           </Canvas>
         </div>
       </div>
@@ -23,7 +24,7 @@ export const Section5 = () => {
   );
 };
 
-function Carousel({ radius = 1, count = 6 }) {
+function Carousel({ radius = 1.4, count = 8 }) {
   return Array.from({ length: count }, (_, i) => (
     <Card
       key={i}
@@ -48,6 +49,22 @@ function Card({ url, ...props }) {
     <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props}>
       <bentPlaneGeometry args={[0.1, 1, 1, 20, 20]} />
     </Image>
+  )
+}
+
+function Banner(props) {
+  const ref = useRef()
+  const texture = useTexture('./team2.png')
+  texture.wrapS = texture.wrapT = THREE.RepeatWrapping
+  const scroll = useScroll()
+  useFrame((state, delta) => {
+    ref.current.material.map.offset.x += delta / 2
+  })
+  return (
+    <mesh ref={ref} {...props}>
+      <cylinderGeometry args={[1.6, 1.6, 0.14, 128, 16, true]} />
+      <meshSineMaterial map={texture} map-anisotropy={16} map-repeat={[30, 1]} side={THREE.DoubleSide} toneMapped={false} />
+    </mesh>
   )
 }
 
