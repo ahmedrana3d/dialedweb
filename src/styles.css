@@ -608,10 +608,11 @@ section {
 .menu-container {
   position: fixed;
   left: 0;
+  height: 0;
   width: 100%;
   z-index: 13;
   backdrop-filter: blur(0px);
-  transition: height 0.5s ease, backdrop-filter 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .menu-container.open {

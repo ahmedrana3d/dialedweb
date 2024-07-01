@@ -88,7 +88,7 @@ const isMobile = window.innerWidth <= 768;
                     <span className="navigation-text" >OUR MISSION</span>
                     <span className="navigation-text" >OUR MISSION</span>
                   </div>
-                  <div className="navigation-arrow-box-blue">
+                  <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
                 </motion.button>
