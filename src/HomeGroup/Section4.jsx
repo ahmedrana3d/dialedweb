@@ -37,7 +37,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-fire why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >High performance</h1>
-                      <p className="why-us-text-description" >Utilizes the power of the GPU (Graphics Processing Unit) to render complex graphics and animations smoothly. Capable of handling large volumes of data and intricate scenes with high frame rates.</p>
+                      <p className="why-us-text-description" >Utilizes the power of the Graphics Processing Unit, rendering complex graphics and animations to handle large volumes of data at high frame rates. </p>
                     </div>
                   </div>
 
@@ -45,7 +45,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-cube why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Interactivity</h1>
-                      <p className="why-us-text-description" >Supports real-time user interactions, making websites more engaging. Users can navigate 3D environments, manipulate objects, and experience dynamic content.</p>
+                      <p className="why-us-text-description" >Supports real-time interactions where users can navigate 3D environments, manipulate objects, and experience dynamic content.</p>
                     </div>
                   </div>
 
@@ -53,7 +53,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-link why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Cross-Platform Compatibility</h1>
-                      <p className="why-us-text-description" >Our 3D websites are designed to work flawlessly on a wide range of devices, ensuring accessibility for all users. Our web experiences offer real-time interactivity, allowing users to seamlessly manipulate objects, explore environments, and experience dynamic content. Users enjoy can enjoy our websites whether they are on a high-end desktop or a mobile device.</p>
+                      <p className="why-us-text-description" >Designed to work flawlessly on a range of devices in order to allow users to enjoy our websites whether they are on a high-end desktop or a mobile device.</p>
                     </div>
                   </div>
 
@@ -70,7 +70,7 @@ export const Section4 = () => {
                   <i class="fa-solid fa-globe why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >International Clientele</h1>
-                      <p className="why-us-text-description" >Our services have a global appeal, attracting clients from various continents and industries. We understand the nuances of different markets, allowing us to tailor our solutions to meet specific regional requirements.</p>
+                      <p className="why-us-text-description" >Our services have a global appeal which allows us to attract clients worldwide and understand the nuances of different markets.</p>
                     </div>
                   </div>
 
@@ -78,7 +78,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-language why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Multi-Lingual Team</h1>
-                      <p className="why-us-text-description" >Our team's diverse linguistic skills enable us to communicate effectively with clients worldwide. We offer support and services in multiple languages, ensuring clear and efficient communication.</p>
+                      <p className="why-us-text-description" >Our team’s diverse linguistic skills enable us to communicate with clients worldwide. We offer our services in multiple languages, ensuring clear and efficient communication.</p>
                     </div>
                   </div>
 
@@ -86,7 +86,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-map why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Global Market Insights</h1>
-                      <p className="why-us-text-description" >Our team’s global background gives us deep insights into diverse international markets, allowing us to create tailored, culturally relevant solutions. We stay updated on trends and user behavior to design intuitive, engaging experiences that resonate worldwide.</p>
+                      <p className="why-us-text-description" >Our team’s international background gives us deep insights into different markets, tailoring our solutions to meet specific regional requirements.</p>
                     </div>
                   </div>
 
@@ -103,7 +103,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-user why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Personalized Service</h1>
-                      <p className="why-us-text-description" >We begin with in-depth consultations to fully understand your vision, objectives, and specific requirements. This allows us to tailor our services precisely to your needs, ensuring a customized solution that aligns perfectly with your brand.</p>
+                      <p className="why-us-text-description" >We commence with thorough consultations to understand your vision and requirements, ensuring our services align seamlessly with your brand.</p>
                     </div>
                   </div>
 
@@ -111,7 +111,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-key why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Collaborative Development</h1>
-                      <p className="why-us-text-description" >Throughout the development process, we maintain open and continuous communication, valuing your input and feedback at every stage. This ensures the final product not only meets but exceeds your expectations, with every detail reflecting your vision.</p>
+                      <p className="why-us-text-description" >We maintain continuous communication throughout development, ensuring the final product meets and exceeds your expectations.</p>
                     </div>
                   </div>
 
@@ -119,7 +119,7 @@ export const Section4 = () => {
                     <i class="fa-solid fa-handshake why-us-icon"></i>
                     <div className="why-us-right-row-texts">
                       <h1 className="why-us-text-title" >Dedicated Partnership</h1>
-                      <p className="why-us-text-description" >We view our clients as partners and are committed to their long-term success. Beyond project delivery, we remain engaged to help you leverage new opportunities, adapt to changes, and continuously improve your 3D web experiences. Our team is always ready to provide strategic advice and support as your business evolves.</p>
+                      <p className="why-us-text-description" >We see clients as long-term partners, committed to your success with ongoing support and strategic advice to enhance your client’s web experiences.</p>
                     </div>
                   </div>
 
