@@ -124,7 +124,9 @@ export const Navigation = () => {
 
   return (
     <>
-      <div className="menu-container">
+      <div className={`menu-container ${menu ? 'open' : ''}`}           onClick={() => {
+            setMenu(!menu);
+          }}>
         <div className="menu">
           <div key="menuContent" className="menuContent" ref={menuContentRef}>
             <div className="menuNav" ref={menuNavRef}>

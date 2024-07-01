@@ -458,7 +458,7 @@ section {
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 22;
   border-bottom: 1px solid transparent;
   transition: background-color 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
 }
@@ -610,6 +610,13 @@ section {
   left: 0;
   width: 100%;
   z-index: 13;
+  backdrop-filter: blur(0px);
+  transition: height 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+.menu-container.open {
+  height: 100%;
+  backdrop-filter: blur(10px);
 }
 
 .menu {
@@ -724,12 +731,6 @@ input::placeholder {
   position: relative;
   width: 100%;
   text-decoration: none;
-}
-
-.menu-button:hover {
-  background-color: #AAA3FF;
-  width: 100%;
-  border-radius: 15px;
 }
 
 .menu-icon {
@@ -1602,8 +1603,7 @@ video {
   width: 100%;
   height: fit-content;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1vw;
 }
 
@@ -1631,8 +1631,9 @@ video {
 
 .six-title {
   font-size: 4vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  font-style: italic;
   margin: 0;
   line-height: 1;
   color: #040217;
