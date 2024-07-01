@@ -203,10 +203,13 @@ section {
   flex-direction: column;
   width: 55vw;
   padding: 2vw;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 
 .contact-video {
-  width: 100%;
+  width: 80%;
 }
 
 .contact-options-box {
@@ -299,9 +302,9 @@ section {
 }
 
 .headline-purple-big {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color: #AAA3FF;
-  font-weight: 400;
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  color: #fefeff;
   font-size: 10vw;
   margin: 0;
   font-style: italic;
@@ -681,7 +684,7 @@ input::placeholder {
   justify-content: space-evenly;
 }
 
-.fa-brands {
+.nav-brands {
   font-size: 2vw;
   color: #fefeff;
   cursor: pointer;
@@ -690,7 +693,7 @@ input::placeholder {
   transition: 0.5s ease;
 }
 
-.fa-brands:hover {
+.nav-brands:hover {
   background-color: #f0f1fa;
   color: #AAA3FF;
   box-shadow: 0 0 20px 5px rgba(252, 254, 234, 0.4);
@@ -1637,8 +1640,9 @@ video {
 
 .six-description {
   font-size: 2.25vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  font-style: italic;
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -1844,9 +1848,9 @@ html.lenis, html.lenis body {
 }
 
 .headline-purple-big {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color: #AAA3FF;
-  font-weight: 400;
+  font-family: "SF", sans-serif;
+  font-weight: bold;
+  color: #fefeff;
   font-size: 5rem;
   margin: 0;
   font-style: italic;
@@ -1928,7 +1932,7 @@ input {
   padding: 4vw 2vw;
 }
 
-.fa-brands {
+.nav-brands {
   font-size: 2rem;
   padding: 1vw;
   border-radius: 15px;

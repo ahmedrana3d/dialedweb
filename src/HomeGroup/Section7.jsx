@@ -32,7 +32,7 @@ export const Section7 = () => {
       <>
         <section className="seven">
           <div className="seven-content">
-            <h1 className="headline-purple seven-titles" >Our Methodology</h1>
+            <h1 className="headline seven-titles" >Our Methodology</h1>
               <div className="seven-accordion">
                 {accordionsData.map((accordion, index) => (
                   <Accordion

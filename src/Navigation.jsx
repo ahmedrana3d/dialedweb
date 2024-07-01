@@ -160,9 +160,9 @@ export const Navigation = () => {
               </div>
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-youtube"></i>
-              <i className="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-instagram nav-brands"></i>
+              <i className="fa-brands fa-youtube nav-brands"></i>
+              <i className="fa-brands fa-linkedin nav-brands"></i>
             </div>
           </div>
         </div>
