@@ -18,24 +18,67 @@ export const Section6 = () => {
                   <h1 className="six-title" >Our services</h1>
                 </div>
               </div>
-              <div className="six-content-bottom-big six-outside">
-                <div className="six-inside" >
-                  <div className="front" >
-                    <h1 className="six-description" >Website design & Development</h1>
+              <div className="six-content-row">
+                <div className="six-content-row-box six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Websites</h1>
+                      </div>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                      </div>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >E-commerce Integration</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Interactive 3D configurators</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Frontend Development</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Storytelling Functionalities</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >CMS Integration</h1>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="back">
-                    <div className="back-content">
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >E-commerce integration</h1>
+                </div>
+                <div className="six-content-row-box six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Design</h1>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Interactive 3D configurators & customizers</h1>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Front-End UI/UX Design</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Storytelling functionalities</h1>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Layout</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Typography</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Visual Content</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Iconography</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Color theory</h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -44,56 +87,133 @@ export const Section6 = () => {
             </div>
 
             <div className="six-content-bottom">
-              <div className="six-content-bottom-big six-outside">
-                <div className="six-inside" >
-                  <div className="front" >
-                    <h1 className="six-description" >Data Organization & Visualization</h1>
+              <div className="six-content-row">
+                <div className="six-content-row-box-bigger six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Visualization</h1>
+                      </div>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                      </div>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Exterior/Interior Renderings</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Architectural Walkthroughs</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Augmented Reality (AR)</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Virtual Reality (VR)</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Product Renderings</h1>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="back">
-                    <div className="back-content">
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Performance Analysis</h1>
+                </div>
+                <div className="six-content-row-box six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Data</h1>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >SEO Audit</h1>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Technical Diagnostics</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Security Assessment</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >UI/UX Evaluation</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Content Assessment</h1>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Performance Analysis</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >SEO Audit</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Content Assessment</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Security Assessment</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >UI/UX Evaluation</h1>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="six-content-bottom-big six-outside">
-                <div className="six-inside" >
-                  <div className="front" >
-                    <h1 className="six-description" >Architectural & Product Animation</h1>
+              <div className="six-content-row">
+                <div className="six-content-row-box-bigger six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Animation</h1>
+                      </div>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                      </div>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Custom Micro Animation</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Product Visualization</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >SVG Sequences</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >VFX</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Motion Graphics</h1>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="back">
-                    <div className="back-content">
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Interior & exterior renderings</h1>
+                </div>
+                <div className="six-content-row-box six-outside">
+                  <div className="six-inside">
+                    <div className="front">
+                      <div className="front-top">
+                        <h1 className="six-description" >Consultation</h1>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Architectural walkthrough & tours</h1>
+                      <div className="front-bottom">
+                        <h1 className="front-bottom-text" >Info</h1>
+                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
                       </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Augmented Reality (AR) Experiences</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Virtual Reality (VR) Experiences</h1>
-                      </div>
-                      <div className="back-content-box">
-                        <h1 className="six-back-description" >Product Renderings & Animations</h1>
+                    </div>
+                    <div className="back">
+                      <div className="back-content">
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Branding</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Market Research</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Audience Analysis</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Maintenance Plans</h1>
+                        </div>
+                        <div className="back-content-box">
+                          <h1 className="six-back-description" >Strategic Planning</h1>
+                        </div>
                       </div>
                     </div>
                   </div>

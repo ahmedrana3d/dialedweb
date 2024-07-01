@@ -714,9 +714,9 @@ input::placeholder {
 
 .menu-button {
   transition: 0.5s ease;
-  padding: 0.25vw 1vw;
+  padding: 0.1vw 1vw;
   cursor: pointer;
-  height: 6vh;
+  height: fit-content;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1462,6 +1462,27 @@ video {
   gap: 0.5vw;
 }
 
+.six-content-row {
+  width: 44.75vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.six-content-row-box {
+  width: 22.125vw;
+  height: 100%;
+  pointer-events: all;
+  perspective: 800px;
+}
+
+.six-content-row-box-bigger {
+  width: 22.125vw;
+  height: 100%;
+  pointer-events: all;
+  perspective: 800px;
+}
+
 .six-content-top {
   width: 100%;
   height: 25vw;
@@ -1472,7 +1493,7 @@ video {
 }
 
 .six-content-top-big {
-  width: 45vw;
+  width: 44.75vw;
   height: 100%;
   border-radius: 15px;
   padding: 2vw;
@@ -1503,14 +1524,6 @@ video {
   z-index: 3;
   pointer-events: none;
 }
-
-.six-content-bottom-big {
-  width: 45vw;
-  height: 100%;
-  pointer-events: all;
-  perspective: 2000px;
-}
-
 .six-outside:hover > .six-inside {
   cursor: pointer;
   transform: rotateY(180deg);
@@ -1540,9 +1553,45 @@ video {
   flex-direction: column;
 }
 
+.front-bottom {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  border-top: 1px solid #fefeff25;
+  left: 0;
+  bottom: 0;
+  padding: 2vw;
+  gap: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.front-bottom-text {
+  font-size: 1.25vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 105%;
+  color: #fefeff;
+}
+
+.front-bottom-circle {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 100%;
+  background-color: #fefeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-plus {
+  font-size: 1vw;
+  color: #040217;
+}
+
 .back {
   transform: rotateY(180deg);
-  background-color: #fefeff;
   padding: 2vw;
 }
 
@@ -1559,8 +1608,13 @@ video {
   height: fit-content;
   width: fit-content;
   padding: 1vw;
-  background-color: #040217;
+  background-color: #fefeff;
   border-radius: 50px;
+  transition: 0.5s ease;
+}
+
+.back-content-box:hover {
+  background-color: #AAA3FF;
 }
 
 .six-back-description {
@@ -1569,7 +1623,7 @@ video {
   font-weight: 400;
   margin: 0;
   line-height: 105%;
-  color: #fefeff;
+  color: #040217;
 }
 
 .six-title {

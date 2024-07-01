@@ -17,7 +17,7 @@ export const Section5 = () => {
         <div className="five-box" >
           <Canvas camera={{ position: [0, 3, isMobile ? 15 : 10], fov: 15 }}>
             <Carousel />
-            <OrbitControls enableZoom={ false } enablePan={ false } enableRotate={ isMobile ? false : true } maxPolarAngle={ Math.PI * 0.45 } minPolarAngle={ 1 } />
+            <OrbitControls enableZoom={ false } enablePan={ false } enableRotate={ isMobile ? false : true } maxPolarAngle={ Math.PI * 0.45 } minPolarAngle={ 1.15 } />
             <Environment preset="dawn" />
             <Banner position={[0, -0.15, 0]} />
           </Canvas>
