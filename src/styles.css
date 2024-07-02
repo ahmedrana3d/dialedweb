@@ -217,6 +217,7 @@ section {
   height: fit-content;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .contact-option-1 {

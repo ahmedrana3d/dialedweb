@@ -5,6 +5,18 @@ import transition from "./Transition";
 
 const Contact = () => {
 
+  const handleClick = (linkUrl) => {
+    window.open(linkUrl, '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:support@dialedworldwide.com';
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+16193176418';
+  };
+
     return (
       <>
 
@@ -20,16 +32,16 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="contact-options-box">
-                  <div className="contact-option-1">
+                <div className="contact-options-box" onClick={handlePhoneClick}>
+                  <div className="contact-option-1" >
                     <i class="fa-solid fa-phone option-icon"></i>
                     <p className="option-text" >Call</p>
                   </div>
-                  <div className="contact-option-1">
-                    <i class="fa-solid fa-envelope option-icon"></i>
-                    <p className="option-text email" >Call</p>
+                  <div className="contact-option-1" onClick={() => window.location = 'support@dialedworldwide.com'}>
+                    <i class="fa-solid fa-envelope option-icon" ></i>
+                    <p className="option-text email" >Email</p>
                   </div>
-                  <div className="contact-option-1">
+                  <div className="contact-option-1" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}>
                     <i class="fa-brands fa-linkedin option-icon"></i>
                     <p className="option-text" >LinkedIn</p>
                   </div>

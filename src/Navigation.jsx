@@ -166,7 +166,7 @@ export const Navigation = () => {
             <div className="menuSocial" ref={menuSocialRef}>
               <i className="fa-brands fa-instagram nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
               <i className="fa-brands fa-youtube nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
-              <i className="fa-brands fa-linkedin nav-brands" onClick={() => handleClick('https://calendly.com/d/cn6c-4s9-66h/meeting?month=2024-04')}></i>
+              <i className="fa-brands fa-linkedin nav-brands" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}></i>
             </div>
           </div>
         </div>
