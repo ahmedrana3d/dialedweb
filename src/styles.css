@@ -921,74 +921,24 @@ input::placeholder {
 
 .one-content-logos {
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   left: 0;
   width: 100%;
-  height: 6vh;
+  height: fit-content;
   z-index: 4;
   pointer-events: none;
 }
 
-.scroller {
-  width: 100%;
-  height: 100%;
-}
-
-.scroller__inner {
-  padding-block: 1vh;
+.marquee-row {
+  width: 100vw;
+  height: fit-content;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10vw;
-  height: 100%;
-  background-color: transparent;
+  justify-content: space-around;
 }
 
-.scroller__inner img {
-  height: 4vh;
-  width: auto;
+.marquee-image {
   position: relative;
-  opacity: 0.25;
-}
-
-.scroller[data-animated="true"] {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    #AAA3FF,
-    #AAA3FF,
-    transparent
-  );
-  mask: linear-gradient(90deg, transparent, #AAA3FF, #AAA3FF, transparent);
-}
-
-.scroller[data-animated="true"] .scroller__inner {
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 40s)
-    var(--_animation-direction, forwards) linear infinite;
-}
-
-.scroller[data-direction="right"] {
-  --_animation-direction: reverse;
-}
-
-.scroller[data-direction="left"] {
-  --_animation-direction: forwards;
-}
-
-.scroller[data-speed="fast"] {
-  --_animation-duration: 20s;
-}
-
-.scroller[data-speed="slow"] {
-  --_animation-duration: 60s;
-}
-
-@keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 0.5rem));
-  }
+  width: 5vw;
 }
 
 .showreel-overlay {
@@ -1324,6 +1274,7 @@ video {
   pointer-events: all;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 /* .five-horizontal {
@@ -2032,16 +1983,26 @@ input {
 }
 
 .one-content-logos {
-  bottom: 7.5vh;
-  z-index: 100;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 4;
+  pointer-events: none;
 }
 
-.scroller__inner {
-  gap: 15vw;
+.marquee-row {
+  width: 250vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
 }
 
-.scroller__inner img {
-  height: 3vh;
+.marquee-image {
+  position: relative;
+  height: 2.5vh;
+  width: auto;
 }
 
 .showreel-overlay {

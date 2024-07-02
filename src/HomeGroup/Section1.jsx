@@ -7,39 +7,11 @@ import { useTextEffect } from "../ScrollAnimations";
 import gsap from "gsap";
 import Spline from '@splinetool/react-spline';
 import { Link, useNavigate } from 'react-router-dom';
+import Marquee from "react-fast-marquee";
 
 export const Section1 = () => {
 
   useTextEffect(".anim");
-
-useEffect(() => {
-  const scrollers = document.querySelectorAll(".scroller");
-
-  // If a user hasn't opted in for reduced motion, then we add the animation
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-  }
-
-  function addAnimation() {
-    scrollers.forEach((scroller) => {
-      // add data-animated="true" to every `.scroller` on the page
-      scroller.setAttribute("data-animated", true);
-
-      // Make an array from the elements within `.scroller-inner`
-      const scrollerInner = scroller.querySelector(".scroller__inner");
-      const scrollerContent = Array.from(scrollerInner.children);
-
-      // For each item in the array, clone it
-      // add aria-hidden to it
-      // add it into the `.scroller-inner`
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden", true);
-        scrollerInner.appendChild(duplicatedItem);
-      });
-    });
-  }
-}, []);
 
 const [fullPageVisible, setFullPageVisible] = useState(false);
 const handleFullPageToggle = () => {
@@ -96,26 +68,18 @@ const isMobile = window.innerWidth <= 768;
             </div>
           </div>
           <div className="one-content-logos">
-            <div className='scroller' data-direction="left" data-speed="slow" >
-            <div className="scroller__inner">
-              <img src="gsap.png" alt="" />
-              <img src="spline.png" alt="" />
-              <img src="threejs.png" alt="" />
-              <img src="figma.png" alt="" />
-              <img src="react.png" alt="" />
-              <img src="hostinger.png" alt="" />
-              <img src="webflow.png" alt="" />
-              <img src="shopify.png" alt="" />
-              <img src="gsap.png" alt="" />
-              <img src="spline.png" alt="" />
-              <img src="threejs.png" alt="" />
-              <img src="figma.png" alt="" />
-              <img src="react.png" alt="" />
-              <img src="hostinger.png" alt="" />
-              <img src="webflow.png" alt="" />
-              <img src="shopify.png" alt="" />
-            </div>
-            </div>
+            <Marquee >
+              <div className="marquee-row">
+                <img className="marquee-image" src="/webflow.png" alt="" />
+                <img className="marquee-image" src="/spline.png" alt="" />
+                <img className="marquee-image" src="/threejs.png" alt="" />
+                <img className="marquee-image" src="/shopify.png" alt="" />
+                <img className="marquee-image" src="/react.png" alt="" />
+                <img className="marquee-image" src="/hostinger.png" alt="" />
+                <img className="marquee-image" src="/figma.png" alt="" />
+                <img className="marquee-image" src="/gsap.png" alt="" />
+              </div>
+            </Marquee>
           </div>
         </section>
 
