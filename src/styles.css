@@ -938,7 +938,7 @@ input::placeholder {
 
 .marquee-image {
   position: relative;
-  width: 5vw;
+  height: 3vh;
 }
 
 .showreel-overlay {
