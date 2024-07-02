@@ -1466,7 +1466,7 @@ video {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 0 5vw;
+  padding: 5vw 5vw;
   gap: 0.5vw;
 }
 

@@ -459,6 +459,43 @@ const circleAnimation = (wrapperSelector, itemSelector, svgSelector, circlePathS
   }, [wrapperSelector, itemSelector, svgSelector, circlePathSelector]);
 };
 
+const useAnimateSmallHeadline = (textSelector) => {
+  useEffect(() => {
+    function animateSmallHeadline(selector) {
+      document.querySelectorAll(selector).forEach((element) => {
+
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            ease: 'none',
+            duration: 1,
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 90%',
+              toggleActions: 'play reverse play reverse',
+            },
+          }
+        );
 
 
-export { useSmallTextAnimation, useAnimateText, useAnimateTextDelay, RotatingHeader, useTextEffect, useImageAnimation, circleAnimation };
+      });
+    }
+
+    // Apply animation to all elements with the given selector
+    animateSmallHeadline(textSelector);
+
+    // Cleanup function to remove ScrollTriggers on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [textSelector]);
+};
+
+
+
+
+export { useSmallTextAnimation, useAnimateText, useAnimateTextDelay, RotatingHeader, useTextEffect, useImageAnimation, circleAnimation, useAnimateSmallHeadline };

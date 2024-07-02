@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, Suspense } from "react";
-import {  RotatingHeader, useAnimateText } from "../ScrollAnimations";
+import {  RotatingHeader, useAnimateSmallHeadline, useAnimateText } from "../ScrollAnimations";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls } from "@react-three/drei";
 import BalloonModel from "../BalloonModel";
@@ -8,6 +8,8 @@ import Accordion from "../Accordion";
 export const Section4 = () => {
 
   useAnimateText(".four-animate-text")
+
+  useAnimateSmallHeadline(".why-us-title-1, .why-us-title-2, .why-us-title-3")
 
     return (
       <>
@@ -29,7 +31,7 @@ export const Section4 = () => {
 
               <div className="why-us-box">
                 <div className="why-us-left">
-                  <h1 className="why-us-title" >Cutting Edge Technology</h1>
+                  <h1 className="why-us-title why-us-title-1" >Cutting Edge Technology</h1>
                 </div>
                 <div className="why-us-right">
 
@@ -62,7 +64,7 @@ export const Section4 = () => {
 
               <div className="why-us-box">
                 <div className="why-us-left">
-                  <h1 className="why-us-title" >Global Reach</h1>
+                  <h1 className="why-us-title why-us-title-2" >Global Reach</h1>
                 </div>
                 <div className="why-us-right">
 
@@ -95,7 +97,7 @@ export const Section4 = () => {
 
               <div className="why-us-box">
                 <div className="why-us-left">
-                  <h1 className="why-us-title" >Client-Centric Approach</h1>
+                  <h1 className="why-us-title why-us-title-3" >Client-Centric Approach</h1>
                 </div>
                 <div className="why-us-right">
 
