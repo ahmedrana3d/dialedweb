@@ -68,7 +68,7 @@ const isMobile = window.innerWidth <= 768;
             </div>
           </div>
           <div className="one-content-logos">
-            <Marquee >
+            <Marquee speed={50} >
               <div className="marquee-row">
                 <img className="marquee-image" src="/webflow.png" alt="" />
                 <img className="marquee-image" src="/spline.png" alt="" />
