@@ -29,6 +29,16 @@ useEffect(() => {
 
 const isMobile = window.innerWidth <= 768;
 
+const navigate = useNavigate();
+
+const handleContactNavigate = () => {
+  if (location.pathname === "/contact") {
+    navigate("/");
+  } else {
+    navigate("/contact");
+  }
+};
+
     return (
       <>
         <section className="one">
@@ -56,9 +66,9 @@ const isMobile = window.innerWidth <= 768;
                   whileHover={{ scale: 1.075 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <div className="navigation-left-content" >
-                    <span className="navigation-text" >OUR MISSION</span>
-                    <span className="navigation-text" >OUR MISSION</span>
+                  <div className="navigation-left-content" onClick={ handleContactNavigate } >
+                    <span className="navigation-text" >GET IN TOUCH</span>
+                    <span className="navigation-text" >GET IN TOUCH</span>
                   </div>
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>

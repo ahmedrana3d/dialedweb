@@ -120,6 +120,10 @@ export const Navigation = () => {
     }
   };
 
+  const handleClick = (linkUrl) => {
+    window.open(linkUrl, '_blank');
+  };
+
   const isMobile = window.innerWidth <= 768;
 
   return (
@@ -154,17 +158,15 @@ export const Navigation = () => {
             <div ref={menuContainerRef} className="menuContainer">
               <h1 className="menu-text">Book Your Consultation</h1>
               <div className="inputContainer">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="emailinput"
-                />
+                <div className="emailinput" onClick={handleContactNavigate}>
+                  Get in touch
+                </div>
               </div>
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
-              <i className="fa-brands fa-instagram nav-brands"></i>
-              <i className="fa-brands fa-youtube nav-brands"></i>
-              <i className="fa-brands fa-linkedin nav-brands"></i>
+              <i className="fa-brands fa-instagram nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
+              <i className="fa-brands fa-youtube nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
+              <i className="fa-brands fa-linkedin nav-brands" onClick={() => handleClick('https://calendly.com/d/cn6c-4s9-66h/meeting?month=2024-04')}></i>
             </div>
           </div>
         </div>
@@ -191,7 +193,7 @@ export const Navigation = () => {
             )}
           </div>
         </motion.button>
-        <Link to="/" className="navigation-center" >
+        <Link to="/"   onClick={(e) => {e.preventDefault(); window.location.href = '/'; }} className="navigation-center" >
             <div className="navigation-center">
                 <img src="/Keycap.png" className="navigation-image" alt="" />
             </div>

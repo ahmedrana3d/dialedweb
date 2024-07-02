@@ -23,7 +23,7 @@ const LoadingScreen = ({ onLoaded }) => {
         <div className="progress__container">
           <div className="progress__bar" style={{ width: `${progress}%` }}></div>
         </div> */}
-        <video className="loading-video" src="/loadingvid.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop ></video>
+        <img className="contact-video" src="/loading.gif" alt="" />
       </div>
     </div>
   );
