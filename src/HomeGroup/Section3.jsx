@@ -10,6 +10,41 @@ export const Section3 = () => {
 
   const isMobile = window.innerWidth <= 768;
 
+  const [dragging, setDragging] = useState(false);
+  const containerRef = useRef(null);
+  const sliderRef = useRef(null);
+
+  const handleMouseDown = () => {
+      setDragging(true);
+  };
+
+  const handleMouseUp = () => {
+      setDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+      if (!dragging) return;
+
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const x = e.clientX - containerRect.left;
+      const width = containerRect.width;
+      const percentage = (x / width) * 100;
+
+      sliderRef.current.style.left = `${percentage}%`;
+      containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
+  };
+
+  useEffect(() => {
+      const handleMouseUpOutside = () => {
+          setDragging(false);
+      };
+
+      window.addEventListener('mouseup', handleMouseUpOutside);
+      return () => {
+          window.removeEventListener('mouseup', handleMouseUpOutside);
+      };
+  }, []);
+
   return (
     <>
       <section className="three">
@@ -39,6 +74,23 @@ export const Section3 = () => {
           )}
         </div>
       </section>
+      <div
+            className="container"
+            onMouseMove={handleMouseMove}
+            ref={containerRef}
+        >
+            <div className="video video1">
+                <video src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+            </div>
+            <div className="video video2">
+                <video src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+            </div>
+            <div
+                className="slider"
+                onMouseDown={handleMouseDown}
+                ref={sliderRef}
+            ></div>
+        </div>
     </>
   );
 };
