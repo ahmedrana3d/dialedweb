@@ -56,7 +56,7 @@ section {
 .experience-one {
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -1936,6 +1936,15 @@ html.lenis, html.lenis body {
     z-index: 1;
   }
 
+  .experience-two {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
   .mobile-scroll {
     display: block;
     position: absolute;
@@ -2969,6 +2978,10 @@ input {
 }
 
 /* EIGHT */
+
+.eight {
+  position: relative;
+}
 
 .eight-main-title {
   position: relative;

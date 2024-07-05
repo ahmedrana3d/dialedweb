@@ -4,6 +4,10 @@ import Accordion from "../Accordion";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 import { useNavigate } from "react-router-dom";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Sphere } from "../Sphere";
+import { Environment } from "@react-three/drei";
+import { easing } from "maath"
 
 export const Section8 = () => {
 
@@ -18,6 +22,8 @@ const handleContactNavigate = () => {
     navigate("/contact");
   }
 };
+
+const isMobile = window.innerWidth <= 768;
 
     return (
       <>
@@ -55,7 +61,32 @@ const handleContactNavigate = () => {
                 </motion.button>
             </div>
           </div>
+
+          {isMobile && (
+          <div className="experience-two" >
+          <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
+            <Sphere />
+            <Rig />
+            <Environment preset="sunset" />
+          </Canvas>
+        </div>
+        )}
         </section>
       </>
     )
+}
+
+function Rig() {
+  useFrame((state, delta) => {
+    // Calculate the target camera position based on the pointer's x and y position
+    const targetX = state.pointer.x * 0.15; // Adjust this multiplier as needed for the desired horizontal movement
+    const targetY = state.pointer.y * 0.15;
+    const targetZ = 8 + Math.atan(state.pointer.x * 2);
+  
+    // Smoothly move the camera to the target position
+    easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
+  
+    // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
+    state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
+  });
 }
