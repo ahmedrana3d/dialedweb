@@ -6,6 +6,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./HomeGroup/Home"
 import Contact from "./Contact"
 import { AnimatePresence } from "framer-motion";
+import { RealEstatePortfolio } from "./RealEstatePortfolio";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -86,6 +87,7 @@ function App() {
           <Routes location={location} key={location.pathname} >
             <Route index element={ <Home /> } />
             <Route path="/contact" element={ <Contact /> } />
+            <Route path="/realestate" element={ <RealEstatePortfolio /> } />
           </Routes>
         </AnimatePresence>
 

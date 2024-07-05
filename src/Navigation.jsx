@@ -154,6 +154,12 @@ export const Navigation = () => {
                   <span className="menu-text">GET IN TOUCH</span>
                 </div>
               </Link>
+              <Link to="/realestate" className="menu-text">
+                <div className="menu-button">
+                  <span className="menu-text">REAL ESTATE</span>
+                  <span className="menu-text">REAL ESTATE</span>
+                </div>
+              </Link>
             </div>
             <div ref={menuContainerRef} className="menuContainer">
               <h1 className="menu-text">Book Your Consultation</h1>

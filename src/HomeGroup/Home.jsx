@@ -7,7 +7,7 @@ import { Section6 } from "./Section6";
 import { Section7 } from "./Section7";
 import { Section8 } from "./Section8";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Sparkles } from "@react-three/drei";
+import { Environment, Float, Sparkles } from "@react-three/drei";
 import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { Sphere } from "../Sphere";
@@ -16,6 +16,7 @@ import transition from "../Transition";
 
 const Home = () => {
 
+  const isMobile = window.innerWidth <= 768;
 
     return (
       <>
@@ -28,13 +29,33 @@ const Home = () => {
         <Section8 />
 
         <div className="experience-one" >
-          <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
+          <Canvas camera={{ position: [0, 0, isMobile ? 7 : 5], fov: 35 }} >
             <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 10, 10, 3 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
+            {!isMobile && (
+            <>
             <Rig />
             <EffectComposer>
-              <Fluid radius={0.03} curl={10} swirl={5} distortion={1} force={2} pressure={0.94} densityDissipation={0.98} velocityDissipation={0.99} intensity={0.3} rainbow={false} blend={0} showBackground={false} fluidColor='#1C1230'/>
+              <Fluid
+                radius={0.03}
+                curl={10}
+                swirl={5}
+                distortion={1}
+                force={2}
+                pressure={0.94}
+                densityDissipation={0.98}
+                velocityDissipation={0.99}
+                intensity={0.3}
+                rainbow={false}
+                blend={0}
+                showBackground={false}
+                fluidColor="#1C1230"
+              />
             </EffectComposer>
+            </>
+          )}
+          <Float speed={2} floatIntensity={ 1.25 } >
             <Sphere />
+          </Float>
             <Environment preset="sunset" />
           </Canvas>
         </div>
