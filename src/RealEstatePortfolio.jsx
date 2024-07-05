@@ -5,6 +5,7 @@ export const RealEstatePortfolio = () => {
   return (
     <>
       <section className="realestate">
+        <h1 className="headline" >Real Estate Portfolio</h1>
         <div className="realestate-content">
 
           <div className="realestate-row">
@@ -19,7 +20,7 @@ export const RealEstatePortfolio = () => {
           </div>
 
           <div className="realestate-row-video">
-            <video className="realestate-video" src="/r14.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop></video>
+          <div className="realestate-row-item realestate-image-14"/>
           </div>
 
           <div className="realestate-row">
@@ -34,7 +35,7 @@ export const RealEstatePortfolio = () => {
           </div>
 
           <div className="realestate-row-video">
-            <video className="realestate-video" src="/r15.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop></video>
+            <div className="realestate-row-item realestate-image-15"/>
           </div>
 
           <div className="realestate-row">
