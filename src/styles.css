@@ -1281,15 +1281,7 @@ video {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: auto;
-}
-
-.four-experience {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+  z-index: 14;
 }
 
 .four-content {
@@ -1311,15 +1303,15 @@ video {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: 1vw;
 }
 
 .why-us-box {
   width: 100%;
-  height: fit-content;
+  height: 35vh;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: 2vw;
 }
 
 .why-us-title {
@@ -1337,20 +1329,29 @@ video {
   height: 100%;
   display: flex;
   flex-direction: row;
-  gap: 3vw;
+  gap: 1vw;
 }
 
 .why-us-right-row {
   display: flex;
   flex-direction: column;
-  width: 24.66vw;
-  height: 30vh;
+  width: 26vw;
+  height: 20vh;
   gap: 1vw;
   padding: 1vw;
   border: 1px solid #fefeff50;
   border-radius: 25px;
+  pointer-events: all;
+  transition: 0.75s ease;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
+.why-us-right-row:hover {
+  transform: scale(1.1); /* Scale up the div */
+  height: fit-content;
+  z-index: 10;
+}
 .why-us-icon {
   font-size: 4vw;
   color: #AAA3FF;
@@ -1377,9 +1378,17 @@ video {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin: 0;
-  line-height: 1;
-  color: #fcfeea;
-  line-height: 125%;
+  color: transparent;
+  transition: 0s ease;
+  position: relative;
+}
+
+.why-us-right-row:hover p {
+  font-size: 1vw;
+  display: flex;
+  line-height: 100%;
+  height: fit-content;
+  color: #fefeff;
 }
 
 /* SECTION FIVE */

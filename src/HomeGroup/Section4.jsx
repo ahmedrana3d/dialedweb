@@ -19,21 +19,24 @@ export const Section4 = () => {
             <div className="why-us-container">
 
               <div className="why-us-box">
+              <div className="why-us-left">
+                  <h1 className="why-us-title why-us-title-1" >Cutting Edge Technology</h1>
+                </div>
                 <div className="why-us-right">
 
-                  <div className="why-us-right-row">
+                  <div className="why-us-right-row left">
                     <i class="fa-solid fa-fire why-us-icon"></i>
                     <h1 className="why-us-text-title" >High performance</h1>
                     <p className="why-us-text-description" >Utilizes the power of the Graphics Processing Unit, rendering complex graphics and animations to handle large volumes of data at high frame rates. </p>
                   </div>
 
-                  <div className="why-us-right-row">
+                  <div className="why-us-right-row center">
                     <i class="fa-solid fa-cube why-us-icon"></i>
                     <h1 className="why-us-text-title" >Interactivity</h1>
                     <p className="why-us-text-description" >Supports real-time interactions where users can navigate 3D environments, manipulate objects, and experience dynamic content.</p>
                   </div>
 
-                  <div className="why-us-right-row">
+                  <div className="why-us-right-row right">
                     <i class="fa-solid fa-link why-us-icon"></i>
                     <h1 className="why-us-text-title" >Cross-Platform Compatibility</h1>
                     <p className="why-us-text-description" >Designed to work flawlessly on a range of devices in order to allow users to enjoy our websites whether they are on a high-end desktop or a mobile device.</p>
@@ -43,6 +46,9 @@ export const Section4 = () => {
               </div>
 
               <div className="why-us-box">
+              <div className="why-us-left">
+                  <h1 className="why-us-title why-us-title-2" >Global Reach</h1>
+                </div>
                 <div className="why-us-right">
 
                   <div className="why-us-right-row">
@@ -67,6 +73,9 @@ export const Section4 = () => {
               </div>
 
               <div className="why-us-box">
+              <div className="why-us-left">
+                  <h1 className="why-us-title why-us-title-3" >Client-Centric Approach</h1>
+                </div>
 
                 <div className="why-us-right">
 
