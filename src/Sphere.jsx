@@ -99,7 +99,7 @@ export function Sphere(props) {
       })
 
       .to(".three-content-box-right", {
-        width: "45%",
+        width: isMobile ? "100%" : "45%",
         scrollTrigger: {
           trigger: ".three-content",
           start: "top bottom",

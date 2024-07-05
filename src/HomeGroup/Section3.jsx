@@ -8,6 +8,8 @@ export const Section3 = () => {
 
   useAnimateText(".three-title")
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <>
       <section className="three">

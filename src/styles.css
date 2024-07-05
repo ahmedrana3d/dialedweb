@@ -1183,41 +1183,6 @@ input::placeholder {
   align-items: center;
 }
 
-video {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-}
-
-.image-wrap {
-  transition: 1s ease-out;
-  transition-delay: 0.2s;
-  height: 50vh;
-  width: auto;
-  overflow: hidden;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  visibility: hidden;
-  position: relative;
-  z-index: 4;
-  border-radius: 25px;
-}
-
-.image-wrap video {
-  transform: scale(1.3);
-  transition: 2s ease-out;
-}
-
-.animating .image-wrap {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  visibility: visible;
-  transform: skewY(0);
-}
-
-.animating video {
-  transform: scale(1);
-  transition: 4s ease-out;
-}
-
 .three-content-box-left {
   width: 100%;
   height: fit-content;
@@ -2335,24 +2300,111 @@ input {
 
 /* SECTION THREE */
 
-.three-content-box {
-  height: 70vh;
-  width: 90%;
+.three {
+  height: 100vh;
+  display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: auto;
+  overflow: visible;
+  padding: 0 10%;
+  align-items: end;
 }
 
-.three-content-box-left, .three-content-box-right {
+.three-content-box-right {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
+.three-content {
+  width: 90%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.three-content-left {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.three-content-left h1, p {
+  position: relative;
+  z-index: 4;
+}
+
+.three-content-right {
+  width: 90%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-content-box-left {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.three-video-frame {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.three-video {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  position: relative;
+}
+
+.typewriter-box {
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+}
 .typewriter {
-  font-size: 1rem;
-  line-height: 125%;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 145%;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.typewriter-main {
+  display: inline-block;
 }
 
 .typewriter-text {
-  padding-left: 1vw;
+  font-family: 'SF', sans-serif;
+  color:#AAA3FF;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 0.25vw;
 }
 
 /* SECTION FOUR */
