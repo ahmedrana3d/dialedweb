@@ -6,14 +6,14 @@ import { OrbitControls } from "@react-three/drei";
 
 export const Section3 = () => {
 
-  // useAnimateText(".three-title")
+  useAnimateText(".three-title")
 
-  // const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <>
       <section className="three">
-        {/* {!isMobile && (
+        {!isMobile && (
           <div className="three-content-box-right">
             <div className="three-video-frame">
               <video className="three-video" src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
@@ -37,7 +37,7 @@ export const Section3 = () => {
               </div>
             </div>
           )}
-        </div> */}
+        </div>
       </section>
     </>
   );

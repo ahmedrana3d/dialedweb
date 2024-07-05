@@ -201,7 +201,7 @@ export const Navigation = () => {
         </motion.button>
         <Link to="/"   onClick={(e) => {e.preventDefault(); window.location.href = '/'; }} className="navigation-center" >
             <div className="navigation-center">
-                <img src="/Keycap.png" className="navigation-image" alt="" />
+                <img src="/loading.png" className="navigation-image" alt="" />
             </div>
         </Link>
         <motion.button

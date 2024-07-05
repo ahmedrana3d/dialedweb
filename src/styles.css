@@ -1237,10 +1237,6 @@ input::placeholder {
 
 /* SECTION FOUR */
 
-.balloonStart {
-  height: 200vh;
-}
-
 .four {
   height: fit-content;
   display: flex;
