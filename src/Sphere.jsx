@@ -98,6 +98,17 @@ export function Sphere(props) {
         },
       })
 
+      .to(".three-content-box-right", {
+        width: "45%",
+        scrollTrigger: {
+          trigger: ".three-content",
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
     })
     
   }, [])

@@ -25,6 +25,7 @@ const LoadingScreen = ({ onLoaded }) => {
           <div className="progress__bar" style={{ width: `${progress}%` }}></div>
         </div> */}
         <img className="contact-video" src="/loading.gif" alt="" />
+        <h1 className="headline" >DIALEDWEB</h1>
       </div>
     </div>
   );
