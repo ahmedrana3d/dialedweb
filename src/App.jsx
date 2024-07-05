@@ -78,6 +78,11 @@ function App() {
 
   const location = useLocation()
 
+  useEffect(() => {
+    // Scroll to the top when the location changes (on route change)
+    window.scrollTo(0, 0);
+  }, [location.pathname]); 
+
   return (
       <>
         <LoadingScreen onLoaded={handleLoaded} />

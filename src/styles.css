@@ -1315,7 +1315,7 @@ video {
 }
 
 .why-us-title {
-  font-size: 4.5vw;
+  font-size: 3vw;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin: 0;
@@ -1339,7 +1339,7 @@ video {
   height: 20vh;
   gap: 1vw;
   padding: 1vw;
-  border: 1px solid #fefeff50;
+  border: 2px solid #fefeff50;
   border-radius: 25px;
   pointer-events: all;
   transition: 0.75s ease;
@@ -1351,6 +1351,7 @@ video {
   transform: scale(1.1); /* Scale up the div */
   height: fit-content;
   z-index: 10;
+  border: 2px solid #AAA3FF;
 }
 .why-us-icon {
   font-size: 4vw;
