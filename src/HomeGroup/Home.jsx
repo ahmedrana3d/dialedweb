@@ -29,8 +29,10 @@ const Home = () => {
         <Section8 />
 
         <div className="experience-one" >
-          <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
+          <Canvas camera={{ position: [0, 0, isMobile ? 7 : 5], fov: 35 }} >
             <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 10, 10, 3 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
+            {!isMobile && (
+            <>
             <Rig />
             <EffectComposer>
               <Fluid
@@ -49,6 +51,8 @@ const Home = () => {
                 fluidColor="#1C1230"
               />
             </EffectComposer>
+            </>
+          )}
           <Float speed={2} floatIntensity={ 1.25 } >
             <Sphere />
           </Float>
