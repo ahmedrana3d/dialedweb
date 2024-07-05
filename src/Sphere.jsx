@@ -73,9 +73,9 @@ export function Sphere(props) {
       })
 
       .to(sphereRef.current.position, {
-        x: 5,
-        y: -5,
-        z: 0,
+        x: isMobile ? 0 : 5,
+        y: isMobile ? 0 : -5,
+        z: isMobile ? 0 : 0,
         scrollTrigger: {
           trigger: ".four",
           start: "top bottom",
