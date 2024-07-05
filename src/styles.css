@@ -2535,7 +2535,7 @@ input {
 .why-us-right-row:hover p {
   font-size: 1rem;
   display: flex;
-  line-height: 100%;
+  line-height: 125%;
   height: fit-content;
   color: #fefeff;
 }
