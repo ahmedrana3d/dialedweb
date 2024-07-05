@@ -2313,7 +2313,7 @@ input {
 
 .three-content-box-right {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2330,6 +2330,8 @@ input {
   display: flex;
   flex-direction:column;
   align-items: center;
+  justify-content: center;
+  gap: 5vw;
 }
 
 .three-content-left {
@@ -2386,7 +2388,7 @@ input {
   position: relative;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1rem;
   line-height: 145%;
   overflow: hidden;
   color: white;
@@ -2404,7 +2406,7 @@ input {
   color:#AAA3FF;
   font-weight: bold;
   font-style: italic;
-  padding-left: 0.25vw;
+  padding-left: 0.5vw;
 }
 
 /* SECTION FOUR */
