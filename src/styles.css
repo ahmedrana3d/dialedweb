@@ -1246,7 +1246,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 14;
+  z-index: 2;
 }
 
 .four-content {
@@ -2495,6 +2495,12 @@ input {
   border-radius: 25px;
 }
 
+.why-us-right-row:hover {
+  transform: scale(1); /* Scale up the div */
+  height: fit-content;
+  border: 1px solid #fefeff50;
+}
+
 .why-us-icon {
   font-size: 3rem;
   color: #AAA3FF;
@@ -2524,6 +2530,14 @@ input {
   line-height: 1;
   color: #fcfeea;
   line-height: 125%;
+}
+
+.why-us-right-row:hover p {
+  font-size: 1rem;
+  display: flex;
+  line-height: 100%;
+  height: fit-content;
+  color: #fefeff;
 }
 /* SECTION FIVE */
 
