@@ -34,9 +34,9 @@ export function Sphere(props) {
       tl
 
       .to(sphereRef.current.scale, {
-        x: 0,
-        y: 0,
-        z: 0,
+        x: isMobile ? 1 : 0,
+        y: isMobile ? 1 : 0,
+        z: isMobile ? 1 : 0,
         scrollTrigger: {
           trigger: ".three",
           start: "top center",
@@ -47,8 +47,8 @@ export function Sphere(props) {
       })
 
       .to(sphereRef.current.position, {
-        x: isMobile ? -3 : -7,
-        y: 5,
+        x: isMobile ? 0 : -7,
+        y: isMobile ? 0 : 5,
         z: 0,
         scrollTrigger: {
           trigger: ".three",

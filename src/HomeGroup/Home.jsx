@@ -16,6 +16,7 @@ import transition from "../Transition";
 
 const Home = () => {
 
+  const isMobile = window.innerWidth <= 768;
 
     return (
       <>
@@ -29,11 +30,27 @@ const Home = () => {
 
         <div className="experience-one" >
           <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
-            <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 20, 20, 5 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
+            <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 10, 10, 3 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
             <Rig />
+            {!isMobile && (
             <EffectComposer>
-              <Fluid radius={0.03} curl={10} swirl={5} distortion={1} force={2} pressure={0.94} densityDissipation={0.98} velocityDissipation={0.99} intensity={0.3} rainbow={false} blend={0} showBackground={false} fluidColor='#1C1230'/>
+              <Fluid
+                radius={0.03}
+                curl={10}
+                swirl={5}
+                distortion={1}
+                force={2}
+                pressure={0.94}
+                densityDissipation={0.98}
+                velocityDissipation={0.99}
+                intensity={0.3}
+                rainbow={false}
+                blend={0}
+                showBackground={false}
+                fluidColor="#1C1230"
+              />
             </EffectComposer>
+          )}
             <Sphere />
             <Environment preset="sunset" />
           </Canvas>
