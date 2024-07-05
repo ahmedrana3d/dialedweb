@@ -40,7 +40,7 @@ function Carousel({ radius = 1.3, count = 7 }) {
       {Array.from({ length: count }, (_, i) => (
         <Card
           key={i}
-          url={`/t${Math.floor(i % 7) + 1}.png`}
+          url={`/teamimage${Math.floor(i % 7) + 1}.png`}
           position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
           rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
         />
@@ -57,10 +57,10 @@ function Card({ url, ...props }) {
   useFrame((state, delta) => {
     easing.damp3(ref.current.scale, hovered ? 1.15 : 1, 0.1, delta)
     easing.damp(ref.current.material, 'radius', hovered ? 0.25 : 0.1, 0.2, delta)
-    easing.damp(ref.current.material, 'zoom', hovered ? 1 : 1.5, 0.2, delta)
+    easing.damp(ref.current.material, 'zoom', hovered ? 1.25 : 0.9, 0.2, delta)
   })
   return (
-    <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props}>
+    <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props} >
       <bentPlaneGeometry args={[0.1, 1, 1, 20, 20]} />
     </Image>
   )
@@ -68,7 +68,7 @@ function Card({ url, ...props }) {
 
 function Banner(props) {
   const ref = useRef()
-  const texture = useTexture('./team2.png')
+  const texture = useTexture('./ourteamimage.png')
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping
   const scroll = useScroll()
   useFrame((state, delta) => {
