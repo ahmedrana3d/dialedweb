@@ -177,7 +177,7 @@ export const Section6 = () => {
                           <h1 className="six-back-description" >SVG Sequences</h1>
                         </div>
                         <div className="back-content-box">
-                          <h1 className="six-back-description" >FX</h1>
+                          <h1 className="six-back-description" >VIRTUAL FX</h1>
                         </div>
                         <div className="back-content-box">
                           <h1 className="six-back-description" >Motion Graphics</h1>

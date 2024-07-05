@@ -17,6 +17,24 @@ const Contact = () => {
     window.location.href = 'tel:+16193176418';
   };
 
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    const { clientX, clientY } = event;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const x = (clientX - centerX) / 150; // Adjust the divisor to control the movement intensity
+    const y = (clientY - centerY) / 150;
+    setPosition({ x, y });
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
     return (
       <>
 
@@ -32,15 +50,15 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="contact-options-box" onClick={handlePhoneClick}>
-                  <div className="contact-option-1" >
+                <div className="contact-options-box">
+                  <a className="contact-option-1" href="tel:+16193176418">
                     <i class="fa-solid fa-phone option-icon"></i>
                     <p className="option-text" >Call</p>
-                  </div>
-                  <div className="contact-option-1" onClick={() => window.location = 'support@dialedworldwide.com'}>
+                  </a>
+                  <a className="contact-option-1" href="mailto:support@dialedworldwide.com">
                     <i class="fa-solid fa-envelope option-icon" ></i>
                     <p className="option-text email" >Email</p>
-                  </div>
+                  </a>
                   <div className="contact-option-1" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}>
                     <i class="fa-brands fa-linkedin option-icon"></i>
                     <p className="option-text" >LinkedIn</p>
@@ -66,12 +84,8 @@ const Contact = () => {
 
               </div>
             </div>
-            <div className="contact-overlay-right">
-                {/* <Suspense >
-                    <Spline loading="eager" scene="https://prod.spline.design/wR22Fdesv6d96-UY/scene.splinecode" />
-              </Suspense> */}
-              {/* <video className="contact-video" src="/loadingvid.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto"loop ></video> */}
-              <img className="contact-video" src="/loading.gif" alt="" />
+            <div className="contact-overlay-right" onMouseMove={handleMouseMove}>
+              <img className="contact-video" src="/loading.png" style={{ transform: `translate3d(${-position.x * 8}px, ${-position.y * 8}px, 0) rotateX(${position.x}deg) rotateY(${position.y}deg)`,}}/>
             </div>
         </div>
 

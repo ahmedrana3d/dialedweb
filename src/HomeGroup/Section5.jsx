@@ -27,7 +27,7 @@ export const Section5 = () => {
   );
 };
 
-function Carousel({ radius = 1.4, count = 8 }) {
+function Carousel({ radius = 1.3, count = 7 }) {
   const ref = useRef()
 
   useFrame((state, delta) => {
@@ -40,7 +40,7 @@ function Carousel({ radius = 1.4, count = 8 }) {
       {Array.from({ length: count }, (_, i) => (
         <Card
           key={i}
-          url={`/team${Math.floor(i % 4) + 1}.jpg`}
+          url={`/t${Math.floor(i % 7) + 1}.png`}
           position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
           rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
         />
@@ -76,7 +76,7 @@ function Banner(props) {
   })
   return (
     <mesh ref={ref} {...props}>
-      <cylinderGeometry args={[1.6, 1.6, 0.14, 128, 16, true]} />
+      <cylinderGeometry args={[1.5, 1.5, 0.14, 128, 16, true]} />
       <meshSineMaterial map={texture} map-anisotropy={16} map-repeat={[30, 1]} side={THREE.DoubleSide} toneMapped={false} />
     </mesh>
   )

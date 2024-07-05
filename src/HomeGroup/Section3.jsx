@@ -15,7 +15,7 @@ export const Section3 = () => {
         <div className="three-content-box" >
 <div className="three-content-box-left">
   <h1 className="headline three-title">Our Mission</h1>
-  <p className="description three-description purple">To innovate and enhance digital experiences by crafting tailored, user-centric web solutions. We elevate and engage audiences through creativity and technology, delivering modern, intuitive websites that drive business’s international success.
+  <p className="description three-description purple">To innovate and enhance digital experiences by crafting tailored, user-centric web solutions. We elevate and engage audiences through creativity and technology, delivering modern, intuitive websites that drive business’s success.
   </p>
   <div className="typewriter-box" >
     <h1 className="typewriter" >
