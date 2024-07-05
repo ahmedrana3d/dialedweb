@@ -33,70 +33,70 @@ export function Sphere(props) {
 
       tl
 
-      // .to(sphereRef.current.scale, {
-      //   x: isMobile ? 1 : 0,
-      //   y: isMobile ? 1 : 0,
-      //   z: isMobile ? 1 : 0,
-      //   scrollTrigger: {
-      //     trigger: ".three",
-      //     start: "top center",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(sphereRef.current.scale, {
+        x: isMobile ? 1 : 0,
+        y: isMobile ? 1 : 0,
+        z: isMobile ? 1 : 0,
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top center",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
-      // .to(sphereRef.current.position, {
-      //   x: isMobile ? 0 : -7,
-      //   y: isMobile ? 0 : 5,
-      //   z: 0,
-      //   scrollTrigger: {
-      //     trigger: ".three",
-      //     start: "top bottom",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(sphereRef.current.position, {
+        x: isMobile ? 0 : -7,
+        y: isMobile ? 0 : 5,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".three",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
-      // .to(sphereRef.current.scale, {
-      //   x: 1,
-      //   y: 1,
-      //   z: 1,
-      //   scrollTrigger: {
-      //     trigger: ".eight",
-      //     start: "top center",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(sphereRef.current.scale, {
+        x: 1,
+        y: 1,
+        z: 1,
+        scrollTrigger: {
+          trigger: ".eight",
+          start: "top center",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
-      // .to(sphereRef.current.position, {
-      //   x: 5,
-      //   y: -5,
-      //   z: 0,
-      //   scrollTrigger: {
-      //     trigger: ".four",
-      //     start: "top bottom",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(sphereRef.current.position, {
+        x: 5,
+        y: -5,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".four",
+          start: "top bottom",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
-      // .to(sphereRef.current.position, {
-      //   x: 0,
-      //   y: 0,
-      //   z: 0,
-      //   scrollTrigger: {
-      //     trigger: ".eight",
-      //     start: "top 60%",
-      //     end: "bottom 100%",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(sphereRef.current.position, {
+        x: 0,
+        y: 0,
+        z: 0,
+        scrollTrigger: {
+          trigger: ".eight",
+          start: "top 60%",
+          end: "bottom 100%",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
       .to(".three-content-box-right", {
         width: isMobile ? "100%" : "45%",
