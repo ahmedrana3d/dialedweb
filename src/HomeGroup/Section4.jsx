@@ -9,7 +9,7 @@ export const Section4 = () => {
 
   useAnimateText(".four-animate-text")
 
-  useAnimateSmallHeadline(".why-us-title-1, .why-us-title-2, .why-us-title-3")
+  // useAnimateSmallHeadline(".why-us-title-1, .why-us-title-2, .why-us-title-3")
 
     return (
       <>
