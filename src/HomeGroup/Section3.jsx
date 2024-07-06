@@ -10,49 +10,64 @@ export const Section3 = () => {
 
   const isMobile = window.innerWidth <= 768;
 
-  // const [dragging, setDragging] = useState(false);
-  // const containerRef = useRef(null);
-  // const sliderRef = useRef(null);
+  const [dragging, setDragging] = useState(false);
+  const containerRef = useRef(null);
+  const sliderRef = useRef(null);
 
-  // const handleMouseDown = () => {
-  //     setDragging(true);
-  // };
+  const handleMouseDown = () => {
+      setDragging(true);
+  };
 
-  // const handleMouseUp = () => {
-  //     setDragging(false);
-  // };
+  const handleMouseUp = () => {
+      setDragging(false);
+  };
 
-  // const handleMouseMove = (e) => {
-  //     if (!dragging) return;
+  const handleMouseMove = (e) => {
+      if (!dragging) return;
 
-  //     const containerRect = containerRef.current.getBoundingClientRect();
-  //     const x = e.clientX - containerRect.left;
-  //     const width = containerRect.width;
-  //     const percentage = (x / width) * 100;
+      const containerRect = containerRef.current.getBoundingClientRect();
+      let x = e.clientX - containerRect.left;
+      const width = containerRect.width;
 
-  //     sliderRef.current.style.left = `${percentage}%`;
-  //     containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
-  // };
+      // Constrain the x position to within the container boundaries
+      x = Math.max(0, Math.min(x, width));
+      const percentage = (x / width) * 100;
 
-  // useEffect(() => {
-  //     const handleMouseUpOutside = () => {
-  //         setDragging(false);
-  //     };
+      sliderRef.current.style.left = `${percentage}%`;
+      containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
+  };
 
-  //     window.addEventListener('mouseup', handleMouseUpOutside);
-  //     return () => {
-  //         window.removeEventListener('mouseup', handleMouseUpOutside);
-  //     };
-  // }, []);
+  useEffect(() => {
+      const handleMouseUpOutside = () => {
+          setDragging(false);
+      };
+
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUpOutside);
+      return () => {
+          window.removeEventListener('mousemove', handleMouseMove);
+          window.removeEventListener('mouseup', handleMouseUpOutside);
+      };
+  }, [dragging]);
 
   return (
     <>
       <section className="three">
         {!isMobile && (
           <div className="three-content-box-right">
-            <div className="three-video-frame">
-              <video className="three-video" src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-            </div>
+      <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+        <div className="video video1">
+          <video src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+        </div>
+        <div className="video video2">
+          <video src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+        </div>
+        <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
+          <div className="circle">
+            <i className="fas fa-arrows-alt-h"></i>
+          </div>
+        </div>
+      </div>
           </div>
         )}
         <div className="three-content">
@@ -74,23 +89,19 @@ export const Section3 = () => {
           )}
         </div>
       </section>
-      {/* <div
-            className="container"
-            onMouseMove={handleMouseMove}
-            ref={containerRef}
-        >
-            <div className="video video1">
-                <video src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-            </div>
-            <div className="video video2">
-                <video src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-            </div>
-            <div
-                className="slider"
-                onMouseDown={handleMouseDown}
-                ref={sliderRef}
-            ></div>
-        </div> */}
+      {/* <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+        <div className="video video1">
+          <video src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+        </div>
+        <div className="video video2">
+          <video src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+        </div>
+        <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
+          <div className="circle">
+            <i className="fas fa-arrows-alt-h"></i>
+          </div>
+        </div>
+      </div> */}
     </>
   );
 };

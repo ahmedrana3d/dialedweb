@@ -70,6 +70,7 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
+  pointer-events: all;
 }
 
 .video {
@@ -98,15 +99,39 @@ section {
 }
 
 .slider {
-  width: 10px;
-  background-color: #333;
+  width: 0.25vw;
+  height: 100%;
+  background-color: #fefeff;
   cursor: ew-resize;
   position: absolute;
-  top: 0;
+  top: 50%;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 2vw; /* Adjust size of the circle */
+  height: 2vw; /* Adjust size of the circle */
+  background-color: white; /* Adjust color of the circle */
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.circle i {
+  font-size: 1vw; /* Adjust size of the icon */
+  color: #040217; /* Adjust color of the icon */
 }
 
 /* REAL ESTATE */
@@ -1203,6 +1228,8 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  pointer-events: all;
+  z-index: 10;
 }
 
 .three-content {
