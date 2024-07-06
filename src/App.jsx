@@ -77,6 +77,14 @@ function App() {
 
   const location = useLocation()
 
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
       <>
         <LoadingScreen onLoaded={handleLoaded} />
