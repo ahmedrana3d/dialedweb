@@ -37,6 +37,21 @@ export const Section3 = () => {
       containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
   };
 
+  const handleTouchMove = (e) => {
+      if (!dragging) return;
+
+      const containerRect = containerRef.current.getBoundingClientRect();
+      let x = e.touches[0].clientX - containerRect.left;
+      const width = containerRect.width;
+
+      // Constrain the x position to within the container boundaries
+      x = Math.max(0, Math.min(x, width));
+      const percentage = (x / width) * 100;
+
+      sliderRef.current.style.left = `${percentage}%`;
+      containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
+  };
+
   useEffect(() => {
       const handleMouseUpOutside = () => {
           setDragging(false);
@@ -44,9 +59,14 @@ export const Section3 = () => {
 
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleMouseUpOutside);
+      window.addEventListener('touchmove', handleTouchMove);
+      window.addEventListener('touchend', handleMouseUpOutside);
+
       return () => {
           window.removeEventListener('mousemove', handleMouseMove);
           window.removeEventListener('mouseup', handleMouseUpOutside);
+          window.removeEventListener('touchmove', handleTouchMove);
+          window.removeEventListener('touchend', handleMouseUpOutside);
       };
   }, [dragging]);
 
@@ -57,17 +77,17 @@ export const Section3 = () => {
           <div className="three-content-box-right">
             <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
                 <div className="video video1">
-                  <video className="three-video" src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                  <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
                 </div>
                 <div className="video video2">
-                  <video className="three-video" src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                  <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
                 </div>
             </div>
           </div>
         )}
                       <div className="slider-container">
                 <div className="slider-line"></div>
-                <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
+                <div className="slider" onMouseDown={handleMouseDown} onTouchStart={handleMouseDown} ref={sliderRef}>
                   <div className="circle">
                     <i className="fas fa-arrows-alt-h"></i>
                   </div>
@@ -84,11 +104,16 @@ export const Section3 = () => {
             </div>
           </div>
           {isMobile && (
-            <div className="three-content-box-right">
-              <div className="three-video-frame">
-                <video className="three-video" src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+          <div className="three-content-box-right">
+          <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+              <div className="video video1">
+                <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
               </div>
-            </div>
+              <div className="video video2">
+                <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+              </div>
+          </div>
+        </div>
           )}
         </div>
       </section>
