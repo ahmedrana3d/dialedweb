@@ -6,7 +6,7 @@ import { OrbitControls } from "@react-three/drei";
 
 export const Section3 = () => {
 
-  useAnimateText(".three-title");
+  useAnimateText(".three-title, .three-top-text-animate");
 
   const isMobile = window.innerWidth <= 768;
 
@@ -76,6 +76,11 @@ export const Section3 = () => {
   return (
     <>
       <section className="three">
+        	{!isMobile && (
+        <div className="three-top-text">
+          <h1 className="headline three-top-text-animate" >Virtual turns Tangible</h1>
+        </div>
+        )}
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>

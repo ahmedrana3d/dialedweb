@@ -1233,15 +1233,19 @@ input::placeholder {
 /* SECTION THREE */
 
 .three {
-  height: 200vh;
+  height: 220vh;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: auto;
   overflow: visible;
-  padding: 0 10%;
-  margin-top: 10vh;
+  padding: 0% 10%;
+  padding-top: 10%;
   align-items: end;
+}
+
+.three-top-text {
+  width: 100%;
 }
 
 .three-content-box-right {
@@ -2425,7 +2429,7 @@ input {
   overflow: visible;
   padding: 0 10%;
   align-items: end;
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .three-content-box-right {
