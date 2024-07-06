@@ -11,19 +11,9 @@ import { RealEstatePortfolio } from "./RealEstatePortfolio";
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
 
-  useEffect(() => {
-    if (progress === 100) {
-      onLoaded();
-    }
-  }, [progress, onLoaded]);
-
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        {/* <h1 className="loading-screen__title animated-text">DIALEDWEB</h1>
-        <div className="progress__container">
-          <div className="progress__bar" style={{ width: `${progress}%` }}></div>
-        </div> */}
         <img className="contact-video" src="/loading.gif" alt="" />
       </div>
     </div>
@@ -32,62 +22,29 @@ const LoadingScreen = ({ onLoaded }) => {
 
 function App() {
 
-  const [lenis, setLenis] = useState(null);
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
-  useEffect(() => {
+  const lenis = new Lenis()
 
-    const lenis = new Lenis()
-
-    lenis.on('scroll', (e) => {
-      console.log(e)
-    })
-    
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+  
+  function raf(time) {
+    lenis.raf(time)
     requestAnimationFrame(raf)
-    setLenis(lenis);
-
-    return () => {
-      lenisInstance.destroy();
-    };
-  }, []);
-
-  const handleLoaded = () => {
-    setTimeout(() => {
-      if (lenis) {
-        lenis.start();
-      }
-      document.body.style.overflow = 'auto';
-    }, 1000); // Delay for 1 second
-  };
-
-  useEffect(() => {
-    if (lenis) {
-      lenis.stop();
-    }
-    document.body.style.overflow = 'hidden';
-  }, [lenis]);
-
-  useEffect(() => {
-    window.history.scrollRestoration = 'manual'
-  }, [])
+  }
+  
+  requestAnimationFrame(raf)
 
   const location = useLocation()
-
-  useEffect(() => {
-    if (lenis) {
-      lenis.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location]);
+  
 
   return (
       <>
-        <LoadingScreen onLoaded={handleLoaded} />
+        <LoadingScreen />
 
         <Navigation />
 
