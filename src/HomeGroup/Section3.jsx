@@ -55,21 +55,24 @@ export const Section3 = () => {
       <section className="three">
         {!isMobile && (
           <div className="three-content-box-right">
-      <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-        <div className="video video1">
-          <video src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-        </div>
-        <div className="video video2">
-          <video src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-        </div>
-        <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
-          <div className="circle">
-            <i className="fas fa-arrows-alt-h"></i>
-          </div>
-        </div>
-      </div>
+            <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+                <div className="video video1">
+                  <video className="three-video" src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                </div>
+                <div className="video video2">
+                  <video className="three-video" src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                </div>
+            </div>
           </div>
         )}
+                      <div className="slider-container">
+                <div className="slider-line"></div>
+                <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
+                  <div className="circle">
+                    <i className="fas fa-arrows-alt-h"></i>
+                  </div>
+                </div>
+              </div>
         <div className="three-content">
           <div className="three-content-box-left">
             <h1 className="headline three-title">Our Mission</h1>

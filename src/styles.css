@@ -69,14 +69,33 @@ section {
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.three-video-frame {
+  width: 100%;
+  height: fit-content;
+  border-radius: 25px;
+  position: relative;
+}
+
+.three-video {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  position: relative;
+}
+
 
 .video {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -88,45 +107,48 @@ section {
   z-index: 0;
 }
 
-.video1 video, .video2 video {
+.video1 video,
+.video2 video {
   width: 100%;
   height: 100%;
 }
 
 .video1 {
-  mask-image: linear-gradient(to right, black var(--mask-width, 50%), transparent var(--mask-width, 50%));
-  -webkit-mask-image: linear-gradient(to right, black var(--mask-width, 50%), transparent var(--mask-width, 50%));
+  mask-image: linear-gradient(to right, black var(--mask-width, 0%), transparent var(--mask-width, 0%));
+  -webkit-mask-image: linear-gradient(to right, black var(--mask-width, 0%), transparent var(--mask-width, 0%));
+}
+
+.slider-container {
+  position: absolute;
+  right: 10%;
+  bottom: 22.5vh; /* Adjust vertical position as needed */
+  width: 35%; /* Adjust width of the slider container */
+  z-index: 20;
+  pointer-events: all;
+}
+
+.slider-line {
+  width: 100%;
+  height: 4px; /* Adjust height of the slider line */
+  background-color: #fefeff10;
+  position: relative;
+  z-index: 1;
 }
 
 .slider {
-  width: 0.25vw;
-  height: 100%;
-  background-color: #fefeff;
-  cursor: ew-resize;
+  width: 3vw; /* Adjust width of the slider circle */
+  height: 3vw; /* Adjust height of the slider circle */
+  background-color: white; /* Adjust color of the slider circle */
+  border-radius: 50%;
   position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 50%;
+  top: 50%; /* Adjust vertical position of the slider circle */
   transform: translate(-50%, -50%);
+  cursor: ew-resize;
   z-index: 2;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.circle {
-  width: 2vw; /* Adjust size of the circle */
-  height: 2vw; /* Adjust size of the circle */
-  background-color: white; /* Adjust color of the circle */
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
 }
 
 .circle i {
@@ -1274,18 +1296,6 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.three-video-frame {
-  width: 100%;
-  border-radius: 25px;
-}
-
-.three-video {
-  width: 100%;
-  height: auto;
-  border-radius: 25px;
-  position: relative;
 }
 
 .typewriter-box {
