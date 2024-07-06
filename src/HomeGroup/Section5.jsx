@@ -5,14 +5,18 @@ import { useRef, useState } from "react";
 import '../OurTeamMesh'
 import * as THREE from 'three'
 import { easing } from 'maath'
+import { useAnimateText } from "../ScrollAnimations";
 
 export const Section5 = () => {
 
   const isMobile = window.innerWidth <= 768;
 
+  useAnimateText(".five-title");
+
   return (
     <section className="five" >
       <div className="five-content">
+      <h1 className="five-title headline">Our Team</h1>
         <div className="mobile-scroll"></div>
         <div className="five-box" >
           <Canvas camera={{ position: [0, 3, isMobile ? 15 : 10], fov: 15 }}>

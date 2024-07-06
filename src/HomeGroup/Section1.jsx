@@ -51,11 +51,10 @@ const handleContactNavigate = () => {
                   className="one-button"
                   whileHover={{ scale: 1.075 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  onClick={handleFullPageToggle}
                 >
                   <div className="navigation-left-content" >
-                    <span className="navigation-text" >WATCH OUR REEL</span>
-                    <span className="navigation-text" >WATCH OUR REEL</span>
+                    <span className="navigation-text" >PROJECTS</span>
+                    <span className="navigation-text" >PROJECTS</span>
                   </div>
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>

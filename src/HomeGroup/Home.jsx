@@ -18,6 +18,10 @@ const Home = () => {
 
   const isMobile = window.innerWidth <= 768;
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
     return (
       <>
         <Section1 />

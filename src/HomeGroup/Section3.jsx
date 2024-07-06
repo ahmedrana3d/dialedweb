@@ -6,68 +6,71 @@ import { OrbitControls } from "@react-three/drei";
 
 export const Section3 = () => {
 
-  useAnimateText(".three-title")
+  useAnimateText(".three-title");
 
   const isMobile = window.innerWidth <= 768;
 
   const [dragging, setDragging] = useState(false);
+  const [percentage, setPercentage] = useState(0);
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
 
   const handleMouseDown = () => {
-      setDragging(true);
+    setDragging(true);
   };
 
   const handleMouseUp = () => {
-      setDragging(false);
+    setDragging(false);
   };
 
   const handleMouseMove = (e) => {
-      if (!dragging) return;
+    if (!dragging) return;
 
-      const containerRect = containerRef.current.getBoundingClientRect();
-      let x = e.clientX - containerRect.left;
-      const width = containerRect.width;
+    const containerRect = containerRef.current.getBoundingClientRect();
+    let x = e.clientX - containerRect.left;
+    const width = containerRect.width;
 
-      // Constrain the x position to within the container boundaries
-      x = Math.max(0, Math.min(x, width));
-      const percentage = (x / width) * 100;
+    // Constrain the x position to within the container boundaries
+    x = Math.max(0, Math.min(x, width));
+    const newPercentage = (x / width) * 100;
 
-      sliderRef.current.style.left = `${percentage}%`;
-      containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
+    setPercentage(newPercentage);
+    sliderRef.current.style.left = `${newPercentage}%`;
+    containerRef.current.style.setProperty('--mask-width', `${newPercentage}%`);
   };
 
   const handleTouchMove = (e) => {
-      if (!dragging) return;
+    if (!dragging) return;
 
-      const containerRect = containerRef.current.getBoundingClientRect();
-      let x = e.touches[0].clientX - containerRect.left;
-      const width = containerRect.width;
+    const containerRect = containerRef.current.getBoundingClientRect();
+    let x = e.touches[0].clientX - containerRect.left;
+    const width = containerRect.width;
 
-      // Constrain the x position to within the container boundaries
-      x = Math.max(0, Math.min(x, width));
-      const percentage = (x / width) * 100;
+    // Constrain the x position to within the container boundaries
+    x = Math.max(0, Math.min(x, width));
+    const newPercentage = (x / width) * 100;
 
-      sliderRef.current.style.left = `${percentage}%`;
-      containerRef.current.style.setProperty('--mask-width', `${percentage}%`);
+    setPercentage(newPercentage);
+    sliderRef.current.style.left = `${newPercentage}%`;
+    containerRef.current.style.setProperty('--mask-width', `${newPercentage}%`);
   };
 
   useEffect(() => {
-      const handleMouseUpOutside = () => {
-          setDragging(false);
-      };
+    const handleMouseUpOutside = () => {
+      setDragging(false);
+    };
 
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUpOutside);
-      window.addEventListener('touchmove', handleTouchMove);
-      window.addEventListener('touchend', handleMouseUpOutside);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUpOutside);
+    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchend', handleMouseUpOutside);
 
-      return () => {
-          window.removeEventListener('mousemove', handleMouseMove);
-          window.removeEventListener('mouseup', handleMouseUpOutside);
-          window.removeEventListener('touchmove', handleTouchMove);
-          window.removeEventListener('touchend', handleMouseUpOutside);
-      };
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUpOutside);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleMouseUpOutside);
+    };
   }, [dragging]);
 
   return (
@@ -76,23 +79,29 @@ export const Section3 = () => {
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-                <div className="video video1">
-                  <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-                </div>
-                <div className="video video2">
-                  <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-                </div>
+              <div className="video video1">
+                <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+              </div>
+              <div className="video video2">
+                <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+              </div>
             </div>
           </div>
         )}
-                      <div className="slider-container">
-                <div className="slider-line"></div>
-                <div className="slider" onMouseDown={handleMouseDown} onTouchStart={handleMouseDown} ref={sliderRef}>
-                  <div className="circle">
-                    <i className="fas fa-arrows-alt-h"></i>
-                  </div>
-                </div>
-              </div>
+        <div className="slider-container">
+          <div className="slider-line"></div>
+          <div
+            className="slider"
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleMouseDown}
+            ref={sliderRef}
+            style={{ backgroundColor: percentage >= 50 ? '#AAA3FF' : '#fefeff' }}
+          >
+            <div className="circle">
+              <i className="fas fa-arrows-alt-h"></i>
+            </div>
+          </div>
+        </div>
         <div className="three-content">
           <div className="three-content-box-left">
             <h1 className="headline three-title">Our Mission</h1>
@@ -104,32 +113,19 @@ export const Section3 = () => {
             </div>
           </div>
           {isMobile && (
-          <div className="three-content-box-right">
-          <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-              <div className="video video1">
-                <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+            <div className="three-content-box-right">
+              <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+                <div className="video video1">
+                  <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                </div>
+                <div className="video video2">
+                  <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                </div>
               </div>
-              <div className="video video2">
-                <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-              </div>
-          </div>
-        </div>
+            </div>
           )}
         </div>
       </section>
-      {/* <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-        <div className="video video1">
-          <video src="/laptop.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-        </div>
-        <div className="video video2">
-          <video src="/laptopcolorful.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-        </div>
-        <div className="slider" onMouseDown={handleMouseDown} ref={sliderRef}>
-          <div className="circle">
-            <i className="fas fa-arrows-alt-h"></i>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
