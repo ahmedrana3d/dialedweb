@@ -11,6 +11,12 @@ import { RealEstatePortfolio } from "./RealEstatePortfolio";
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
 
+  useEffect(() => {
+    if (progress === 100) {
+      onLoaded();
+    }
+  }, [progress, onLoaded]);
+
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
@@ -26,25 +32,51 @@ function App() {
     window.scrollTo(0, 0);
   }
 
-  const lenis = new Lenis()
+  const [lenis, setLenis] = useState(null);
 
-  lenis.on('scroll', (e) => {
-    console.log(e)
-  })
-  
-  function raf(time) {
-    lenis.raf(time)
+  useEffect(() => {
+
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+    
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    
     requestAnimationFrame(raf)
-  }
-  
-  requestAnimationFrame(raf)
+    setLenis(lenis);
+
+    return () => {
+      lenisInstance.destroy();
+    };
+  }, []);
+
+  const handleLoaded = () => {
+    setTimeout(() => {
+      if (lenis) {
+        lenis.start();
+      }
+      document.body.style.overflow = 'auto';
+    }, 1000); // Delay for 1 second
+  };
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.stop();
+    }
+    document.body.style.overflow = 'hidden';
+  }, [lenis]);
 
   const location = useLocation()
   
 
   return (
       <>
-        <LoadingScreen />
+        <LoadingScreen onLoaded={handleLoaded} />
 
         <Navigation />
 
