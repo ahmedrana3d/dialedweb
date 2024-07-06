@@ -15,21 +15,16 @@ import { easing } from "maath";
 import transition from "../Transition";
 
 const Home = () => {
-  const section1Ref = useRef(null);
   const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
-    // Scroll to Section1 when the component mounts
-    if (section1Ref.current) {
-      section1Ref.current.scrollIntoView({ behavior: "smooth" });
-    }
+    // Scroll to the top of the page when the component mounts or updates
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-    <div ref={section1Ref} >
       <Section1 />
-    </div>
       <Section3 />
       <Section4 />
       <Section5 />
