@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Section1 } from "./Section1";
 import { Section3 } from "./Section3";
 import { Section4 } from "./Section4";
@@ -11,32 +11,37 @@ import { Environment, Sparkles } from "@react-three/drei";
 import { EffectComposer } from "@react-three/postprocessing";
 import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { Sphere } from "../Sphere";
-import { easing } from "maath"
+import { easing } from "maath";
 import transition from "../Transition";
 
 const Home = () => {
-
+  const section1Ref = useRef(null);
   const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    // Scroll to Section1 when the component mounts
+    if (section1Ref.current) {
+      section1Ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, []);
 
-    return (
-      <>
-        <Section1 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
-        <Section8 />
+  return (
+    <>
+    <div ref={section1Ref} >
+      <Section1 />
+    </div>
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Section7 />
+      <Section8 />
 
-        <div className="experience-one" >
-          <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
-            <Sparkles position={ [ 0, 0, -1 ] } scale={ [ 10, 10, 3 ] } size={ 4 } count={ 40 } color={ "#a09bcb" } far={ 10 } speed={ 1 } />
-            <Rig />
-            {!isMobile && (
+      <div className="experience-one">
+        <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
+          <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#a09bcb"} far={10} speed={1} />
+          <Rig />
+          {!isMobile && (
             <EffectComposer>
               <Fluid
                 radius={0.03}
@@ -55,28 +60,27 @@ const Home = () => {
               />
             </EffectComposer>
           )}
-            <Sphere />
-            <Environment preset="sunset" />
-          </Canvas>
-        </div>
-
-      </>
-    )
-}
+          <Sphere />
+          <Environment preset="sunset" />
+        </Canvas>
+      </div>
+    </>
+  );
+};
 
 export default transition(Home);
 
 function Rig() {
-    useFrame((state, delta) => {
-      // Calculate the target camera position based on the pointer's x and y position
-      const targetX = state.pointer.x * 0.15; // Adjust this multiplier as needed for the desired horizontal movement
-      const targetY = state.pointer.y * 0.15;
-      const targetZ = 8 + Math.atan(state.pointer.x * 2);
-    
-      // Smoothly move the camera to the target position
-      easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
-    
-      // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
-      state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
-    });
-  }
+  useFrame((state, delta) => {
+    // Calculate the target camera position based on the pointer's x and y position
+    const targetX = state.pointer.x * 0.15; // Adjust this multiplier as needed for the desired horizontal movement
+    const targetY = state.pointer.y * 0.15;
+    const targetZ = 8 + Math.atan(state.pointer.x * 2);
+
+    // Smoothly move the camera to the target position
+    easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
+
+    // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
+    state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
+  });
+}
