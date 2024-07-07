@@ -70,9 +70,7 @@ export const Section1 = () => {
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
                 </div>
-                {!isMobile && (
-                  <div data-hover-bounds></div>
-                )}
+                <div data-hover-bounds></div>
               </motion.button>
               <motion.button
                 className="one-button-transparent btn menu-btn"
@@ -86,9 +84,7 @@ export const Section1 = () => {
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
                 </div>
-                {!isMobile && (
-                  <div data-hover-bounds></div>
-                )}
+                <div data-hover-bounds></div>
               </motion.button>
             </div>
           </div>

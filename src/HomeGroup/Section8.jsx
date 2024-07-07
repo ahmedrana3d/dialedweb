@@ -43,9 +43,7 @@ const isMobile = window.innerWidth <= 768;
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
-                  {!isMobile && (
-                    <div data-hover-bounds></div>
-                  )}
+                  <div data-hover-bounds></div>
                 </motion.button>
                 <motion.button
                   className="one-button-transparent btn menu-btn"
@@ -59,9 +57,7 @@ const isMobile = window.innerWidth <= 768;
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
-                  {!isMobile && (
-                    <div data-hover-bounds></div>
-                  )}
+                  <div data-hover-bounds></div>
                 </motion.button>
             </div>
           </div>

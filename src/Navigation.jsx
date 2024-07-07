@@ -188,9 +188,7 @@ export const Navigation = () => {
               </>
             )}
           </div>
-          {!isMobile && (
-            <div data-hover-bounds></div>
-          )}
+          <div data-hover-bounds></div>
         </motion.button>
         <Link to="/"   onClick={(e) => {e.preventDefault(); window.location.href = '/'; }} className="navigation-center" >
             <div className="navigation-center">
@@ -212,9 +210,7 @@ export const Navigation = () => {
               </>
             )}
           </div>
-          {!isMobile && (
-            <div data-hover-bounds></div>
-          )}
+          <div data-hover-bounds></div>
         </motion.button>
       </div>
     </>
