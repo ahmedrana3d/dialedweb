@@ -1,10 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
+import Lottie from 'react-lottie';
+import animationData from '../lotties/data';
 
 export const Section6 = () => {
 
   useAnimateText(".six-title")
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    }
+  };
 
     return (
       <>
@@ -125,6 +136,11 @@ export const Section6 = () => {
                     <div className="front">
                       <div className="front-top">
                         <h1 className="six-description" >Data</h1>
+                        <Lottie 
+	                        options={defaultOptions}
+                          height={"20vh"}
+                          width={"100%"}
+                        />
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
