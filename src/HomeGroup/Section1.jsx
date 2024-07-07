@@ -73,10 +73,11 @@ export const Section1 = () => {
                 </div>
               </motion.button>
               <motion.button
-                className="one-button-transparent"
+                className="one-button-transparent btn menu-btn"
                 whileHover={{ scale: 1.075 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 onClick={handleColorToggle}
+                data-hover
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">COLOR CHANGE</span>
@@ -85,6 +86,7 @@ export const Section1 = () => {
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
                 </div>
+                <div data-hover-bounds></div>
               </motion.button>
             </div>
           </div>
