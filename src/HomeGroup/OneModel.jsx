@@ -14,9 +14,9 @@ export default function OneModel(props) {
 
   const cameraLoads = () => {
     gsap.to(camera.position, {
-      duration: 5,
+      duration: 3,
       x: -7,
-      y: 13,
+      y: 15,
       z: 13,
       ease: 'power3.out',
     });
@@ -30,7 +30,7 @@ export default function OneModel(props) {
 
   const { nodes, materials } = useGLTF('./cpu2.glb')
   return (
-    <group position={ [ 0, isMobile ? 0 : 1, 0 ] } scale={ isMobile ? 1.5 : 1} {...props} dispose={null}>
+    <group position={ [ 0, 0, 0 ] } scale={ isMobile ? 1.5 : 1} {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry} material={materials.Chip} >
         <meshStandardMaterial metalness={1} roughness={0.1} />
       </mesh>

@@ -514,7 +514,7 @@ section {
   font-size: 5vw;
   font-family: "SFBOLD", sans-serif;
   margin: 0;
-  line-height: 1;
+  line-height: 90%;
   color: #fefeff;
 }
 
@@ -808,7 +808,7 @@ section {
 .navigation-text {
   font-size: 0.8vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .navigation-logo-text {
@@ -993,7 +993,9 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .experience {

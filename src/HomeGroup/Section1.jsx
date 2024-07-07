@@ -45,7 +45,7 @@ const handleContactNavigate = () => {
         <section className="one">
           <div className="one-content" >
             <div className="one-content-left">
-              <h1 className="headline anim grey" >Crafting Digital <br /> <span className="headline-purple grey" >Masterpieces</span></h1>
+              <h1 className="headline anim grey" >Crafting Digital <br /> Masterpieces</h1>
               <p className="one-description" >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
               <div className="one-content-buttons" >
                 <motion.button
