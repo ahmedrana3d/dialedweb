@@ -65,6 +65,7 @@ body {
 	background: white;
 	mix-blend-mode: difference;
 	pointer-events: none;
+  z-index: 1000;
 }
 
 .cta {
