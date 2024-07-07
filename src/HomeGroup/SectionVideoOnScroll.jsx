@@ -72,7 +72,7 @@ export const SectionScrollVideoOnScroll = () => {
     return (
       <>
         <section className="scroll-video-on-scroll">
-            <video src="https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/WhatsApp%20Video%202024-07-07%20at%2023.39.52_d57e0e15.mp4?v=1720377726119"       playsinline="true" webkit-playsinline="true" preload="auto"       muted="muted" class="video-background"></video>
+            <video src="https://cdn.glitch.global/fe3827f2-4071-425c-8769-3c031c0a66ff/abstract-background-ink-water-20072.mp4?v=1720380438549"       playsinline="true" webkit-playsinline="true" preload="auto"       muted="muted" class="video-background"></video>
         </section>
       </>
     )
