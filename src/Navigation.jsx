@@ -59,7 +59,7 @@ export const Navigation = () => {
 
     tl.fromTo(
       menuSocialRef.current,
-      { transform: "translate3d(0, 5vh, 0) rotate(5deg)" },
+      { transform: "translate3d(0, 5vh, 0) rotate(-5deg)" },
       {
         transform: "translate3d(0, 0, 0) rotate(0deg)",
         duration: 0.5,
@@ -160,14 +160,6 @@ export const Navigation = () => {
                   <span className="menu-text">REAL ESTATE</span>
                 </div>
               </Link>
-            </div>
-            <div ref={menuContainerRef} className="menuContainer">
-              <h1 className="menu-text">Book Your Consultation</h1>
-              <div className="inputContainer">
-                <div className="emailinput" onClick={handleContactNavigate}>
-                  Get in touch
-                </div>
-              </div>
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
               <i className="fa-brands fa-instagram nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>

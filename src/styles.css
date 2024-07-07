@@ -3,10 +3,18 @@
 @import url('https://fonts.cdnfonts.com/css/gt-alpina-trial');
 
 @font-face {
-  font-family: 'SF';
-  src: url('SF.OTF') format('OTF');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'SFBOLD';
+  src: url('SFBOLD.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: 'SFMEDIUM';
+  src: url('SFMEDIUM.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: 'SFITALIC';
+  src: url('SFITALIC.OTF') format('OTF');
 }
 
 @font-face {
@@ -18,9 +26,9 @@
   box-sizing: border-box;
 }
 
-.fa-solid {
+.fa-location-arrow {
   font-size: 0.75vw;
-  color: #040217;
+  color: #fefeff;
 }
 
 html,
@@ -37,8 +45,7 @@ body {
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  background-color: #040217;
-  background-image: url('gradient.jpg');
+  background-color: #010001;
 }
 
 ::-webkit-scrollbar {
@@ -154,7 +161,7 @@ section {
 
 .circle i {
   font-size: 1vw; /* Adjust size of the icon */
-  color: #040217; /* Adjust color of the icon */
+  color: #010001; /* Adjust color of the icon */
 }
 
 /* REAL ESTATE */
@@ -189,7 +196,7 @@ section {
 .realestate-row-item {
   width: 100%;
   height: 100%;
-  background-color: #070E2B;
+  background-color: #111111;
   background-size: cover;
   background-position: center;
 }
@@ -261,7 +268,7 @@ section {
 .realestate-row-item-big {
   width: 100%;
   height: 100%;
-  background-color: #070E2B;
+  background-color: #111111;
   background-size: cover;
   background-position: center;
 }
@@ -284,7 +291,6 @@ section {
 
 .marquee {
   position: absolute;
-  color: #AAA3FF;
   bottom: 0;
   padding: 30px 0;
   font-weight: 600;
@@ -361,11 +367,11 @@ section {
 
 .contact-overlay-title {
   font-size: 4vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff;
 }
 
 .contact-overlay-left-box {
@@ -403,8 +409,8 @@ section {
 
 .contact-overlay-description {
   font-size: 0.95vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -460,8 +466,8 @@ section {
 
 .option-text {
   font-size: 0.85vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -479,8 +485,8 @@ section {
 
 .phone-text {
   font-size: 1vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff;
   line-break: 125%;
@@ -506,17 +512,16 @@ section {
 
 .headline {
   font-size: 5vw;
-  font-family: "SF", sans-serif;
-  font-weight: bold;
+  font-family: "SFBOLD", sans-serif;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff;
   font-style: italic;
 }
 
 .headline-purple {
   font-family: 'GT Alpina Trial', sans-serif;
-  color:#AAA3FF;
+  color: #fefeff;
   font-weight: 400;
   font-size: 5vw;
   margin: 0;
@@ -532,18 +537,9 @@ section {
   font-style: italic;
 }
 
-.headline-blue {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color:#01f1ff;
-  font-weight: 400;
-  font-size: 5vw;
-  margin: 0;
-  font-style: italic;
-}
-
 .description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   font-size: 1.25vw;
   color: #fefeff;
   line-height: 145%;
@@ -561,8 +557,8 @@ section {
 }
 
 .rotatingHeader h1{
-  font-family: "SF", sans-serif;
-  font-weight: bold;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
 	color: #fefeff;
 	font-size: 2.25vw;
 	margin:0;
@@ -570,14 +566,12 @@ section {
 	line-height: 0.5;
 	perspective: 600px;
   z-index: 10;
-  font-style: italic;
 }
 
 .rotatingHeader h1:nth-child(2) {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color:#AAA3FF;
-  font-weight: 400;
-  letter-spacing: 0.1vw;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
+  font-style: italic;
 }
 
 /* ACCORDION */
@@ -608,8 +602,7 @@ section {
 }
 
 .accordion:hover {
-  background-color: #fefeff25;
-  border: 2px solid #AAA3FF;
+  border: 2px solid #fefeff;
 }
 
 .accordion-top {
@@ -624,15 +617,19 @@ section {
 }
 
 .accordion-icon {
-  background-color: #AAA3FF;
+  background-color: #fefeff;
   width: 2vw;
   height: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #111111;
+  color: #010001;
   margin-top: -1vw;
+}
+
+.fa-arrow-down {
+  color: #010001;
 }
 
 /* .accordion:hover {
@@ -652,14 +649,14 @@ section {
 }
 
 .small-text-accordion {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: 'SFMEDIUM', sans-serif;
+  font-weight: normal;
   font-size: 1.25vw;
   line-height: 115%;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 2vw;
-  color: white;
+  color: #fefeff75;
 }
 
 .rotate {
@@ -685,7 +682,7 @@ section {
 }
 
 .navigation.scrolled {
-  background-color: #04021710; /* Change to your preferred color */
+  background-color: transparent; /* Change to your preferred color */
   height: 8vh; /* Adjust to your desired height */
   backdrop-filter: blur(7px);
   z-index: 200;
@@ -757,7 +754,7 @@ section {
 .navigation-right {
   width: fit-content;
   height: 2.25vw;
-  background-color: #AAA3FF;
+  background-color: #fefeff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,7 +768,7 @@ section {
 }
 
 .navigation-right:hover {
-  box-shadow: 0 0 20px 5px rgba(220, 215, 255, 0.4);
+  box-shadow: 0 0 20px 5px rgba(252, 254, 234, 0.4);
 }
 
 .navigation-right-content {
@@ -813,15 +810,15 @@ section {
 
 .navigation-text {
   font-size: 0.8vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
 }
 
 .navigation-logo-text {
   font-size: 1.5vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #fcfeea;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
+  color: #fefeff;
 }
 
 /* NAVIGATION OVERLAY */
@@ -875,43 +872,6 @@ section {
   pointer-events: all;
 }
 
-.inputContainer {
-  position: relative;
-  width: 100%;
-}
-
-.emailinput {
-  padding: 1vw;
-  height: 6vh;
-  border-radius: 15px;
-  color: #fefeff;
-  border: none;
-  display: flex;
-  align-items: center;
-  font-size: 1vw;
-  box-sizing: border-box;
-  background-color: #040217;
-  font-family: "Inter", sans-serif;
-  font-size: 1vw;
-  cursor: pointer;
-}
-
-input {
-  width: 100%;
-  height: 3rem;
-  border-radius: 15px;
-  resize: none;
-  color: #fff;
-  border: 1px solid #AAA3FF;
-  background-color: #040217;
-  border: none;
-}
-
-input::placeholder {
-  color: #fefeff; /* Change this to the desired color */
-}
-
-
 .menuSocial {
   width: 100%;
   height: auto;
@@ -927,7 +887,7 @@ input::placeholder {
 
 .nav-brands {
   font-size: 2vw;
-  color: #040217;
+  color: #010001;
   cursor: pointer;
   padding: 1vw;
   border-radius: 15px;
@@ -935,7 +895,7 @@ input::placeholder {
 }
 
 .nav-brands:hover {
-  background-color: #040217;
+  background-color: #010001;
   color: #fefeff;
   box-shadow: 0 0 20px 5px rgba(252, 254, 234, 0.4);
 }
@@ -949,11 +909,11 @@ input::placeholder {
 
 .menu-text {
   font-size: 2vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   text-decoration: none;
-  color: #040217;
+  color: #010001;
 }
 
 .menu-button {
@@ -985,19 +945,18 @@ input::placeholder {
 
 .one-content {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  margin: 5% 0%;
+  padding: 0% 10%;
 }
 
 .one-content-left {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  text-align: center;
-  align-items: center;
+  width: 50%;
+  text-align: left;
   justify-content: center;
   gap: 3vh;
   z-index: 3;
@@ -1009,11 +968,12 @@ input::placeholder {
 }
 
 .one-description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   font-size: 1.25vw;
   color: #fefeff75;
   line-height: 145%;
+  width: 75%;
   margin: 0;
 }
 
@@ -1028,7 +988,15 @@ input::placeholder {
   height: 100%;
   width: 50%;
   position: relative;
-  background-color: #040217;
+}
+
+.one-content-right-experience {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .experience {
@@ -1038,7 +1006,7 @@ input::placeholder {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #040217;
+  background-color: #010001;
 }
 
 .one-content-buttons {
@@ -1049,7 +1017,7 @@ input::placeholder {
 .one-button {
   width: fit-content;
   height: 2.75vw;
-  background-color: #fcfeea;
+  background-color: #fefeff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1064,7 +1032,7 @@ input::placeholder {
   z-index: 2;
   gap: 0.5vw;
   pointer-events: all;
-  color: #040217;
+  color: #010001;
 }
 
 .one-button-transparent {
@@ -1083,7 +1051,6 @@ input::placeholder {
   position: relative;
   z-index: 2;
   gap: 0.5vw;
-  color: #fcfeea;
   border: 2px solid #fcfeea50;
   pointer-events: all;
   color: #fefeff;
@@ -1132,17 +1099,7 @@ input::placeholder {
 .navigation-arrow-box {
   width: 2vw;
   height: 2vw;
-  background-color: #AAA3FF;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navigation-arrow-box-blue {
-  width: 2vw;
-  height: 2vw;
-  background-color: #01f1ff;
+  background-color: #010001;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -1242,6 +1199,7 @@ input::placeholder {
   padding: 0% 10%;
   padding-top: 10%;
   align-items: end;
+  gap: 3vh;
 }
 
 .three-top-text {
@@ -1298,7 +1256,7 @@ input::placeholder {
 }
 
 .three-content-box-left {
-  width: 100%;
+  width: 90%;
   height: fit-content;
   position: relative;
   display: flex;
@@ -1330,7 +1288,7 @@ input::placeholder {
 
 .typewriter-text {
   font-family: 'SF', sans-serif;
-  color:#AAA3FF;
+  color:#fefeff75;
   font-weight: bold;
   font-style: italic;
   padding-left: 0.25vw;
@@ -1379,11 +1337,11 @@ input::placeholder {
 
 .why-us-title {
   font-size: 3vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff;
   z-index: 4;
 }
 
@@ -1399,7 +1357,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   width: 26vw;
-  height: 20vh;
+  height: 17.5vh;
   gap: 1vw;
   padding: 1vw;
   border: 2px solid #fefeff50;
@@ -1411,14 +1369,15 @@ input::placeholder {
 }
 
 .why-us-right-row:hover {
-  transform: scale(1.1); /* Scale up the div */
-  height: 26vh;
+  transform: scale(1.15); /* Scale up the div */
+  height: 30vh;
+  padding-bottom: 5%;
   z-index: 10;
-  border: 2px solid #AAA3FF;
+  border: 2px solid #fefeff;
 }
 .why-us-icon {
   font-size: 4vw;
-  color: #AAA3FF;
+  color: #fefeff75;
 }
 
 .why-us-right-row-texts {
@@ -1429,18 +1388,18 @@ input::placeholder {
 
 .why-us-text-title {
   font-size: 1.25vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #AAA3FF;
+  color: #fefeff;
   z-index: 4;
 }
 
 .why-us-text-description {
   font-size: 1vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: transparent;
   transition: 0.25s linear;
@@ -1451,7 +1410,7 @@ input::placeholder {
 .why-us-right-row:hover p {
   font-size: 1vw;
   display: flex;
-  color: #fefeff;
+  color: #fefeff75;
 }
 
 /* SECTION FIVE */
@@ -1731,8 +1690,8 @@ input::placeholder {
 
 .front-bottom-text {
   font-size: 1.25vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -1771,38 +1730,34 @@ input::placeholder {
   width: fit-content;
   padding: 1vw;
   background-color: #fefeff;
+  border: 2px solid #fefeff;
+  color: #010001;
   border-radius: 50px;
   transition: 0.5s ease;
 }
 
 .back-content-box:hover {
-  background-color: #AAA3FF;
+  background-color: #010001;
+  border: 2px solid #fefeff;
+  color: #fefeff;
 }
 
 .six-back-description {
   font-size: 1vw;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 105%;
-  color: #040217;
 }
 
 .six-title {
-  font-size: 4vw;
-  font-family: "SF", sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  margin: 0;
-  line-height: 1;
-  color: #040217;
+  color: #010001;
 }
 
 .six-description {
   font-size: 2.25vw;
-  font-family: "SF", sans-serif;
-  font-weight: bold;
-  font-style: italic;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -1899,8 +1854,7 @@ input::placeholder {
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  background-color: #040217;
-  background-image: url('gradient.jpg');
+  background-color: #010001;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
   pointer-events: all;
@@ -2014,13 +1968,12 @@ html.lenis, html.lenis body {
   font-weight: bold;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff;
   font-style: italic;
 }
 
 .headline-purple {
   font-family: 'GT Alpina Trial', sans-serif;
-  color:#AAA3FF;
   font-weight: 400;
   font-size: 2.75rem;
   margin: 0;
@@ -2046,8 +1999,8 @@ html.lenis, html.lenis body {
 }
 
 .description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   font-size: 1rem;
   color: #fefeff;
   line-height: 145%;
@@ -2151,25 +2104,28 @@ input {
   width: 100%;
   height: 90vh;
   flex-direction: column;
-  margin: 10vh 0%;
+  padding: 10vh 0%;
+  padding-top: 15vh;
 }
 
 .one-content-left {
-  height: 100%;
-  width: 90%;
-  margin-left: 5%;
+  height: 50%;
+  width: 100%;
+  margin-left: 0%;
   gap: 4vh;
+  text-align: center;
+  align-items: center;
 }
 
 .one-description {
   font-size: 1rem;
   line-height: 125%;
-  width: 90%;
+  width: 80%;
   color: #fefeff75;
 }
 
 .one-content-right {
-  height: 100%;
+  height: 50%;
   width: 100%;
 }
 
@@ -2257,8 +2213,8 @@ input {
 
 .navigation-text {
   font-size: 0.75rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
 }
 
 .fa-solid {
@@ -2290,8 +2246,8 @@ input {
 
 .contact-overlay-title {
   font-size: 3rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
   color: #fcfeea;
@@ -2332,8 +2288,8 @@ input {
 
 .contact-overlay-description {
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -2377,8 +2333,8 @@ input {
 
 .option-text {
   font-size: 0.75rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -2396,8 +2352,8 @@ input {
 
 .phone-text {
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   color: #fefeff;
   line-break: 125%;
@@ -2525,7 +2481,6 @@ input {
 
 .typewriter-text {
   font-family: 'SF', sans-serif;
-  color:#AAA3FF;
   font-weight: bold;
   font-style: italic;
   padding-left: 0.5vw;
@@ -2671,11 +2626,11 @@ input {
 
 .why-us-title {
   font-size: 2rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff;
   z-index: 4;
 }
 
@@ -2706,7 +2661,7 @@ input {
 
 .why-us-icon {
   font-size: 3rem;
-  color: #AAA3FF;
+  color: #fefeff75;
 }
 
 .why-us-right-row-texts {
@@ -2717,21 +2672,20 @@ input {
 
 .why-us-text-title {
   font-size: 1.25rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #AAA3FF;
   z-index: 4;
 }
 
 .why-us-text-description {
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
-  color: #fcfeea;
+  color: #fefeff75;
   line-height: 125%;
 }
 
@@ -2902,8 +2856,8 @@ input {
 
 .front-bottom-text {
   font-size: 1.25rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -2948,16 +2902,16 @@ input {
 }
 
 .back-content-box:hover {
-  background-color: #AAA3FF;
+  background-color: #fefeff;
 }
 
 .six-back-description {
   font-size: 0.75rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: normal;
   margin: 0;
   line-height: 105%;
-  color: #040217;
+  color: #010001;
 }
 
 .six-title {
@@ -2967,7 +2921,7 @@ input {
   font-style: italic;
   margin: 0;
   line-height: 1;
-  color: #040217;
+  color: #010001;
 }
 
 .six-description {
@@ -3030,14 +2984,8 @@ input {
   width: 100%;
   position: relative;
   z-index: 4;
-  background-color: #fefeff10;
   border-radius: 25px;
   border: 2px solid transparent;
-}
-
-.accordion:hover {
-  background-color: #fefeff25;
-  border: 2px solid #AAA3FF;
 }
 
 .accordion-top {
@@ -3052,14 +3000,12 @@ input {
 }
 
 .accordion-icon {
-  background-color: #AAA3FF;
   width: 2rem;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #111111;
   margin-top: -1rem;
 }
 
@@ -3087,7 +3033,6 @@ input {
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 2vw;
-  color: white;
 }
 
 .rotate {
@@ -3105,25 +3050,8 @@ input {
 }
 
 .rotatingHeader h1{
-  font-family: "SF", sans-serif;
-  font-weight: bold;
-	color: #fefeff;
 	font-size: 2rem;
-	margin:0;
-	padding: 0;
-	line-height: 0.5;
-	perspective: 600px;
-  z-index: 10;
-  font-style: italic;
 }
-
-.rotatingHeader h1:nth-child(2) {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color:#AAA3FF;
-  font-weight: 400;
-  letter-spacing: 0.1vw;
-}
-
 /* EIGHT */
 
 .eight {
@@ -3201,6 +3129,11 @@ input {
 .realestate-video {
   position: relative;
   height: 110vh;
+}
+
+.fa-location-arrow {
+  font-size: 0.65rem;
+  color: #fefeff;
 }
 
 

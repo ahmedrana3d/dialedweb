@@ -310,42 +310,42 @@ const useTextEffect = (textSelector) => {
           },
         });
 
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            ease: 'none',
-            delay: 1,
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 100%',
-              end: 'top 60%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
+        // gsap.fromTo(
+        //   element,
+        //   {
+        //     opacity: 0,
+        //   },
+        //   {
+        //     opacity: 1,
+        //     ease: 'none',
+        //     delay: 1,
+        //     scrollTrigger: {
+        //       trigger: element,
+        //       start: 'top 100%',
+        //       end: 'top 60%',
+        //       scrub: true,
+        //       toggleActions: 'play reverse play reverse',
+        //     },
+        //   }
+        // );
 
-        gsap.fromTo(
-          element,
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 20%',
-              end: 'top 5%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
+        // gsap.fromTo(
+        //   element,
+        //   {
+        //     opacity: 1,
+        //   },
+        //   {
+        //     opacity: 0,
+        //     ease: 'none',
+        //     scrollTrigger: {
+        //       trigger: element,
+        //       start: 'top 20%',
+        //       end: 'top 5%',
+        //       scrub: true,
+        //       toggleActions: 'play reverse play reverse',
+        //     },
+        //   }
+        // );
 
 
       });

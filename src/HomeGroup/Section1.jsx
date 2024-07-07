@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Section6 } from "./Section6";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Float, Sparkles } from "@react-three/drei";
+import { Environment, Float, OrbitControls, Sparkles } from "@react-three/drei";
 import { useTextEffect } from "../ScrollAnimations";
 import gsap from "gsap";
 import Spline from '@splinetool/react-spline';
 import { Link, useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
+import OneModel from "./OneModel";
 
 export const Section1 = () => {
 
@@ -74,6 +75,19 @@ const handleContactNavigate = () => {
                   </div>
                 </motion.button>
               </div>
+            </div>
+            <div className="one-content-right">
+              <div className="one-content-right-experience">
+                <Canvas camera={{ position: [0, 0, 20], fov: 35 }} >
+                  <Suspense fallback >
+                    <Float rotationIntensity={ 0.5 } floatIntensity={ 2 } speed={ 2 } >
+                      <OneModel />
+                    </Float>
+                  </Suspense>  
+                  <OrbitControls maxPolarAngle={ Math.PI / 2 } enableZoom={ false } enableRotate={ true } enablePan={ false } />
+                </Canvas>
+              </div>
+
             </div>
           </div>
           <div className="one-content-logos">

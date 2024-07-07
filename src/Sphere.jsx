@@ -34,32 +34,6 @@ export function Sphere(props) {
       tl
 
       .to(sphereRef.current.scale, {
-        x: isMobile ? 1 : 0,
-        y: isMobile ? 1 : 0,
-        z: isMobile ? 1 : 0,
-        scrollTrigger: {
-          trigger: ".three",
-          start: "top center",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
-      .to(sphereRef.current.position, {
-        x: isMobile ? 0 : -7,
-        y: isMobile ? 0 : 5,
-        z: 0,
-        scrollTrigger: {
-          trigger: ".three",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
-      .to(sphereRef.current.scale, {
         x: 1,
         y: 1,
         z: 1,
@@ -72,18 +46,6 @@ export function Sphere(props) {
         },
       })
 
-      .to(sphereRef.current.position, {
-        x: isMobile ? 0 : 5,
-        y: isMobile ? 0 : -5,
-        z: isMobile ? 0 : 0,
-        scrollTrigger: {
-          trigger: ".four",
-          start: "top bottom",
-          end: "bottom 100%",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
 
       .to(sphereRef.current.position, {
         x: 0,
@@ -116,7 +78,7 @@ export function Sphere(props) {
   const isMobile = window.innerWidth <= 768;
 
   return (
-    <group ref={sphereRef} position={ [ 0, 0, 0 ] } {...props} scale={1} dispose={null}>
+    <group ref={sphereRef} position={ [ 5, -5, 0 ] } {...props} scale={1} dispose={null}>
       <group scale={ isMobile ? 0.0035 : 0.0065}>
         <mesh
           geometry={nodes.Sphere.geometry}

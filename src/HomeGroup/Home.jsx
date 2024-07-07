@@ -34,7 +34,7 @@ const Home = () => {
 
       <div className="experience-one">
         <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
-          <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#a09bcb"} far={10} speed={1} />
+          {/* <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#fefeff"} far={10} speed={1} /> */}
           <Rig />
           {!isMobile && (
             <EffectComposer>
@@ -51,7 +51,7 @@ const Home = () => {
                 rainbow={false}
                 blend={0}
                 showBackground={false}
-                fluidColor="#1C1230"
+                fluidColor="#515151"
               />
             </EffectComposer>
           )}

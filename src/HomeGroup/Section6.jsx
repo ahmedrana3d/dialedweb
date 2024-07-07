@@ -15,7 +15,7 @@ export const Section6 = () => {
               <div className="six-content-top-big">
                 <div className="six-content-top-big-content">
                   <div className="six-content-circle" />
-                  <h1 className="six-title" >Our Services</h1>
+                  <h1 className="headline six-title" >Our Services</h1>
                 </div>
               </div>
               <div className="six-content-row">
