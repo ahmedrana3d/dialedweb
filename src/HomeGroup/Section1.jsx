@@ -82,7 +82,7 @@ export const Section1 = () => {
             </div>
           </div>
           <div className="one-content-right">
-            <div className="one-content-right-experience">
+            <div className="one-content-right-experience" >
               <Canvas camera={{ position: [5, 20, 13], fov: 35 }}>
                 <Suspense fallback>
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
