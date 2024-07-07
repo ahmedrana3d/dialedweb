@@ -83,7 +83,7 @@ export const Section3 = () => {
                 <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
               </div>
               <div className="video video2">
-                <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export const Section3 = () => {
                   <video className="three-video" src="/laptopwhite.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
                 </div>
                 <div className="video video2">
-                  <video className="three-video" src="/laptopcolorful2.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                  <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
                 </div>
               </div>
             </div>
