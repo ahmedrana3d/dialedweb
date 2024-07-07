@@ -78,12 +78,13 @@ const handleContactNavigate = () => {
             </div>
             <div className="one-content-right">
               <div className="one-content-right-experience">
-                <Canvas camera={{ position: [0, 0, 20], fov: 35 }} >
+                <Canvas camera={{ position: [5, 20, 13], fov: 35 }} >
                   <Suspense fallback >
                     <Float rotationIntensity={ 0.5 } floatIntensity={ 2 } speed={ 2 } >
                       <OneModel />
                     </Float>
-                  </Suspense>  
+                  </Suspense> 
+                  <Environment preset="sunset" /> 
                   <OrbitControls maxPolarAngle={ Math.PI / 2 } enableZoom={ false } enableRotate={ true } enablePan={ false } />
                 </Canvas>
               </div>
