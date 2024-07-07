@@ -52,6 +52,29 @@ body {
   display: none;
 }
 
+.cursor {
+	width: 3vw;
+	height: 3vw;
+	border-radius: 50%;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translate(-50%, -50%);
+
+	background: white;
+	mix-blend-mode: difference;
+	pointer-events: none;
+}
+
+.cta {
+	width: 100px;
+	position: fixed;
+	top: -999px;
+	left: -999px;
+	pointer-events: none;
+}
+
 section {
   width: 100%;
   height: 100vh;

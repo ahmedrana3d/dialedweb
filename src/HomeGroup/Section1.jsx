@@ -14,14 +14,14 @@ export const Section1 = () => {
   useTextEffect(".anim");
 
   const [fullPageVisible, setFullPageVisible] = useState(false);
-  const [colorToggle, setColorToggle] = useState(false);
+  const [colorIndex, setColorIndex] = useState(0);
 
   const handleFullPageToggle = () => {
     setFullPageVisible(!fullPageVisible);
   };
 
   const handleColorToggle = () => {
-    setColorToggle(!colorToggle);
+    setColorIndex((prevIndex) => (prevIndex + 1) % 4); // Cycle through 4 colors
   };
 
   useEffect(() => {
@@ -93,7 +93,7 @@ export const Section1 = () => {
               <Canvas camera={{ position: [5, 20, 13], fov: 35 }}>
                 <Suspense fallback>
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                    <OneModel colorToggle={colorToggle} rotate={rotate} setRotate={setRotate} />
+                    <OneModel colorIndex={colorIndex} rotate={rotate} setRotate={setRotate} />
                   </Float>
                 </Suspense>
                 <Environment preset="sunset" />

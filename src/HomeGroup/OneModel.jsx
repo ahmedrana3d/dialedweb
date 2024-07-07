@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
-export default function OneModel({ colorToggle, rotate, setRotate }) {
+export default function OneModel({ colorIndex, rotate, setRotate }) {
   const { camera } = useThree();
   const tl = gsap.timeline();
   let mm = gsap.matchMedia();
@@ -26,13 +26,14 @@ export default function OneModel({ colorToggle, rotate, setRotate }) {
 
   const isMobile = window.innerWidth <= 768;
   const { nodes, materials } = useGLTF('./cpu2.glb');
-  const color = colorToggle ? "#FFEB8C" : "#fefeff";
+
+  const colors = ["#fefeff", "#FFEB8C", "#D1A578", "black"];
 
   useEffect(() => {
     if (rotate) {
       gsap.to(model.current.rotation, {
-        y: model.current.rotation.y + Math.PI * 2,
-        duration: 1,
+        y: model.current.rotation.y + Math.PI * 1,
+        duration: 2,
         onComplete: () => setRotate(false),
       });
     }
@@ -41,22 +42,22 @@ export default function OneModel({ colorToggle, rotate, setRotate }) {
   return (
     <group position={[0, 0, 0]} scale={isMobile ? 1.5 : 1} dispose={null} ref={model} >
       <mesh geometry={nodes.Object_4.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.1} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.1} color={colors[colorIndex]} />
       </mesh>
       <mesh geometry={nodes.Object_6.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.5} color={colors[colorIndex]} />
       </mesh>
       <mesh geometry={nodes.Object_8.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.1} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.1} color={colors[colorIndex]} />
       </mesh>
       <mesh geometry={nodes.Object_10.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.5} color={colors[colorIndex]}  />
       </mesh>
       <mesh geometry={nodes.Object_12.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.5} color={colors[colorIndex]} />
       </mesh>
       <mesh geometry={nodes.Object_14.geometry} >
-        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
+        <meshStandardMaterial metalness={1} roughness={0.5} color={colors[colorIndex]} />
       </mesh>
     </group>
   );

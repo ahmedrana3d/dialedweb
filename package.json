@@ -32,7 +32,8 @@
     "slick-carousel": "^1.8.1",
     "split-type": "^0.3.4",
     "three": "^0.159.0",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vecteur": "^0.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
