@@ -4,13 +4,10 @@ import gsap from 'gsap'
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
-export default function OneModel(props) {
-
-  const { camera } = useThree()
-
-  const tl = gsap.timeline()
-
-  let mm  = gsap.matchMedia();
+export default function OneModel({ colorToggle }) {
+  const { camera } = useThree();
+  const tl = gsap.timeline();
+  let mm = gsap.matchMedia();
 
   const cameraLoads = () => {
     gsap.to(camera.position, {
@@ -23,34 +20,35 @@ export default function OneModel(props) {
   };
 
   useEffect(() => {
-      cameraLoads();
+    cameraLoads();
   }, []);
 
   const isMobile = window.innerWidth <= 768;
+  const { nodes, materials } = useGLTF('./cpu2.glb');
+  const color = colorToggle ? "#FFEB8C" : "#fefeff";
 
-  const { nodes, materials } = useGLTF('./cpu2.glb')
   return (
-    <group position={ [ 0, 0, 0 ] } scale={ isMobile ? 1.5 : 1} {...props} dispose={null}>
-      <mesh geometry={nodes.Object_4.geometry} material={materials.Chip} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+    <group position={[0, 0, 0]} scale={isMobile ? 1.5 : 1} dispose={null}>
+      <mesh geometry={nodes.Object_4.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.1} color={color} />
       </mesh>
-      <mesh geometry={nodes.Object_6.geometry} material={materials.Chip2} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+      <mesh geometry={nodes.Object_6.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
       </mesh>
-      <mesh geometry={nodes.Object_8.geometry} material={materials.Chip2} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+      <mesh geometry={nodes.Object_8.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.1} color={color} />
       </mesh>
-      <mesh geometry={nodes.Object_10.geometry} material={materials.Chip2} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+      <mesh geometry={nodes.Object_10.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
       </mesh>
-      <mesh geometry={nodes.Object_12.geometry} material={materials.Chip2} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+      <mesh geometry={nodes.Object_12.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
       </mesh>
-      <mesh geometry={nodes.Object_14.geometry} material={materials.Chip2} >
-        <meshStandardMaterial metalness={1} roughness={0.1} />
+      <mesh geometry={nodes.Object_14.geometry} >
+        <meshStandardMaterial metalness={1} roughness={0.5} color={color} />
       </mesh>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./cpu2.glb')
+useGLTF.preload('./cpu2.glb');
