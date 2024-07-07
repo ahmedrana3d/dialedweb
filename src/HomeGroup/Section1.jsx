@@ -60,8 +60,6 @@ export const Section1 = () => {
             <div className="one-content-buttons">
               <motion.button
                 className="one-button btn menu-btn"
-                whileHover={{ scale: 1.075 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 onClick={handleRotate}
                 data-hover
               >
@@ -76,8 +74,6 @@ export const Section1 = () => {
               </motion.button>
               <motion.button
                 className="one-button-transparent btn menu-btn"
-                whileHover={{ scale: 1.075 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 onClick={handleColorToggle}
                 data-hover
               >

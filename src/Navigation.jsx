@@ -173,9 +173,6 @@ export const Navigation = () => {
       <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
         <motion.button
           className="navigation-left btn menu-btn"
-          whileHover={{ scale: 1.075 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
           onClick={() => {
             setMenu(!menu);
           }}
@@ -200,8 +197,6 @@ export const Navigation = () => {
         </Link>
         <motion.button
           className="navigation-right btn menu-btn"
-          whileHover={{ scale: 1.075 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
           onClick={handleContactNavigate}
           data-hover
         >
