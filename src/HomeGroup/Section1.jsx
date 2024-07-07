@@ -59,10 +59,11 @@ export const Section1 = () => {
             <p className="one-description">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
               <motion.button
-                className="one-button"
+                className="one-button btn menu-btn"
                 whileHover={{ scale: 1.075 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 onClick={handleRotate}
+                data-hover
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">ROTATE</span>
@@ -71,6 +72,7 @@ export const Section1 = () => {
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
                 </div>
+                <div data-hover-bounds></div>
               </motion.button>
               <motion.button
                 className="one-button-transparent btn menu-btn"

@@ -76,11 +76,6 @@ export const Section3 = () => {
   return (
     <>
       <section className="three">
-        	{!isMobile && (
-        <div className="three-top-text">
-          <h1 className="headline three-top-text-animate" >Virtual turns Tangible</h1>
-        </div>
-        )}
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
@@ -109,7 +104,7 @@ export const Section3 = () => {
         </div>
         <div className="three-content">
           <div className="three-content-box-left">
-            <h1 className="headline three-title">Our Mission</h1>
+            <h1 className="headline three-title">Virtual turns <br />Tangible</h1>
             <p className="description three-description purple">To innovate and enhance digital experiences by crafting tailored, user-centric web solutions. We elevate and engage audiences through creativity and technology, delivering modern, intuitive websites that drive business’s success.</p>
             <div className="typewriter-box">
               <h1 className="typewriter">

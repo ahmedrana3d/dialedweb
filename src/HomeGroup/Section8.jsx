@@ -33,9 +33,10 @@ const isMobile = window.innerWidth <= 768;
             <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>
             <div className="eight-buttons">
                 <motion.button
-                  className="one-button"
+                  className="one-button btn menu-btn"
                   whileHover={{ scale: 1.075 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  data-hover
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >PROJECTS</span>
@@ -44,12 +45,14 @@ const isMobile = window.innerWidth <= 768;
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
+                  <div data-hover-bounds></div>
                 </motion.button>
                 <motion.button
-                  className="one-button-transparent"
+                  className="one-button-transparent btn menu-btn"
                   whileHover={{ scale: 1.075 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  data-hover
                 >
                   <div className="navigation-left-content" onClick={ handleContactNavigate } >
                     <span className="navigation-text" >GET IN TOUCH</span>
@@ -58,6 +61,7 @@ const isMobile = window.innerWidth <= 768;
                   <div className="navigation-arrow-box">
                     <i class="fa-solid fa-location-arrow"></i>
                   </div>
+                  <div data-hover-bounds></div>
                 </motion.button>
             </div>
           </div>

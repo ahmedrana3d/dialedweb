@@ -136,28 +136,28 @@ export const Navigation = () => {
             <div className="menuNav" ref={menuNavRef}>
               <Link to="/" className="menu-text">
                 <div className="menu-button">
-                  <span className="menu-text">HOME</span>
-                  <span className="menu-text">HOME</span>
+                  <span className="menu-text">Home</span>
+                  <span className="menu-text">Home</span>
                 </div>
               </Link>
               <div className="menu-button">
-                <span className="menu-text">PROJECTS</span>
-                <span className="menu-text">PROJECTS</span>
+                <span className="menu-text">Projects</span>
+                <span className="menu-text">Projects</span>
               </div>
               <div className="menu-button">
-                <span className="menu-text">LEARN</span>
-                <span className="menu-text">LEARN</span>
+                <span className="menu-text">Learn</span>
+                <span className="menu-text">Learn</span>
               </div>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button">
-                  <span className="menu-text">GET IN TOUCH</span>
-                  <span className="menu-text">GET IN TOUCH</span>
+                  <span className="menu-text">Get in touch</span>
+                  <span className="menu-text">Get in touch</span>
                 </div>
               </Link>
               <Link to="/realestate" className="menu-text">
                 <div className="menu-button">
-                  <span className="menu-text">REAL ESTATE</span>
-                  <span className="menu-text">REAL ESTATE</span>
+                  <span className="menu-text">Real estate</span>
+                  <span className="menu-text">Real estate</span>
                 </div>
               </Link>
             </div>
@@ -172,13 +172,14 @@ export const Navigation = () => {
 
       <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
         <motion.button
-          className="navigation-left"
+          className="navigation-left btn menu-btn"
           whileHover={{ scale: 1.075 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
           onClick={() => {
             setMenu(!menu);
           }}
+          data-hover
         >
           <div className="navigation-left-content">
             {isMobile ? (
@@ -190,6 +191,7 @@ export const Navigation = () => {
               </>
             )}
           </div>
+          <div data-hover-bounds></div>
         </motion.button>
         <Link to="/"   onClick={(e) => {e.preventDefault(); window.location.href = '/'; }} className="navigation-center" >
             <div className="navigation-center">
@@ -197,10 +199,11 @@ export const Navigation = () => {
             </div>
         </Link>
         <motion.button
-          className="navigation-right"
+          className="navigation-right btn menu-btn"
           whileHover={{ scale: 1.075 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
           onClick={handleContactNavigate}
+          data-hover
         >
           <div className="navigation-right-content">
             {isMobile ? (
@@ -212,6 +215,7 @@ export const Navigation = () => {
               </>
             )}
           </div>
+          <div data-hover-bounds></div>
         </motion.button>
       </div>
     </>
