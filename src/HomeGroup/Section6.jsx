@@ -136,11 +136,6 @@ export const Section6 = () => {
                     <div className="front">
                       <div className="front-top">
                         <h1 className="six-description" >Data</h1>
-                        <Lottie 
-	                        options={defaultOptions}
-                          height={"20vh"}
-                          width={"100%"}
-                        />
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
