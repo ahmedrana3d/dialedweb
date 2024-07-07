@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
-export default function OneModel({ colorToggle }) {
+export default function OneModel({ colorToggle, rotate, setRotate }) {
   const { camera } = useThree();
   const tl = gsap.timeline();
   let mm = gsap.matchMedia();
@@ -29,14 +29,14 @@ export default function OneModel({ colorToggle }) {
   const color = colorToggle ? "#FFEB8C" : "#fefeff";
 
   useEffect(() => {
-    const rotationAmount = colorToggle ? Math.PI * 0.5 : 0; // Adjust rotation amount as needed
-
-    gsap.to(model.current.rotation, {
-      y: rotationAmount,
-      duration: 1,
-      ease: 'power1.out',
-    });
-  }, [colorToggle]);
+    if (rotate) {
+      gsap.to(model.current.rotation, {
+        y: model.current.rotation.y + Math.PI * 2,
+        duration: 1,
+        onComplete: () => setRotate(false),
+      });
+    }
+  }, [rotate, setRotate]);
 
   return (
     <group position={[0, 0, 0]} scale={isMobile ? 1.5 : 1} dispose={null} ref={model} >

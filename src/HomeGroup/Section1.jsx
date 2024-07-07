@@ -44,6 +44,12 @@ export const Section1 = () => {
     }
   };
 
+  const [rotate, setRotate] = useState(false);
+
+  const handleRotate = () => {
+    setRotate(true);
+};
+
   return (
     <>
       <section className="one">
@@ -56,10 +62,11 @@ export const Section1 = () => {
                 className="one-button"
                 whileHover={{ scale: 1.075 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                onClick={handleRotate}
               >
                 <div className="navigation-left-content">
-                  <span className="navigation-text">PROJECTS</span>
-                  <span className="navigation-text">PROJECTS</span>
+                  <span className="navigation-text">ROTATE</span>
+                  <span className="navigation-text">ROTATE</span>
                 </div>
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
@@ -86,7 +93,7 @@ export const Section1 = () => {
               <Canvas camera={{ position: [5, 20, 13], fov: 35 }}>
                 <Suspense fallback>
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                    <OneModel colorToggle={colorToggle} />
+                    <OneModel colorToggle={colorToggle} rotate={rotate} setRotate={setRotate} />
                   </Float>
                 </Suspense>
                 <Environment preset="sunset" />
