@@ -27,7 +27,7 @@ export default function OneModel({ colorIndex, rotate, setRotate }) {
   const isMobile = window.innerWidth <= 768;
   const { nodes, materials } = useGLTF('./cpu2.glb');
 
-  const colors = ["#fefeff", "#FFEB8C", "#D1A578", "#888888"];
+  const colors = ["#fefeff", "#FFEB8C", "#D1A578", "#777777"];
 
   useEffect(() => {
     if (rotate) {
