@@ -13,6 +13,7 @@ import { Fluid } from "@whatisjery/react-fluid-distortion";
 import { Sphere } from "../Sphere";
 import { easing } from "maath";
 import transition from "../Transition";
+import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
@@ -30,6 +31,7 @@ const Home = () => {
       <Section5 />
       <Section6 />
       <Section7 />
+      <SectionScrollVideoOnScroll />
       <Section8 />
 
       <div className="experience-one">
