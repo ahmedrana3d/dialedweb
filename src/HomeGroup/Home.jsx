@@ -14,6 +14,7 @@ import { Sphere } from "../Sphere";
 import { easing } from "maath";
 import transition from "../Transition";
 import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
+import { Section2 } from "./Section2";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
@@ -28,6 +29,7 @@ const Home = () => {
       <Section1 />
       <Section3 />
       <Section4 />
+      <Section2 />
       <Section5 />
       <Section6 />
       <Section7 />
