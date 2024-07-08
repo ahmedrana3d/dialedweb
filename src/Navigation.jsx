@@ -144,22 +144,18 @@ export const Navigation = () => {
                 <span className="menu-text">Projects</span>
                 <span className="menu-text">Projects</span>
               </div>
-              <div className="menu-button">
-                <span className="menu-text">Learn</span>
-                <span className="menu-text">Learn</span>
-              </div>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button">
-                  <span className="menu-text">Get in touch</span>
-                  <span className="menu-text">Get in touch</span>
+                  <span className="menu-text">Get In Touch</span>
+                  <span className="menu-text">Get In Touch</span>
                 </div>
               </Link>
-              <Link to="/realestate" className="menu-text">
+              {/* <Link to="/realestate" className="menu-text">
                 <div className="menu-button">
                   <span className="menu-text">Real estate</span>
                   <span className="menu-text">Real estate</span>
                 </div>
-              </Link>
+              </Link> */}
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
               <i className="fa-brands fa-instagram nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
