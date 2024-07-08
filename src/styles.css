@@ -100,8 +100,8 @@ a {
 }
 
 .cursor {
-  width: 2vw;
-  height: 2vw;
+  width: 1.75vw;
+  height: 1.75vw;
   border-radius: 50%;
 
   position: fixed;
@@ -2851,7 +2851,7 @@ input {
 .five {
   position: relative;
   padding: 0 0vw;
-  height: 60vh;
+  height: 50vh;
 }
 
 .five-content {
@@ -2882,7 +2882,7 @@ input {
   position: relative;
   z-index: auto;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 0vh;
 }
 
 .six-content {

@@ -19,7 +19,7 @@ export const Section5 = () => {
       <h1 className="five-title headline">Our Team</h1>
         <div className="mobile-scroll"></div>
         <div className="five-box" >
-          <Canvas camera={{ position: [0, 3, isMobile ? 15 : 10], fov: 15 }}>
+          <Canvas camera={{ position: [0, 3, isMobile ? 11 : 8.5], fov: 15 }}>
             <Carousel />
             <OrbitControls enableZoom={ false } enablePan={ false } enableRotate={ isMobile ? false : true } maxPolarAngle={ 1 } minPolarAngle={ 1.3 } />
             <Environment preset="dawn" />
@@ -31,7 +31,7 @@ export const Section5 = () => {
   );
 };
 
-function Carousel({ radius = 1.3, count = 7 }) {
+function Carousel({ radius = 1.1, count = 7 }) {
   const ref = useRef()
 
   useFrame((state, delta) => {
@@ -61,7 +61,7 @@ function Card({ url, ...props }) {
   useFrame((state, delta) => {
     easing.damp3(ref.current.scale, hovered ? 1.15 : 1, 0.1, delta)
     easing.damp(ref.current.material, 'radius', hovered ? 0.25 : 0.1, 0.2, delta)
-    easing.damp(ref.current.material, 'zoom', hovered ? 0.85 : 0.75, 0.2, delta)
+    easing.damp(ref.current.material, 'zoom', hovered ? 0.75 : 0.75, 0.2, delta)
   })
   return (
     <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props} >
@@ -80,7 +80,7 @@ function Banner(props) {
   })
   return (
     <mesh ref={ref} {...props}>
-      <cylinderGeometry args={[1.5, 1.5, 0.14, 128, 16, true]} />
+      <cylinderGeometry args={[1.3, 1.3, 0.075, 128, 16, true]} />
       <meshSineMaterial map={texture} map-anisotropy={16} map-repeat={[30, 1]} side={THREE.DoubleSide} toneMapped={false} />
     </mesh>
   )
