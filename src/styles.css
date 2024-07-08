@@ -69,7 +69,6 @@ a {
 
 .btn {
   width: fit-content;
-  height: 2.75vw;
   position: relative;
   display: grid;
   place-content: center;
@@ -1010,6 +1009,14 @@ section {
   flex-direction: column;
   z-index: auto;
   position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2vw;
 }
 
 .one-content {
@@ -2056,8 +2063,8 @@ html.lenis, html.lenis body {
   }
 
   .cursor {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 0vw;
+    height: 0vw;
     border-radius: 50%;
   
     position: fixed;
@@ -2073,14 +2080,41 @@ html.lenis, html.lenis body {
   }
   
   .cta {
-    width: 100px;
+    width: 0;
     position: fixed;
-    top: -999px;
-    left: -999px;
+    top: 0;
+    left: 0;
     pointer-events: none;
     display: none;
   }
 
+  .btn {
+
+  svg {
+    width: 0%;
+    height: 0%;
+    pointer-events: none;
+  }
+}
+
+[data-hover] {
+  position: relative;
+
+  [data-hover-bounds] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    inset: 0;
+
+    /*    outline: 1px solid red; */
+  }
+
+  &:hover {
+    [data-hover-bounds] {
+      transform: scale(0);
+    }
+  }
+}
   /* TEXTS */
 
 .headline {

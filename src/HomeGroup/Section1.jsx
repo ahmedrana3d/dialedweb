@@ -13,12 +13,7 @@ import OneModel from "./OneModel";
 export const Section1 = () => {
   useTextEffect(".anim");
 
-  const [fullPageVisible, setFullPageVisible] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
-
-  const handleFullPageToggle = () => {
-    setFullPageVisible(!fullPageVisible);
-  };
 
   const handleColorToggle = () => {
     setColorIndex((prevIndex) => (prevIndex + 1) % 4); // Cycle through 4 colors
@@ -116,38 +111,9 @@ export const Section1 = () => {
             </div>
           </Marquee>
         </div>
+        <img className="scroll-indicator" src="/scrollindicator.gif" alt="" />
       </section>
 
-      <AnimatePresence>
-        {fullPageVisible && (
-          <motion.div
-            className="showreel-overlay"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <video className="showreel-video" src="/video.mp4" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
-            <motion.button
-              className="navigation-left showreel-button"
-              whileHover={{ scale: 1.075 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              onClick={handleFullPageToggle}
-            >
-              <div className="navigation-left-content">
-                {isMobile ? (
-                  <i class="fa-solid fa-x"></i>
-                ) : (
-                  <>
-                    <span className="navigation-text">CLOSE</span>
-                    <span className="navigation-text">CLOSE</span>
-                  </>
-                )}
-              </div>
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };
