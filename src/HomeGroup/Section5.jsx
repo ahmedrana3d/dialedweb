@@ -44,7 +44,7 @@ function Carousel({ radius = 1.1, count = 7 }) {
       {Array.from({ length: count }, (_, i) => (
         <Card
           key={i}
-          url={`/teamimage${Math.floor(i % 7) + 1}.png`}
+          url={`/ot${Math.floor(i % 7) + 1}.png`}
           position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
           rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
         />
@@ -61,7 +61,7 @@ function Card({ url, ...props }) {
   useFrame((state, delta) => {
     easing.damp3(ref.current.scale, hovered ? 1.15 : 1, 0.1, delta)
     easing.damp(ref.current.material, 'radius', hovered ? 0.25 : 0.1, 0.2, delta)
-    easing.damp(ref.current.material, 'zoom', hovered ? 0.75 : 0.75, 0.2, delta)
+    easing.damp(ref.current.material, 'zoom', hovered ? 0.7 : 0.7, 0.2, delta)
   })
   return (
     <Image ref={ref} url={url} transparent side={THREE.DoubleSide} onPointerOver={pointerOver} onPointerOut={pointerOut} {...props} >
