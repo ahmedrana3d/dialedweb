@@ -111,7 +111,7 @@ export const Section1 = () => {
             </div>
           </Marquee>
         </div>
-        <img className="scroll-indicator" src="/scrollindicator.gif" alt="" />
+        <img className="scroll-indicator" src="/scroll.gif" alt="" />
       </section>
 
     </>

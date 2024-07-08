@@ -1013,10 +1013,10 @@ section {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 10vh;
+  bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 2vw;
+  transform: translate(-50%, 0);
+  width: 5vw;
 }
 
 .one-content {
