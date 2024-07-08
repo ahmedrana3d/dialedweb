@@ -2115,6 +2115,10 @@ html.lenis, html.lenis body {
 
 @media (max-width: 768px) {
 
+  .scroll-indicator {
+    display: none;
+  }
+
   .experience-one {
     height: 100vh;
     width: 100%;
