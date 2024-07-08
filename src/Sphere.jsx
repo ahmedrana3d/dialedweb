@@ -83,7 +83,7 @@ export function Sphere(props) {
         <mesh
           geometry={nodes.Sphere.geometry}
         >
-            <meshStandardMaterial metalness={1} roughness={ 0.9 } color={ "#dcd7ff" }  />
+            <meshStandardMaterial metalness={1} roughness={0.5} color={ "#555555" } />
         </mesh>
       </group>
     </group>

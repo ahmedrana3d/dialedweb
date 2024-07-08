@@ -67,7 +67,7 @@ const isMobile = window.innerWidth <= 768;
           <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
             <Sphere />
             <Rig />
-            <Environment preset="sunset" />
+            <Environment preset="night" />
           </Canvas>
         </div>
         )}

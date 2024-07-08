@@ -60,7 +60,7 @@ const Home = () => {
             </EffectComposer>
           )}
           <Sphere />
-          <Environment preset="sunset" />
+          <Environment preset="night" />
         </Canvas>
       </div>
     </>
