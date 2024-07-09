@@ -1018,6 +1018,7 @@ section {
   left: 50%;
   transform: translate(-50%, 0);
   width: 12.5vw;
+  display: none;
 }
 
 .one-content {

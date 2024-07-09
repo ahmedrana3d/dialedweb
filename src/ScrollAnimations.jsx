@@ -33,7 +33,7 @@ const useAnimateText = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
-              toggleActions: 'play none none reset',
+              toggleActions: 'play none none reverse',
             },
           }
         );
@@ -51,27 +51,27 @@ const useAnimateText = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
-            toggleActions: 'play none none reset',
+            toggleActions: 'play none none reverse',
           },
         });
 
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 100%',
-              end: 'top 60%',
-              scrub: true,
-              toggleActions: 'play reverse play reverse',
-            },
-          }
-        );
+        // gsap.fromTo(
+        //   element,
+        //   {
+        //     opacity: 0,
+        //   },
+        //   {
+        //     opacity: 1,
+        //     ease: 'none',
+        //     scrollTrigger: {
+        //       trigger: element,
+        //       start: 'top 100%',
+        //       end: 'top 60%',
+        //       scrub: true,
+        //       toggleActions: 'play reverse play reverse',
+        //     },
+        //   }
+        // );
 
         // gsap.fromTo(
         //   element,
