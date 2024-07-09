@@ -1014,10 +1014,10 @@ section {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2.5%;
+  top: 100vh;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 12.5vw;
+  width: 5vw;
   display: none;
 }
 
@@ -2000,7 +2000,7 @@ section {
   position: sticky;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 95vh;
 }
 
 .scroll-video-on-scroll-items {
@@ -2060,6 +2060,10 @@ section {
 
 .box-between-words-image-3 {
   background-image: url('/vision.png');
+}
+
+.scroll-purple {
+  color: #AAA3FF;
 }
 
 /* LOADING SCREEN DESKTOP */
@@ -3557,6 +3561,10 @@ input {
   border-radius: 15px;
   background-size: cover;
   background-position: center;
+}
+
+.scroll-purple {
+  color: #AAA3FF;
 }
 
 

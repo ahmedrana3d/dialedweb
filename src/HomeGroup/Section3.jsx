@@ -76,6 +76,7 @@ export const Section3 = () => {
   return (
     <>
       <section className="three">
+        <img className="scroll-indicator" src="/scroll3.gif" alt="" />
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>

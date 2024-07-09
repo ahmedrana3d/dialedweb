@@ -116,7 +116,6 @@ const handleScrollToSection3 = () => {
             </div>
           </Marquee>
         </div>
-        <img className="scroll-indicator" src="/scroll2.gif" alt="" />
       </section>
 
     </>
