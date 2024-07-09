@@ -15,6 +15,7 @@ import { easing } from "maath";
 import transition from "../Transition";
 import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 import { Section2 } from "./Section2";
+import { SectionVideoMobile } from "./SectionVideoMobile";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
@@ -36,7 +37,7 @@ const Home = () => {
       <Section5 />
       <Section6 />
       <Section7 />
-      <SectionScrollVideoOnScroll />
+      {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
 
       <div className="experience-one">
