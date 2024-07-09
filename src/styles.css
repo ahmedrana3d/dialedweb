@@ -2056,15 +2056,17 @@ section {
 .box-between-words-small {
   height: 5vw;
   width: 4vw;
-  border-radius: 25px;
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
+  z-index: 10;
+  pointer-events: all;
 }
 
 .box-between-words-big {
   height: 5vw;
   width: 7vw;
-  border-radius: 25px;
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
 }
