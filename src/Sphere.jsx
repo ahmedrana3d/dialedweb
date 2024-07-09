@@ -78,7 +78,7 @@ export function Sphere(props) {
   const isMobile = window.innerWidth <= 768;
 
   return (
-    <group ref={sphereRef} position={ [ 5, -5, 0 ] } {...props} scale={1} dispose={null}>
+    <group ref={sphereRef} position={ [ isMobile ? 0 : 5, isMobile ? 0 : -5, 0 ] } {...props} scale={1} dispose={null}>
       <group scale={ isMobile ? 0.0035 : 0.0065}>
         <mesh
           geometry={nodes.Sphere.geometry}

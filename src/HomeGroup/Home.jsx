@@ -45,6 +45,8 @@ const Home = () => {
           {/* <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#fefeff"} far={10} speed={1} /> */}
           <Rig />
           {!isMobile && (
+            <>
+            <Sphere />
             <EffectComposer>
               <Fluid
                 radius={0.03}
@@ -62,8 +64,8 @@ const Home = () => {
                 fluidColor="#515151"
               />
             </EffectComposer>
+            </>
           )}
-          <Sphere />
           <Environment preset="night" />
         </Canvas>
       </div>
