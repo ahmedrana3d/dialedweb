@@ -146,7 +146,7 @@ section {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: fit-content;
   pointer-events: all;
   display: flex;
@@ -1376,6 +1376,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   pointer-events: all;
   z-index: 10;
