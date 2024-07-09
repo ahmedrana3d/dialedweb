@@ -2466,7 +2466,6 @@ input {
   width: 100vw;
   height: fit-content;
   z-index: 1;
-  background-color: #040217;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
