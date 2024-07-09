@@ -2012,14 +2012,74 @@ section {
   height: 300vh;
   width: 100%;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
 }
 
 .video-background {
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
   height: 100vh;
+}
+
+.scroll-video-on-scroll-items {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 50%;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.scroll-video-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+  row-gap: 1vw;
+}
+
+.scroll-section-headline {
+  font-size: 5vw;
+  font-family: "SFBOLD", sans-serif;
+  margin: 0;
+  line-height: 1;
+  color: #fefeff;
+}
+
+.box-between-words-small {
+  height: 5vw;
+  width: 4vw;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.box-between-words-big {
+  height: 5vw;
+  width: 7vw;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.box-between-words-image-1 {
+  background-image: url('/twoimageone.png');
+}
+
+.box-between-words-image-2 {
+  background-image: url('/twoimagetwo.png');
+}
+
+.box-between-words-image-3 {
+  background-image: url('/twoimagefour.png');
 }
 
 /* LOADING SCREEN DESKTOP */
@@ -2204,7 +2264,7 @@ html.lenis, html.lenis body {
   /* TEXTS */
 
 .headline {
-  font-size: 2.75rem;
+  font-size: 2.7rem;
   font-family: "SF", sans-serif;
   font-weight: bold;
   margin: 0;
