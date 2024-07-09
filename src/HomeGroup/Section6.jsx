@@ -6,7 +6,7 @@ import animationData from '../lotties/data';
 
 export const Section6 = () => {
 
-  useAnimateText(".six-title")
+  useAnimateText(".six-content-headline")
 
   const defaultOptions = {
     loop: true,
@@ -22,13 +22,10 @@ export const Section6 = () => {
         <section className="six">
           <div className="six-content">
 
+            <h1 className="headline six-content-headline" >Our Services</h1>
+
             <div className="six-content-top">
-              <div className="six-content-top-big">
-                <div className="six-content-top-big-content">
-                  <div className="six-content-circle" />
-                  <h1 className="headline six-title" >Our Services</h1>
-                </div>
-              </div>
+
               <div className="six-content-row">
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
@@ -62,6 +59,7 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -94,12 +92,8 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="six-content-bottom">
-              <div className="six-content-row">
-                <div className="six-content-row-box-bigger six-outside">
+                <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
                       <div className="front-top">
@@ -131,6 +125,12 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
+
+              </div>
+            </div>
+
+            <div className="six-content-bottom">
+              <div className="six-content-row">
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -163,9 +163,7 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="six-content-row">
-                <div className="six-content-row-box-bigger six-outside">
+                <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
                       <div className="front-top">

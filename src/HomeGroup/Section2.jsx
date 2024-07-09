@@ -29,7 +29,7 @@ export const Section2 = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="two-images-box-small two-images-box-image-3">
+                    <div className="two-images-box-small two-images-box-image-2">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Wellness</h1>
@@ -47,7 +47,7 @@ export const Section2 = () => {
                     </div>
                 </div>
                 <div className="two-images-container-row">
-                    <div className="two-images-box-small two-images-box-image-2">
+                    <div className="two-images-box-small two-images-box-image-3">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Wellness</h1>

@@ -1290,11 +1290,11 @@ section {
 }
 
 .two-images-box-image-1 {
-  background-image: url('/twoimageone.png');
+  background-image: url('/project1.png');
 }
 
 .two-images-box-image-2 {
-  background-image: url('/twoimagetwo.png');
+  background-image: url('/project3.png');
 }
 
 .two-images-box-image-3 {
@@ -1302,7 +1302,7 @@ section {
 }
 
 .two-images-box-image-4 {
-  background-image: url('/twoimagefour.png');
+  background-image: url('/project2.png');
 }
 
 .two-images-box-content {
@@ -1741,7 +1741,7 @@ section {
   position: relative;
   z-index: auto;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 0vh;
 }
 
 .six-content {
@@ -1750,18 +1750,18 @@ section {
   display: flex;
   flex-direction: column;
   padding: 15vh 5vw;
-  gap: 0.5vw;
+  gap: 1.5vw;
 }
 
 .six-content-row {
-  width: 44.75vw;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .six-content-row-box {
-  width: 22.125vw;
+  width: 29vw;
   height: 100%;
   pointer-events: all;
   perspective: 800px;
@@ -1776,40 +1776,16 @@ section {
 
 .six-content-top {
   width: 100%;
-  height: 25vw;
+  height: 29vw;
   display: flex;
   gap: 0.5vw;
   z-index: 3;
   pointer-events: none;
 }
 
-.six-content-top-big {
-  width: 44.75vw;
-  height: 100%;
-  border-radius: 15px;
-  padding: 2vw;
-  display: flex;
-  background-color: #fefeff;
-  pointer-events: all;
-}
-
-.six-content-top-big-content {
-  display: flex;
-  height: fit-content;
-  gap: 1vw;
-}
-
-.six-content-circle {
-  width: 2vw;
-  height: 2vw;
-  background-color: #040217;
-  border-radius: 100%;
-  align-self: center;
-}
-
 .six-content-bottom {
   width: 100%;
-  height: 25vw;
+  height: 29vw;
   display: flex;
   gap: 0.5vw;
   z-index: 3;

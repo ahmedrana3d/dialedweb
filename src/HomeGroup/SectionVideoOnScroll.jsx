@@ -92,16 +92,16 @@ export const SectionScrollVideoOnScroll = () => {
         <section className="scroll-video-on-scroll">
             <div className="scroll-video-on-scroll-items">
                 <div className="scroll-video-items-wrapper">
-                    <h1 className="scroll-section-headline scroll-headline-1" >A</h1>
+                    <h1 className="scroll-section-headline scroll-headline-1" >Grow</h1>
                     <motion.div whileHover={{ scale: 2, rotate: -10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-small box-between-words-image-1" />
-                    <h1 className="scroll-section-headline scroll-headline-2" >tiny</h1>
-                    <h1 className="scroll-section-headline scroll-headline-3" >mountain</h1>
-                    <h1 className="scroll-section-headline scroll-headline-4" >village</h1>
+                    <h1 className="scroll-section-headline scroll-headline-2" >your</h1>
+                    <h1 className="scroll-section-headline scroll-headline-3" >Digital</h1>
+                    <h1 className="scroll-section-headline scroll-headline-4" >Presence,</h1>
                     <motion.div whileHover={{ scale: 2, rotate: 10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-small box-between-words-image-2" />
-                    <h1 className="scroll-section-headline scroll-headline-5" >where</h1>
-                    <h1 className="scroll-section-headline scroll-headline-6" >it</h1>
-                    <h1 className="scroll-section-headline scroll-headline-7" >all</h1>
-                    <h1 className="scroll-section-headline scroll-headline-8" >began...</h1>
+                    <h1 className="scroll-section-headline scroll-headline-5" >let</h1>
+                    <h1 className="scroll-section-headline scroll-headline-6" >Your</h1>
+                    <h1 className="scroll-section-headline scroll-headline-7" >Vision</h1>
+                    <h1 className="scroll-section-headline scroll-headline-8" >Bloom</h1>
                     <motion.div whileHover={{ scale: 2, rotate: -10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-big box-between-words-image-3" />
                 </div>
             </div>
