@@ -45,7 +45,7 @@ body {
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  background-color: #010001;
+  background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -438,7 +438,7 @@ section {
 
 .contact-overlay-title {
   font-size: 4vw;
-  font-family: "SFMEDIUM", sans-serif;
+  font-family: "SFBOLD", sans-serif;
   font-weight: normal;
   margin: 0;
   line-height: 1;
@@ -2521,7 +2521,7 @@ input {
 
 .contact-overlay-title {
   font-size: 3rem;
-  font-family: "SFMEDIUM", sans-serif;
+  font-family: "SFBOLD", sans-serif;
   font-weight: normal;
   margin: 0;
   line-height: 1;
@@ -3541,7 +3541,7 @@ input {
 }
 
 .box-between-words-small {
-  height: 15vw;
+  height: 10vw;
   align-self: center;
   justify-self: center;
   width: 3rem;

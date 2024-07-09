@@ -16,32 +16,32 @@ export const Section2 = () => {
                     <div className="two-images-box-big two-images-box-image-1">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                <h1 className="two-images-box-content-item-text" >Wellness</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Branding</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
                             </motion.div>
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Consulting</h1>
+                                <h1 className="two-images-box-content-item-text" >Design</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Visualisation</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Animation</h1>
                             </motion.div>
                         </div>
                     </div>
                     <div className="two-images-box-small two-images-box-image-2">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                <h1 className="two-images-box-content-item-text" >Wellness</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Branding</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
                             </motion.div>
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Consulting</h1>
+                                <h1 className="two-images-box-content-item-text" >Design</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Visualisation</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Animation</h1>
                             </motion.div>
                         </div>
                     </div>
@@ -50,32 +50,32 @@ export const Section2 = () => {
                     <div className="two-images-box-small two-images-box-image-3">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                <h1 className="two-images-box-content-item-text" >Wellness</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Branding</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
                             </motion.div>
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Consulting</h1>
+                                <h1 className="two-images-box-content-item-text" >Design</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Consultation</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Data</h1>
                             </motion.div>
                         </div>
                     </div>
                     <div className="two-images-box-big two-images-box-image-4">
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                <h1 className="two-images-box-content-item-text" >Wellness</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Branding</h1>
-                            </motion.div>
-                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
                             </motion.div>
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                <h1 className="two-images-box-content-item-text" >Consulting</h1>
+                                <h1 className="two-images-box-content-item-text" >Design</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Visualisation</h1>
+                            </motion.div>
+                            <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
+                                <h1 className="two-images-box-content-item-text" >Animation</h1>
                             </motion.div>
                         </div>
                     </div>
