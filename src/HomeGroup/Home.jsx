@@ -36,7 +36,6 @@ const Home = () => {
       <Section2 />
       <Section5 />
       <Section6 />
-      <Section7 />
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
 
