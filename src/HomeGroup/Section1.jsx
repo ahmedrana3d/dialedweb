@@ -10,13 +10,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import OneModel from "./OneModel";
 
-export const Section1 = () => {
+export const Section1 = ({ section3Ref }) => {
   useTextEffect(".anim");
 
   const [colorIndex, setColorIndex] = useState(0);
 
-  const handleColorToggle = () => {
+  const handleInteractive = () => {
     setColorIndex((prevIndex) => (prevIndex + 1) % 4); // Cycle through 4 colors
+    setRotate(true);
   };
 
   useEffect(() => {
@@ -45,6 +46,10 @@ export const Section1 = () => {
     setRotate(true);
 };
 
+const handleScrollToSection3 = () => {
+  section3Ref.current.scrollIntoView({ behavior: "smooth" });
+};
+
   return (
     <>
       <section className="one">
@@ -55,12 +60,12 @@ export const Section1 = () => {
             <div className="one-content-buttons">
               <motion.button
                 className="one-button btn menu-btn"
-                onClick={handleRotate}
                 data-hover
+                onClick={handleScrollToSection3}
               >
                 <div className="navigation-left-content">
-                  <span className="navigation-text">ROTATE</span>
-                  <span className="navigation-text">ROTATE</span>
+                  <span className="navigation-text">SEE MORE</span>
+                  <span className="navigation-text">SEE MORE</span>
                 </div>
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>
@@ -69,12 +74,12 @@ export const Section1 = () => {
               </motion.button>
               <motion.button
                 className="one-button-transparent btn menu-btn"
-                onClick={handleColorToggle}
+                onClick={handleInteractive}
                 data-hover
               >
                 <div className="navigation-left-content">
-                  <span className="navigation-text">COLOR CHANGE</span>
-                  <span className="navigation-text">COLOR CHANGE</span>
+                  <span className="navigation-text">INTERACT</span>
+                  <span className="navigation-text">INTERACT</span>
                 </div>
                 <div className="navigation-arrow-box">
                   <i class="fa-solid fa-location-arrow"></i>

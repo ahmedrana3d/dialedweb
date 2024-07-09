@@ -40,7 +40,7 @@ export default function OneModel({ colorIndex, rotate, setRotate }) {
   }, [rotate, setRotate]);
 
   return (
-    <group position={[0, 0, 0]} scale={isMobile ? 1.5 : 1} dispose={null} ref={model} >
+    <group position={[0, isMobile ? 0 : 0, 0]} scale={isMobile ? 1.5 : 1} dispose={null} ref={model} >
       <mesh geometry={nodes.Object_4.geometry} >
         <meshStandardMaterial metalness={1} roughness={0.1} color={colors[colorIndex]} />
       </mesh>

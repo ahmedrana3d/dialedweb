@@ -18,6 +18,7 @@ import { Section2 } from "./Section2";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
+  const section3Ref = useRef(null);
 
   useEffect(() => {
     // Scroll to the top of the page when the component mounts or updates
@@ -26,8 +27,10 @@ const Home = () => {
 
   return (
     <>
-      <Section1 />
-      <Section3 />
+      <Section1 section3Ref={section3Ref} />
+      <div ref={section3Ref} >
+        <Section3 />
+      </div>
       <Section4 />
       <Section2 />
       <Section5 />
