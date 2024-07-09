@@ -2009,7 +2009,7 @@ section {
 /* VIDEOONSCROLL */
 
 .scroll-video-on-scroll {
-  height: 500vh;
+  height: 300vh;
   width: 100%;
   overflow: visible;
 }
