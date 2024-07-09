@@ -72,7 +72,7 @@ export const SectionScrollVideoOnScroll = () => {
     return (
       <>
         <section className="scroll-video-on-scroll">
-            <video src="./flowerkey2.mp4" preload="auto" playsInline="true" muted="muted" class="video-background"></video>
+            <video src="./flowerkey2.mp4" preload="auto" playsInline="true" webkit-playsinline="true" muted="muted" class="video-background"></video>
         </section>
       </>
     )
