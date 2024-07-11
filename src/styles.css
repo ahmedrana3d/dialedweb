@@ -115,6 +115,34 @@ a {
   z-index: 1000;
 }
 
+#ball {
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+#cursor-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  transition: opacity 150ms ease-in-out;
+  font-size: 1vw;
+  font-family: "SFBOLD", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+  color: #fefeff;
+}
+
 .cta {
   width: 100px;
   position: fixed;
@@ -2245,6 +2273,36 @@ html.lenis, html.lenis body {
     }
   }
 }
+
+#ball {
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+  transition: width 0.5s ease, height 0.5s ease;
+  display: none;
+}
+
+#cursor-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  transition: opacity 150ms ease-in-out;
+  font-size: 1vw;
+  font-family: "SFBOLD", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1;
+  color: #fefeff;
+  display: none;
+}
   /* TEXTS */
 
 .headline {
@@ -3577,34 +3635,6 @@ input {
   color: #fefeff;
 }
 
-
-#ball {
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 999;
-  transition: width 0.5s ease, height 0.5s ease;
-}
-
-#cursor-text {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  opacity: 1;
-  z-index: 999;
-  display: grid;
-  place-items: center;
-  transition: opacity 150ms ease-in-out;
-  font-size: 1vw;
-  font-family: "SFBOLD", sans-serif;
-  font-weight: normal;
-  margin: 0;
-  line-height: 1;
-  color: #fefeff;
-}
 
 
 

@@ -286,8 +286,7 @@ function App() {
     var lastHoveredElement = null;
     
     function updateCursor(e) {
-    
-      if (lastHoveredElement === null) {
+      if (window.innerWidth > 768 && lastHoveredElement === null) {
         ball.style.display = 'block';
         ball.style.height = "1.75vw";
         ball.style.width = "1.75vw";
@@ -295,28 +294,37 @@ function App() {
       }
     }
     
+    // Handle hover enter only if screen width is greater than 768px (example threshold)
     function handleHoverEnter(e) {
-      cursorText.innerHTML = e.target.getAttribute('data-cursor-text');
-      cursorText.style.opacity = '1';
-      ball.style.height = "10vw";
-      ball.style.width = "10vw";
-    
-      lastHoveredElement = e.target;
+      if (window.innerWidth > 768) {
+        cursorText.innerHTML = e.target.getAttribute('data-cursor-text');
+        cursorText.style.opacity = '1';
+        ball.style.height = "10vw";
+        ball.style.width = "10vw";
+      
+        lastHoveredElement = e.target;
+      }
     }
     
+    // Handle hover leave only if screen width is greater than 768px (example threshold)
     function handleHoverLeave(e) {
-      cursorText.style.opacity = '0';
-      ball.style.display = 'block';
-    
-      lastHoveredElement = null;
+      if (window.innerWidth > 768) {
+        cursorText.style.opacity = '0';
+        ball.style.display = 'block';
+      
+        lastHoveredElement = null;
+      }
     }
     
-    document.addEventListener('mousemove', updateCursor);
-    
-    hoverAreas.forEach(function(elem) {
-      elem.addEventListener('mouseenter', handleHoverEnter);
-      elem.addEventListener('mouseleave', handleHoverLeave);
-    });
+    // Add event listeners conditionally based on screen width
+    if (window.innerWidth > 768) {
+      document.addEventListener('mousemove', updateCursor);
+      
+      hoverAreas.forEach(function(elem) {
+        elem.addEventListener('mouseenter', handleHoverEnter);
+        elem.addEventListener('mouseleave', handleHoverLeave);
+      });
+    }
 
   }, []);
   
