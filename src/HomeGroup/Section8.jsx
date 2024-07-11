@@ -69,7 +69,7 @@ const hoverSoundMobile = () => {
                 <motion.button
                   className="one-button-transparent btn menu-btn"
                   data-hover
-                  onClick={() => { handleContactNavigate(); hoverSoundMobile(); }}
+                  onClick={() => {  handleNavigateClick('/contact'); hoverSoundMobile(); }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
                 >
