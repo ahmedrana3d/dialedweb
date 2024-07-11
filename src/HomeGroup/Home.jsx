@@ -16,6 +16,7 @@ import transition from "../Transition";
 import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
+import { initializeCursors } from "../Cursor";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
@@ -26,16 +27,24 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    initializeCursors();
+  }, []);
+
   return (
     <>
+
+<div className="cursor" id="ball"></div>
+<div className="cursor-text" id="cursor-text">Scroll</div>
+
       <Section1 section3Ref={section3Ref} />
       <div ref={section3Ref} >
         <Section3 />
       </div>
-      <Section4 />
       <Section2 />
-      <Section5 />
       <Section6 />
+      <Section4 />
+      <Section5 />
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
 

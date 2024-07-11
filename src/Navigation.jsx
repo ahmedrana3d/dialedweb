@@ -126,6 +126,17 @@ export const Navigation = () => {
 
   const isMobile = window.innerWidth <= 768;
 
+  const hoverSound = new Audio('/fx.mp3');
+
+const handleHoverStart = () => {
+  hoverSound.play();
+};
+
+const handleHoverEnd = () => {
+  hoverSound.pause();
+  hoverSound.currentTime = 0; // Reset audio to the beginning for instant replay
+};
+
   return (
     <>
       <div className={`menu-container ${menu ? 'open' : ''}`}           onClick={() => {
@@ -173,6 +184,8 @@ export const Navigation = () => {
             setMenu(!menu);
           }}
           data-hover
+          onMouseEnter={handleHoverStart}
+          onMouseLeave={handleHoverEnd}
         >
           <div className="navigation-left-content">
             {isMobile ? (
@@ -195,6 +208,8 @@ export const Navigation = () => {
           className="navigation-right btn menu-btn"
           onClick={handleContactNavigate}
           data-hover
+          onMouseEnter={handleHoverStart}
+          onMouseLeave={handleHoverEnd}
         >
           <div className="navigation-right-content">
             {isMobile ? (

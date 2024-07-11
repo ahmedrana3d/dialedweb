@@ -50,6 +50,17 @@ const handleScrollToSection3 = () => {
   section3Ref.current.scrollIntoView({ behavior: "smooth" });
 };
 
+const hoverSound = new Audio('/fx.mp3');
+
+const handleHoverStart = () => {
+  hoverSound.play();
+};
+
+const handleHoverEnd = () => {
+  hoverSound.pause();
+  hoverSound.currentTime = 0; // Reset audio to the beginning for instant replay
+};
+
   return (
     <>
       <section className="one">
@@ -59,9 +70,11 @@ const handleScrollToSection3 = () => {
             <p className="one-description">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
               <motion.button
-                className="one-button btn menu-btn"
+                className="one-button-transparent btn menu-btn"
                 data-hover
                 onClick={handleScrollToSection3}
+                onMouseEnter={handleHoverStart}
+                onMouseLeave={handleHoverEnd}
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">SEE MORE</span>
@@ -73,8 +86,10 @@ const handleScrollToSection3 = () => {
                 <div data-hover-bounds></div>
               </motion.button>
               <motion.button
-                className="one-button-transparent btn menu-btn"
+                className="one-button btn menu-btn"
                 onClick={handleInteractive}
+                onMouseEnter={handleHoverStart}
+                onMouseLeave={handleHoverEnd}
                 data-hover
               >
                 <div className="navigation-left-content">

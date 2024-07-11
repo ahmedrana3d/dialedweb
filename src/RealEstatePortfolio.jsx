@@ -1,9 +1,18 @@
 import React from "react";
+import { initializeCursors } from "./Cursor";
 
 export const RealEstatePortfolio = () => {
 
+  useEffect(() => {
+    initializeCursors();
+  }, []);
+
   return (
     <>
+
+<div className="cursor" id="ball"></div>
+<div className="cursor-text" id="cursor-text">Scroll</div>
+
       <section className="realestate">
         <h1 className="headline" >Real Estate Portfolio</h1>
         <div className="realestate-content">

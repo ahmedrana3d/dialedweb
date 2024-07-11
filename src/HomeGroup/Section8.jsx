@@ -25,6 +25,17 @@ const handleContactNavigate = () => {
 
 const isMobile = window.innerWidth <= 768;
 
+const hoverSound = new Audio('/fx.mp3');
+
+const handleHoverStart = () => {
+  hoverSound.play();
+};
+
+const handleHoverEnd = () => {
+  hoverSound.pause();
+  hoverSound.currentTime = 0; // Reset audio to the beginning for instant replay
+};
+
     return (
       <>
         <section className="eight">
@@ -35,6 +46,8 @@ const isMobile = window.innerWidth <= 768;
                 <motion.button
                   className="one-button btn menu-btn"
                   data-hover
+                  onMouseEnter={handleHoverStart}
+                  onMouseLeave={handleHoverEnd}
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >PROJECTS</span>
@@ -49,6 +62,8 @@ const isMobile = window.innerWidth <= 768;
                   className="one-button-transparent btn menu-btn"
                   data-hover
                   onClick={ handleContactNavigate }
+                  onMouseEnter={handleHoverStart}
+                  onMouseLeave={handleHoverEnd}
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >GET IN TOUCH</span>
