@@ -15,13 +15,9 @@ export const Section8 = () => {
 
   const navigate = useNavigate();
 
-const handleContactNavigate = () => {
-  if (location.pathname === "/contact") {
-    navigate("/");
-  } else {
-    navigate("/contact");
-  }
-};
+  const handleNavigateClick = (linkUrl) => {
+    navigate(linkUrl);
+  };
 
 const isMobile = window.innerWidth <= 768;
 
@@ -57,7 +53,7 @@ const hoverSoundMobile = () => {
                 <motion.button
                   className="one-button btn menu-btn"
                   data-hover
-                  onClick={() => { hoverSoundMobile(); }}
+                  onClick={() => { hoverSoundMobile(); handleNavigateClick('/projects') }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
                 >
