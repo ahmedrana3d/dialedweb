@@ -4,6 +4,7 @@ import gsap from "gsap";
 import transition from "./Transition";
 import { useAnimateText } from "./ScrollAnimations";
 import { initializeCursors } from "./Cursor";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 const SectionProjects = () => {
 
@@ -69,83 +70,107 @@ const SectionProjects = () => {
             </div>
             <div className="projects-section-container">
               
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                  <img src="/project1.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 1</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project1.png" alt="Project 1" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 2</p>
+                    </div>
+                    <p className="project-text-description" >Description text 2</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
     
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <img src="/project2.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 2</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project2.png" alt="Project 2" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 2</p>
+                    </div>
+                    <p className="project-text-description" >Description text 2</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
     
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <img src="/project3.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 3</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project3.png" alt="Project 3" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 3</p>
+                    </div>
+                    <p className="project-text-description" >Description text 3</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
     
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <img src="/project4.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 4</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project4.png" alt="Project 4" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 4</p>
+                    </div>
+                    <p className="project-text-description" >Description text 4</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
 
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <img src="/project1.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 5</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project1.png" alt="Project 5" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 5</p>
+                    </div>
+                    <p className="project-text-description" >Description text 5</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
 
-              <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <img src="/project2.png" alt="Project 1" />
-                </div>
-                <div className="project-text-container">
-                  <div className="project-text-container-title">
-                    <p className="project-text-title" >Project title 6</p>
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ -10 } >
+                      <img src="/project2.png" alt="Project 6" />
+                    </Parallax>
                   </div>
-                  <p className="project-text-description" >Description text</p>
-                  <p className="project-text-description" >(2024)</p>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Project title 6</p>
+                    </div>
+                    <p className="project-text-description" >Description text 6</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxProvider>
     
             </div>
           </div>
