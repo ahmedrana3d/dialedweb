@@ -168,6 +168,12 @@ export const Navigation = () => {
                   <span className="menu-text">Projects</span>
                 </div>
               </Link>
+              <Link to="/ourservices" className="menu-text">
+                <div className="menu-button">
+                  <span className="menu-text">Services</span>
+                  <span className="menu-text">Services</span>
+                </div>
+              </Link>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button">
                   <span className="menu-text">Get In Touch</span>
