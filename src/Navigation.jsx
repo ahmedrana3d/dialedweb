@@ -128,14 +128,25 @@ export const Navigation = () => {
 
   const hoverSound = new Audio('/fx.mp3');
 
-const handleHoverStart = () => {
-  hoverSound.play();
-};
-
-const handleHoverEnd = () => {
-  hoverSound.pause();
-  hoverSound.currentTime = 0; // Reset audio to the beginning for instant replay
-};
+  const hoverSoundStart = () => {
+    if (!isMobile) {
+      hoverSound.play();
+      hoverSound.currentTime = 0;
+    }
+  };
+  
+  const hoverSoundEnd = () => {
+    if (!isMobile) {
+      hoverSound.pause();
+      hoverSound.currentTime = 0;
+    }
+  };
+  
+  const hoverSoundMobile = () => {
+    if (isMobile) {
+      hoverSound.play();
+    }
+  };
 
   return (
     <>
@@ -151,10 +162,12 @@ const handleHoverEnd = () => {
                   <span className="menu-text">Home</span>
                 </div>
               </Link>
-              <div className="menu-button">
-                <span className="menu-text">Projects</span>
-                <span className="menu-text">Projects</span>
-              </div>
+              <Link to="/projects" className="menu-text">
+                <div className="menu-button">
+                  <span className="menu-text">Projects</span>
+                  <span className="menu-text">Projects</span>
+                </div>
+              </Link>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button">
                   <span className="menu-text">Get In Touch</span>
@@ -180,12 +193,10 @@ const handleHoverEnd = () => {
       <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
         <motion.button
           className="navigation-left btn menu-btn"
-          onClick={() => {
-            setMenu(!menu);
-          }}
+          onClick={() => { setMenu(!menu); hoverSoundMobile(); }}
+          onMouseEnter={hoverSoundStart}
+          onMouseLeave={hoverSoundEnd}
           data-hover
-          onMouseEnter={handleHoverStart}
-          onMouseLeave={handleHoverEnd}
         >
           <div className="navigation-left-content">
             {isMobile ? (
@@ -206,10 +217,10 @@ const handleHoverEnd = () => {
         </Link>
         <motion.button
           className="navigation-right btn menu-btn"
-          onClick={handleContactNavigate}
+          onClick={() => { handleContactNavigate(); hoverSoundMobile(); }}
+          onMouseEnter={hoverSoundStart}
+          onMouseLeave={hoverSoundEnd}
           data-hover
-          onMouseEnter={handleHoverStart}
-          onMouseLeave={handleHoverEnd}
         >
           <div className="navigation-right-content">
             {isMobile ? (

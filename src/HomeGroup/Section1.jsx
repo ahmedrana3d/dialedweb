@@ -52,13 +52,24 @@ const handleScrollToSection3 = () => {
 
 const hoverSound = new Audio('/fx.mp3');
 
-const handleHoverStart = () => {
-  hoverSound.play();
+const hoverSoundStart = () => {
+  if (!isMobile) {
+    hoverSound.play();
+    hoverSound.currentTime = 0;
+  }
 };
 
-const handleHoverEnd = () => {
-  hoverSound.pause();
-  hoverSound.currentTime = 0; // Reset audio to the beginning for instant replay
+const hoverSoundEnd = () => {
+  if (!isMobile) {
+    hoverSound.pause();
+    hoverSound.currentTime = 0;
+  }
+};
+
+const hoverSoundMobile = () => {
+  if (isMobile) {
+    hoverSound.play();
+  }
 };
 
   return (
@@ -72,9 +83,9 @@ const handleHoverEnd = () => {
               <motion.button
                 className="one-button-transparent btn menu-btn"
                 data-hover
-                onClick={handleScrollToSection3}
-                onMouseEnter={handleHoverStart}
-                onMouseLeave={handleHoverEnd}
+                onClick={() => { handleScrollToSection3(); hoverSoundMobile(); }}
+                onMouseEnter={hoverSoundStart}
+                onMouseLeave={hoverSoundEnd}
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">SEE MORE</span>
@@ -87,9 +98,9 @@ const handleHoverEnd = () => {
               </motion.button>
               <motion.button
                 className="one-button btn menu-btn"
-                onClick={handleInteractive}
-                onMouseEnter={handleHoverStart}
-                onMouseLeave={handleHoverEnd}
+                onClick={() => { handleInteractive(); hoverSoundMobile(); }}
+                onMouseEnter={hoverSoundStart}
+                onMouseLeave={hoverSoundEnd}
                 data-hover
               >
                 <div className="navigation-left-content">

@@ -10,6 +10,7 @@ import { RealEstatePortfolio } from "./RealEstatePortfolio";
 import gsap from "https://esm.sh/gsap";
 import { vec2 } from "https://esm.sh/vecteur";
 import { initializeCursors } from "./Cursor";
+import SectionProjects from "./Projects"
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -91,6 +92,7 @@ function App() {
           <Routes location={location} key={location.pathname} >
             <Route index element={ <Home /> } />
             <Route path="/contact" element={ <Contact /> } />
+            <Route path="/projects" element={ <SectionProjects /> } />
             <Route path="/realestate" element={ <RealEstatePortfolio /> } />
           </Routes>
         </AnimatePresence>

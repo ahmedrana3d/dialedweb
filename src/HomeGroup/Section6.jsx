@@ -1,21 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
-import Lottie from 'react-lottie';
-import animationData from '../lotties/data';
 
 export const Section6 = () => {
 
   useAnimateText(".six-content-headline")
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    }
-  };
 
     return (
       <>
