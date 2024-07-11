@@ -205,8 +205,40 @@ function App() {
         });
       }
     }
+
+    class CursorText extends Cursor {
+      constructor(targetEl) {
+        super(targetEl);
+      }
+    
+      update() {
+        this.position.current.lerp(this.position.target, this.position.lerpAmount);
+        this.scale.current = gsap.utils.interpolate(
+          this.scale.current,
+          this.scale.target,
+          this.scale.lerpAmount
+        );
+    
+        this.position.previous.copy(this.position.current);
+        this.scale.previous = this.scale.current;
+    
+        gsap.set(this.el, {
+          x: this.position.current.x,
+          y: this.position.current.y
+        });
+    
+        // Always maintain a constant rotation
+        const constantRotation = 0; // Adjust this value as needed
+        gsap.set(this.el, {
+          rotate: constantRotation,
+          scaleX: this.scale.current,
+          scaleY: this.scale.current
+        });
+      }
+    }
     
     const cursor = new Cursor(document.querySelector(".cursor"));
+    const cursorTextMoving = new CursorText(document.querySelector(".cursor-text"));
     
     const cta = document.querySelector(".cta");
     const menuBtn = document.querySelector(".menu-btn");
@@ -215,13 +247,22 @@ function App() {
     
     function update() {
       cursor.update();
+      cursorTextMoving.update();
     }
+
+    // function updateCursorTextPosition(x, y) {
+    //   gsap.set(cursorText, {
+    //     x: x + 20, // Adjust the offset as needed
+    //     y: y + 20  // Adjust the offset as needed
+    //   });
+    // }
     
     function onMouseMove(event) {
       const x = event.clientX;
       const y = event.clientY;
     
       cursor.updateTargetPosition(x, y);
+      cursorTextMoving.updateTargetPosition(x, y);
     }
     
     function onResize() {
@@ -236,6 +277,47 @@ function App() {
     gsap.ticker.add(update);
     window.addEventListener("pointermove", onMouseMove);
     window.addEventListener("resize", onResize);
+
+    var ball = document.getElementById("ball");
+    var cursorText = document.getElementById("cursor-text");
+    
+    var hoverAreas = document.querySelectorAll('.hover-area');
+    
+    var lastHoveredElement = null;
+    
+    function updateCursor(e) {
+    
+      if (lastHoveredElement === null) {
+        ball.style.display = 'block';
+        ball.style.height = "1.75vw";
+        ball.style.width = "1.75vw";
+        cursorText.style.opacity = '0';
+      }
+    }
+    
+    function handleHoverEnter(e) {
+      cursorText.innerHTML = e.target.getAttribute('data-cursor-text');
+      cursorText.style.opacity = '1';
+      ball.style.height = "10vw";
+      ball.style.width = "10vw";
+    
+      lastHoveredElement = e.target;
+    }
+    
+    function handleHoverLeave(e) {
+      cursorText.style.opacity = '0';
+      ball.style.display = 'block';
+    
+      lastHoveredElement = null;
+    }
+    
+    document.addEventListener('mousemove', updateCursor);
+    
+    hoverAreas.forEach(function(elem) {
+      elem.addEventListener('mouseenter', handleHoverEnter);
+      elem.addEventListener('mouseleave', handleHoverLeave);
+    });
+
   }, []);
   
 
@@ -253,7 +335,8 @@ function App() {
           </Routes>
         </AnimatePresence>
 
-        <div class="cursor"></div>
+        <div className="cursor" id="ball"></div>
+        <div className="cursor-text" id="cursor-text">Scroll</div>
 
       </>
   );

@@ -79,7 +79,7 @@ export const Section3 = () => {
         <img className="scroll-indicator" src="/scroll3.gif" alt="" />
         {!isMobile && (
           <div className="three-content-box-right">
-            <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
+            <div className="container hover-area" data-cursor-text="SCROLL" onMouseMove={handleMouseMove} ref={containerRef}>
               <div className="video video1">
                 <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
               </div>
