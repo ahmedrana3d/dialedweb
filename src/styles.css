@@ -141,10 +141,6 @@ a {
   margin: 0;
   line-height: 1;
   color: #fefeff;
-  text-shadow: -1px -1px 0 #000,  
-                1px -1px 0 #000,
-               -1px  1px 0 #000,
-                1px  1px 0 #000;
 }
 
 .cta {

@@ -218,8 +218,8 @@ export function initializeCursors() {
     if (window.innerWidth > 768) {
       cursorText.innerHTML = e.target.getAttribute('data-cursor-text');
       cursorText.style.opacity = '1';
-      ball.style.height = "10vw";
-      ball.style.width = "10vw";
+      ball.style.height = "7.5vw";
+      ball.style.width = "7.5vw";
 
       lastHoveredElement = e.target;
     }
