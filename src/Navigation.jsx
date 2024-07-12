@@ -157,25 +157,25 @@ export const Navigation = () => {
           <div key="menuContent" className="menuContent" ref={menuContentRef}>
             <div className="menuNav" ref={menuNavRef}>
               <Link to="/" className="menu-text">
-                <div className="menu-button">
+                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <span className="menu-text">Home</span>
                   <span className="menu-text">Home</span>
                 </div>
               </Link>
               <Link to="/projects" className="menu-text">
-                <div className="menu-button">
+                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <span className="menu-text">Projects</span>
                   <span className="menu-text">Projects</span>
                 </div>
               </Link>
               <Link to="/ourservices" className="menu-text">
-                <div className="menu-button">
+                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <span className="menu-text">Services</span>
                   <span className="menu-text">Services</span>
                 </div>
               </Link>
               <Link to="/contact" className="menu-text">
-                <div className="menu-button">
+                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <span className="menu-text">Get In Touch</span>
                   <span className="menu-text">Get In Touch</span>
                 </div>
@@ -188,9 +188,9 @@ export const Navigation = () => {
               </Link> */}
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
-              <i className="fa-brands fa-instagram nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
-              <i className="fa-brands fa-youtube nav-brands" onClick={() => handleClick('https://www.instagram.com/dialedweb/')}></i>
-              <i className="fa-brands fa-linkedin nav-brands" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}></i>
+              <i className="fa-brands fa-instagram nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} ></i>
+              <i className="fa-brands fa-youtube nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} ></i>
+              <i className="fa-brands fa-linkedin nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.linkedin.com/company/dialed-web/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} ></i>
             </div>
           </div>
         </div>
