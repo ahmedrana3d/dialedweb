@@ -2626,6 +2626,35 @@ input {
 
 /* SECTION ONE */
 
+.background-element {
+  width: 30vh;
+  height: 110vh;
+  border-radius: 100%;
+  background-color: #fefeff35;
+  filter: blur(100px);
+  opacity: 1;
+  position: absolute;
+  left: 40vh;
+  margin-top: -65vh;
+  z-index: 0;
+  transform: rotate(40deg);
+  z-index: 1;
+}
+
+.background-element-grid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 60vh;
+  background-image: 
+  linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px; /* Adjust this value to change the grid size */
+  z-index: 1;
+}
+
+
 .one-content {
   width: 100%;
   height: 90vh;
