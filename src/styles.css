@@ -1040,6 +1040,34 @@ section {
   position: relative;
 }
 
+.background-element-kodu {
+  width: 40vh;
+  height: 160vh;
+  border-radius: 100%;
+  background-color: #fefeff29;
+  filter: blur(100px);
+  opacity: 1;
+  position: absolute;
+  left: 170vh;
+  margin-top: -77.5vh;
+  z-index: 0;
+  transform: rotate(40deg);
+  z-index: 1;
+}
+
+.background-element-grid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 50vh;
+  background-image: 
+  linear-gradient(to right, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px; /* Adjust this value to change the grid size */
+  z-index: 1;
+}
+
 .scroll-indicator {
   position: absolute;
   top: 100vh;

@@ -75,6 +75,8 @@ const hoverSoundMobile = () => {
   return (
     <>
       <section className="one">
+      <div className="background-element-kodu" />
+      <div className="background-element-grid" />
         <div className="one-content">
           <div className="one-content-left">
             <h1 className="headline anim grey">Crafting Digital <br /> Masterpieces</h1>
