@@ -12,6 +12,11 @@ const OurServices = () => {
     initializeCursors();
   }, []);
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts or updates
+    window.scrollTo(0, 0);
+  }, []);
+
 
     return (
       <>
