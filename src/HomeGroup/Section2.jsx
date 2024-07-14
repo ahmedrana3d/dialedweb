@@ -13,6 +13,30 @@ export const Section2 = () => {
         navigate("/projects");
     };
 
+    const isMobile = window.innerWidth <= 768;
+
+    const hoverSound = new Audio('/fx.mp3');
+
+    const hoverSoundStart = () => {
+      if (!isMobile) {
+        hoverSound.play();
+        hoverSound.currentTime = 0;
+      }
+    };
+    
+    const hoverSoundEnd = () => {
+      if (!isMobile) {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+      }
+    };
+    
+    const hoverSoundMobile = () => {
+      if (isMobile) {
+        hoverSound.play();
+      }
+    };
+
   return (
     <>
       <section className="two">
@@ -20,7 +44,7 @@ export const Section2 = () => {
             <h1 className="headline two-title">Featured Projects</h1>
             <div className="two-images-container">
                 <div className="two-images-container-row">
-                    <div className="two-images-box-big two-images-box-image-1  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate();}} >
+                    <div className="two-images-box-big two-images-box-image-1  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -36,7 +60,7 @@ export const Section2 = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="two-images-box-small two-images-box-image-2  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate();}} >
+                    <div className="two-images-box-small two-images-box-image-2  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -54,7 +78,7 @@ export const Section2 = () => {
                     </div>
                 </div>
                 <div className="two-images-container-row">
-                    <div className="two-images-box-small two-images-box-image-3  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate();}} >
+                    <div className="two-images-box-small two-images-box-image-3  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -70,7 +94,7 @@ export const Section2 = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="two-images-box-big two-images-box-image-4  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate();}} >
+                    <div className="two-images-box-big two-images-box-image-4  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
