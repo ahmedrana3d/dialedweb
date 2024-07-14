@@ -1333,6 +1333,8 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 20;
+  cursor: pointer;
 }
 
 .two-images-box-small {
@@ -1343,6 +1345,8 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 20;
+  cursor: pointer;
 }
 
 .two-images-box-image-1 {
