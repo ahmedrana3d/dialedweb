@@ -2285,6 +2285,197 @@ section {
   transform-origin: bottom left;
 }
 
+/* INTRODCUTION SECTION */
+
+.introduction {
+  padding: 15vh 5%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.introduction-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.introduction-bottom-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction-bottom-content-left, .introduction-bottom-content-right{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction:row;
+  align-items: start;
+  gap: 0.5vw;
+}
+
+.introduction-bottom-circle {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 100%;
+  background-color: #fefeff;
+}
+
+.introduction-bottom-left-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 0.85vw;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-bottom-content-right-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 2.8vw;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-text-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+  justify-content: end;
+  justify-self: start;
+  align-self: flex-start;
+  gap: 2vh;
+}
+
+.introduction-section-title {
+  font-size: 11.25vw;
+  font-weight: 600;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  letter-spacing: 0.15vw;
+  text-align: center;
+  z-index: 0;
+  margin: 0;
+  line-height: 75%;
+}
+
+.introduction-section-description {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 100%;
+  align-self: flex-end;
+}
+
+.introduction-section-description-top {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 100%;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+  text-align: center;
+}
+
+.introduction-section-title-400 {
+  font-weight: 400;
+}
+
+.introduction-image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.introduction-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: 1s ease;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Adjust color as needed */
+  z-index: 1;
+  transition: width 2s ease-in-out;
+}
+
+.masktext-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20vw;
+}
+
+.body{
+  font-size: 5vw;
+}
+
+.lineMask {
+  overflow: hidden;
+}
+
+.lineMask-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 2.8vw;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-content-images {
+  width: 100%;
+  height: 400vh;
+  position: relative;
+}
+
+.introduction-content-images-sticky-box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.introduction-images-sticky-text {
+  font-size: 12vw;
+  font-weight: 500;
+  color: #fefeff25;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 90%;
+  text-align: center;
+  position: relative;
+}
+
 /* LOADING SCREEN DESKTOP */
 
 .loading-screen {

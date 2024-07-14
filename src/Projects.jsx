@@ -15,8 +15,8 @@ const SectionProjects = () => {
 
     const navigate = useNavigate();
 
-    const handleNavigateClick = (linkUrl) => {
-      navigate(linkUrl);
+    const handleNavigateClick = (projectSubpage) => {
+      navigate(`/projects/${projectSubpage}`);
     };
 
     const handleClick = (linkUrl) => {
@@ -71,7 +71,7 @@ const SectionProjects = () => {
             <div className="projects-section-container">
               
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
                       <img src="/project5.png" alt="Project 1" />

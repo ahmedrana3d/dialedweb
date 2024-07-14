@@ -12,6 +12,7 @@ import { vec2 } from "https://esm.sh/vecteur";
 import { initializeCursors } from "./Cursor";
 import SectionProjects from "./Projects"
 import OurServices from "./OurServices";
+import ProjectSubpage1 from "./ProjectSubpage1";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -94,6 +95,7 @@ function App() {
             <Route index element={ <Home /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
+            <Route path="/projects/:visualization" element={ <ProjectSubpage1 /> } />
             <Route path="/ourservices" element={ <OurServices /> } />
             <Route path="/realestate" element={ <RealEstatePortfolio /> } />
           </Routes>
