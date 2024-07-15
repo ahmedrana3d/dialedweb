@@ -38,6 +38,15 @@ const VisualizationSub3 = () => {
 <h1 className="headline hotel-title-text" >Premium Luxury Hotel</h1>
 
   <div className="visualizationsub-row">
+    <div className="visualizationsub-image hotel-image-11"/>
+    <div className="visualizationsub-image hotel-image-12"/>
+  </div>
+
+  <div className="visualizationsub-row">
+    <div className="visualizationsub-image hotel-image-10"/>
+  </div>
+
+  <div className="visualizationsub-row">
     <div className="visualizationsub-image hotel-image-1"/>
     <div className="visualizationsub-image hotel-image-2"/>
   </div>
