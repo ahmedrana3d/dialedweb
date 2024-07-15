@@ -29,7 +29,8 @@ const phrasesMobile = [
   "STUNNING RENDERINGS",
   "OF LUXURIOUS VILLAS,",
   "ELEGANT HOUSES, AND",
-  "SOPHISTICATED HOTELS",
+  "SOPHISTICATED",
+  "HOTELS"
 ];
 
 const Visualization = () => {
