@@ -74,14 +74,14 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project5.png" alt="Project 1" />
+                      <img src="/bali.jpg" alt="Project 1" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 2</p>
+                      <p className="project-text-title" >Architectural Visualization</p>
                     </div>
-                    <p className="project-text-description" >Description text 2</p>
+                    <p className="project-text-description" >3D Renderings</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
@@ -96,9 +96,9 @@ const SectionProjects = () => {
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 2</p>
+                      <p className="project-text-title" >Digital Elegance</p>
                     </div>
-                    <p className="project-text-description" >Description text 2</p>
+                    <p className="project-text-description" >UI/UX Design</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
