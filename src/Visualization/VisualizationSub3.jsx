@@ -25,6 +25,8 @@ const VisualizationSub3 = () => {
         initializeCursors();
       }, []);
 
+      useAnimateText(".hotel-title-text")
+
     return (
         <>
 
@@ -33,7 +35,7 @@ const VisualizationSub3 = () => {
 
 <section className="visualizationsub">
 
-<h1 className="headline bali-title-text" >Premium Luxury Hotel</h1>
+<h1 className="headline hotel-title-text" >Premium Luxury Hotel</h1>
 
   <div className="visualizationsub-row">
     <div className="visualizationsub-image hotel-image-1"/>
