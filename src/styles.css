@@ -2434,10 +2434,6 @@ section {
   gap: 20vw;
 }
 
-.body{
-  font-size: 5vw;
-}
-
 .lineMask {
   overflow: hidden;
 }
@@ -4283,6 +4279,295 @@ input {
   font-size: 1rem;
 }
 
+/* INTRODCUTION SECTION */
+
+.introduction {
+  padding: 15vh 5%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+.introduction-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.introduction-bottom-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.introduction-bottom-content-left, .introduction-bottom-content-right{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction:row;
+  align-items: start;
+  gap: 3vw;
+}
+
+.introduction-bottom-circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: #fefeff;
+}
+
+.introduction-bottom-left-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-bottom-content-right-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 2.8vw;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-text-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+  justify-content: end;
+  justify-self: start;
+  align-self: flex-start;
+  gap: 2vh;
+}
+
+.introduction-section-title {
+  font-size: 11.25vw;
+  font-weight: 600;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  letter-spacing: 0.15vw;
+  text-align: center;
+  z-index: 0;
+  margin: 0;
+  line-height: 75%;
+}
+
+.introduction-section-description {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 100%;
+  align-self: flex-end;
+}
+
+.introduction-section-description-top {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fefeff;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 100%;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+  text-align: center;
+}
+
+.introduction-section-title-400 {
+  font-weight: 400;
+}
+
+.introduction-image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.introduction-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: 1s ease;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Adjust color as needed */
+  z-index: 1;
+  transition: width 2s ease-in-out;
+}
+
+.masktext-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20vw;
+}
+
+.lineMask {
+  overflow: hidden;
+}
+
+.lineMask-text {
+  margin: 0;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 8vw;
+  color: #fefeff;
+  text-transform: uppercase;
+}
+
+.introduction-content-images {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin-top: 0vh;
+}
+
+.introduction-content-images-sticky-box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.introduction-images-sticky-text {
+  font-size: 12vw;
+  font-weight: 500;
+  color: #fefeff25;
+  font-family: "SFBOLD", sans-serif;
+  z-index: 2;
+  margin: 0;
+  line-height: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.introduction-content-images-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+}
+.introduction-images-container-row-left {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+}
+.introduction-images-row-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  z-index: 3;
+  cursor: pointer;
+}
+.introduction-images-row-img {
+  height: 50vh;
+  width: auto;
+}
+.introduction-image-row-number {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 8rem;
+  color: #fefeff;
+  text-align: left;
+  margin: 0;
+  line-height: 50%;
+  z-index: 2;
+}
+.introduction-image-row-title {
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fefeff;
+  text-align: left;
+  margin: 0;
+}
+.introduction-images-container-row-right {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  z-index: 3;
+}
+.introduction-images-row-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  cursor: pointer;
+}
+
+.visualizationsub {
+  width: 100%;
+  height: fit-content;
+  padding: 15vh 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.visualizationsub-row {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.visualizationsub-row-big {
+  width: 100%;
+  height: 125vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.visualizationsub-image {
+  width: 100%;
+  height: 100%;
+  background-color: #070E2B;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+}
 
 
 

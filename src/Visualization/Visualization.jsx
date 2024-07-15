@@ -13,14 +13,24 @@ import { useInView } from 'react-intersection-observer';
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
-const phrases = [
-    "OUR ARCHITECTURAL",
-    "VISUALIZATION STUDIO EXCELS",
-    "IN CRAFTING STUNNING",
-    "RENDERINGS OF LUXURIOUS",
-    "VILLAS, ELEGANT HOUSES, AND",
-    "SOPHISTICATED HOTELS",
-  ]
+const phrasesDesktop = [
+  "OUR ARCHITECTURAL",
+  "VISUALIZATION STUDIO EXCELS",
+  "IN CRAFTING STUNNING",
+  "RENDERINGS OF LUXURIOUS",
+  "VILLAS, ELEGANT HOUSES, AND",
+  "SOPHISTICATED HOTELS",
+];
+
+const phrasesMobile = [
+  "OUR ARCHITECTURAL",
+  "VISUALIZATION STUDIO",
+  "EXCELS IN CRAFTING",
+  "STUNNING RENDERINGS",
+  "OF LUXURIOUS VILLAS,",
+  "ELEGANT HOUSES, AND",
+  "SOPHISTICATED HOTELS",
+];
 
 const Visualization = () => {
 
@@ -158,26 +168,51 @@ const Visualization = () => {
 export default transition(Visualization);
 
 export function MaskText() {
+  const [isMobile, setIsMobile] = useState(false);
 
-    const animation = {
-      initial: {y: "100%"},
-      enter: i => ({y: "0", transition: {duration: 0.75, ease: [0.33, 1, 0.68, 1],  delay: 0.075 * i}})
-    }
-  
-    const { ref, inView, entry } = useInView({
-      threshold: 0.75,
-      triggerOnce: true
-    });
-  
-    return(
-      <div ref={ref} >
-        {
-          phrases.map( (phrase, index) => {
-            return <div key={index} className="lineMask">
-              <motion.p custom={index} className="lineMask-text" variants={animation} initial="initial" animate={inView ? "enter" : ""}>{phrase}</motion.p>
-            </div>
-          })
-        }
-      </div>
-    )
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as per your design needs
+    };
+
+    handleResize(); // Initial check on mount
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const phrases = isMobile ? phrasesMobile : phrasesDesktop;
+
+  const animation = {
+    initial: { y: "100%" },
+    enter: (i) => ({
+      y: "0",
+      transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i },
+    }),
+  };
+
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+    triggerOnce: true,
+  });
+
+  return (
+    <div ref={ref}>
+      {phrases.map((phrase, index) => (
+        <div key={index} className="lineMask">
+          <motion.p
+            custom={index}
+            className="lineMask-text"
+            variants={animation}
+            initial="initial"
+            animate={inView ? "enter" : ""}
+          >
+            {phrase}
+          </motion.p>
+        </div>
+      ))}
+    </div>
+  );
+}
