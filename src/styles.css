@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.cdnfonts.com/css/gt-alpina-trial');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @font-face {
   font-family: 'SFBOLD';
@@ -2294,6 +2295,7 @@ section {
   display: flex;
   flex-direction: column;
   overflow: visible;
+  padding-bottom: 0;
 }
 
 .introduction-content {
@@ -2450,8 +2452,9 @@ section {
 
 .introduction-content-images {
   width: 100%;
-  height: 400vh;
+  height: fit-content;
   position: relative;
+  margin-top: 0vh;
 }
 
 .introduction-content-images-sticky-box {
@@ -2462,6 +2465,7 @@ section {
   height: 100vh;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .introduction-images-sticky-text {
@@ -2475,6 +2479,68 @@ section {
   text-align: center;
   position: relative;
 }
+
+.introduction-content-images-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+}
+.introduction-images-container-row-left {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+}
+.introduction-images-row-left {
+  width: 52.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  z-index: 3;
+}
+.introduction-images-row-img {
+  height: 120vh;
+  width: auto;
+}
+.introduction-image-row-number {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 8vw;
+  color: #fefeff;
+  text-align: left;
+  margin: 0;
+  line-height: 50%;
+  z-index: 2;
+}
+.introduction-image-row-title {
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 500;
+  font-size: 1.75vw;
+  color: #fefeff;
+  text-align: left;
+  margin: 0;
+}
+.introduction-images-container-row-right {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  z-index: 3;
+}
+.introduction-images-row-right {
+  width: 52.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
 
 /* LOADING SCREEN DESKTOP */
 

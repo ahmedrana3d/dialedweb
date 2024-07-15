@@ -94,7 +94,57 @@ const ProjectSubPage1 = () => {
         <div className="introduction-content-images-sticky-box">
             <h1 className="introduction-images-sticky-text" >Featured Real Estate Projects</h1>
         </div>
-        div.introduction
+        <div className="introduction-content-images-container">
+
+          <div className="introduction-images-container-row-left">
+            <div className="introduction-images-row-left">
+              <h1 className="introduction-image-row-number" >01</h1>
+              <img src="/bali2.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Secluded Bali Villa</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right">
+              <h1 className="introduction-image-row-number" >02</h1>
+              <img src="/project1cover.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Modern Beverly Hills Home</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-left">
+            <div className="introduction-images-row-left">
+              <h1 className="introduction-image-row-number" >03</h1>
+              <img src="/project5cover.png" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Minimalisitic Penthouse</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right">
+              <h1 className="introduction-image-row-number" >04</h1>
+              <img src="/project2cover.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Premier Luxury Hotel</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-left">
+            <div className="introduction-images-row-left">
+              <h1 className="introduction-image-row-number" >05</h1>
+              <img src="/project6cover.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Minimalisitic Penthouse</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right">
+              <h1 className="introduction-image-row-number" >06</h1>
+              <img src="/project4cover.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Modern Beverly Hills Home</h1>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
         </>
