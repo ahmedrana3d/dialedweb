@@ -12,7 +12,13 @@ import { vec2 } from "https://esm.sh/vecteur";
 import { initializeCursors } from "./Cursor";
 import SectionProjects from "./Projects"
 import OurServices from "./OurServices";
-import ProjectSubpage1 from "./ProjectSubpage1";
+import Visualization from "./Visualization/Visualization";
+import VisualizationSub from "./Visualization/VisualizationSub";
+import VisualizationSub2 from "./Visualization/VisualizationSub2";
+import VisualizationSub3 from "./Visualization/VisualizationSub3";
+import VisualizationSub4 from "./Visualization/VisualizationSub4";
+import VisualizationSub5 from "./Visualization/VisualizationSub5";
+import VisualizationSub6 from "./Visualization/VisualizationSub6";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -95,7 +101,13 @@ function App() {
             <Route index element={ <Home /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
-            <Route path="/projects/:visualization" element={ <ProjectSubpage1 /> } />
+            <Route path="/projects/:visualization" element={ <Visualization /> } />
+            <Route path="/projects/:visualization/secluded-bali-villa" element={ <VisualizationSub /> } />
+            <Route path="/projects/:visualization/modern-beverly-hills-home" element={ <VisualizationSub2 /> } />
+            <Route path="/projects/:visualization/premier-luxury-hotel" element={ <VisualizationSub3 /> } />
+            <Route path="/projects/:visualization/minimalistic-penthouse" element={ <VisualizationSub4 /> } />
+            <Route path="/projects/:visualization/visualizationsubpage5" element={ <VisualizationSub5 /> } />
+            <Route path="/projects/:visualization/visualizationsubpage6" element={ <VisualizationSub6 /> } />
             <Route path="/ourservices" element={ <OurServices /> } />
             <Route path="/realestate" element={ <RealEstatePortfolio /> } />
           </Routes>

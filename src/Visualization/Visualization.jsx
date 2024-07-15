@@ -4,9 +4,9 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
-import transition from "./Transition";
-import { useAnimateText } from "./ScrollAnimations";
-import { initializeCursors } from "./Cursor";
+import transition from "../Transition";
+import { useAnimateText } from "../ScrollAnimations";
+import { initializeCursors } from "../Cursor";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -22,7 +22,7 @@ const phrases = [
     "SOPHISTICATED HOTELS",
   ]
 
-const ProjectSubPage1 = () => {
+const Visualization = () => {
 
     useEffect(() => {
         // Scroll to the top when the component mounts
@@ -30,6 +30,10 @@ const ProjectSubPage1 = () => {
       }, []);
 
     const navigate = useNavigate();
+
+    const handleNavigateClick = (projectSubpage) => {
+      navigate(`/projects/visualization/${projectSubpage}`);
+    };
 
       useEffect(() => {
         initializeCursors();
@@ -97,7 +101,7 @@ const ProjectSubPage1 = () => {
         <div className="introduction-content-images-container">
 
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left">
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("secluded-bali-villa") }} >
               <h1 className="introduction-image-row-number" >01</h1>
               <img src="/bali2.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Secluded Bali Villa</h1>
@@ -105,7 +109,7 @@ const ProjectSubPage1 = () => {
           </div>
 
           <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right">
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("modern-beverly-hills-home") }} >
               <h1 className="introduction-image-row-number" >02</h1>
               <img src="/project1cover.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Modern Beverly Hills Home</h1>
@@ -113,23 +117,23 @@ const ProjectSubPage1 = () => {
           </div>
 
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left">
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("premier-luxury-hotel") }} >
               <h1 className="introduction-image-row-number" >03</h1>
-              <img src="/project5cover.png" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Minimalisitic Penthouse</h1>
-            </div>
-          </div>
-
-          <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right">
-              <h1 className="introduction-image-row-number" >04</h1>
               <img src="/project2cover.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Premier Luxury Hotel</h1>
             </div>
           </div>
 
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("minimalistic-penthouse") }} >
+              <h1 className="introduction-image-row-number" >04</h1>
+              <img src="/project5cover.png"  className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Minimalisitic Penthouse </h1>
+            </div>
+          </div>
+
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left">
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("visualizationsubpage5") }} >
               <h1 className="introduction-image-row-number" >05</h1>
               <img src="/project6cover.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Minimalisitic Penthouse</h1>
@@ -137,7 +141,7 @@ const ProjectSubPage1 = () => {
           </div>
 
           <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right">
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("visualizationsubpage6") }} >
               <h1 className="introduction-image-row-number" >06</h1>
               <img src="/project4cover.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Modern Beverly Hills Home</h1>
@@ -151,7 +155,7 @@ const ProjectSubPage1 = () => {
       );
     };
 
-export default transition(ProjectSubPage1);
+export default transition(Visualization);
 
 export function MaskText() {
 
