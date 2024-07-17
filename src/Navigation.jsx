@@ -153,7 +153,8 @@ export const Navigation = () => {
       <div className={`menu-container ${menu ? 'open' : ''}`}           onClick={() => {
             setMenu(!menu);
           }}>
-        <div className="menu">
+        <div className="menu" >
+          <div className="menu-hover-close hover-area" data-cursor-text="CLOSE" />
           <div key="menuContent" className="menuContent" ref={menuContentRef}>
             <div className="menuNav" ref={menuNavRef}>
               <Link to="/" className="menu-text">
