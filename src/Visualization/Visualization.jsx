@@ -1,11 +1,11 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import transition from "../Transition";
-import { useAnimateText } from "../ScrollAnimations";
+import { useAnimateText, useTextEffect } from "../ScrollAnimations";
 import { initializeCursors } from "../Cursor";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from 'framer-motion';
@@ -51,30 +51,44 @@ const Visualization = () => {
       }, []);
 
       useEffect(() => {
-        gsap.from(".introduction-section-title", {
-          duration: 1.75,
-          y: 250,
-          delay: 2.9,
-          stagger: 0.1,
-          ease: "power4.inOut",
-        });
-        gsap.fromTo(
-          ".introduction-section-description, .introduction-section-description-top",
-          { opacity: 0 },
-          { opacity: 1, duration: 1.5, ease: "power1", delay: 4.5 }
-        );
     
         gsap.fromTo(".overlay", 
           { width: "125%" },
           { width: "0%", duration: 1, ease: "none" }
         );
         
-        gsap.to(".introduction-image-img", {
-          y: "-10vw",
-          delay: 3,
-          duration: 0.4,
-          ease: "none",
-        });
+    }, []);
+
+    useTextEffect(".visualization-text-title-effect")
+
+    useEffect(() => {
+      // Fade in animation for the button when component mounts
+      gsap.fromTo(
+        ".introduction-text-box-right-text",
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
+      );
+    }, []);
+
+    useEffect(() => {
+      gsap.to(".introduction-image", {
+        width: "100%",
+        scrollTrigger: {
+          trigger: ".introduction-image",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        }
+      });
+      // gsap.to(".introduction-image-img", {
+      //   scale: 1.1,
+      //   scrollTrigger: {
+      //     trigger: ".introduction-image",
+      //     start: "top bottom",
+      //     end: "bottom center",
+      //     scrub: 1,
+      //   }
+      // });
     }, []);
 
     return (
@@ -86,23 +100,17 @@ const Visualization = () => {
     <section className="introduction">
       <div className="introduction-content">
         <div className="introduction-text-box">
-            <h1 className="introduction-section-title" >VISUALIZATION</h1>
+          <div className="introduction-text-box-left">
+            <h1 className="introduction-section-title visualization-text-title-effect" >Architectural <br /> Visualization</h1>
+          </div>
+          <div className="introduction-text-box-right">
+            <p className="introduction-text-box-right-text" >Our architectural visualization studio excels in crafting stunning renderings of luxurious villas, elegant houses, and sophisticated hotels.</p>
+          </div>
         </div>
           <div className="introduction-image">
-            <div className="overlay"></div>
-              <img className="introduction-image-img" src="/bali.jpg" alt="" />
-          </div>
-          <div className="introduction-bottom-content">
-            <div className="introduction-bottom-content-left">
-                <div className="introduction-bottom-circle"></div>
-                <h1 className="introduction-bottom-left-text" >Architectural 3D Visualization</h1>
-            </div>
-            <div className="introduction-bottom-content-right">
-                {/* <h1 className="introduction-bottom-content-right-text" >Our architectural visualization studio excels in crafting stunning renderings of luxurious villas, elegant houses, and sophisticated hotels.</h1> */}
-                <div className="masktext-container">
-                    <MaskText/>
-                </div>
-            </div>
+            <div className="overlay" />
+            <div className="introduction-image-img" />
+            {/* <img className="introduction-image-img" src="/bali.jpg" alt="" /> */}
           </div>
       </div>
       <div className="introduction-content-images">
