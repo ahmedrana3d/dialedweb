@@ -89,7 +89,7 @@ export const SectionScrollVideoOnScroll = () => {
 
     return (
       <>
-        <section className="scroll-video-on-scroll">
+        <section className="scroll-video-on-scroll  hover-area" data-cursor-text="SCROLL" >
             <div className="scroll-video-on-scroll-items">
                 <div className="scroll-video-items-wrapper">
                     <h1 className="scroll-section-headline scroll-headline-1" >Grow</h1>
@@ -105,7 +105,7 @@ export const SectionScrollVideoOnScroll = () => {
                     <h1 className="scroll-section-headline scroll-headline-8" >Bloom</h1>
                 </div>
             </div>
-            <video src="./flowerkey3.mp4" preload="auto" playsInline="true" webkit-playsinline="true" muted="muted" class="video-background hover-area" data-cursor-text="SCROLL"></video>
+            <video src="./flowerkey3.mp4" preload="auto" playsInline="true" webkit-playsinline="true" muted="muted" class="video-background" ></video>
         </section>
       </>
     )
