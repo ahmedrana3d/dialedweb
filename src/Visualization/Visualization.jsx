@@ -13,25 +13,7 @@ import { useInView } from 'react-intersection-observer';
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
-const phrasesDesktop = [
-  "OUR ARCHITECTURAL",
-  "VISUALIZATION STUDIO EXCELS",
-  "IN CRAFTING STUNNING",
-  "RENDERINGS OF LUXURIOUS",
-  "VILLAS, ELEGANT HOUSES, AND",
-  "SOPHISTICATED HOTELS",
-];
-
-const phrasesMobile = [
-  "OUR ARCHITECTURAL",
-  "VISUALIZATION STUDIO",
-  "EXCELS IN CRAFTING",
-  "STUNNING RENDERINGS",
-  "OF LUXURIOUS VILLAS,",
-  "ELEGANT HOUSES, AND",
-  "SOPHISTICATED",
-  "HOTELS"
-];
+const isMobile = window.innerWidth <= 768;
 
 const Visualization = () => {
 
@@ -80,15 +62,25 @@ const Visualization = () => {
           scrub: 1,
         }
       });
-      // gsap.to(".introduction-image-img", {
-      //   scale: 1.1,
-      //   scrollTrigger: {
-      //     trigger: ".introduction-image",
-      //     start: "top bottom",
-      //     end: "bottom center",
-      //     scrub: 1,
-      //   }
-      // });
+      gsap.to(".introduction-section-title-top", {
+        marginLeft: "15%",
+        scrollTrigger: {
+          trigger: ".introduction-image",
+          start: isMobile ? "top 40%" : "top 70%",
+          end: "bottom center",
+          scrub: 1,
+        }
+      });
+      gsap.to(".introduction-section-title-bottom", {
+        marginRight: "15%",
+        scrollTrigger: {
+          trigger: ".introduction-image",
+          start: isMobile ? "top 40%" : "top 70%",
+          end: "bottom center",
+          scrub: 1,
+          markers: true,
+        }
+      });
     }, []);
 
     return (
@@ -101,7 +93,7 @@ const Visualization = () => {
       <div className="introduction-content">
         <div className="introduction-text-box">
           <div className="introduction-text-box-left">
-            <h1 className="introduction-section-title visualization-text-title-effect" >Architectural <br /> Visualization</h1>
+            <h1 className="introduction-section-title visualization-text-title-effect" > <span className="introduction-section-title-top" >Architectural</span> <br /> <span className="introduction-section-title-bottom" >Visualization</span> </h1>
           </div>
           <div className="introduction-text-box-right">
             <p className="introduction-text-box-right-text" >Our architectural visualization studio excels in crafting stunning renderings of luxurious villas, elegant houses, and sophisticated hotels.</p>
@@ -175,53 +167,3 @@ const Visualization = () => {
     };
 
 export default transition(Visualization);
-
-export function MaskText() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as per your design needs
-    };
-
-    handleResize(); // Initial check on mount
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const phrases = isMobile ? phrasesMobile : phrasesDesktop;
-
-  const animation = {
-    initial: { y: "100%" },
-    enter: (i) => ({
-      y: "0",
-      transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i },
-    }),
-  };
-
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-    triggerOnce: true,
-  });
-
-  return (
-    <div ref={ref}>
-      {phrases.map((phrase, index) => (
-        <div key={index} className="lineMask">
-          <motion.p
-            custom={index}
-            className="lineMask-text"
-            variants={animation}
-            initial="initial"
-            animate={inView ? "enter" : ""}
-          >
-            {phrase}
-          </motion.p>
-        </div>
-      ))}
-    </div>
-  );
-}
