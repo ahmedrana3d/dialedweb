@@ -76,7 +76,7 @@ const Visualization = () => {
         scrollTrigger: {
           trigger: ".introduction-image",
           start: "top bottom",
-          end: "bottom top",
+          end: "bottom center",
           scrub: 1,
         }
       });
