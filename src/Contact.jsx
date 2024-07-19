@@ -74,21 +74,21 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="contact-phone">
+                <a className="contact-phone" href="tel:+16193176418">
                   <p className="option-text" >Phone</p>
                   <p className="phone-text" >+1 619 317 6418</p>
-                </div>
+                </a>
 
-                <div className="contact-phone">
+                <a className="contact-phone" href="mailto:support@dialedworldwide.com">
                   <p className="option-text" >Email</p>
                   <p className="phone-text" >support@dialedworldwide.com</p>
-                </div>
+                </a>
 
                 <div className="contact-address">
                   <p className="option-text" >Address</p>
-                  <p className="phone-text" >DialedWEB</p>
-                  <p className="phone-text" >Address</p>
-                  <p className="phone-text" >Address</p>
+                  <p className="phone-text" >545 La Jolla Village Drive</p>
+                  <p className="phone-text" >San Diego</p>
+                  <p className="phone-text" >CA 92122</p>
                 </div>
 
               </div>
