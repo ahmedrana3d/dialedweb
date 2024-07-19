@@ -88,41 +88,41 @@ const SectionProjects = () => {
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://dialedwebseltzers.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project6.png" alt="Project 2" />
+                      <img src="/project7.png" alt="Project 2" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Digital Elegance</p>
+                      <p className="project-text-title" >DialedWeb Seltzer</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design</p>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://apple-vision-pro-immersive-website.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project7.png" alt="Project 3" />
+                      <img src="/project3.png" alt="Project 3" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 3</p>
+                      <p className="project-text-title" >Apple Vision</p>
                     </div>
-                    <p className="project-text-description" >Description text 3</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2023)</p>
                   </div>
                 </div>
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://mographs.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
                       <img src="/project8.png" alt="Project 4" />
@@ -130,16 +130,16 @@ const SectionProjects = () => {
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 4</p>
+                      <p className="project-text-title" >Mographs</p>
                     </div>
-                    <p className="project-text-description" >Description text 4</p>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
               </ParallaxProvider>
 
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://stalik.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
                       <img src="/project1.png" alt="Project 5" />
@@ -147,9 +147,9 @@ const SectionProjects = () => {
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 5</p>
+                      <p className="project-text-title" >Stalik</p>
                     </div>
-                    <p className="project-text-description" >Description text 5</p>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
@@ -159,48 +159,14 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project2.png" alt="Project 6" />
+                      <img src="/project6.png" alt="Project 6" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 6</p>
+                      <p className="project-text-title" >Digital Elegance</p>
                     </div>
-                    <p className="project-text-description" >Description text 6</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
-              </ParallaxProvider>
-
-              <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project3.png" alt="Project 6" />
-                    </Parallax>
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 6</p>
-                    </div>
-                    <p className="project-text-description" >Description text 6</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
-              </ParallaxProvider>
-
-              <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project4.png" alt="Project 6" />
-                    </Parallax>
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Project title 6</p>
-                    </div>
-                    <p className="project-text-description" >Description text 6</p>
+                    <p className="project-text-description" >UI/UX Design</p>
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
