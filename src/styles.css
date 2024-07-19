@@ -1857,16 +1857,28 @@ section {
   gap: 1.5vw;
 }
 
+.six-content-top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 0.5vw;
+  z-index: 3;
+  pointer-events: none;
+}
+
 .six-content-row {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 1.5vw;
 }
 
 .six-content-row-box {
   width: 29vw;
-  height: 100%;
+  height: 29vw;
   pointer-events: all;
   perspective: 1500px;
 }
@@ -1876,15 +1888,6 @@ section {
   height: 100%;
   pointer-events: all;
   perspective: 800px;
-}
-
-.six-content-top {
-  width: 100%;
-  height: 29vw;
-  display: flex;
-  gap: 0.5vw;
-  z-index: 3;
-  pointer-events: none;
 }
 
 .six-content-bottom {
@@ -1964,6 +1967,9 @@ section {
 .back {
   transform: rotateY(180deg);
   padding: 2vw;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.15);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .back-content {
@@ -3865,14 +3871,17 @@ input {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
-  gap: 2vh;
+  justify-content: space-between;
+  gap: 0;
+  row-gap: 2.5vh;
+  flex-wrap: wrap;
 }
 
 .six-content-row-box {
-  width: 100%;
-  height: 30vh;
+  width: 47.5%;
+  height: 32.5vh;
   pointer-events: all;
   perspective: 1500px;
 }
@@ -4021,7 +4030,7 @@ input {
 }
 
 .six-description {
-  font-size: 2.25rem;
+  font-size: 6vw;
   font-family: "SF", sans-serif;
   font-weight: bold;
   margin: 0;

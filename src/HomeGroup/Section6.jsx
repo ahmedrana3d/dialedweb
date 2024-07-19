@@ -17,6 +17,7 @@ export const Section6 = () => {
             <div className="six-content-top">
 
               <div className="six-content-row">
+
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -116,11 +117,6 @@ export const Section6 = () => {
                   </div>
                 </div>
 
-              </div>
-            </div>
-
-            <div className="six-content-bottom">
-              <div className="six-content-row">
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -153,6 +149,7 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -185,6 +182,7 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="six-content-row-box six-outside">
                   <div className="six-inside">
                     <div className="front">
@@ -217,6 +215,7 @@ export const Section6 = () => {
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
