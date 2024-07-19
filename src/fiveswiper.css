@@ -1,0 +1,15 @@
+.swiper-box-scrollbar-drag {
+    background-color: #fefeff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+  }
+
+  .swiper-box-scrollbar-horizontal {
+    color: #fefeff25;
+    background-color: #fefeff25;
+    border-radius: 25px;
+  }

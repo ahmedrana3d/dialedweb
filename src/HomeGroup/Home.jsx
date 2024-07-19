@@ -17,6 +17,7 @@ import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
 import { initializeCursors } from "../Cursor";
+import { Section5Mobile } from "./Section5Mobile";
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
@@ -47,7 +48,7 @@ const Home = () => {
         <Section6 />
       </div>
       <Section4 />
-      <Section5 />
+      {isMobile ? <Section5Mobile /> : <Section5 />}
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
 

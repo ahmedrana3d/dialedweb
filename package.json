@@ -34,6 +34,7 @@
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
     "split-type": "^0.3.4",
+    "swiper": "^11.1.5",
     "three": "^0.159.0",
     "typewriter-effect": "^2.21.0",
     "use-sound": "^4.0.3",

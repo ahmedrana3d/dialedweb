@@ -3798,6 +3798,70 @@ input {
   height: 100%;
 }
 
+.fivemobile {
+  gap: 2vh;
+}
+
+.five-title-mobile {
+  margin-bottom: 2vh;
+  padding: 5%;
+}
+
+.swiper-box {
+  height: 50vh;
+  width: 90%;
+}
+
+.swiper-box-scrollbar-drag {
+  color: #fefeff;
+  background-color: #fefeff;
+  height: 10px;
+}
+
+.fivemobile-box {
+  width: 90vw;
+  height: 45vh;
+  background-color: antiquewhite;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+
+.fivemobile-box-image-1 {
+  background-image: url('/o3.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-2 {
+  background-image: url('/o1.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-3 {
+  background-image: url('/o2.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-4 {
+  background-image: url('/o5.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-5 {
+  background-image: url('/o7.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-6 {
+  background-image: url('/o6.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
+.fivemobile-box-image-7 {
+  background-image: url('/o4.png'); /* Replace '/pic1.jpg' with your image URL */
+  transform: scaleX(-1);
+}
+
 /* SECTION SIX */
 
 .six {
@@ -4001,9 +4065,9 @@ input {
 .back-content-box {
   height: fit-content;
   width: fit-content;
-  padding: 2vw;
+  padding: 0.5vh 2vw;
   background-color: #fefeff;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: 0.5s ease;
 }
 
@@ -4167,7 +4231,7 @@ input {
   z-index: 4;
   pointer-events: none;
   color: #fefeff;
-  font-size: 1.85rem;
+  font-size: 7vw;
 }
 
 .eight-title {
