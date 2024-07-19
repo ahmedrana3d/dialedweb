@@ -4167,7 +4167,7 @@ input {
   z-index: 4;
   pointer-events: none;
   color: #fefeff;
-  font-size: 2rem;
+  font-size: 1.85rem;
 }
 
 .eight-title {
@@ -4276,7 +4276,7 @@ input {
 }
 
 .scroll-section-headline {
-  font-size: 2.7rem;
+  font-size: 2.25rem;
   font-family: "SFBOLD", sans-serif;
   font-weight: bold;
   margin: 0;
