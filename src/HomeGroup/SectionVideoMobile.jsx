@@ -26,7 +26,7 @@ export const SectionVideoMobile = () => {
                     <h1 className="scroll-section-headline scroll-headline-8" >Bloom</h1>
                 </div>
             </div>
-            <img src="/flower.png" class="video-background" alt="" />
+            <video src="./flowerkey3.mp4" preload="auto" playsInline="true" autoPlay="true" webkit-playsinline="true" muted="muted" class="video-background" ></video>
         </section>
       </>
     )
