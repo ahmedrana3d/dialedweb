@@ -21,6 +21,7 @@ import { initializeCursors } from "../Cursor";
 const Home = () => {
   const isMobile = window.innerWidth <= 768;
   const section3Ref = useRef(null);
+  const section6Ref = useRef(null);
 
   useEffect(() => {
     // Scroll to the top of the page when the component mounts or updates
@@ -42,7 +43,9 @@ const Home = () => {
         <Section3 />
       </div>
       <Section2 />
-      <Section6 />
+      <div ref={section6Ref} id="section6">
+        <Section6 />
+      </div>
       <Section4 />
       <Section5 />
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}

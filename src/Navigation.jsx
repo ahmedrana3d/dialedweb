@@ -8,7 +8,7 @@ gsap.registerPlugin(CustomEase);
 
 const customEase = CustomEase.create("customEase", ".4,0,.1,1");
 
-export const Navigation = () => {
+export const Navigation = ({ scrollToSection6 }) => {
   const location = useLocation();
 
   // NAV OVERLAY
@@ -148,6 +148,28 @@ export const Navigation = () => {
     }
   };
 
+  const handleClickSection = (linkUrl) => {
+    if (linkUrl === "#section6") {
+      scrollToSection('section6');
+    } else {
+      window.open(linkUrl, '_blank');
+    }
+  };
+  
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      let offset = -10 * window.innerHeight / 100; // -10vh for all sections
+      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition + offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <>
       <div className={`menu-container ${menu ? 'open' : ''}`}           onClick={() => {
@@ -169,12 +191,12 @@ export const Navigation = () => {
                   <span className="menu-text">Projects</span>
                 </div>
               </Link>
-              <Link to="/ourservices" className="menu-text">
-                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+              <div className="menu-text" onClick={() => handleClickSection("#section6")} >
+                <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd}>
                   <span className="menu-text">Services</span>
                   <span className="menu-text">Services</span>
                 </div>
-              </Link>
+              </div>
               <Link to="/contact" className="menu-text">
                 <div className="menu-button" onClick={() => { hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <span className="menu-text">Get In Touch</span>

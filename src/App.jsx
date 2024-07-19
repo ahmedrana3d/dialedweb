@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import Lenis from "@studio-freight/lenis";
 import { Navigation } from "./Navigation";
@@ -88,17 +88,27 @@ function App() {
   // useEffect(() => {
   //   initializeCursors();
   // }, []);
+
+  const section6Ref = useRef(null);
+
+  const scrollToSection6 = () => {
+    if (section6Ref.current) {
+      section6Ref.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("section6Ref.current is null");
+    }
+  };
   
 
   return (
       <>
         <LoadingScreen onLoaded={handleLoaded} />
 
-        <Navigation />
+        <Navigation scrollToSection6={scrollToSection6} />
 
         <AnimatePresence mode="wait" >
           <Routes location={location} key={location.pathname} >
-            <Route index element={ <Home /> } />
+            <Route index element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
             <Route path="/projects/:visualization" element={ <Visualization /> } />
