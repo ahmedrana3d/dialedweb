@@ -3720,17 +3720,20 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: fit-content;
+  height: 15vh;
   gap: 5vw;
   padding: 5%;
   border: 1px solid #fefeff50;
   border-radius: 25px;
+  transition: 0.75s ease;
 }
 
 .why-us-right-row:hover {
-  transform: scale(1); /* Scale up the div */
-  height: fit-content;
-  border: 1px solid #fefeff50;
+  transform: scale(1.1);
+  padding-bottom: 5%;
+  height: 30vh;
+  z-index: 10;
+  border: 2px solid #fefeff;
 }
 
 .why-us-icon {
