@@ -4369,7 +4369,7 @@ input {
 }
 
 .scroll-video-on-scroll-items {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 5%;
   width: 90%;

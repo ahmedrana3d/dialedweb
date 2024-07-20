@@ -13,7 +13,7 @@ export const SectionScrollVideoOnScroll = () => {
                 src: "/flowerkey3.mp4",
                 transitionSpeed: 14,
                 frameThreshold: 0.01,
-                full: false,
+                full: true,
             });
         };
         document.body.appendChild(script);
