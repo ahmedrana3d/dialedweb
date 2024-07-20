@@ -264,6 +264,11 @@ section {
   color: #010001; /* Adjust color of the icon */
 }
 
+#scrolly-video {
+  width: 100vw;
+  height: 100vh;
+}
+
 /* REAL ESTATE */
 
 .realestate {
@@ -2096,7 +2101,7 @@ section {
 /* VIDEOONSCROLL */
 
 .scroll-video-on-scroll {
-  height: 300vh;
+  height: 500vh;
   width: 100%;
   overflow: visible;
   display: flex;

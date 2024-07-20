@@ -49,7 +49,7 @@ const Home = () => {
       </div>
       <Section4 />
       {isMobile ? <Section5Mobile /> : <Section5 />}
-      {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
+      <SectionScrollVideoOnScroll />
       <Section8 />
 
       <div className="experience-one">
