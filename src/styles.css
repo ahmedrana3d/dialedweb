@@ -3710,10 +3710,12 @@ input {
 
 .why-us-right {
   width: 100%;
+  /* height: 50vh; */
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 5vw;
+  position: relative;
 }
 
 .why-us-right-row {
@@ -3735,6 +3737,29 @@ input {
   z-index: 10;
   border: 2px solid #fefeff;
 }
+
+/* .left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.center {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center:hover {
+  transform: scale(1.1) translateY(-50%);
+}
+
+.right {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
 
 .why-us-icon {
   font-size: 3rem;
