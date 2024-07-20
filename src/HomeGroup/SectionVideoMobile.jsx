@@ -27,8 +27,7 @@ export const SectionVideoMobile = () => {
                 </div>
             </div>
             <video
-              src="./fivevideomobile.mp4"
-              preload="auto"
+              src="/fivevideomobile.mp4"
               playsInline
               muted
               autoPlay
