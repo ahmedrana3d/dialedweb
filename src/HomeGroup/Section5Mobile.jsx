@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, EffectCards, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, EffectCards, EffectFade, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-cards';
 import 'swiper/css/effect-fade';
+import 'swiper/css/effect-coverflow';
 import '../fiveswiper.css';
 import { useAnimateText } from '../ScrollAnimations';
 
@@ -17,9 +18,10 @@ export const Section5Mobile = () => {
     <section className="fivemobile" >
         <h1 className="headline five-title-mobile">Our Team</h1>
         <Swiper
-            modules={[ Scrollbar, EffectCards, EffectFade]}
+            modules={[ Scrollbar, EffectCards, EffectFade, EffectCoverflow ]}
             spaceBetween={50}
             slidesPerView={1}
+            effect='cards'
             scrollbar={{ draggable: true, dragSize: 125, dragClass: "swiper-box-scrollbar-drag", horizontalClass: "swiper-box-scrollbar-horizontal" }}
             className='swiper-box'
         >
