@@ -264,11 +264,6 @@ section {
   color: #010001; /* Adjust color of the icon */
 }
 
-#scrolly-video {
-  width: 100vw;
-  height: 100vh;
-}
-
 /* REAL ESTATE */
 
 .realestate {
@@ -2101,7 +2096,7 @@ section {
 /* VIDEOONSCROLL */
 
 .scroll-video-on-scroll {
-  height: 500vh;
+  height: 300vh;
   width: 100%;
   overflow: visible;
   display: flex;
@@ -2111,11 +2106,12 @@ section {
   z-index: 2;
 }
 
-.video-background {
+#scrolly-video {
   position: sticky;
   top: 0;
-  right: 0;
+  left: 0;
   height: 95vh;
+  width: 80vw;
 }
 
 .scroll-video-on-scroll-items {
@@ -4336,6 +4332,26 @@ input {
   font-size: 0.65rem;
   color: #fefeff;
 }
+
+.scroll-video-on-scroll {
+  height: 300vh;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  z-index: 2;
+}
+
+#scrolly-video {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+}
+
 
 .section-video-mobile {
   width: 100%;
