@@ -26,7 +26,14 @@ export const SectionVideoMobile = () => {
                     <h1 className="scroll-section-headline scroll-headline-8" >Bloom</h1>
                 </div>
             </div>
-            <video src="./fivevideomobile.mp4" preload="auto" playsInline="true" autoPlay="true" muted="muted" class="video-background"></video>
+            <video
+              src="./fivevideomobile.mp4"
+              preload="auto"
+              playsInline
+              muted
+              autoPlay
+              className="video-background"
+            />
         </section>
       </>
     )
