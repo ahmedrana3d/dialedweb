@@ -7,8 +7,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-cards';
 import 'swiper/css/effect-fade';
 import '../fiveswiper.css';
+import { useAnimateText } from '../ScrollAnimations';
 
 export const Section5Mobile = () => {
+
+    useAnimateText(".five-title-mobile")
 
   return (
     <section className="fivemobile" >
