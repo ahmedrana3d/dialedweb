@@ -11,8 +11,8 @@ export const SectionVideoMobile = () => {
             new ScrollyVideo({
                 scrollyVideoContainer: "scrolly-video",
                 src: "/flowermobile.mp4",
-                // transitionSpeed: 14,
-                // frameThreshold: 0.01,
+                transitionSpeed: 14,
+                frameThreshold: 0.01,
                 full: true,
             });
         };
