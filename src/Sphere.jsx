@@ -79,7 +79,8 @@ export function Sphere(props) {
 
   return (
     <group ref={sphereRef} position={ [ isMobile ? 0 : 5, isMobile ? 0 : -5, 0 ] } {...props} scale={1} dispose={null}>
-      <group scale={ isMobile ? 0.0035 : 0.0065}>
+      <group scale={ isMobile ? 0.006 : 0.0065}>
+        {/* isMobile before was 0.0035 */}
         <mesh
           geometry={nodes.Sphere.geometry}
         >
