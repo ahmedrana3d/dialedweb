@@ -4660,6 +4660,7 @@ input {
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  z-index: 0;
 }
 
 .introduction-images-sticky-text {
@@ -4688,7 +4689,7 @@ input {
   flex-direction: row;
   justify-content: start;
   position: relative;
-  z-index: 2;
+  z-index: 10;
 }
 .introduction-images-row-left {
   width: 100%;
@@ -4696,7 +4697,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  z-index: 3;
+  z-index: 10;
   cursor: pointer;
 }
 .introduction-images-row-img {
@@ -4727,7 +4728,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  z-index: 3;
+  z-index: 10;
 }
 .introduction-images-row-right {
   width: 100%;
