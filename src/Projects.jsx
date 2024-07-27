@@ -74,7 +74,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/archi.png" alt="Project 1" />
+                      <img src="/arcnew.png" alt="Project 1" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
@@ -125,7 +125,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://mographs.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project8.png" alt="Project 4" />
+                      <img src="/diginew.png" alt="Project 4" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
