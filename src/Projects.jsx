@@ -137,40 +137,6 @@ const SectionProjects = () => {
                   </div>
                 </div>
               </ParallaxProvider>
-
-              <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://stalik.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project1.png" alt="Project 5" />
-                    </Parallax>
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Stalik</p>
-                    </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
-              </ParallaxProvider>
-
-              <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project6.png" alt="Project 6" />
-                    </Parallax>
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Digital Elegance</p>
-                    </div>
-                    <p className="project-text-description" >UI/UX Design</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
-              </ParallaxProvider>
     
             </div>
           </div>

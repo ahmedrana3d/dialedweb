@@ -15,6 +15,8 @@ export const Section5 = () => {
 
   return (
     <section className="five" >
+    <div className="background-element-two" />
+    <div className="background-element-grid-two" />
       <div className="five-content">
       <h1 className="five-title headline">Our Team</h1>
         <div className="mobile-scroll"></div>
