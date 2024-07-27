@@ -74,7 +74,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/vheader.jpg" alt="Project 1" />
+                      <img src="/archi.png" alt="Project 1" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
