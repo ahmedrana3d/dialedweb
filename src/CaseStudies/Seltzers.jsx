@@ -250,7 +250,7 @@ export const CaseStudySeltzers = () => {
                 <img src="/project5.png" alt="" />
             </div>
             <div className="casestudy-explanation">
-                <h1 className="casestudy-title" >The Brief</h1>
+                <h1 className="casestudy-title headline" >The Brief</h1>
                 <p className="casestudy-explanation-description animate-text" >In the bustling world of beverages, capturing the audience's attention online is more important than ever. DialedWeb Seltzers sought a vibrant and interactive website that would not only showcase their products but also create an unforgettable user experience. This case study explores how we made our own Seltzers' online platform through cutting-edge design and interactive features, ensuring a lasting impact on our audience.</p>
             </div>
             <div className="casestudy-half-images">
@@ -258,7 +258,7 @@ export const CaseStudySeltzers = () => {
                 <div className="casestudy-halfimage casestudy-halfimage-2" />
             </div>
             <div className="casestudy-features-box">
-                <h1 className="casestudy-title" >Implemented Features</h1>
+                <h1 className="casestudy-title headline" >Implemented Features</h1>
                 <div className="casestudy-accordion">
                     <Accordion
                         title="Immersive Loading Screen"

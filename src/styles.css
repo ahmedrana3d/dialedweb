@@ -4656,6 +4656,180 @@ input {
   font-size: 1rem;
 }
 
+.casestudy {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 5vw;
+  padding-bottom: 25vh;
+}
+
+.casestudy-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.casestudy-content-top {
+  flex-direction: column-reverse;
+  margin-bottom: 10vh;
+}
+
+.casestudy-top-left {
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  text-align: center;
+}
+
+.casestudy-title {
+}
+
+.casestudy-subtitle {
+  width: 80%;
+}
+
+.casestudy-button-text {
+  font-size: 1.25vw;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 600;
+}
+
+.casestudy-top-right {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  cursor: pointer;
+}
+
+.casestudy-top-right-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.casestudy-top-right-image img {
+  position: relative;
+  width: 100%;
+}
+
+.casestudy-full-image {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  border-radius: 25px;
+  background-color: #01f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.casestudy-full-image img {
+  width: auto;
+  height: 100%;
+}
+
+.casestudy-explanation {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 25vh;
+}
+
+.casestudy-explanation-description {
+  font-size: 1rem;
+  font-family: "SFBOLD", sans-serif;
+  margin: 0;
+  line-height: 110%;
+  color: #fefeff;
+  font-weight: 500;
+}
+
+.casestudy-half-images {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25vh;
+  margin-top: 25vh;
+  gap: 2vh;
+}
+
+.casestudy-halfimage {
+  width: 100%;
+  height: 50%;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-big-half-images {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25vh;
+  gap: 0;
+  row-gap: 1.5vw;
+}
+
+.casestudy-big-row {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5vw;
+}
+
+.casestudy-big-bigimage {
+  width: 100%;
+  height: 125vh;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-big-halfimage {
+  width: 50%;
+  height: 75vh;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-halfimage-1 {
+  background-image: url("/project7.png");
+}
+
+.casestudy-halfimage-2 {
+  background-image: url("/project5.png");
+}
+
+.casestudy-features-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.casestudy-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 /* INTRODCUTION SECTION */
 
 .introduction {
