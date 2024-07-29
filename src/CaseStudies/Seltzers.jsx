@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useAnimateText } from "../ScrollAnimations";
+import { useAnimateText, useTextEffect } from "../ScrollAnimations";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { initializeCursors } from "../Cursor";
@@ -48,13 +48,13 @@ export const CaseStudySeltzers = () => {
       }
     };
 
-    useAnimateText(".casestudy-title")
+    useTextEffect(".casestudy-title")
 
       useEffect(() => {
         gsap.fromTo(
           ".casestudy-subtitle, .casestudy-button",
           { opacity: 0 },
-          { opacity: 1, duration: 1.5, ease: "power1", delay: 1 }
+          { opacity: 1, duration: 1.5, ease: "power1", delay: 1.5 }
         );
       }, []);
 
