@@ -2325,6 +2325,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 10vh 5vw;
+  padding-bottom: 25vh;
 }
 
 .casestudy-content {
@@ -2361,32 +2362,11 @@ section {
   font-weight: 700;
 }
 
-/* .casestudy-button {
-  width: fit-content;
-  height: 3.5vw;
-  background-color: #fefeff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25vw;
-  padding: 0 1vw;
-  padding-left: 1.5vw;
-  border-radius: 100px;
-  border: none;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  position: relative;
-  z-index: 2;
-  gap: 0.5vw;
-  pointer-events: all;
-  color: #010001;
-}
-
 .casestudy-button-text {
   font-size: 1.25vw;
   font-family: "SFMEDIUM", sans-serif;
   font-weight: 600;
-} */
+}
 
 .casestudy-top-right {
   width: 50%;
@@ -2429,7 +2409,6 @@ section {
   flex-direction: column;
   gap: 5vh;
   margin-top: 25vh;
-  margin-bottom: 25vh;
 }
 
 .casestudy-explanation-description {
@@ -2448,11 +2427,49 @@ section {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 25vh;
+  margin-top: 25vh;
 }
 
 .casestudy-halfimage {
   width: 49%;
   height: 100%;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-big-half-images {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25vh;
+  gap: 0;
+  row-gap: 1.5vw;
+}
+
+.casestudy-big-row {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5vw;
+}
+
+.casestudy-big-bigimage {
+  width: 100%;
+  height: 125vh;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-big-halfimage {
+  width: 50%;
+  height: 75vh;
   border-radius: 50px;
   background-size: cover;
   background-position: center; 

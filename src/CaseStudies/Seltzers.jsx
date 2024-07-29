@@ -56,14 +56,14 @@ export const CaseStudySeltzers = () => {
         );
       }, []);
 
-    //   const overlayRef = useRef()
+      // const overlayRef = useRef()
 
-    //   useEffect(() => {
-    //     gsap.fromTo(overlayRef.current, 
-    //         { yPercent: 0 },
-    //         { yPercent: 125, duration: 2, ease: 'power1.out', delay: 2 }
-    //       );
-    //     }, []);
+      // useEffect(() => {
+      //   gsap.fromTo(overlayRef.current, 
+      //       { yPercent: 0 },
+      //       { yPercent: 125, duration: 2, ease: 'power1.out', delay: 2 }
+      //     );
+      //   }, []);
 
       useEffect(() => {
         gsap.to(".casestudy-top-right-image-img", {
@@ -145,6 +145,38 @@ export const CaseStudySeltzers = () => {
             );
           }, []);
 
+          useLayoutEffect(() => {
+            gsap.fromTo(
+              ".casestudy-big-bigimage", 
+              { yPercent: 10, opacity: 0 },
+              { 
+                yPercent: 0,
+                opacity: 1, 
+                duration: 1.5,
+                scrollTrigger: {
+                  trigger: ".casestudy-big-bigimage",
+                  start: "top bottom",
+                }
+              }
+            );
+          }, []);
+
+          useLayoutEffect(() => {
+            gsap.fromTo(
+              ".casestudy-big-row", 
+              { yPercent: 10, opacity: 0 },
+              { 
+                yPercent: 0,
+                opacity: 1, 
+                duration: 1.5,
+                scrollTrigger: {
+                  trigger: ".casestudy-big-row",
+                  start: "top bottom",
+                }
+              }
+            );
+          }, []);
+
           const [rotate, setRotate] = useState(false);
 
           const handleInteractive = () => {
@@ -162,7 +194,7 @@ export const CaseStudySeltzers = () => {
             <div className="casestudy-content-top" >
                 <div className="casestudy-top-left">
                     <h1 className="headline casestudy-title" >Dialed Seltzers</h1>
-                    <p className="casestudy-subtitle one-description" >Transforming the Digital Presence Strategy for DialedWeb Seltzers</p>
+                    <p className="one-description casestudy-subtitle" >Transforming the Digital Presence Strategy for DialedWeb Seltzers</p>
                     <div className="one-content-buttons casestudy-button">
               <motion.button
                 className="one-button-transparent btn menu-btn"
@@ -261,6 +293,17 @@ export const CaseStudySeltzers = () => {
                         content="The website uses a combination of animated graphics and storytelling elements to narrate the brand's story. This approach creates an emotional connection with the audience and reinforces the brand identity."
                     />
                 </div>
+            </div>
+            <div className="casestudy-big-half-images">
+                <div className="casestudy-big-bigimage casestudy-halfimage-1" />
+                <div className="casestudy-big-row">
+                  <div className="casestudy-big-halfimage casestudy-halfimage-1" />
+                  <div className="casestudy-big-halfimage casestudy-halfimage-2" />
+                </div>
+            </div>
+            <div className="casestudy-explanation">
+                <h1 className="casestudy-title" >The Conclusion</h1>
+                <p className="casestudy-explanation-description animate-text" >Through innovative design and interactive features, we crafted a website our own Seltzers that captivates users and enhances their digital journey. The integration of high-quality visuals, interactive 3D models, and engaging storytelling has not only elevated user engagement but also effectively showcased our brand’s unique offerings. Wouldn't you want a sip?</p>
             </div>
         </div>
       </section>
