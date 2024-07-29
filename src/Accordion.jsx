@@ -1,38 +1,39 @@
 import React, { useEffect, useRef, useState } from "react";
-import { RotatingHeader } from "./ScrollAnimations";
 
-function Accordion({ title, content, isActive, onToggle }) {
-  const contentRef = useRef(null);
-  const accordionTopRef = useRef(null);
+function Accordion(props) {
+  const [active, setActive] = useState(false);
+  const content = useRef(null);
   const [height, setHeight] = useState("0px");
 
   useEffect(() => {
-    setHeight(isActive ? `${contentRef.current.scrollHeight}px` : "0px");
-  }, [isActive]);
+    console.log("Height for ", props.title, ": ", height);
+  }, [height]);
+
+  function toggleAccordion() {
+    setActive(!active);
+    setHeight(active ? "0px" : `${content.current.scrollHeight}px`);
+  }
 
   return (
     <div className="accordion-section">
       <div
-        className={`accordion ${isActive ? "active" : ""}`}
-        onClick={onToggle}
+        className={`accordion ${active ? "active" : ""}`}
+        onClick={toggleAccordion}
       >
-        <div className="accordion-top" ref={accordionTopRef}>
-          <RotatingHeader text={title} hoverTargetRef={accordionTopRef} />
-          <div className="accordion-icon">
-            <i
-              className={`fa-solid fa-arrow-down ${isActive ? "rotate" : ""}`}
-              style={{ transition: "transform 0.5s ease" }}
-            ></i>
+        <div className="accordion-top">
+          <p className="description bold">{props.title}</p>
+          <div className="accordion-icon" >
+            <i className={`fa-solid fa-arrow-down ${active ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }} ></i>
           </div>
         </div>
         <div
-          ref={contentRef}
+          ref={content}
           style={{ maxHeight: `${height}` }}
           className="accordion-content"
         >
           <div
-            className="small-text-accordion white"
-            dangerouslySetInnerHTML={{ __html: content }}
+            className="small-text-accordion"
+            dangerouslySetInnerHTML={{ __html: props.content }}
           />
         </div>
       </div>

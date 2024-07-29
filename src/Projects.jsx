@@ -88,7 +88,7 @@ const SectionProjects = () => {
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://dialedwebseltzers.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("seltzers") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
                       <img src="/project7.png" alt="Project 2" />

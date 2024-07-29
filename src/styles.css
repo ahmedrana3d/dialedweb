@@ -681,6 +681,7 @@ section {
 }
 
 .accordion {
+  background-color: #fefefe10;
   cursor: pointer;
   padding-left: 1vw;
   padding-right: 1vw;
@@ -690,28 +691,16 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: 0.5s ease;
-  width: 100%;
-  position: relative;
-  z-index: 4;
-  background-color: #fefeff10;
-  border-radius: 25px;
-  border: 2px solid transparent;
-}
-
-.accordion:hover {
-  border: 2px solid #fefeff;
+  transition: background-color 0.6s ease;
+  border-radius: 35px;
 }
 
 .accordion-top {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 100%;
   justify-content: space-between;
-  padding-top: 2vw;
-  padding-bottom: 1vw;
+  width: 100%;
 }
 
 .accordion-icon {
@@ -722,17 +711,12 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #010001;
-  margin-top: -1vw;
+  color: #111111;
 }
 
-.fa-arrow-down {
-  color: #010001;
+.accordion:hover {
+  background-color: #fefeff25;
 }
-
-/* .accordion:hover {
-  background-color: #ecf0f5;
-} */
 
 .rotate {
   transform: rotate(90deg);
@@ -747,20 +731,19 @@ section {
 }
 
 .small-text-accordion {
-  font-family: 'SFMEDIUM', sans-serif;
-  font-weight: normal;
-  font-size: 1.25vw;
-  line-height: 115%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 100%;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 2vw;
-  color: #fefeff75;
+  color: #fefeff;
 }
 
 .rotate {
   transform: rotate(180deg);
 }
-
 
 /* NAVIGATION BAR */
 .navigation {
@@ -2334,6 +2317,166 @@ section {
 .project-image:hover ~ .project-text-container .project-text-title::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.casestudy {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 5vw;
+}
+
+.casestudy-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.casestudy-content-top {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+  padding: 0 5vw;
+}
+
+.casestudy-top-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3vh;
+}
+
+.casestudy-title {
+  font-size: 5vw;
+  font-family: "SFBOLD", sans-serif;
+  margin: 0;
+  line-height: 90%;
+  color: #fefeff;
+  font-weight: 700;
+}
+
+/* .casestudy-button {
+  width: fit-content;
+  height: 3.5vw;
+  background-color: #fefeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25vw;
+  padding: 0 1vw;
+  padding-left: 1.5vw;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  gap: 0.5vw;
+  pointer-events: all;
+  color: #010001;
+}
+
+.casestudy-button-text {
+  font-size: 1.25vw;
+  font-family: "SFMEDIUM", sans-serif;
+  font-weight: 600;
+} */
+
+.casestudy-top-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  cursor: pointer;
+}
+
+.casestudy-top-right-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.casestudy-top-right-image img {
+  position: relative;
+  width: 100%;
+}
+
+.casestudy-full-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.casestudy-full-image img {
+  width: 100%;
+}
+
+.casestudy-explanation {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+}
+
+.casestudy-explanation-description {
+  font-size: 2vw;
+  font-family: "SFBOLD", sans-serif;
+  margin: 0;
+  line-height: 110%;
+  color: #fefeff;
+  font-weight: 500;
+}
+
+.casestudy-half-images {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25vh;
+}
+
+.casestudy-halfimage {
+  width: 49%;
+  height: 100%;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.casestudy-halfimage-1 {
+  background-image: url("/project7.png");
+}
+
+.casestudy-halfimage-2 {
+  background-image: url("/project5.png");
+}
+
+.casestudy-features-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.casestudy-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 /* INTRODCUTION SECTION */

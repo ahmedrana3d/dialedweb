@@ -19,6 +19,7 @@ import VisualizationSub3 from "./Visualization/VisualizationSub3";
 import VisualizationSub4 from "./Visualization/VisualizationSub4";
 import VisualizationSub5 from "./Visualization/VisualizationSub5";
 import VisualizationSub6 from "./Visualization/VisualizationSub6";
+import { CaseStudySeltzers } from "./CaseStudies/Seltzers";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -111,7 +112,8 @@ function App() {
             <Route index element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
-            <Route path="/projects/:visualization" element={ <Visualization /> } />
+            <Route path="/projects/seltzers" element={ <CaseStudySeltzers /> } />
+            <Route path="/projects/visualization" element={ <Visualization /> } />
             <Route path="/projects/:visualization/secluded-bali-villa" element={ <VisualizationSub /> } />
             <Route path="/projects/:visualization/modern-beverly-hills-home" element={ <VisualizationSub2 /> } />
             <Route path="/projects/:visualization/premier-luxury-hotel" element={ <VisualizationSub3 /> } />
