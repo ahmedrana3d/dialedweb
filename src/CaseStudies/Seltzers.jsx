@@ -48,7 +48,9 @@ export const CaseStudySeltzers = () => {
       }
     };
 
-    useTextEffect(".casestudy-title")
+    useTextEffect(".casestudy-title-one")
+
+    useAnimateText(".casestudy-title")
 
       useEffect(() => {
         gsap.fromTo(
@@ -186,7 +188,7 @@ export const CaseStudySeltzers = () => {
         <div className="casestudy-content" >
             <div className="casestudy-content-top" >
                 <div className="casestudy-top-left">
-                    <h1 className="headline casestudy-title" >Dialed Seltzers</h1>
+                    <h1 className="headline casestudy-title-one" >Dialed Seltzers</h1>
                     <p className="one-description casestudy-subtitle" >Transforming the Digital Presence Strategy for DialedWeb Seltzers</p>
                     <div className="one-content-buttons casestudy-button">
               <motion.button
