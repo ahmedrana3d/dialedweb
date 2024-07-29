@@ -21,7 +21,7 @@ function Accordion(props) {
         onClick={toggleAccordion}
       >
         <div className="accordion-top">
-          <p className="description bold">{props.title}</p>
+          <p className="title-accordion">{props.title}</p>
           <div className="accordion-icon" >
             <i className={`fa-solid fa-arrow-down ${active ? "rotate" : ""}`} style={{ transition: "transform 0.5s ease" }} ></i>
           </div>

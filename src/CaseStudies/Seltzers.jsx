@@ -16,6 +16,8 @@ gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
 export const CaseStudySeltzers = () => {
 
+  const isMobile = window.innerWidth <= 768;
+
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
@@ -249,7 +251,11 @@ export const CaseStudySeltzers = () => {
                 <div className="casestudy-halfimage casestudy-halfimage-2" />
             </div>
             <div className="casestudy-features-box">
-                <h1 className="casestudy-title headline" >Implemented Features</h1>
+                {isMobile ? (
+                  <h1 className="casestudy-title headline" >Implemented <br /> Features</h1>
+                ) : (
+                  <h1 className="casestudy-title headline" >Implemented Features</h1>
+                )}
                 <div className="casestudy-accordion">
                     <Accordion
                         title="Immersive Loading Screen"
@@ -293,7 +299,7 @@ export const CaseStudySeltzers = () => {
                 </div>
             </div>
             <div className="casestudy-explanation">
-                <h1 className="casestudy-title" >The Conclusion</h1>
+                <h1 className="casestudy-title headline" >The Conclusion</h1>
                 <p className="casestudy-explanation-description animate-text" >Through innovative design and interactive features, we crafted a website our own Seltzers that captivates users and enhances their digital journey. The integration of high-quality visuals, interactive 3D models, and engaging storytelling has not only elevated user engagement but also effectively showcased our brand’s unique offerings. Wouldn't you want a sip?</p>
             </div>
         </div>
