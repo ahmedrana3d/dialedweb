@@ -65,11 +65,11 @@ export const CaseStudySeltzers = () => {
       //     );
       //   }, []);
 
-      useEffect(() => {
-        gsap.to(".casestudy-top-right-image-img", {
-            scale: 1.1, duration: 1, delay: 3, ease: 'power1.out',
-        })
-      }, []);
+      // useEffect(() => {
+      //   gsap.to(".casestudy-top-right-image-img", {
+      //       scale: 1.1, duration: 1, delay: 3, ease: 'power1.out',
+      //   })
+      // }, []);
 
       useEffect(() => {
         const paragraphs = document.querySelectorAll('.animate-text');
@@ -113,69 +113,60 @@ export const CaseStudySeltzers = () => {
         };
         }, []);
 
-        useLayoutEffect(() => {
-            gsap.fromTo(
-              ".casestudy-full-image", 
-              { yPercent: 15, opacity: 0 },
-              { 
-                yPercent: 0,
-                opacity: 1, 
-                duration: 1,
-                scrollTrigger: {
-                  trigger: ".casestudy-full-image",
-                  start: "top bottom",
-                }
+        useEffect(() => {
+          gsap.fromTo(
+            ".casestudy-full-image", 
+            { yPercent: 15, opacity: 0 },
+            { 
+              yPercent: 0,
+              opacity: 1, 
+              duration: 1,
+              scrollTrigger: {
+                trigger: ".casestudy-full-image",
+                start: "top bottom",
               }
-            );
-          }, []);
-
-          useLayoutEffect(() => {
-            gsap.fromTo(
-              ".casestudy-half-images", 
-              { yPercent: 10, opacity: 0 },
-              { 
-                yPercent: 0,
-                opacity: 1, 
-                duration: 1.5,
-                scrollTrigger: {
-                  trigger: ".casestudy-half-images",
-                  start: "top bottom",
-                }
+            }
+          );
+          gsap.fromTo(
+            ".casestudy-half-images", 
+            { yPercent: 10, opacity: 0 },
+            { 
+              yPercent: 0,
+              opacity: 1, 
+              duration: 1.5,
+              scrollTrigger: {
+                trigger: ".casestudy-half-images",
+                start: "top bottom",
               }
-            );
-          }, []);
-
-          useLayoutEffect(() => {
-            gsap.fromTo(
-              ".casestudy-big-bigimage", 
-              { yPercent: 10, opacity: 0 },
-              { 
-                yPercent: 0,
-                opacity: 1, 
-                duration: 1.5,
-                scrollTrigger: {
-                  trigger: ".casestudy-big-bigimage",
-                  start: "top bottom",
-                }
+            }
+          );
+          gsap.fromTo(
+            ".casestudy-big-bigimage", 
+            { yPercent: 10, opacity: 0 },
+            { 
+              yPercent: 0,
+              opacity: 1, 
+              duration: 1.5,
+              scrollTrigger: {
+                trigger: ".casestudy-big-bigimage",
+                start: "top bottom",
               }
-            );
-          }, []);
-
-          useLayoutEffect(() => {
-            gsap.fromTo(
-              ".casestudy-big-row", 
-              { yPercent: 10, opacity: 0 },
-              { 
-                yPercent: 0,
-                opacity: 1, 
-                duration: 1.5,
-                scrollTrigger: {
-                  trigger: ".casestudy-big-row",
-                  start: "top bottom",
-                }
+            }
+          );
+          gsap.fromTo(
+            ".casestudy-big-row", 
+            { yPercent: 10, opacity: 0 },
+            { 
+              yPercent: 0,
+              opacity: 1, 
+              duration: 1.5,
+              scrollTrigger: {
+                trigger: ".casestudy-big-row",
+                start: "top bottom",
               }
-            );
-          }, []);
+            }
+          );
+        })
 
           const [rotate, setRotate] = useState(false);
 
