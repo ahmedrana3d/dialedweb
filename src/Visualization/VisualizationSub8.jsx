@@ -12,7 +12,7 @@ import { useInView } from 'react-intersection-observer';
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
-const VisualizationSub2 = () => {
+const VisualizationSub8 = () => {
 
     useEffect(() => {
         // Scroll to the top when the component mounts
@@ -25,34 +25,29 @@ const VisualizationSub2 = () => {
         initializeCursors();
       }, []);
 
-      useAnimateText(".beverly-title-text")
-
     return (
         <>
 
 <div className="cursor" id="ball"></div>
 <div className="cursor-text" id="cursor-text">Scroll</div>
 
-  <section className="visualizationsub">
+<section className="visualizationsub">
 
-    <h1 className="headline beverly-title-text" >Modern Beverly Hills Mansion</h1>
+<h1 className="headline hotel-title-text" >Urban Hideaway</h1>
 
-      <div className="visualizationsub-row">
-        <div className="visualizationsub-image beverly-image-1"/>
-      </div>
+  <div className="visualizationsub-row">
+    <div className="visualizationsub-image hi-1"/>
+    <div className="visualizationsub-image hi-2"/>
+  </div>
 
-      <div className="visualizationsub-row">
-        <div className="visualizationsub-image beverly-image-2"/>
-        <div className="visualizationsub-image beverly-image-3"/>
-      </div>
+  <div className="visualizationsub-row">
+    <div className="visualizationsub-image hi-3"/>
+    <div className="visualizationsub-image hi-4"/>
+  </div>
 
-      <div className="visualizationsub-row">
-        <div className="visualizationsub-image beverly-image-4"/>
-      </div>
-
-  </section>
+</section>
         </>
       );
     };
 
-export default transition(VisualizationSub2);
+export default transition(VisualizationSub8);

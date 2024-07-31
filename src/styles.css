@@ -2762,6 +2762,7 @@ section {
 }
 .introduction-images-row-img {
   height: 120vh;
+  object-fit: cover;
   width: auto;
 }
 .introduction-image-row-number {
@@ -2835,80 +2836,119 @@ section {
   border-radius: 25px;
 }
 
-.bali-image-1 {
-  background-image: url('/baliimage1.jpg');
+.manor-1 {
+  background-image: url('/manor1.jpg');
 }
 
-.bali-image-2 {
-  background-image: url('/baliimage2.jpg');
+.manor-2 {
+  background-image: url('/manor2.jpg');
 }
-.bali-image-3 {
-  background-image: url('/baliimage3.jpg');
+.manor-3 {
+  background-image: url('/manor3.jpg');
 }
-.bali-image-4 {
-  background-image: url('/baliimage4.jpg');
+.manor-4 {
+  background-image: url('/manor4.jpg');
 }
 
 .beverly-image-1 {
-  background-image: url('/beverlyimage1.jpg');
+  background-image: url('/bev1.jpg');
 }
 .beverly-image-2 {
-  background-image: url('/beverlyimage2.jpg');
+  background-image: url('/bev2.jpg');
 }
 .beverly-image-3 {
-  background-image: url('/beverlyimage3.jpg');
+  background-image: url('/bev3.jpg');
 }
 .beverly-image-4 {
-  background-image: url('/beverlyimage4.jpg');
-}
-.beverly-image-5 {
-  background-image: url('/beverlyimage5.jpg');
-}
-.beverly-image-6 {
-  background-image: url('/beverlyimage6.jpg');
-}
-.beverly-image-7 {
-  background-image: url('/beverlyimage7.jpg');
+  background-image: url('/bev4.jpg');
 }
 
-.hotel-image-1 {
-  background-image: url('/hotelimage1.jpg');
+.tr-1 {
+  background-image: url('/tr1.jpg');
 }
-.hotel-image-2 {
-  background-image: url('/hotelimage2.jpg');
+.tr-2 {
+  background-image: url('/tr2.jpg');
 }
-.hotel-image-3 {
-  background-image: url('/hotelimage3.jpg');
+.tr-3 {
+  background-image: url('/tr3.jpg');
 }
-.hotel-image-4 {
-  background-image: url('/hotelimage4.jpg');
-}
-.hotel-image-5 {
-  background-image: url('/hotelimage5.jpg');
-}
-.hotel-image-6 {
-  background-image: url('/hotelimage6.jpg');
-}
-.hotel-image-7 {
-  background-image: url('/hotelimage7.jpg');
-}
-.hotel-image-8 {
-  background-image: url('/hotelimage8.jpg');
-}
-.hotel-image-9 {
-  background-image: url('/hotelimage9.jpg');
-}
-.hotel-image-10 {
-  background-image: url('/hotelimage10.jpg');
-}
-.hotel-image-11 {
-  background-image: url('/hotelimage11.jpg');
-}
-.hotel-image-12 {
-  background-image: url('/hotelimage12.jpg');
+.tr-4 {
+  background-image: url('/tr4.jpg');
 }
 
+.st-1 {
+  background-image: url('/st1.jpg');
+}
+.st-2 {
+  background-image: url('/st2.jpg');
+}
+.st-3 {
+  background-image: url('/st3.jpg');
+}
+.st-4 {
+  background-image: url('/st4.jpg');
+}
 
+.ur-1 {
+  background-image: url('/ur1.jpg');
+}
+.ur-2 {
+  background-image: url('/ur2.jpg');
+}
+.ur-3 {
+  background-image: url('/ur3.jpg');
+}
+.ur-4 {
+  background-image: url('/ur4.jpg');
+}
+.ur-5 {
+  background-image: url('/ur5.jpg');
+}
+.ur-6 {
+  background-image: url('/ur6.jpg');
+}
+.ur-7 {
+  background-image: url('/ur7.jpg');
+}
+.ur-8 {
+  background-image: url('/ur8.jpg');
+}
+
+.co-1 {
+  background-image: url('/co1.jpg');
+}
+.co-2 {
+  background-image: url('/co2.jpg');
+}
+.co-3 {
+  background-image: url('/co3.png');
+}
+.co-4 {
+  background-image: url('/co4.jpg');
+}
+
+.ci-1 {
+  background-image: url('/ci1.jpg');
+}
+.ci-2 {
+  background-image: url('/ci2.jpg');
+}
+.ci-3 {
+  background-image: url('/ci3.jpg');
+}
+
+.hi-1 {
+  background-image: url('/hi1.jpeg');
+}
+.hi-2 {
+  background-image: url('/hi2.jpeg');
+}
+.hi-3 {
+  background-image: url('/hi3.jpeg');
+}
+.hi-4 {
+  background-image: url('/hi4.jpeg');
+}
 
 /* LOADING SCREEN DESKTOP */
 

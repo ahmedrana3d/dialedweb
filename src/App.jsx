@@ -20,6 +20,8 @@ import VisualizationSub4 from "./Visualization/VisualizationSub4";
 import VisualizationSub5 from "./Visualization/VisualizationSub5";
 import VisualizationSub6 from "./Visualization/VisualizationSub6";
 import { CaseStudySeltzers } from "./CaseStudies/Seltzers";
+import VisualizationSub7 from "./Visualization/VisualizationSub7";
+import VisualizationSub8 from "./Visualization/VisualizationSub8";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -114,12 +116,14 @@ function App() {
             <Route path="/projects" element={ <SectionProjects /> } />
             <Route path="/projects/seltzers" element={ <CaseStudySeltzers /> } />
             <Route path="/projects/visualization" element={ <Visualization /> } />
-            <Route path="/projects/:visualization/secluded-bali-villa" element={ <VisualizationSub /> } />
-            <Route path="/projects/:visualization/modern-beverly-hills-home" element={ <VisualizationSub2 /> } />
-            <Route path="/projects/:visualization/premier-luxury-hotel" element={ <VisualizationSub3 /> } />
-            <Route path="/projects/:visualization/minimalistic-penthouse" element={ <VisualizationSub4 /> } />
-            <Route path="/projects/:visualization/visualizationsubpage5" element={ <VisualizationSub5 /> } />
-            <Route path="/projects/:visualization/visualizationsubpage6" element={ <VisualizationSub6 /> } />
+            <Route path="/projects/:visualization/the-manor" element={ <VisualizationSub /> } />
+            <Route path="/projects/:visualization/modern-beverly-hills-mansion" element={ <VisualizationSub2 /> } />
+            <Route path="/projects/:visualization/tropical-vacation-home" element={ <VisualizationSub3 /> } />
+            <Route path="/projects/:visualization/minimalistic-studio" element={ <VisualizationSub4 /> } />
+            <Route path="/projects/:visualization/urban-sanctuary-hotel" element={ <VisualizationSub5 /> } />
+            <Route path="/projects/:visualization/contemporary-home" element={ <VisualizationSub6 /> } />
+            <Route path="/projects/:visualization/cityscapes" element={ <VisualizationSub7 /> } />
+            <Route path="/projects/:visualization/urban-hideaway" element={ <VisualizationSub8 /> } />
             <Route path="/ourservices" element={ <OurServices /> } />
             <Route path="/realestate" element={ <RealEstatePortfolio /> } />
           </Routes>

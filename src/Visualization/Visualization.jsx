@@ -111,17 +111,15 @@ const Visualization = () => {
         <div className="introduction-content-images-container">
 
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left" >
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("the-manor") }} >
               <h1 className="introduction-image-row-number" >01</h1>
               <img src="/v1.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Hotel Lobby</h1>
+              <h1 className="introduction-image-row-title" >The Manor</h1>
             </div>
           </div>
 
-          {/* onClick={() => { handleNavigateClick("secluded-bali-villa") }} */}
-
           <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right" >
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("modern-beverly-hills-mansion") }} >
               <h1 className="introduction-image-row-number" >02</h1>
               <img src="/v2.jpg" className="introduction-images-row-img" alt="" />
               <h1 className="introduction-image-row-title" >Modern Beverly Hills Mansion</h1>
@@ -129,36 +127,52 @@ const Visualization = () => {
           </div>
 
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left" >
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("tropical-vacation-home") }} >
               <h1 className="introduction-image-row-number" >03</h1>
-              <img src="/newv.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Tropical Vacation Home</h1>
+              <img src="/tr1.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Tropical Vacation Home</h1>
             </div>
           </div>
 
           <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right" >
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("minimalistic-studio") }} >
               <h1 className="introduction-image-row-number" >04</h1>
-              <img src="/v3.jpg"  className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Minimalisitic Penthouse </h1>
+              <img src="/st1.jpg"  className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Minimalisitic Studio </h1>
             </div>
           </div>
 
           <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left" >
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("urban-sanctuary-hotel") }} >
               <h1 className="introduction-image-row-number" >05</h1>
-              <img src="/v4.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Urban Skyscraper</h1>
+              <img src="/ur1.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Urban Sanctuary Hotel</h1>
             </div>
           </div>
 
-          {/* <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("visualizationsubpage6") }} >
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("contemporary-home") }} >
               <h1 className="introduction-image-row-number" >06</h1>
-              <img src="/project4cover.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Modern Beverly Hills Home</h1>
+              <img src="/co1.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Contemporary Home</h1>
             </div>
-          </div> */}
+          </div>
+
+          <div className="introduction-images-container-row-left">
+            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("cityscapes") }} >
+              <h1 className="introduction-image-row-number" >07</h1>
+              <img src="/ci2.jpg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Cityscapes</h1>
+            </div>
+          </div>
+
+          <div className="introduction-images-container-row-right">
+            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("urban-hideaway") }} >
+              <h1 className="introduction-image-row-number" >08</h1>
+              <img src="/hi1.jpeg" className="introduction-images-row-img" alt="" />
+              <h1 className="introduction-image-row-title" >Urban Hideaway</h1>
+            </div>
+          </div>
 
         </div>
       </div>

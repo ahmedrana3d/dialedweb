@@ -33,33 +33,16 @@ const VisualizationSub4 = () => {
 
 <section className="visualizationsub">
 
-<h1 className="headline hotel-title-text" >Minimalistic Penthouse</h1>
+<h1 className="headline hotel-title-text" >Minimalistic Studio</h1>
 
   <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-1"/>
-    <div className="visualizationsub-image hotel-image-2"/>
+    <div className="visualizationsub-image st-1"/>
+    <div className="visualizationsub-image st-2"/>
   </div>
 
   <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-3"/>
-  </div>
-
-  <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-4"/>
-    <div className="visualizationsub-image hotel-image-5"/>
-  </div>
-
-  <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-6"/>
-  </div>
-
-  <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-7"/>
-    <div className="visualizationsub-image hotel-image-8"/>
-  </div>
-
-  <div className="visualizationsub-row">
-    <div className="visualizationsub-image hotel-image-9"/>
+    <div className="visualizationsub-image st-3"/>
+    <div className="visualizationsub-image st-4"/>
   </div>
 
 </section>
