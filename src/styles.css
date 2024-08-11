@@ -5,22 +5,22 @@
 
 @font-face {
   font-family: 'SFBOLD';
-  src: url('SFBOLD.otf') format('OpenType');
+  src: url('/SFBOLD.otf') format('OpenType');
 }
 
 @font-face {
   font-family: 'SFMEDIUM';
-  src: url('SFMEDIUM.otf') format('OpenType');
+  src: url('/SFMEDIUM.otf') format('OpenType');
 }
 
 @font-face {
   font-family: 'SFITALIC';
-  src: url('SFITALIC.OTF') format('OTF');
+  src: url('/SFITALIC.OTF') format('OTF');
 }
 
 @font-face {
   font-family: 'GTAlpina';
-  src: url('GT_Alpina_Regular.otf') format('OpenType');
+  src: url('/GT_Alpina_Regular.otf') format('OpenType');
 }
 
 * {
