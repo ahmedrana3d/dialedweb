@@ -8,6 +8,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Sphere } from "../Sphere";
 import { Environment } from "@react-three/drei";
 import { easing } from "maath"
+import { EffectComposer } from "@react-three/postprocessing";
+import { Fluid } from "@whatisjery/react-fluid-distortion";
 
 export const Section8 = () => {
 
@@ -85,15 +87,35 @@ const hoverSoundMobile = () => {
             </div>
           </div>
 
-          {isMobile && (
-          <div className="experience-two" >
-          <Canvas camera={{ position: [0, 0, 5], fov: 35 }} >
+          <div className="experience-one">
+        <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
+          {/* <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#fefeff"} far={10} speed={1} /> */}
             <Sphere />
-            <Rig />
-            <Environment preset="night" />
-          </Canvas>
-        </div>
-        )}
+            {!isMobile && (
+              <>
+                <Rig />
+                <EffectComposer>
+                <Fluid
+                radius={0.03}
+                curl={10}
+                swirl={5}
+                distortion={1}
+                force={2}
+                pressure={0.94}
+                densityDissipation={0.98}
+                velocityDissipation={0.99}
+                intensity={0.3}
+                rainbow={false}
+                blend={0}
+                showBackground={false}
+                fluidColor="#515151"
+                />
+              </EffectComposer>
+            </>
+          )}
+          <Environment preset="night" />
+        </Canvas>
+      </div>
         </section>
       </>
     )
