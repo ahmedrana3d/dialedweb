@@ -5,7 +5,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Float, OrbitControls, Sparkles } from "@react-three/drei";
 import { useTextEffect } from "../ScrollAnimations";
 import gsap from "gsap";
-import Spline from '@splinetool/react-spline';
 import { Link, useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import OneModel from "./OneModel";
@@ -75,8 +74,8 @@ const hoverSoundMobile = () => {
   return (
     <>
       <section className="one">
-      <div className="background-element" />
-      <div className="background-element-grid" />
+      <div className="background-element-small" />
+      <div className="background-element-grid-small" />
         <div className="one-content">
           <div className="one-content-left">
             <h1 className="headline anim grey">Crafting Digital <br /> Masterpieces</h1>
@@ -94,7 +93,7 @@ const hoverSoundMobile = () => {
                   <span className="navigation-text">SEE MORE</span>
                 </div>
                 <div className="navigation-arrow-box">
-                  <i class="fa-solid fa-location-arrow"></i>
+                  <i className="fa-solid fa-location-arrow"></i>
                 </div>
                 <div data-hover-bounds></div>
               </motion.button>
@@ -110,7 +109,7 @@ const hoverSoundMobile = () => {
                   <span className="navigation-text">INTERACT</span>
                 </div>
                 <div className="navigation-arrow-box">
-                  <i class="fa-solid fa-location-arrow"></i>
+                  <i className="fa-solid fa-location-arrow"></i>
                 </div>
                 <div data-hover-bounds></div>
               </motion.button>

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Spline from '@splinetool/react-spline';
 import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 
 export const Section6 = () => {
@@ -26,7 +25,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">
@@ -59,7 +58,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">
@@ -92,7 +91,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">
@@ -125,7 +124,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">
@@ -158,7 +157,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">
@@ -191,7 +190,7 @@ export const Section6 = () => {
                       </div>
                       <div className="front-bottom">
                         <h1 className="front-bottom-text" >Info</h1>
-                        <div className="front-bottom-circle" ><i class="fa-solid fa-plus"></i></div>
+                        <div className="front-bottom-circle" ><i className="fa-solid fa-plus"></i></div>
                       </div>
                     </div>
                     <div className="back">

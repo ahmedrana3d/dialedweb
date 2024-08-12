@@ -6,12 +6,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./HomeGroup/Home"
 import Contact from "./Contact"
 import { AnimatePresence } from "framer-motion";
-import { RealEstatePortfolio } from "./RealEstatePortfolio";
-import gsap from "https://esm.sh/gsap";
-import { vec2 } from "https://esm.sh/vecteur";
 import { initializeCursors } from "./Cursor";
 import SectionProjects from "./Projects"
-import OurServices from "./OurServices";
 import Visualization from "./Visualization/Visualization";
 import VisualizationSub from "./Visualization/VisualizationSub";
 import VisualizationSub2 from "./Visualization/VisualizationSub2";
@@ -125,8 +121,6 @@ function App() {
             <Route path="/projects/:visualization/contemporary-home" element={ <VisualizationSub6 /> } />
             <Route path="/projects/:visualization/cityscapes" element={ <VisualizationSub7 /> } />
             <Route path="/projects/:visualization/urban-hideaway" element={ <VisualizationSub8 /> } />
-            <Route path="/ourservices" element={ <OurServices /> } />
-            <Route path="/realestate" element={ <RealEstatePortfolio /> } />
             <Route path="/learn-more" element={ <Learnmain /> } />
           </Routes>
         </AnimatePresence>

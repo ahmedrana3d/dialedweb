@@ -8,7 +8,9 @@ const LearnMain = () => {
 
   return (
     <>
+    <NextUIProvider>
         <LearnApp />
+    </NextUIProvider>
     </>
   );
 };

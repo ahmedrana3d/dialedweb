@@ -81,10 +81,10 @@ export const Section3 = () => {
           <div className="three-content-box-right">
             <div className="container hover-area" data-cursor-text="SCROLL" onMouseMove={handleMouseMove} ref={containerRef}>
               <div className="video video1">
-                <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
               </div>
               <div className="video video2">
-                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
               </div>
             </div>
           </div>
@@ -117,10 +117,10 @@ export const Section3 = () => {
             <div className="three-content-box-right">
               <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
                 <div className="video video1">
-                  <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                  <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
                 </div>
                 <div className="video video2">
-                  <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                  <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
                 </div>
               </div>
             </div>

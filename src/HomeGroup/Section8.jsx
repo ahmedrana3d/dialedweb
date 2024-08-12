@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Spline from '@splinetool/react-spline';
-import Accordion from "../Accordion";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAnimateText, useAnimateTextDelay } from "../ScrollAnimations";
 import { useNavigate } from "react-router-dom";
@@ -64,7 +62,7 @@ const hoverSoundMobile = () => {
                     <span className="navigation-text" >PROJECTS</span>
                   </div>
                   <div className="navigation-arrow-box">
-                    <i class="fa-solid fa-location-arrow"></i>
+                    <i className="fa-solid fa-location-arrow"></i>
                   </div>
                   <div data-hover-bounds></div>
                 </motion.button>
@@ -80,7 +78,7 @@ const hoverSoundMobile = () => {
                     <span className="navigation-text" >GET IN TOUCH</span>
                   </div>
                   <div className="navigation-arrow-box">
-                    <i class="fa-solid fa-location-arrow"></i>
+                    <i className="fa-solid fa-location-arrow"></i>
                   </div>
                   <div data-hover-bounds></div>
                 </motion.button>

@@ -16,7 +16,6 @@ export const Navigation = () => {
   const [menu, setMenu] = useState(false);
   const menuContentRef = useRef(null);
   const menuNavRef = useRef(null);
-  const menuContainerRef = useRef(null);
   const menuSocialRef = useRef(null);
 
   useEffect(() => {
@@ -39,17 +38,6 @@ export const Navigation = () => {
     tl.fromTo(
       menuNavRef.current,
       { transform: "translate3d(0, 5vh, 0) rotate(5deg)" },
-      {
-        transform: "translate3d(0, 0, 0) rotate(0deg)",
-        duration: 0.5,
-        ease: customEase,
-      },
-      0
-    );
-
-    tl.fromTo(
-      menuContainerRef.current,
-      { transform: "translate3d(0, 5vh, 0) rotate(-5deg)" },
       {
         transform: "translate3d(0, 0, 0) rotate(0deg)",
         duration: 0.5,

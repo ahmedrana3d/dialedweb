@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, Suspense } from "react";
 import {  RotatingHeader, useAnimateSmallHeadline, useAnimateText } from "../ScrollAnimations";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls } from "@react-three/drei";
-import BalloonModel from "../BalloonModel";
 import Accordion from "../Accordion";
 
 export const Section4 = () => {
@@ -25,19 +24,19 @@ export const Section4 = () => {
                 <div className="why-us-right">
 
                   <div className="why-us-right-row left">
-                    <i class="fa-solid fa-fire why-us-icon"></i>
+                    <i className="fa-solid fa-fire why-us-icon"></i>
                     <h1 className="why-us-text-title" >High performance</h1>
                     <p className="why-us-text-description" >Utilizes the power of the Graphics Processing Unit, rendering complex graphics and animations to handle large volumes of data at high frame rates. </p>
                   </div>
 
                   <div className="why-us-right-row center">
-                    <i class="fa-solid fa-cube why-us-icon"></i>
+                    <i className="fa-solid fa-cube why-us-icon"></i>
                     <h1 className="why-us-text-title" >Interactivity</h1>
                     <p className="why-us-text-description" >Supports real-time interactions where users can navigate 3D environments, manipulate objects, and experience dynamic content.</p>
                   </div>
 
                   <div className="why-us-right-row right">
-                    <i class="fa-solid fa-link why-us-icon"></i>
+                    <i className="fa-solid fa-link why-us-icon"></i>
                     <h1 className="why-us-text-title" >Cross-Platform Compatibility</h1>
                     <p className="why-us-text-description" >Designed to work flawlessly on a range of devices in order to allow users to enjoy our websites whether they are on a high-end desktop or a mobile device.</p>
                   </div>
@@ -52,19 +51,19 @@ export const Section4 = () => {
                 <div className="why-us-right">
 
                   <div className="why-us-right-row">
-                  <i class="fa-solid fa-globe why-us-icon"></i>
+                  <i className="fa-solid fa-globe why-us-icon"></i>
                     <h1 className="why-us-text-title" >International Clientele</h1>
                     <p className="why-us-text-description" >Our services have a global appeal which allows us to attract clients worldwide and understand the nuances of different markets.</p>
                   </div>
 
                   <div className="why-us-right-row">
-                    <i class="fa-solid fa-language why-us-icon"></i>
+                    <i className="fa-solid fa-language why-us-icon"></i>
                     <h1 className="why-us-text-title" >Multi-Lingual Team</h1>
                     <p className="why-us-text-description" >Our team’s diverse linguistic skills enable us to communicate with clients worldwide. We offer our services in multiple languages, ensuring clear and efficient communication.</p>
                   </div>
 
                   <div className="why-us-right-row">
-                    <i class="fa-solid fa-map why-us-icon"></i>
+                    <i className="fa-solid fa-map why-us-icon"></i>
                     <h1 className="why-us-text-title" >Global Market Insights</h1>
                     <p className="why-us-text-description" >Our team’s international background gives us deep insights into different markets, tailoring our solutions to meet specific regional requirements.</p>
                   </div>
@@ -80,19 +79,19 @@ export const Section4 = () => {
                 <div className="why-us-right">
 
                   <div className="why-us-right-row">
-                    <i class="fa-solid fa-user why-us-icon"></i>
+                    <i className="fa-solid fa-user why-us-icon"></i>
                     <h1 className="why-us-text-title" >Personalized Service</h1>
                     <p className="why-us-text-description" >We commence with thorough consultations to understand your vision and requirements, ensuring our services align seamlessly with your brand.</p>
                   </div>
 
                   <div className="why-us-right-row">
-                    <i class="fa-solid fa-key why-us-icon"></i>
+                    <i className="fa-solid fa-key why-us-icon"></i>
                     <h1 className="why-us-text-title" >Collaborative Development</h1>
                     <p className="why-us-text-description" >We maintain continuous communication throughout development, ensuring the final product meets and exceeds your expectations.</p>
                   </div>
 
                   <div className="why-us-right-row">
-                    <i class="fa-solid fa-handshake why-us-icon"></i>
+                    <i className="fa-solid fa-handshake why-us-icon"></i>
                     <h1 className="why-us-text-title" >Dedicated Partnership</h1>
                     <p className="why-us-text-description" >We see clients as long-term partners, committed to your success with ongoing support and strategic advice to enhance your client’s web experiences.</p>
                   </div>
