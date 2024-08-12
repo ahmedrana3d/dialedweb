@@ -12,7 +12,7 @@ export const Section4 = () => {
 
     return (
       <>
-        <section className="four">
+        <section className="section four">
           <div className="four-content">
             <h1 className="headline four-animate-text" >Why Us</h1>
             <div className="why-us-container">

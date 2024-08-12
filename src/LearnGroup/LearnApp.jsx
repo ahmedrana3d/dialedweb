@@ -3,7 +3,7 @@ import './App.css'
 import Learn from './Learn'
 const LearnApp = () => {
   return (
-    <div>
+    <div className='learn-more-overflow' >
       <Learn />
     </div>
   )

@@ -30,7 +30,7 @@ export const Section7 = () => {
 
     return (
       <>
-        <section className="seven">
+        <section className="section seven">
           <div className="seven-content">
             <h1 className="headline seven-titles" >Our Process</h1>
               <div className="seven-accordion">

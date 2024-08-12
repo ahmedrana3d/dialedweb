@@ -14,7 +14,7 @@ export const Section5 = () => {
   useAnimateText(".five-title");
 
   return (
-    <section className="five" >
+    <section className="section five" >
     <div className="background-element-two" />
     <div className="background-element-grid-two" />
       <div className="five-content">

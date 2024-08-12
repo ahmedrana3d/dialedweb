@@ -73,7 +73,7 @@ const hoverSoundMobile = () => {
 
   return (
     <>
-      <section className="one">
+      <section className="section one">
       <div className="background-element-small" />
       <div className="background-element-grid-small" />
         <div className="one-content">

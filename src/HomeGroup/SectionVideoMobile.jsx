@@ -28,7 +28,7 @@ export const SectionVideoMobile = () => {
 
     return (
         <>
-            <section className="scroll-video-on-scroll hover-area" data-cursor-text="SCROLL">
+            <section className="section scroll-video-on-scroll hover-area" data-cursor-text="SCROLL">
                 <div className="scroll-video-on-scroll-items">
                     <div className="scroll-video-items-wrapper">
                         <h1 className="scroll-section-headline scroll-headline-1">Grow</h1>

@@ -11,6 +11,7 @@ import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
 import { initializeCursors } from "../Cursor";
 import { Section5Mobile } from "./Section5Mobile";
+import '../styles.css'
 
 const Home = () => {
   const isMobile = window.innerWidth <= 768;

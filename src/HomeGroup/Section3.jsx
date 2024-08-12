@@ -75,7 +75,7 @@ export const Section3 = () => {
 
   return (
     <>
-      <section className="three">
+      <section className="section three">
         <img className="scroll-indicator" src="/scroll3.gif" alt="" />
         {!isMobile && (
           <div className="three-content-box-right">

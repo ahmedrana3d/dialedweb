@@ -48,7 +48,7 @@ if (window.innerWidth > 768) {
 }
   });
 
-  useGSAP(() => {
+  useEffect(() => {
     const split = new SplitText(textRef.current, { type: "words, chars" });
 
     gsap.fromTo(
@@ -101,7 +101,7 @@ if (window.innerWidth > 768) {
       },
       });
 
-  });
+    }, []);
 
   return (
     <div className="w-screen h-[100vh] flex justify-center items-center bg-transparent">

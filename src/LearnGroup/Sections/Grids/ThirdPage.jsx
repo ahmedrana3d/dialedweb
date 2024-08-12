@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap, { ScrollTrigger, SplitText, TextPlugin } from 'gsap/all';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
@@ -11,7 +11,7 @@ const ThirdPage = () => {
   const headText2Ref = useRef(null);
   const svgPath = useRef(null);
 
-  useGSAP(() => {
+  useEffect(() => {
     const splitPara = new SplitText(paraRef.current, { type: "words, chars" });
     const splitHead1 = new SplitText(headText1Ref.current, { type: "words" });
     const splitHead2 = new SplitText(headText2Ref.current, { type: "words" });
@@ -109,7 +109,7 @@ const ThirdPage = () => {
       },
     });
 
-  });
+  }, []);
 
   return (
     <div className='w-screen h-auto bg-black flex flex-col items-center gap-12 md:gap-0 md:items-start '>

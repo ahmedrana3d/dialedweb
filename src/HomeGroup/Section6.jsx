@@ -8,7 +8,7 @@ export const Section6 = () => {
 
     return (
       <>
-        <section className="six">
+        <section className="section six">
           <div className="six-content">
 
             <h1 className="headline six-content-headline" >Our Services</h1>

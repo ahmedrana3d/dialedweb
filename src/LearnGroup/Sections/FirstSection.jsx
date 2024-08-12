@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
@@ -6,10 +6,10 @@ import Meteors from "../Components/Styles/Meteor";
 gsap.registerPlugin(SplitText);
 
 const FirstSection = () => {
-  const headText = useRef();
+  const headText = useRef(true);
   const el = useRef();
 
-  useGSAP(() => {
+  useEffect(() => {
     if (headText.current) {
       const tl = gsap.timeline();
 
@@ -59,7 +59,7 @@ const FirstSection = () => {
         }
       );
     }
-  });
+  }, []);
 
   return (
     <>

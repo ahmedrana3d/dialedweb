@@ -39,7 +39,7 @@ export const Section2 = () => {
 
   return (
     <>
-      <section className="two">
+      <section className="section two">
         <div className="two-content">
             <h1 className="headline two-title">Featured Projects</h1>
             <div className="two-images-container">

@@ -16,7 +16,7 @@ export const Section5Mobile = () => {
     useAnimateText(".five-title-mobile")
 
   return (
-    <section className="fivemobile" >
+    <section className="section fivemobile" >
         <h1 className="headline five-title-mobile">Our Team</h1>
         <Swiper
             modules={[ Scrollbar, EffectCards, EffectFade, EffectCoverflow, Parallax ]}

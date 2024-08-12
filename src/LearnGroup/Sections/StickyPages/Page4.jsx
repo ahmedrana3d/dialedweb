@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,10 +16,10 @@ import 'swiper/css/navigation';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Page4 = () => {
-  const statRef = useRef();
+  const statRef = useRef(true);
 
 
-useGSAP(() => {
+useEffect(() => {
   if (statRef.current) {
 
     const animationsTriggered = {};
@@ -128,7 +128,7 @@ tl.fromTo(statRef.current, { translateY: "-44%" }, { translateY: "-70%", ease: "
 
 
   }
-});
+}, []);
 
 
 function takeToElement(element) {
@@ -386,7 +386,8 @@ function takeToElement(element) {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView={1}
+        slidesPerGroup={1}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -468,21 +469,6 @@ function takeToElement(element) {
       </Swiper>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </>
   );
 };

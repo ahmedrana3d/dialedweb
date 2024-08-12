@@ -8,7 +8,7 @@ export const SectionFAQ = () => {
       };
       
       return (
-        <section className="seven">
+        <section className="section seven">
         <div className="background-element-one" />
         <div className="background-element-two" />
           <div className="seven-content" >

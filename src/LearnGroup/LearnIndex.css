@@ -33,6 +33,10 @@
     font-family: "Inter", sans-serif;
 }
 
+.learn-more-overflow {
+  overflow-x: hidden;
+}
+
 
 
 .sf-bold {

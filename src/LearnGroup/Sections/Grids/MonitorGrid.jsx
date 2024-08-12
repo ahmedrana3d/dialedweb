@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
@@ -21,7 +21,7 @@ const MonitorGrid = () => {
   const [isFollowed, setIsFollowed] = useState(false);
 
 
-  useGSAP(() => {
+  useEffect(() => {
     const split = new SplitText(textRef.current, { type: "words, chars" });
 
     gsap.fromTo(
@@ -62,7 +62,7 @@ const MonitorGrid = () => {
       }
     );
 
-  });
+  }, []);
 
   return (
 <div className="w-screen h-[100vh] flex justify-center items-center bg-transparent  " 
