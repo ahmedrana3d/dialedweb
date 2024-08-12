@@ -121,7 +121,6 @@ function App() {
             <Route path="/projects/:visualization/contemporary-home" element={ <VisualizationSub6 /> } />
             <Route path="/projects/:visualization/cityscapes" element={ <VisualizationSub7 /> } />
             <Route path="/projects/:visualization/urban-hideaway" element={ <VisualizationSub8 /> } />
-            <Route path="/learn-more" element={ <Learnmain /> } />
           </Routes>
         </AnimatePresence>
 {/* 
