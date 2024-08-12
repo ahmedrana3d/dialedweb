@@ -22,6 +22,7 @@ import VisualizationSub6 from "./Visualization/VisualizationSub6";
 import { CaseStudySeltzers } from "./CaseStudies/Seltzers";
 import VisualizationSub7 from "./Visualization/VisualizationSub7";
 import VisualizationSub8 from "./Visualization/VisualizationSub8";
+import Learnmain from "./LearnGroup/learnmain";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -126,6 +127,7 @@ function App() {
             <Route path="/projects/:visualization/urban-hideaway" element={ <VisualizationSub8 /> } />
             <Route path="/ourservices" element={ <OurServices /> } />
             <Route path="/realestate" element={ <RealEstatePortfolio /> } />
+            <Route path="/learn-more" element={ <Learnmain /> } />
           </Routes>
         </AnimatePresence>
 {/* 
