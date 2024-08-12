@@ -6,11 +6,13 @@ import { NextUIProvider } from '@nextui-org/react'
 
 createRoot(document.getElementById('root')).render(
   <>
+      <NextUIProvider>
     <Router>
       <Routes>
         <Route path="/*" element={ <App /> } />
       </Routes>
     </Router>
+    </NextUIProvider>
   </>
 )
 
