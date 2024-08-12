@@ -42,7 +42,8 @@
     "typescript": "^5.5.3",
     "typewriter-effect": "^2.21.0",
     "use-sound": "^4.0.3",
-    "vecteur": "^0.2.0"
+    "vecteur": "^0.2.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
