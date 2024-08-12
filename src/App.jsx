@@ -30,10 +30,8 @@ const LoadingScreen = ({ onLoaded }) => {
   }, [progress, onLoaded]);
 
   return (
-    <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
-      <div className="loading-screen__container">
-        <img className="contact-video" src="/loading.gif" alt="" />
-      </div>
+    <div className={`website-loading-screen ${active ? "" : "website-loading-screen--hidden"}`}>
+        <img className="website-loading-video" src="/loading.gif" alt="" />
     </div>
   );
 };

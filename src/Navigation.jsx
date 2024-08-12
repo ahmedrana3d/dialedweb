@@ -228,16 +228,16 @@ export const Navigation = () => {
           onMouseLeave={hoverSoundEnd}
           data-hover
         >
-          <div className="navigation-left-content">
             {isMobile ? (
               <i className="fa-solid fa-bars"></i>
             ) : (
               <>
-                <span className="navigation-text">MENU</span>
-                <span className="navigation-text">MENU</span>
+                <div className="navigation-left-content">
+                  <span className="navigation-text">MENU</span>
+                  <span className="navigation-text">MENU</span>
+                </div>
               </>
             )}
-          </div>
           <div data-hover-bounds></div>
         </motion.button>
         <Link to="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }} className="navigation-center">
@@ -252,16 +252,16 @@ export const Navigation = () => {
           onMouseLeave={hoverSoundEnd}
           data-hover
         >
-          <div className="navigation-right-content">
             {isMobile ? (
               <i className="fa-solid fa-envelope"></i>
             ) : (
               <>
-                <span className="navigation-text">GET IN TOUCH</span>
-                <span className="navigation-text">GET IN TOUCH</span>
+                <div className="navigation-right-content">
+                  <span className="navigation-text">GET IN TOUCH</span>
+                  <span className="navigation-text">GET IN TOUCH</span>
+                </div>
               </>
             )}
-          </div>
           <div data-hover-bounds></div>
         </motion.button>
       </div>

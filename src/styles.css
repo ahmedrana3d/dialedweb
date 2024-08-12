@@ -446,8 +446,8 @@ section {
   height: 100vh;
   z-index: 1;
   display: flex;
-  margin-top: 10vh;
   background-color: #010001;
+  padding-top: 10vh;
 }
 
 .contact-overlay-left {
@@ -2946,7 +2946,7 @@ section {
 
 /* LOADING SCREEN DESKTOP */
 
-.loading-screen {
+.website-loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -2966,12 +2966,12 @@ section {
   pointer-events: all;
 }
 
-.loading-video {
+.website-loading-video {
   position: relative;
-  width: 50%;
+  width: 20%;
 }
 
-.loading-screen--hidden {
+.website-loading-screen--hidden {
   animation: fade-out 0.25s ease-in-out forwards 0.25s;
 }
 
@@ -3036,6 +3036,11 @@ html.lenis, html.lenis body {
 /* MOBILE STYLING */
 
 @media (max-width: 768px) {
+
+  .website-loading-video {
+    position: relative;
+    width: 70%;
+  }
 
   .scroll-indicator {
     display: none;
@@ -3443,7 +3448,6 @@ input {
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
 }
 
 .contact-overlay-left {
@@ -4660,7 +4664,7 @@ input {
 }
 
 .box-between-words-small {
-  height: 10vw;
+  height: 8vw;
   align-self: center;
   justify-self: center;
   width: 3rem;
@@ -4670,7 +4674,7 @@ input {
 }
 
 .box-between-words-big {
-  height: 15vw;
+  height: 8vw;
   width: 5rem;
   border-radius: 15px;
   background-size: cover;
