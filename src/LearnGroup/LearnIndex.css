@@ -9,7 +9,7 @@
 }
 body{
   overflow-x: hidden;
-  background-color: black;
+  background-color: #111111;
 }
 
 *, *::before, *::after {
