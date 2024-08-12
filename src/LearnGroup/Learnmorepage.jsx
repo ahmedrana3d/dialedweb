@@ -4,7 +4,7 @@ import LearnApp from "./LearnApp";
 import './LearnIndex.css'
 import { NextUIProvider } from '@nextui-org/react'
 
-const LearnMain = () => {
+const Learnmorepage = () => {
 
   return (
     <>
@@ -15,4 +15,4 @@ const LearnMain = () => {
   );
 };
 
-export default transition(LearnMain);
+export default transition(Learnmorepage);
