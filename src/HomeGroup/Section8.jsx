@@ -11,15 +11,28 @@ import { Fluid } from "@whatisjery/react-fluid-distortion";
 
 export const Section8 = () => {
 
-  useAnimateText(".eight-main-title")
-
   const navigate = useNavigate();
 
   const handleNavigateClick = (linkUrl) => {
     navigate(linkUrl);
   };
 
-const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    // Function to update isMobile based on window size
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
 const hoverSound = new Audio('/fx.mp3');
 

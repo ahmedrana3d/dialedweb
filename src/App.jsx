@@ -15,7 +15,6 @@ import VisualizationSub3 from "./Visualization/VisualizationSub3";
 import VisualizationSub4 from "./Visualization/VisualizationSub4";
 import VisualizationSub5 from "./Visualization/VisualizationSub5";
 import VisualizationSub6 from "./Visualization/VisualizationSub6";
-import { CaseStudySeltzers } from "./CaseStudies/Seltzers";
 import VisualizationSub7 from "./Visualization/VisualizationSub7";
 import VisualizationSub8 from "./Visualization/VisualizationSub8";
 import Learnmorepage from "./LearnGroup/Learnmorepage";
@@ -109,7 +108,6 @@ function App() {
             <Route index element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
-            <Route path="/projects/seltzers" element={ <CaseStudySeltzers /> } />
             <Route path="/projects/visualization" element={ <Visualization /> } />
             <Route path="/projects/:visualization/the-manor" element={ <VisualizationSub /> } />
             <Route path="/projects/:visualization/modern-beverly-hills-mansion" element={ <VisualizationSub2 /> } />

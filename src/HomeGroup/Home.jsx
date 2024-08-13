@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Section1 } from "./Section1";
 import { Section3 } from "./Section3";
 import { Section4 } from "./Section4";
@@ -14,17 +14,31 @@ import { Section5Mobile } from "./Section5Mobile";
 import '../styles.css'
 
 const Home = () => {
-  const isMobile = window.innerWidth <= 768;
   const section3Ref = useRef(null);
   const section6Ref = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    // Function to update isMobile based on window size
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    initializeCursors();
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Scroll to the top of the page when the component mounts or updates
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    initializeCursors();
   }, []);
 
   return (

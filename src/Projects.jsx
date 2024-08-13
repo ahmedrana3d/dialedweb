@@ -88,7 +88,7 @@ const SectionProjects = () => {
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("seltzers") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick("https://dialedwebseltzers.vercel.app/") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
                       <img src="/project7.png" alt="Project 2" />
@@ -105,15 +105,15 @@ const SectionProjects = () => {
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://apple-vision-pro-immersive-website.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.liranstalik.com/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project3.png" alt="Project 3" />
+                      <img src="/stalikproject.png" alt="Project 3" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Apple Vision</p>
+                      <p className="project-text-title" >Liran Stalik</p>
                     </div>
                     <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2023)</p>
@@ -122,15 +122,15 @@ const SectionProjects = () => {
               </ParallaxProvider>
     
               <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://mographs.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://vitalenta.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/diginew.png" alt="Project 4" />
+                      <img src="/vitalentaproject.jpg" alt="Project 4" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
-                      <p className="project-text-title" >Mographs</p>
+                      <p className="project-text-title" >Vita Lenta</p>
                     </div>
                     <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>
