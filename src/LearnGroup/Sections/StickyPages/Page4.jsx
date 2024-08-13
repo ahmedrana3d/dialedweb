@@ -195,7 +195,7 @@ function takeToElement(element) {
                 className="tes-scroll-content w-4/5 text-center md:text-start absolute flex flex-col gap-80 md:pl-[2.03rem] md:pr-[.2rem] top-[calc(((71vh-20.3rem)/2)*-1)]"
                 style={{ transform: "translate(0px, 13%)" }}
               >
-                <div className="min-h-[15.6rem] user-engagement tes-content h-screen gap-[10rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] user-engagement tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.2vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Increase User Engagement with Interactivity
                   </h6>
@@ -214,7 +214,7 @@ function takeToElement(element) {
                   </div>
 
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Transform Sales with 3D Product Configurations
                   </h6>
@@ -230,7 +230,7 @@ function takeToElement(element) {
                     />
                   </div>
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Avoid Losing Customers, Enhance User Experience
                   </h6>
@@ -247,7 +247,7 @@ function takeToElement(element) {
                     />
                   </div>
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Get ahead of the curve.
                   </h6>
