@@ -63,7 +63,7 @@ const FirstSection = () => {
 
   return (
     <>
-        <div ref={el} className="w-screen !h-screen relative    flex justify-center items-center md:items-start flex-col  font-sf-bold  bg-black z-10">
+        <div ref={el} className="w-screen !h-screen relative    flex justify-center items-center md:items-start flex-col    bg-black z-10">
             <Meteors number={20} />
 
             <div className="background-element hidden md:block" bis_skin_checked="1"></div>
@@ -74,7 +74,7 @@ const FirstSection = () => {
          <h1
          
         ref={headText}
-        className="text-gray-50 text-[9vw] md:text-[7vw] md:text-start text-center mb-16 md:mb-0 uppercase md:mx-32 leading-[1.1] md:leading-[1]"
+        className="text-gray-50 text-[9vw] md:text-[7vw] md:text-start text-center mb-16 md:mb-0 font-sf-pro uppercase md:mx-32 leading-[1.1] md:leading-[1]"
       >
         {["how do these", "features actually", 
           <><span className="bg-gradient-to-b  bg-clip-text  text-transparent from-white dark:to-slate-900/10">boost</span> your digital</>, 

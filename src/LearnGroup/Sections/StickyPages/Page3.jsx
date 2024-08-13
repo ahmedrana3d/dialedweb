@@ -35,6 +35,9 @@ const Page3 = () => {
                     scrub: true,
                     pin: true,
                     // pinSpacing: true,
+                    onEnter: () => {
+                      ScrollTrigger.refresh();
+                    },
                 }
             });
     
@@ -62,28 +65,6 @@ const Page3 = () => {
 
 
 
-
-            // const path = svgPath.current;
-            // const pathLength = path.getTotalLength();
-            // path.style.strokeDasharray = pathLength;
-            // path.style.strokeDashoffset = pathLength;
-        
-            // gsap.fromTo(
-            //   path,
-            //   { strokeDashoffset: pathLength },
-            //   {
-            //     strokeDashoffset: 0,
-            //     scrollTrigger: {
-            //       trigger: path,
-            //       start: "top center",
-            //       end: "bottom top",
-            //       scrub: true,
-            //     },
-            //   }
-            // );
-
-
-
 gsap.to(".clip-path-svg", {
     duration: 1,
     clipPath: "inset(0px 0px calc(10%))",
@@ -106,31 +87,7 @@ gsap.to(".clip-path-svg", {
 
 
 
-{/* <svg
-        className='absolute w-screen h-[250vw] md:h-[150vw]  hidden left-0'
-        width="100%"
-        height="100%"
-        viewBox="0 0 1000 1500"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <path
-          ref={svgPath}
-          d="M-13 17.5C-46.2521 -28.3137 475.634 302.292 320 455C233.7 531.813 122.952 458.201 166.5 344.5C193.788 273.253 330.649 117.107 510.5 393C547.281 449.422 538.5 504.5 609.5 476.5C680.5 448.5 727.243 671 774.5 671C935.994 672.176 1039.92 724.796 1072.5 781"
-          stroke="url(#paint0_linear_79_8)"
-          strokeLinecap="round"
-          strokeWidth="16"
-          strokeLinejoin="round"
-        />
-<defs>
-<linearGradient id="paint0_linear_79_8" x1="517.199" y1="4.05438" x2="517.199" y2="671" gradientUnits="userSpaceOnUse">
-<stop stopColor="#808080"/>
-<stop offset="0.0001" stopColor="#C1C1C1"/>
-<stop offset="1" stopColor="#514F4F"/>
-</linearGradient>
-</defs>
-      </svg> */}
+
 
       <div style={{ clipPath: 'inset(0px 0px calc(110%))' }} className=" absolute flex w-full justify-center clip-path-svg  md:hidden">
       <svg
