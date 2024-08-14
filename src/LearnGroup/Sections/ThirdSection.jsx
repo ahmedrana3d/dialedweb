@@ -3,14 +3,11 @@ import MonitorGrid from "./Grids/MonitorGrid";
 import ThirdPage from "./Grids/ThirdPage";
 
 const ThirdSection = () => {
-
-
   return (
-  <>
-
-<ThirdPage/>
-  <ChessboardGrid/>
-<MonitorGrid/>
+    <>
+      <ThirdPage />
+      <ChessboardGrid />
+      <MonitorGrid />
     </>
   );
 };
