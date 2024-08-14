@@ -9,7 +9,7 @@ const LearnApp = () => {
   }, []);
 
   return (
-    <div className='learn-more-overflow' >
+    <div className='learn-more-overflow overflow-x-hidden' >
       <Learn />
     </div>
   )
