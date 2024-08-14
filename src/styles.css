@@ -3678,7 +3678,7 @@ input {
 /* SECTION THREE */
 
 .three {
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3703,7 +3703,7 @@ input {
 
 .three-content {
   width: 90%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -3842,7 +3842,7 @@ input {
 .slider-container {
   position: absolute;
   right: 10%;
-  bottom: 15vh; /* Adjust vertical position as needed */
+  bottom: 11vh; /* Adjust vertical position as needed */
   width: 80%; /* Adjust width of the slider container */
   pointer-events: all;
 }
@@ -3884,14 +3884,6 @@ input {
   flex-direction: column;
   position: relative;
   z-index: auto;
-}
-
-.four-experience {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
 }
 
 .four-content {
@@ -3948,7 +3940,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 15vh;
+  height: fit-content;
   gap: 5vw;
   padding: 5%;
   border: 1px solid #fefeff50;
@@ -3957,11 +3949,11 @@ input {
 }
 
 .why-us-right-row:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   padding-bottom: 5%;
-  height: 30vh;
+  height: fit-content;
   z-index: 10;
-  border: 2px solid #fefeff;
+  border: 1px solid #fefeff;
 }
 
 /* .left {

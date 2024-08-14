@@ -119,7 +119,7 @@ const hoverSoundMobile = () => {
                 rainbow={false}
                 blend={0}
                 showBackground={false}
-                fluidColor="#515151"
+                fluidColor="black"
                 />
               </EffectComposer>
             </>
