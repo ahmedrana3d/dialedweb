@@ -381,7 +381,7 @@ function takeToElement(element) {
 <section className=" flex justify-center items-center md:hidden h-screen w-screen">
 
 
-<Swiper
+      <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -399,21 +399,21 @@ function takeToElement(element) {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container flex justify-center items-center"
       >
-<SwiperSlide>
-  <img src="./soda_image.jpg" alt="slide_image" 
-       width={1000}
-       height={1000}
-       className="h-[20rem] object-cover rounded-[2rem] w-11/12"
-  />
-  <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
-    <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
-      Increase User Engagement with Interactivity
-    </h6>
-    <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
-      Websites with interactive elements see a 40% increase in user time spent on site
-    </h6>
-  </div>
-</SwiperSlide>
+        <SwiperSlide>
+          <img src="./soda_image.jpg" alt="slide_image" 
+            width={1000}
+            height={1000}
+            className="h-[20rem] object-cover rounded-[2rem] w-11/12"
+          />
+            <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
+              <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
+                Increase User Engagement with Interactivity
+              </h6>
+              <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
+                Websites with interactive elements see a 40% increase in user time spent on site
+              </h6>
+            </div>
+        </SwiperSlide>
 
         <SwiperSlide>
           <img src="./car_image.jpg" alt="slide_image" 
