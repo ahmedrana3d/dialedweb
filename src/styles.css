@@ -3703,7 +3703,7 @@ input {
 
 .three-content {
   width: 90%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -3842,7 +3842,7 @@ input {
 .slider-container {
   position: absolute;
   right: 10%;
-  bottom: 15vh; /* Adjust vertical position as needed */
+  bottom: 11vh; /* Adjust vertical position as needed */
   width: 80%; /* Adjust width of the slider container */
   pointer-events: all;
 }
