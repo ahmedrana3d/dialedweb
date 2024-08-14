@@ -1,7 +1,6 @@
-import { useGSAP } from '@gsap/react';
-import gsap, { ScrollTrigger, SplitText, TextPlugin } from 'gsap/all';
-import React, { useEffect, useRef } from 'react';
-
+import { useGSAP } from "@gsap/react";
+import gsap, { ScrollTrigger, SplitText, TextPlugin } from "gsap/all";
+import React, { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -66,7 +65,7 @@ const ThirdPage = () => {
         ease: "power3.out",
         stagger: {
           each: 0.3,
-          from: 'end',
+          from: "end",
         },
         scrollTrigger: {
           trigger: headText2Ref.current,
@@ -96,8 +95,6 @@ const ThirdPage = () => {
       }
     );
 
-
-
     gsap.to(headText1Ref.current, {
       x: "18%",
       scrollTrigger: {
@@ -108,13 +105,12 @@ const ThirdPage = () => {
         // markers: true,
       },
     });
-
   }, []);
 
   return (
-    <div className='w-screen h-auto bg-black flex flex-col items-center gap-12 md:gap-0 md:items-start '>
+    <div className="w-screen h-auto bg-black flex flex-col items-center gap-12 md:gap-0 md:items-start ">
       <svg
-        className='absolute w-screen h-[250vw] md:h-[150vw] left-0'
+        className="absolute w-screen h-[250vw] md:h-[150vw] left-0"
         width="100%"
         height="100%"
         viewBox="0 0 1000 1500"
@@ -130,39 +126,63 @@ const ThirdPage = () => {
           strokeWidth="16"
           strokeLinejoin="round"
         />
-<defs>
-<linearGradient id="paint0_linear_79_8" x1="517.199" y1="4.05438" x2="517.199" y2="671" gradientUnits="userSpaceOnUse">
-<stop stopColor="#808080"/>
-<stop offset="0.0001" stopColor="#C1C1C1"/>
-<stop offset="1" stopColor="#514F4F"/>
-</linearGradient>
-</defs>
+        <defs>
+          <linearGradient
+            id="paint0_linear_79_8"
+            x1="517.199"
+            y1="4.05438"
+            x2="517.199"
+            y2="671"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#808080" />
+            <stop offset="0.0001" stopColor="#C1C1C1" />
+            <stop offset="1" stopColor="#514F4F" />
+          </linearGradient>
+        </defs>
       </svg>
 
-      <div className='w-full  '>
-        <div className='overflow-hidden w-full'>
-          <div ref={headText1Ref} className='text-[9vw] md:text-[8vw] font-sf-bold text-gray-50 tracking-tight leading-tight pl-6 md:pl-12'>Great Experiences</div>
+      <div className="w-full  ">
+        <div className="overflow-hidden w-full">
+          <div
+            ref={headText1Ref}
+            className="text-[9vw] md:text-[8vw] font-sf-bold text-gray-50 tracking-tight leading-tight pl-6 md:pl-12"
+          >
+            Great Experiences
+          </div>
         </div>
-        <div className='overflow-hidden'>
-          <div ref={headText2Ref} className=' text-[9vw] md:text-[8vw] font-sf-bold text-gray-50 tracking-tight leading-tight pl-6 md:pl-12'>Build Loyalty</div>
+        <div className="overflow-hidden">
+          <div
+            ref={headText2Ref}
+            className=" text-[9vw] md:text-[8vw] font-sf-bold text-gray-50 tracking-tight leading-tight pl-6 md:pl-12"
+          >
+            Build Loyalty
+          </div>
         </div>
       </div>
 
-      <div className='w-full  md:pr-[9vw] text-left md:text-left mt-8 flex  justify-center md:justify-end'>
-        <div ref={paraRef} className=' w-4/5 md:w-[35vw] mr-0 md:mr-8 one-description'>
-          A negative experience on a website will deter 88% of online consumers from revisiting, and 79% of consumers who encounter performance issues are less likely to buy from that site again, highlighting the critical importance of  for maintaining customer loyalty and sales.
+      <div className="w-full  md:pr-[9vw] text-left md:text-left mt-8 flex  justify-center md:justify-end">
+        <div
+          ref={paraRef}
+          className=" w-4/5 md:w-[35vw] mr-0 md:mr-8 one-description"
+        >
+          A negative experience on a website will deter 88% of online consumers
+          from revisiting, and 79% of consumers who encounter performance issues
+          are less likely to buy from that site again, highlighting the critical
+          importance of for maintaining customer loyalty and sales.
         </div>
       </div>
 
-
-<div className=' z-10 w-full flex justify-center md:justify-start md:pl-32'>
-
-
-<video className=' w-[90%] rounded-3xl md:w-2/5' src="./video2.mp4"  playsInline muted autoPlay loop></video>
-
-</div>
-
-
+      <div className=" z-10 w-full flex justify-center md:justify-start md:pl-32">
+        <video
+          className=" w-[90%] rounded-3xl md:w-2/5"
+          src="./video2.mp4"
+          playsInline
+          muted
+          autoPlay
+          loop
+        ></video>
+      </div>
     </div>
   );
 };
