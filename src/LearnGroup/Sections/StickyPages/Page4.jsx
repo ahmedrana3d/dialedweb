@@ -48,10 +48,9 @@ const updateOpacity = (element, scale) => {
 };
 
 const highlightText = (element) => {
-    gsap.to(`.tes-button.${element}`, { opacity: 1, fontWeight: 500 });
+    gsap.to(`.tes-button.${element}`, { opacity: 1 });
       gsap.to(`.tes-button:not(.${element})`, {
         opacity: 0.5,
-        fontWeight: 400,
      });
 }
 
