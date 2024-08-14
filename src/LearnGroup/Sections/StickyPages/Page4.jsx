@@ -189,13 +189,13 @@ function takeToElement(element) {
           }}
         >
           <div className="relative w-full md:w-[57%] h-full overflow-hidden flex justify-center rounded-[3rem]">
-            <div className="relative w-full lg:w-[57%] h-full overflow-hidden mx-[3vw] ">
+            <div className="relative w-full lg:w-[100%] h-full overflow-hidden mx-[3vw] ">
               <div
                 ref={statRef}
-                className="tes-scroll-content w-full text-center md:text-start absolute flex flex-col gap-80 md:pl-[2.03rem] md:pr-[.2rem] top-[calc(((71vh-20.3rem)/2)*-1)]"
+                className="tes-scroll-content w-4/5 text-center md:text-start absolute flex flex-col gap-80 md:pl-[2.03rem] md:pr-[.2rem] top-[calc(((71vh-20.3rem)/2)*-1)]"
                 style={{ transform: "translate(0px, 13%)" }}
               >
-                <div className="min-h-[15.6rem] user-engagement tes-content h-screen gap-[6rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] user-engagement tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.2vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Increase User Engagement with Interactivity
                   </h6>
@@ -214,7 +214,7 @@ function takeToElement(element) {
                   </div>
 
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Transform Sales with 3D Product Configurations
                   </h6>
@@ -230,7 +230,7 @@ function takeToElement(element) {
                     />
                   </div>
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Avoid Losing Customers, Enhance User Experience
                   </h6>
@@ -247,7 +247,7 @@ function takeToElement(element) {
                     />
                   </div>
                 </div>
-                <div className="min-h-[15.6rem] tes-content h-screen gap-[3rem] flex flex-col justify-center">
+                <div className="min-h-[15.6rem] tes-content h-screen gap-[5rem] flex flex-col justify-center">
                   <h6 className="text-[1.64rem] md:text-[2.4vw] leading-snug font-sf-bold tracking-wide capitalize">
                     Get ahead of the curve.
                   </h6>
@@ -275,9 +275,9 @@ function takeToElement(element) {
               <img
                 alt=""
                 loading="lazy"
-                width="800"
+                width="1000"
                 height="1200"
-                className="w-[100%] origin-top absolute h-[16.8rem] lg:h-[34rem] top-[50%] rounded-[2rem] object-cover image-1"
+                className="w-[100%] origin-top absolute h-3/4 top-[50%] rounded-[2rem] object-cover image-1"
                 style={{
                   transform:
                     "translate(0%, -50%) translate(0px, 1rem) scale(0.9, 0.9)",
@@ -295,8 +295,8 @@ function takeToElement(element) {
                 alt=""
                 loading="lazy"
                 width="1000"
-                height="1000"
-                className="w-[100%] origin-top absolute h-[16.8rem] lg:h-[34rem] top-[50%] rounded-[2rem] object-cover image-2"
+                height="1200"
+                className="w-[100%] origin-top absolute h-3/4 top-[50%] rounded-[2rem] object-cover image-2"
                 style={{
                   transform:
                     "translate(0%, -50%) translate(0px, 0.35rem) scale(0.8, 0.8)",
@@ -313,9 +313,9 @@ function takeToElement(element) {
               <img
                 alt=""
                 loading="lazy"
-                width="800"
+                width="1000"
                 height="1200"
-                className="w-[100%] origin-top absolute h-[16.8rem] lg:h-[34rem] top-[50%] rounded-[2rem] object-cover image-3"
+                className="w-[100%] origin-top absolute h-3/4 top-[50%] rounded-[2rem] object-cover image-3"
                 style={{
                   transform:
                     "translate(0%, -50%) translate(0px, -0.3rem) scale(0.7, 0.7)",
@@ -329,9 +329,9 @@ function takeToElement(element) {
               <img
                 alt=""
                 loading="lazy"
-                width="800"
+                width="1000"
                 height="1200"
-                className="w-[100%] origin-top absolute h-[16.8rem] lg:h-[34rem] top-[50%] rounded-[2rem] object-cover image-4"
+                className="w-[100%] origin-top absolute h-3/4 top-[50%] rounded-[2rem] object-cover image-4"
                 style={{
                   transform:
                     "translate(0%, -50%) translate(0px, -0.95rem) scale(0.6, 0.6)",
