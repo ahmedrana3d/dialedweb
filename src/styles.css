@@ -3209,7 +3209,9 @@ html.lenis, html.lenis body {
 }
 
 .navigation-image {
-  height: 50%;
+  width: 17.5vw;
+  height: auto;
+  object-fit: cover;
 }
 
 .fa-bars, .fa-envelope {
@@ -3293,15 +3295,15 @@ input {
 /* SECTION ONE */
 
 .background-element-small {
-  width: 30dvh;
-  height: 110dvh;
+  width: 60vw;
+  height: 215vw;
   border-radius: 100%;
   background-color: #fefeff35;
   filter: blur(100px);
   opacity: 1;
   position: absolute;
-  left: 40dvh;
-  margin-top: -65dvh;
+  left: 80vw;
+  margin-top: -125vw;
   z-index: 0;
   transform: rotate(40deg);
   z-index: 1;
@@ -3312,28 +3314,32 @@ input {
   top: 0;
   right: 0;
   width: 80vw;
-  height: 60dvh;
+  height: 100vw;
   background-image: 
   linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
   linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 50px 50px; /* Adjust this value to change the grid size */
   z-index: 1;
+  /* 0.015 */
 }
 
+.one {
+  height: fit-content;
+}
 
 .one-content {
   width: 100%;
-  height: 90dvh;
+  height: fit-content;
   flex-direction: column-reverse;
-  padding: 10dvh 0%;
-  padding-top: 10dvh;
+  padding: 20vw 0%;
+  padding-top: 20vw;
 }
 
 .one-content-left {
-  height: 60%;
+  height: 80vw;
   width: 100%;
   margin-left: 0%;
-  gap: 4dvh;
+  gap: 7.5vw;
   text-align: center;
   align-items: center;
 }
@@ -3346,7 +3352,7 @@ input {
 }
 
 .one-content-right {
-  height: 40%;
+  height: 60vw;
   width: 100%;
 }
 
@@ -3385,7 +3391,7 @@ input {
 
 .one-content-logos {
   position: absolute;
-  bottom: 10dvh;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: fit-content;
@@ -3395,41 +3401,15 @@ input {
 
 .marquee-row {
   width: 250vw;
-  height: fit-content;
+  height: 5vw;
   display: flex;
   justify-content: space-around;
 }
 
 .marquee-image {
   position: relative;
-  height: 2.5dvh;
+  height: 5vw;
   width: auto;
-}
-
-.showreel-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100dvh;
-  z-index: 250;
-  background-color: #04021750;
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.showreel-video {
-  position: relative;
-  width: 70%;
-  height: auto;
-  border-radius: 25px;
-}
-
-.showreel-button {
-  position: absolute;
-  bottom: 12dvh;
 }
 
 .navigation-text {
@@ -3596,7 +3576,7 @@ input {
 /* SECTION TWO */
 
 .two {
-  height: fit-content;
+  height: 500vw;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3682,7 +3662,7 @@ input {
 /* SECTION THREE */
 
 .three {
-  height: 100dvh;
+  height: 200vw;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3691,8 +3671,7 @@ input {
   padding: 0 10%;
   align-items: end;
   padding-top: 0;
-  margin-top: 0dvh;
-  margin-top: -10dvh;
+  margin-top: 10vw;
 }
 
 .three-content-box-right {
@@ -3707,7 +3686,7 @@ input {
 
 .three-content {
   width: 90%;
-  height: 100%;
+  height: 200vw;
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -3794,7 +3773,7 @@ input {
 .container {
   position: relative;
   width: 100%;
-  height: 30dvh;
+  height: 60vw;
   pointer-events: all;
   display: flex;
   flex-direction: column;
@@ -3846,7 +3825,7 @@ input {
 .slider-container {
   position: absolute;
   right: 10%;
-  bottom: 11dvh; /* Adjust vertical position as needed */
+  bottom: 25vw; /* Adjust vertical position as needed */
   width: 80%; /* Adjust width of the slider container */
   pointer-events: all;
 }
