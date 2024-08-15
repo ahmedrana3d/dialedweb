@@ -190,7 +190,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <div className={`menu-container ${menu ? 'open' : ''}`} onClick={() => setMenu(!menu)}>
+      <div className={`menu-container z-50 ${menu ? 'open' : ''}`} onClick={() => setMenu(!menu)}>
         <div className="menu">
           <div className="menu-hover-close hover-area" data-cursor-text="CLOSE" />
           <div key="menuContent" className="menuContent" ref={menuContentRef}>

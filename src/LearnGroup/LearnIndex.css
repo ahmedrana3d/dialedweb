@@ -3,50 +3,58 @@
 @import url('https://fonts.cdnfonts.com/css/gt-alpina-trial');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-@font-face {
-  font-family: 'SFBOLD';
-  src: url('/SFBOLD.otf') format('OpenType');
-}
-
-@font-face {
-  font-family: 'SFMEDIUM';
-  src: url('/SFMEDIUM.otf') format('OpenType');
-}
-
-@font-face {
-  font-family: 'SFITALIC';
-  src: url('/SFITALIC.OTF') format('OTF');
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+@font-face {
+  font-family: "SFPRO";
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/fonts/inter_font.tff") format("truetype");
+}
+
+@font-face {
+  font-family: 'SFPRO Bold';
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+
+
+@font-face {
+  font-family: 'NB-International-Bold';
+  src: url("/fonts/number_font.otf") format("opentype");
+}
+
+
 
 .sf-pro {
-  font-family: "SFMEDIUM";
-  font-weight: normal;
+  font-family: "SFPRO";
 }
 
 .inter {
-    font-family: "Inter", sans-serif;
-}
-
-.learn-more-overflow {
-  overflow-x: hidden;
+  font-family: "Inter";
 }
 
 
 
 .sf-bold {
-  font-family: "SFBOLD";
-  font-weight: 700;
+  font-family: "SFPRO Bold";
 }
 
 .helvetica {
   font-family: "SFPRO Bold";
 }
+
+
+
+
+
 
 .background-element-grid {
   position: absolute;
