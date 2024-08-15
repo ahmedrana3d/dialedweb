@@ -95,6 +95,25 @@ function App() {
       console.error("section6Ref.current is null");
     }
   };
+
+  useEffect(() => {
+    // Function to update the --vh custom property and log it to the console
+    const updateVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      console.log(`--vh: ${vh}px`); // Log the vh value
+    };
+
+    // Set initial value
+    updateVh();
+
+    // Update on resize
+    window.addEventListener('resize', updateVh);
+
+    return () => {
+      window.removeEventListener('resize', updateVh);
+    };
+  }, []);
   
 
   return (
