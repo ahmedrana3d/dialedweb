@@ -3038,7 +3038,7 @@ html.lenis, html.lenis body {
 @media (max-width: 768px) {
 
   .section {
-    height: 100svh;
+    height: 100dvh;
   }
 
   .website-loading-video {
@@ -3220,7 +3220,7 @@ html.lenis, html.lenis body {
 
 .menu {
   width: 90vw;
-  gap: 5svh;
+  gap: 5dvh;
   border-radius: 15px;
 }
 
@@ -3240,7 +3240,7 @@ html.lenis, html.lenis body {
 
 .emailinput {
   padding: 2vw;
-  height: 6svh;
+  height: 6dvh;
   border-radius: 10px;
   font-size: 1rem;
 }
@@ -3264,7 +3264,7 @@ input {
 }
 
 .menuContent {
-  gap: 5svh;
+  gap: 5dvh;
   height: 100%;
 }
 
@@ -3293,15 +3293,15 @@ input {
 /* SECTION ONE */
 
 .background-element-small {
-  width: 30svh;
-  height: 110svh;
+  width: 30dvh;
+  height: 110dvh;
   border-radius: 100%;
   background-color: #fefeff35;
   filter: blur(100px);
   opacity: 1;
   position: absolute;
-  left: 40svh;
-  margin-top: -65svh;
+  left: 40dvh;
+  margin-top: -65dvh;
   z-index: 0;
   transform: rotate(40deg);
   z-index: 1;
@@ -3312,7 +3312,7 @@ input {
   top: 0;
   right: 0;
   width: 80vw;
-  height: 60svh;
+  height: 60dvh;
   background-image: 
   linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
   linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
@@ -3323,17 +3323,17 @@ input {
 
 .one-content {
   width: 100%;
-  height: 90svh;
+  height: 90dvh;
   flex-direction: column-reverse;
-  padding: 10svh 0%;
-  padding-top: 10svh;
+  padding: 10dvh 0%;
+  padding-top: 10dvh;
 }
 
 .one-content-left {
   height: 60%;
   width: 100%;
   margin-left: 0%;
-  gap: 4svh;
+  gap: 4dvh;
   text-align: center;
   align-items: center;
 }
@@ -3385,7 +3385,7 @@ input {
 
 .one-content-logos {
   position: absolute;
-  bottom: 10svh;
+  bottom: 10dvh;
   left: 0;
   width: 100%;
   height: fit-content;
@@ -3402,7 +3402,7 @@ input {
 
 .marquee-image {
   position: relative;
-  height: 2.5svh;
+  height: 2.5dvh;
   width: auto;
 }
 
@@ -3411,7 +3411,7 @@ input {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   z-index: 250;
   background-color: #04021750;
   backdrop-filter: blur(10px);
@@ -3429,7 +3429,7 @@ input {
 
 .showreel-button {
   position: absolute;
-  bottom: 12svh;
+  bottom: 12dvh;
 }
 
 .navigation-text {
@@ -3447,7 +3447,7 @@ input {
 
 .contact-overlay {
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   z-index: 1;
   backdrop-filter: blur(10px);
   display: flex;
@@ -3458,7 +3458,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   padding: 0vw 5vw;
 }
 
@@ -3521,7 +3521,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 80svh;
+  height: 80dvh;
   padding: 2vw;
 }
 
@@ -3601,7 +3601,7 @@ input {
   flex-direction: column;
   position: relative;
   padding: 0 5%;
-  margin-bottom: calc(var(--vh) * 15); /* Updated from 15svh */
+  margin-bottom: 15dvh;
 }
 
 .two-content {
@@ -3609,7 +3609,7 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--vh) * 3); /* Updated from 3svh */
+  gap: 3dvh;
 }
 
 .two-images-container {
@@ -3617,7 +3617,7 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--vh) * 2); /* Updated from 2svh */
+  gap: 2dvh;
 }
 
 .two-images-container-row {
@@ -3626,18 +3626,19 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: calc(var(--vh) * 2); /* Updated from 2svh */
+  gap: 2dvh;
 }
 
 .two-images-box-big {
   width: 100%;
-  height: calc(var(--vh) * 60); /* Updated from 60svh */
+  height: 60dvh;
 }
 
 .two-images-box-small {
   width: 100%;
-  height: calc(var(--vh) * 60); /* Updated from 60svh */
+  height: 60dvh;
 }
+
 
 .two-images-box-content {
   width: fit-content;
@@ -3677,10 +3678,11 @@ input {
   font-weight: normal;
   font-size: 0.75rem;
 }
+
 /* SECTION THREE */
 
 .three {
-  height: 100svh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3689,8 +3691,8 @@ input {
   padding: 0 10%;
   align-items: end;
   padding-top: 0;
-  margin-top: 0svh;
-  margin-top: -10svh;
+  margin-top: 0dvh;
+  margin-top: -10dvh;
 }
 
 .three-content-box-right {
@@ -3792,7 +3794,7 @@ input {
 .container {
   position: relative;
   width: 100%;
-  height: 30svh;
+  height: 30dvh;
   pointer-events: all;
   display: flex;
   flex-direction: column;
@@ -3844,7 +3846,7 @@ input {
 .slider-container {
   position: absolute;
   right: 10%;
-  bottom: 11svh; /* Adjust vertical position as needed */
+  bottom: 11dvh; /* Adjust vertical position as needed */
   width: 80%; /* Adjust width of the slider container */
   pointer-events: all;
 }
@@ -4023,8 +4025,8 @@ input {
 .five {
   position: relative;
   padding: 0 0vw;
-  margin-top: 10svh;
-  height: 50svh;
+  margin-top: 10dvh;
+  height: 50dvh;
 }
 
 .five-content {
@@ -4047,18 +4049,18 @@ input {
 }
 
 .fivemobile {
-  gap: 2svh;
+  gap: 2dvh;
   height: fit-content;
-  padding-bottom: 15svh;
+  padding-bottom: 15dvh;
 }
 
 .five-title-mobile {
-  margin-bottom: 2svh;
+  margin-bottom: 2dvh;
   padding: 5%;
 }
 
 .swiper-box {
-  height: 50svh;
+  height: 50dvh;
   width: 90%;
 }
 
@@ -4070,7 +4072,7 @@ input {
 
 .fivemobile-box {
   width: 90vw;
-  height: 45svh;
+  height: 45dvh;
   background-color: antiquewhite;
   border-radius: 25px;
   background-size: cover;
@@ -4121,8 +4123,8 @@ input {
   position: relative;
   z-index: auto;
   justify-content: center;
-  margin-top: 0svh;
-  margin-bottom: 15svh;
+  margin-top: 0dvh;
+  margin-bottom: 15dvh;
 }
 
 .our-services-page {
@@ -4135,19 +4137,19 @@ input {
 }
 
 .our-services-page-content {
-  margin-top: 5svh;
-  margin-bottom: 15svh;
+  margin-top: 5dvh;
+  margin-bottom: 15dvh;
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 10svh 5vw;
+  padding: 10dvh 5vw;
   padding-top: 0;
   gap: 1.5vw;
 }
 
 .our-services-top-headline {
-  margin-top: 10svh;
+  margin-top: 10dvh;
   margin-left: 5%;
 }
 
@@ -4156,9 +4158,9 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 5svh 5vw;
+  padding: 5dvh 5vw;
   padding-top: 0;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .six-content-top {
@@ -4166,14 +4168,14 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 2svh;
+  gap: 2dvh;
   z-index: 3;
   pointer-events: none;
 }
 
 .six-content-top-big {
   width: 100%;
-  height: 15svh;
+  height: 15dvh;
   border-radius: 15px;
   padding: 4vw;
   display: flex;
@@ -4189,20 +4191,20 @@ input {
   justify-content: start;
   justify-content: space-between;
   gap: 0;
-  row-gap: 2.5svh;
+  row-gap: 2.5dvh;
   flex-wrap: wrap;
 }
 
 .six-content-row-box {
   width: 47.5%;
-  height: 32.5svh;
+  height: 32.5dvh;
   pointer-events: all;
   perspective: 1500px;
 }
 
 .six-content-row-box-bigger {
   width: 100%;
-  height: 30svh;
+  height: 30dvh;
   pointer-events: all;
   perspective: 800px;
 }
@@ -4226,7 +4228,7 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 2svh;
+  gap: 2dvh;
   z-index: 3;
   pointer-events: none;
 }
@@ -4315,7 +4317,7 @@ input {
 .back-content-box {
   height: fit-content;
   width: fit-content;
-  padding: 0.5svh 2vw;
+  padding: 0.5dvh 2vw;
   background-color: #fefeff;
   border-radius: 10px;
   transition: 0.5s ease;
@@ -4359,7 +4361,7 @@ input {
   flex-direction: column;
   position: relative;
   z-index: auto;
-  margin-top: 20svh;
+  margin-top: 20dvh;
   margin-bottom: 0;
 }
 
@@ -4368,7 +4370,7 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 5svh;
+  gap: 5dvh;
   padding: 0 5vw;
 }
 
@@ -4461,7 +4463,7 @@ input {
   font-weight: normal;
   font-size: 1.25rem;
   color: #fefeff;
-  margin: 2.5svh 0;
+  margin: 2.5dvh 0;
 }
 
 .small-text-accordion {
@@ -4496,13 +4498,13 @@ input {
 
 .eight {
   position: relative;
-  height: 60svh;
-  margin-top: -30svh;
+  height: 60dvh;
+  margin-top: -30dvh;
   z-index: 20;
 }
 
 .experience-two {
-  height: 60svh;
+  height: 60dvh;
   width: 100%;
   position: absolute;
   top: 0;
@@ -4532,7 +4534,7 @@ input {
   flex-direction: column;
   z-index: auto;
   position: relative;
-  padding: 10svh 5%;
+  padding: 10dvh 5%;
 }
 
 .realestate-content {
@@ -4546,7 +4548,7 @@ input {
 
 .realestate-row {
   width: 100%;
-  height: 150svh;
+  height: 150dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -4571,7 +4573,7 @@ input {
 
 .realestate-row-video {
   width: 100%;
-  height: 150svh;
+  height: 150dvh;
   display: flex;
   justify-content: space-between;
   gap: 1vw;
@@ -4580,7 +4582,7 @@ input {
 
 .realestate-video {
   position: relative;
-  height: 110svh;
+  height: 110dvh;
 }
 
 .fa-location-arrow {
@@ -4589,7 +4591,7 @@ input {
 }
 
 .scroll-video-on-scroll {
-  height: 300svh;
+  height: 300dvh;
   width: 100%;
   overflow: visible;
   display: flex;
@@ -4603,7 +4605,7 @@ input {
   position: sticky;
   top: 0;
   left: 0;
-  height: 100svh;
+  height: 100dvh;
   width: 100vw;
 }
 
@@ -4613,7 +4615,7 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  margin-top: 10svh;
+  margin-top: 10dvh;
   justify-content: center;
 }
 
@@ -4629,7 +4631,7 @@ input {
   top: 0;
   left: 5%;
   width: 90%;
-  height: 229svh;
+  height: 229dvh;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -4644,7 +4646,7 @@ input {
   gap: 2vw;
   row-gap: 1vw;
   position: sticky;
-  top: 10svh;
+  top: 10dvh;
   left: 0;
 }
 
@@ -4682,31 +4684,31 @@ input {
 /* SECTION ONE */
 
 .projects-section {
-  padding: 10svh 5%;
+  padding: 10dvh 5%;
 }
 
 .projects-section-content {
-  gap: 5svh;
+  gap: 5dvh;
 }
 
 .projects-top-texts {
   display: flex;
   flex-direction: column;
-  gap: 5svh;
+  gap: 5dvh;
 }
 
 .projects-section-container {
-  row-gap: 5svh;
+  row-gap: 5dvh;
 }
 
 .project {
   width: 100%;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .project-image {
   width: 100%;
-  height: 30svh;
+  height: 30dvh;
   border-radius: 15px;
 }
 
@@ -4723,8 +4725,8 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 10svh 5vw;
-  padding-bottom: 15svh;
+  padding: 10dvh 5vw;
+  padding-bottom: 15dvh;
 }
 
 .casestudy-content {
@@ -4736,7 +4738,7 @@ input {
 
 .casestudy-content-top {
   flex-direction: column-reverse;
-  margin-bottom: 10svh;
+  margin-bottom: 10dvh;
 }
 
 .casestudy-top-left {
@@ -4784,7 +4786,7 @@ input {
 .casestudy-full-image {
   position: relative;
   width: 100%;
-  height: 65svh;
+  height: 65dvh;
   border-radius: 25px;
   background-color: #01f1ff;
   display: flex;
@@ -4802,8 +4804,8 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 3svh;
-  margin-top: 15svh;
+  gap: 3dvh;
+  margin-top: 15dvh;
 }
 
 .casestudy-explanation-description {
@@ -4817,13 +4819,13 @@ input {
 
 .casestudy-half-images {
   width: 100%;
-  height: 85svh;
+  height: 85dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 15svh;
-  margin-top: 15svh;
-  gap: 2svh;
+  margin-bottom: 15dvh;
+  margin-top: 15dvh;
+  gap: 2dvh;
 }
 
 .casestudy-halfimage {
@@ -4841,9 +4843,9 @@ input {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 15svh;
+  margin-top: 15dvh;
   gap: 0;
-  row-gap: 2svh;
+  row-gap: 2dvh;
 }
 
 .casestudy-big-row {
@@ -4852,12 +4854,12 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .casestudy-big-bigimage {
   width: 100%;
-  height: 65svh;
+  height: 65dvh;
   border-radius: 25px;
   background-size: cover;
   background-position: center; 
@@ -4865,7 +4867,7 @@ input {
 
 .casestudy-big-halfimage {
   width: 100%;
-  height: 41.5svh;
+  height: 41.5dvh;
   border-radius: 25px;
   background-size: cover;
   background-position: center; 
@@ -4883,19 +4885,19 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3svh;
+  gap: 3dvh;
 }
 
 .casestudy-accordion {
   display: flex;
   flex-direction: column;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 /* INTRODCUTION SECTION */
 
 .introduction {
-  padding: 15svh 0;
+  padding: 15dvh 0;
   height: fit-content;
   position: relative;
   display: flex;
@@ -4909,7 +4911,7 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .introduction-bottom-content {
@@ -4917,7 +4919,7 @@ input {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .introduction-bottom-content-left, .introduction-bottom-content-right{
@@ -4958,11 +4960,11 @@ input {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 30svh;
+  height: 30dvh;
   justify-content: end;
   justify-self: start;
   align-self: flex-start;
-  gap: 2svh;
+  gap: 2dvh;
 }
 
 .introduction-section-title {
@@ -5010,7 +5012,7 @@ input {
   margin: 0;
   line-height: 100%;
   position: absolute;
-  top: 10svh;
+  top: 10dvh;
   left: 5vw;
   text-align: center;
 }
@@ -5021,7 +5023,7 @@ input {
 
 .introduction-image {
   width: 30%;
-  height: 50svh;
+  height: 50dvh;
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -5031,7 +5033,7 @@ input {
 
 .introduction-image img {
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
   object-fit: cover;
   transition: 1s ease;
   transform: translateY(0);
@@ -5072,7 +5074,7 @@ input {
   width: 100%;
   height: fit-content;
   position: relative;
-  margin-top: 0svh;
+  margin-top: 0dvh;
 }
 
 .introduction-content-images-sticky-box {
@@ -5080,7 +5082,7 @@ input {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -5104,7 +5106,7 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20svh;
+  gap: 20dvh;
 }
 .introduction-images-container-row-left {
   width: 100%;
@@ -5120,12 +5122,12 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1svh;
+  gap: 1dvh;
   z-index: 10;
   cursor: pointer;
 }
 .introduction-images-row-img {
-  height: 50svh;
+  height: 50dvh;
   width: auto;
 }
 .introduction-image-row-number {
@@ -5159,35 +5161,35 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1svh;
+  gap: 1dvh;
   cursor: pointer;
 }
 
 .visualizationsub {
   width: 100%;
   height: fit-content;
-  padding: 15svh 5vw;
+  padding: 15dvh 5vw;
   display: flex;
   flex-direction: column;
-  gap: 5svh;
+  gap: 5dvh;
 }
 
 .visualizationsub-row {
   width: 100%;
-  height: 75svh;
+  height: 75dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5svh;
+  gap: 5dvh;
 }
 
 .visualizationsub-row-big {
   width: 100%;
-  height: 125svh;
+  height: 125dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5svh;
+  gap: 5dvh;
 }
 
 .visualizationsub-image {
