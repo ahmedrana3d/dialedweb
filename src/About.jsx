@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useAnimateText } from "../ScrollAnimations";
+import { useAnimateText } from "./ScrollAnimations";
 
 
-export const Section5 = () => {
+export const SectionAbout = () => {
 
   useAnimateText(".five-title")
 
@@ -19,7 +19,7 @@ export const Section5 = () => {
   ];
 
   return (
-    <section className="section five" >
+    <section className="section five about" >
       <div className="five-content">
         <div className="five-content-textbox">
           <h1 className="headline five-title" >A global network of talent</h1>

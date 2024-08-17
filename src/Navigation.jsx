@@ -201,6 +201,12 @@ export const Navigation = () => {
                   <span className="menu-text">Home</span>
                 </div>
               </Link>
+              <Link to="/about" className="menu-text">
+                <div className="menu-button" onClick={hoverSoundMobile} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd}>
+                  <span className="menu-text">About</span>
+                  <span className="menu-text">About</span>
+                </div>
+              </Link>
               <Link to="/projects" className="menu-text">
                 <div className="menu-button" onClick={hoverSoundMobile} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd}>
                   <span className="menu-text">Projects</span>

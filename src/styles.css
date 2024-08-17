@@ -1607,6 +1607,10 @@ a {
   height: fit-content;
 }
 
+.about {
+  padding: 15vh 5%;
+}
+
 .five-content {
   display: flex;
   flex-direction: column;
@@ -3908,6 +3912,10 @@ input {
   padding: 0 5%;
   height: fit-content;
   padding-bottom: 35vw;
+}
+
+.about {
+  padding: 30vw 5%;
 }
 
 .five-content {

@@ -16,6 +16,7 @@ import VisualizationSub5 from "./Visualization/VisualizationSub5";
 import VisualizationSub6 from "./Visualization/VisualizationSub6";
 import Learnmorepage from "./LearnGroup/Learnmorepage";
 import { Policy } from "./HomeGroup/Policy";
+import { SectionAbout } from "./About";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -115,6 +116,7 @@ function App() {
             <Route path="/projects/:visualization/contemporary-home" element={ <VisualizationSub6 /> } />
             <Route path="/learn-more" element={ <Learnmorepage /> } />
             <Route path="/privacy-policy" element={ <Policy /> } />
+            <Route path="/about" element={ <SectionAbout /> } />
           </Routes>
         </AnimatePresence>
 {/* 
