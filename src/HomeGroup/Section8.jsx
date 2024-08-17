@@ -59,6 +59,7 @@ const hoverSoundMobile = () => {
     return (
       <>
         <section className="section eight">
+            <p className="eight-bottom-description" onClick={() => handleNavigateClick('/privacy-policy')} >Privacy Policy</p>
             <div className="eight-content">
             <h1 className="headline eight-main-title" >Let’s talk about the  <br /> impact you'd like to make.</h1>
             <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>

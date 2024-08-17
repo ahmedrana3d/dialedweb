@@ -158,22 +158,6 @@ const Visualization = () => {
             </div>
           </div>
 
-          <div className="introduction-images-container-row-left">
-            <div className="introduction-images-row-left" onClick={() => { handleNavigateClick("cityscapes") }} >
-              <h1 className="introduction-image-row-number" >07</h1>
-              <img src="/ci2.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Cityscapes</h1>
-            </div>
-          </div>
-
-          <div className="introduction-images-container-row-right">
-            <div className="introduction-images-row-right" onClick={() => { handleNavigateClick("urban-hideaway") }} >
-              <h1 className="introduction-image-row-number" >08</h1>
-              <img src="/hi1.jpeg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Urban Hideaway</h1>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

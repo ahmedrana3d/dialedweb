@@ -6,7 +6,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./HomeGroup/Home"
 import Contact from "./Contact"
 import { AnimatePresence } from "framer-motion";
-import { initializeCursors } from "./Cursor";
 import SectionProjects from "./Projects"
 import Visualization from "./Visualization/Visualization";
 import VisualizationSub from "./Visualization/VisualizationSub";
@@ -15,9 +14,8 @@ import VisualizationSub3 from "./Visualization/VisualizationSub3";
 import VisualizationSub4 from "./Visualization/VisualizationSub4";
 import VisualizationSub5 from "./Visualization/VisualizationSub5";
 import VisualizationSub6 from "./Visualization/VisualizationSub6";
-import VisualizationSub7 from "./Visualization/VisualizationSub7";
-import VisualizationSub8 from "./Visualization/VisualizationSub8";
 import Learnmorepage from "./LearnGroup/Learnmorepage";
+import { Policy } from "./HomeGroup/Policy";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -95,25 +93,6 @@ function App() {
       console.error("section6Ref.current is null");
     }
   };
-
-  useEffect(() => {
-    // Function to update the --vh custom property and log it to the console
-    const updateVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      console.log(`--vh: ${vh}px`); // Log the vh value
-    };
-
-    // Set initial value
-    updateVh();
-
-    // Update on resize
-    window.addEventListener('resize', updateVh);
-
-    return () => {
-      window.removeEventListener('resize', updateVh);
-    };
-  }, []);
   
 
   return (
@@ -134,9 +113,8 @@ function App() {
             <Route path="/projects/:visualization/minimalistic-studio" element={ <VisualizationSub4 /> } />
             <Route path="/projects/:visualization/urban-sanctuary-hotel" element={ <VisualizationSub5 /> } />
             <Route path="/projects/:visualization/contemporary-home" element={ <VisualizationSub6 /> } />
-            <Route path="/projects/:visualization/cityscapes" element={ <VisualizationSub7 /> } />
-            <Route path="/projects/:visualization/urban-hideaway" element={ <VisualizationSub8 /> } />
             <Route path="/learn-more" element={ <Learnmorepage /> } />
+            <Route path="/privacy-policy" element={ <Policy /> } />
           </Routes>
         </AnimatePresence>
 {/* 

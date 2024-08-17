@@ -80,29 +80,10 @@ export const Section3 = () => {
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container hover-area" data-cursor-text="SCROLL" onMouseMove={handleMouseMove} ref={containerRef}>
-              <div className="video video1">
-                <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
-              </div>
-              <div className="video video2">
-                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
-              </div>
+              <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
             </div>
           </div>
         )}
-        <div className="slider-container">
-          <div className="slider-line"></div>
-          <div
-            className="slider"
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleMouseDown}
-            ref={sliderRef}
-            style={{ backgroundColor: percentage >= 50 ? '#AAA3FF' : '#fefeff' }}
-          >
-            <div className="circle">
-              <i className="fas fa-arrows-alt-h"></i>
-            </div>
-          </div>
-        </div>
         <div className="three-content">
           <div className="three-content-box-left">
             <h1 className="headline three-title">Virtual Turns <br />Tangible</h1>
@@ -116,12 +97,7 @@ export const Section3 = () => {
           {isMobile && (
             <div className="three-content-box-right">
               <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-                <div className="video video1">
-                  <video className="three-video" src="/laptop4.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
-                </div>
-                <div className="video video2">
-                  <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
-                </div>
+                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" playsInline data-wf-ignore="true" preload="auto" loop></video>
               </div>
             </div>
           )}

@@ -74,7 +74,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/arcnew.png" alt="Project 1" />
+                      <img src="/archi.jpg" alt="Project 1" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
@@ -108,7 +108,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.liranstalik.com/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/stalikproject.png" alt="Project 3" />
+                      <img src="/stalikproject.jpg" alt="Project 3" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
