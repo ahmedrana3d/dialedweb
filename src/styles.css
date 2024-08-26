@@ -1645,10 +1645,6 @@ a {
   transition: 0.5s ease;
 }
 
-.five-content-item:hover {
-  border: 2px solid #fefefe;
-}
-
 .five-content-item-inside {
   /* width: 20vw; */
   width: fit-content;
@@ -3124,10 +3120,12 @@ html.lenis, html.lenis body {
 /* NAVIGATION OVERLAY */
 
 .menu {
-  width: 90vw;
+  width: 100%;
   gap: 10vw;
   height: 200vw;
   border-radius: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .menuNav {
@@ -3566,16 +3564,16 @@ input {
 /* SECTION THREE */
 
 .three {
-  height: 200vw;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: auto;
   overflow: visible;
-  padding: 0 10%;
-  align-items: end;
   padding-top: 0;
   margin-top: 0vw;
+  padding: 35vw 5vw;
+  align-items: end;
 }
 
 .three-content-box-right {
@@ -3589,11 +3587,11 @@ input {
 }
 
 .three-content {
-  width: 90%;
-  height: 200vw;
-  position: absolute;
-  bottom: 0;
-  left: 5%;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  bottom: auto;
+  left: auto;
   display: flex;
   flex-direction:column;
   align-items: center;
@@ -4356,7 +4354,7 @@ input {
 .scroll-section-headline {
   font-size: 2.25rem;
   font-family: "SFBOLD", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
   line-height: 1;
   color: #fefeff;
