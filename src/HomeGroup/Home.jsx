@@ -9,7 +9,6 @@ import transition from "../Transition";
 import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
-import { initializeCursors } from "../Cursor";
 import '../styles.css'
 
 const Home = () => {
@@ -23,8 +22,6 @@ const Home = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
-    initializeCursors();
 
     // Add event listener to handle window resize
     window.addEventListener("resize", handleResize);
@@ -42,9 +39,6 @@ const Home = () => {
 
   return (
     <>
-
-<div className="cursor" id="ball"></div>
-<div className="cursor-text" id="cursor-text">Scroll</div>
 
       <Section1 section3Ref={section3Ref} />
       <div ref={section3Ref} >
