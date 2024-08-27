@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import transition from "./Transition";
-import { initializeCursors } from "./Cursor";
 
 const Contact = () => {
 
@@ -35,16 +34,9 @@ const Contact = () => {
     };
   }, []);
 
-  useEffect(() => {
-    initializeCursors();
-  }, []);
-
 
     return (
       <>
-
-<div className="cursor" id="ball"></div>
-<div className="cursor-text" id="cursor-text">Scroll</div>
 
         <div className="contact-overlay" >
             <div className="contact-overlay-left">
@@ -52,7 +44,7 @@ const Contact = () => {
               <div className="contact-overlay-left-box">
 
                 <div className="contact-person-box">
-                  <div className="contact-person-image gabriella" />
+                  <div className="contact-person-image contact-image" />
                   <div className="contact-description-box">
                     <p className="contact-overlay-description" >Let’s bring your idea to life. <span className="white-text" >Get in touch with management directly. </span></p>
                   </div>

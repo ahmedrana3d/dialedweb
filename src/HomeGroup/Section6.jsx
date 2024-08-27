@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useAnimateText } from "../ScrollAnimations";
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
 
 export const Section6 = () => {
   useAnimateText(".six-content-headline");
@@ -11,6 +16,25 @@ export const Section6 = () => {
   const handleCardClick = (index) => {
     setFlippedIndex(flippedIndex === index ? null : index);
   };
+
+  const isMobile = window.innerWidth <= 768;
+
+  // Refs for each box
+  const boxRef1 = useRef();
+  const boxRef2 = useRef();
+  const boxRef3 = useRef();
+  const boxRef4 = useRef();
+  const boxRef5 = useRef();
+  const boxRef6 = useRef();
+
+  useEffect(() => {
+    gsap.fromTo( boxRef1.current, { scaleX: 0, rotate: 10 }, { delay: 0, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef1.current, start: "top bottom"}});
+    gsap.fromTo( boxRef2.current, { scaleX: 0, rotate: 10 }, { delay: 0.25, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef2.current, start: "top bottom"}});
+    gsap.fromTo( boxRef3.current, { scaleX: 0, rotate: 10 }, { delay: isMobile ? 0 : 0.5, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef3.current, start: "top bottom"}});
+    gsap.fromTo( boxRef4.current, { scaleX: 0, rotate: 10 }, { delay: isMobile ? 0.25 : 0, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef4.current, start: "top bottom"}});
+    gsap.fromTo( boxRef5.current, { scaleX: 0, rotate: 10 }, { delay: isMobile ? 0 : 0.25, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef5.current, start: "top bottom"}});
+    gsap.fromTo( boxRef6.current, { scaleX: 0, rotate: 10 }, { delay: isMobile ? 0.25 : 0.5, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef6.current, start: "top bottom"}});
+  }, []);
 
   return (
     <>
@@ -87,6 +111,20 @@ export const Section6 = () => {
                     flippedIndex === index ? "flipped" : ""
                   }`}
                   onClick={() => handleCardClick(index)}
+                  ref={ index === 0
+                      ? boxRef1
+                      : index === 1
+                      ? boxRef2
+                      : index === 2
+                      ? boxRef3
+                      : index === 3
+                      ? boxRef4
+                      : index === 4
+                      ? boxRef5
+                      : index === 5
+                      ? boxRef6
+                      : null
+                  }
                 >
                   <div className="six-inside">
                     <div className="front">
@@ -119,6 +157,7 @@ export const Section6 = () => {
     </>
   );
 };
+
 
 
 {/* <div className="services-container">

@@ -2,6 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { useAnimateText } from "../ScrollAnimations";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { TextPlugin } from 'gsap/TextPlugin';
+import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
 export const Section2 = () => {
 
@@ -37,6 +43,18 @@ export const Section2 = () => {
       }
     };
 
+    const boxRef1 = useRef();
+    const boxRef2 = useRef();
+    const boxRef3 = useRef();
+    const boxRef4 = useRef();
+
+    useEffect(() => {
+      gsap.fromTo( boxRef1.current, { xPercent: -50, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef1.current, start: "top bottom"}});
+      gsap.fromTo( boxRef2.current, { xPercent: 50, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef2.current, start: "top bottom"}});
+      gsap.fromTo( boxRef3.current, { xPercent: -50, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef3.current, start: "top bottom"}});
+      gsap.fromTo( boxRef4.current, { xPercent: 50, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef4.current, start: "top bottom"}});
+    }, []);
+
   return (
     <>
       <section className="section two">
@@ -44,7 +62,8 @@ export const Section2 = () => {
             <h1 className="headline two-title">Featured Projects</h1>
             <div className="two-images-container">
                 <div className="two-images-container-row">
-                    <div className="two-images-box-big two-images-box-image-1  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                    <div className="two-images-box-big  hover-area" ref={boxRef1} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                        <img className="two-images-box-big-image" src="/ecomwaveproject.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -60,7 +79,8 @@ export const Section2 = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="two-images-box-small two-images-box-image-2  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                    <div className="two-images-box-small  hover-area" ref={boxRef2} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                        <img className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -78,7 +98,8 @@ export const Section2 = () => {
                     </div>
                 </div>
                 <div className="two-images-container-row">
-                    <div className="two-images-box-small two-images-box-image-3  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                    <div className="two-images-box-small  hover-area" ref={boxRef3} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                        <img className="two-images-box-big-image" src="/project7.png" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -94,7 +115,8 @@ export const Section2 = () => {
                             </motion.div>
                         </div>
                     </div>
-                    <div className="two-images-box-big two-images-box-image-4  hover-area" data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                    <div className="two-images-box-big  hover-area" ref={boxRef4} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                        <img className="two-images-box-big-image" src="/diginew.png" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>

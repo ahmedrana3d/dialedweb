@@ -33,7 +33,6 @@ const useAnimateText = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
-              toggleActions: 'play none none reverse',
             },
           }
         );
@@ -51,7 +50,6 @@ const useAnimateText = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
-            toggleActions: 'play none none reverse',
           },
         });
 
@@ -133,7 +131,6 @@ const useAnimateTextDelay = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 50%',
-              toggleActions: 'play none none reset',
             },
           }
         );
@@ -148,7 +145,6 @@ const useAnimateTextDelay = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 50%',
-            toggleActions: 'play none none reset',
           },
         });
 
@@ -180,7 +176,6 @@ const useSmallTextAnimation = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 80%',
-            toggleActions: 'play none none reverse',
           },
         });
 
@@ -287,7 +282,6 @@ const useTextEffect = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 100%',
-              toggleActions: 'play none none reset',
             },
           }
         );
@@ -306,7 +300,6 @@ const useTextEffect = (textSelector) => {
           scrollTrigger: {
             trigger: element,
             start: 'top 100%',
-            toggleActions: 'play none none reset',
           },
         });
 
@@ -476,7 +469,7 @@ const useAnimateSmallHeadline = (textSelector) => {
             scrollTrigger: {
               trigger: element,
               start: 'top 90%',
-              toggleActions: 'play reverse play reverse',
+              toggleActions: 'play reverse play reset',
             },
           }
         );

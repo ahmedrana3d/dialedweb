@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import transition from "./Transition";
 import { useAnimateText } from "./ScrollAnimations";
-import { initializeCursors } from "./Cursor";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 const SectionProjects = () => {
@@ -24,10 +23,6 @@ const SectionProjects = () => {
       };
 
       useAnimateText(".projects-animate-text")
-
-      useEffect(() => {
-        initializeCursors();
-      }, []);
 
       const isMobile = window.innerWidth <= 768;
 
@@ -55,9 +50,6 @@ const SectionProjects = () => {
 
     return (
         <>
-
-<div className="cursor" id="ball"></div>
-<div className="cursor-text" id="cursor-text">Scroll</div>
 
         <section className="projects-section">
           <div className="projects-section-content">

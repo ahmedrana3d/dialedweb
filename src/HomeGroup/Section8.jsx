@@ -5,9 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Sphere } from "../Sphere";
 import { Environment } from "@react-three/drei";
-import { easing } from "maath"
-import { EffectComposer } from "@react-three/postprocessing";
-import { Fluid } from "@whatisjery/react-fluid-distortion";
+import gsap from "gsap";
+import { TextPlugin } from 'gsap/TextPlugin';
+import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
 export const Section8 = () => {
 
@@ -56,19 +59,32 @@ const hoverSoundMobile = () => {
   }
 };
 
+useAnimateText(".eight-main-title")
+
+const descriptionRef = useRef()
+const buttonRef1 = useRef()
+const buttonRef2 = useRef()
+
+useEffect(() => {
+  gsap.fromTo( descriptionRef.current, { opacity: 0 }, {  opacity: 1, duration: 1.5, ease: "power1", scrollTrigger: { trigger: descriptionRef.current, start: "top bottom"}});
+  gsap.fromTo(buttonRef1.current, { xPercent: -50, opacity: 0, }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: ".eight-buttons", start: "top bottom"} });
+  gsap.fromTo(buttonRef2.current, { xPercent: 50, opacity: 0, }, { xPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: ".eight-buttons", start: "top bottom"} });
+}, []);
+
     return (
       <>
         <section className="section eight">
             <p className="eight-bottom-description" onClick={() => handleNavigateClick('/privacy-policy')} >Privacy Policy</p>
             <div className="eight-content">
             <h1 className="headline eight-main-title" >Let’s talk about the  <br /> impact you'd like to make.</h1>
-            <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>
+            <p className="description eight-title" ref={descriptionRef} >Let our projects speak for themselves and schedule your free consultation with us today.</p>
             <div className="eight-buttons">
                 <motion.button
                   className="one-button"
                   onClick={() => { hoverSoundMobile(); handleNavigateClick('/projects') }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
+                  ref={buttonRef1}
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >PROJECTS</span>
@@ -79,10 +95,11 @@ const hoverSoundMobile = () => {
                   </div>
                 </motion.button>
                 <motion.button
-                  className="one-button-transparent"
+                  className="one-button-transparent eight-bottom-buttons"
                   onClick={() => {  handleNavigateClick('/contact'); hoverSoundMobile(); }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
+                  ref={buttonRef2}
                 >
                   <div className="navigation-left-content" >
                     <span className="navigation-text" >GET IN TOUCH</span>

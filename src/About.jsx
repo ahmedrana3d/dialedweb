@@ -4,6 +4,11 @@ import { useAnimateText } from "./ScrollAnimations";
 
 export const SectionAbout = () => {
 
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts or updates
+    window.scrollTo(0, 0);
+  }, []);
+
   useAnimateText(".five-title")
 
   const isMobile = window.innerWidth <= 768;
