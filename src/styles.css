@@ -1287,7 +1287,7 @@ a {
 }
 
 .two-images-box-image-1 {
-  background-image: url('/stalikproject.jpg');
+  background-image: url('/ecomwaveproject.jpg');
 }
 
 .two-images-box-image-2 {
@@ -1731,6 +1731,7 @@ a {
   height: 29vw;
   pointer-events: all;
   perspective: 1500px;
+  cursor: pointer;
 }
 
 .six-content-row-box-bigger {
@@ -1748,9 +1749,25 @@ a {
   z-index: 3;
   pointer-events: none;
 }
-.six-outside:hover > .six-inside {
+/* .six-outside:hover > .six-inside {
   cursor: pointer;
   transform: rotateY(180deg);
+} */
+
+.six-content-row-box.flipped .six-inside {
+  transform: rotateY(180deg);
+}
+
+.six-content-row-box:hover .fa-plus {
+  transform: rotate(45deg);
+}
+
+.six-content-row-box:hover .front-bottom-circle {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.15);
+}
+
+.six-content-row-box:hover .front {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.15);
 }
 
 .six-inside {
@@ -1775,6 +1792,8 @@ a {
 
 .front {
   flex-direction: column;
+  transition: 0.5s ease;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0);
 }
 
 .front-bottom {
@@ -1807,11 +1826,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.25s ease;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0);
 }
 
 .fa-plus {
   font-size: 1vw;
   color: #040217;
+  transition: 0.5s ease;
 }
 
 .back {
@@ -4087,10 +4109,10 @@ input {
   z-index: 3;
   pointer-events: none;
 }
-.six-outside:hover > .six-inside {
+/* .six-outside:hover > .six-inside {
   cursor: pointer;
   transform: rotateY(180deg);
-}
+} */
 
 .six-inside {
   height: 100%;

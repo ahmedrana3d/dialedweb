@@ -49,7 +49,6 @@ const Home = () => {
         <Section6 />
       </div>
       <Section4 />
-      <Section5 />
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
     </>
