@@ -44,7 +44,7 @@ export const SectionFooter = () => {
         gsap.fromTo( ".footer-animate-description", { yPercent: 100, opacity: 0 }, { stagger: { amount: 0.5 }, yPercent: 0, opacity: 1, duration: 0.5, ease: "power3", scrollTrigger: { trigger: ".footer-animate-description", start: "top bottom"}});
         gsap.fromTo( lineRef.current, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: lineRef.current, start: "top bottom"}});
         gsap.fromTo( copyrightRef.current, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: copyrightRef.current, start: "top bottom"}});
-        gsap.fromTo( ".footer-icon", { yPercent: 100, opacity: 0 }, { stagger: { amount: 0.5 }, yPercent: 0, opacity: 1, duration: 0.5, ease: "power3", scrollTrigger: { trigger: ".footer-icon", start: "top bottom"}});
+        gsap.fromTo( ".footer-icon", { xPercent: 100, opacity: 0 }, { stagger: { amount: 0.5 }, xPercent: 0, opacity: 1, duration: 0.5, ease: "power3", scrollTrigger: { trigger: ".footer-icon", start: "top bottom"}});
       }, []);
 
   return (
