@@ -74,7 +74,6 @@ useEffect(() => {
     return (
       <>
         <section className="section eight">
-            <p className="eight-bottom-description" onClick={() => handleNavigateClick('/privacy-policy')} >Privacy Policy</p>
             <div className="eight-content">
             <h1 className="headline eight-main-title" >Let’s talk about the  <br /> impact you'd like to make.</h1>
             <p className="description eight-title" ref={descriptionRef} >Let our projects speak for themselves and schedule your free consultation with us today.</p>
@@ -113,8 +112,7 @@ useEffect(() => {
           </div>
 
           <div className="experience-one">
-        <Canvas camera={{ position: [0, 0, 7.5], fov: 35 }}>
-          {/* <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#fefeff"} far={10} speed={1} /> */}
+        <Canvas camera={{ position: [0, 0, isMobile ? 5.5 : 7.5], fov: 35 }}>
             <Sphere />
           <Environment preset="night" />
         </Canvas>

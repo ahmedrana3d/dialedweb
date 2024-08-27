@@ -10,12 +10,13 @@ import { SectionScrollVideoOnScroll } from "./SectionVideoOnScroll";
 import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
 import '../styles.css'
+import { SectionFooter } from "./SectionFooter";
 
 const Home = () => {
   const section3Ref = useRef(null);
   const section6Ref = useRef(null);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
   useEffect(() => {
     // Function to update isMobile based on window size
@@ -39,7 +40,6 @@ const Home = () => {
 
   return (
     <>
-
       <Section1 section3Ref={section3Ref} />
       <div ref={section3Ref} >
         <Section3 />
@@ -51,6 +51,7 @@ const Home = () => {
       <Section4 />
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
+      <SectionFooter />
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import Lenis from "@studio-freight/lenis";
 import { Navigation } from "./Navigation";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Home from "./HomeGroup/Home"
 import Contact from "./Contact"
 import { AnimatePresence } from "framer-motion";
@@ -17,6 +17,7 @@ import VisualizationSub6 from "./Visualization/VisualizationSub6";
 import Learnmorepage from "./LearnGroup/Learnmorepage";
 import { Policy } from "./HomeGroup/Policy";
 import { SectionAbout } from "./About";
+import { motion } from "framer-motion";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -77,6 +78,12 @@ function App() {
 
   const location = useLocation()
 
+  const navigate = useNavigate();
+
+  const handleNavigateClick = (linkUrl) => {
+    navigate(linkUrl);
+  };
+
   // useEffect(() => {
   //   initializeCursors();
   // }, []);
@@ -90,11 +97,35 @@ function App() {
       console.error("section6Ref.current is null");
     }
   };
+
+  const [showCookiesPopup, setShowCookiesPopup] = useState(true);
+  const handleCookiesResponse = () => {
+    setShowCookiesPopup(false);
+  };
   
 
   return (
       <>
         <LoadingScreen onLoaded={handleLoaded} />
+
+        <div className={`cookies-popup ${!showCookiesPopup ? 'fade-out' : ''}`}>
+        <h1 className="cookies-title" >We value your privacy</h1>
+        <p className="cookies-description" >This website uses cookies to help you have a superior browsing experience on the website. <span className="cookies-underlined" onClick={() => {  handleNavigateClick('/privacy-policy'); }} >Read more</span></p>
+        <div className="cookies-row">
+          <motion.button className="cookies-button" onClick={handleCookiesResponse} >
+            <div className="navigation-left-content">
+              <span className="navigation-text">ACCEPT</span>
+              <span className="navigation-text">ACCEPT</span>
+            </div>
+          </motion.button>
+          <motion.button className="cookies-button" onClick={handleCookiesResponse} >
+            <div className="navigation-left-content">
+              <span className="navigation-text">DECLINE</span>
+              <span className="navigation-text">DECLINE</span>
+            </div>
+          </motion.button>
+        </div>
+      </div>
 
         <Navigation scrollToSection6={scrollToSection6} />
 

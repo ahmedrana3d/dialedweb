@@ -45,7 +45,7 @@ export const Section3 = () => {
         <div className="three-content">
           <div className="three-content-box-left">
             <h1 className="headline three-title">Virtual Turns <br />Tangible</h1>
-            <p className="description three-description purple" ref={descriptionRef} >To innovate and enhance digital experiences by crafting tailored, user-centric web solutions. We elevate and engage audiences through creativity and technology, delivering modern, intuitive websites that drive business’s success.</p>
+            <p className="description three-description purple" ref={descriptionRef} >To innovate and enhance digital experiences by crafting tailored, user-centric web solutions. We create captivating web experiences that takes users on an immersive journey beyond their imagination.</p>
             <div className="typewriter-box" >
               <h1 className="typewriter" ref={typewriterRef} >
                 <span className='typewriter-main'>We<span className="typewriter-text"></span></span>

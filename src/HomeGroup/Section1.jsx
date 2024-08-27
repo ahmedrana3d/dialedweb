@@ -78,7 +78,7 @@ const hoverSoundMobile = () => {
       <div className="background-element-grid-small" />
         <div className="one-content">
           <div className="one-content-left">
-            <h1 className="headline anim grey">Crafting Digital <br /> Masterpieces</h1>
+            <h1 className="headline anim">Crafting Digital <br /> Masterpieces</h1>
             <p className="one-description">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
               <motion.button
