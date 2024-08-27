@@ -2187,7 +2187,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  transition: 0.5s ease;
+  transition: box-shadow 0.5s ease;
   background-color: #fefeff;
 }
 
@@ -4690,7 +4690,6 @@ input {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  transition: 0.5s ease;
   background-color: #fefeff;
 }
 /* PRIVACY POLICY */
