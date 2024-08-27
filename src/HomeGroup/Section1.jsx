@@ -82,8 +82,7 @@ const hoverSoundMobile = () => {
             <p className="one-description">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
               <motion.button
-                className="one-button-transparent btn menu-btn"
-                data-hover
+                className="one-button-transparent"
                 onClick={() => { handleScrollToSection3(); hoverSoundMobile(); }}
                 onMouseEnter={hoverSoundStart}
                 onMouseLeave={hoverSoundEnd}
@@ -95,14 +94,12 @@ const hoverSoundMobile = () => {
                 <div className="navigation-arrow-box">
                   <i className="fa-solid fa-location-arrow"></i>
                 </div>
-                <div data-hover-bounds></div>
               </motion.button>
               <motion.button
-                className="one-button btn menu-btn"
+                className="one-button"
                 onClick={() => { handleInteractive(); hoverSoundMobile(); }}
                 onMouseEnter={hoverSoundStart}
                 onMouseLeave={hoverSoundEnd}
-                data-hover
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">INTERACT</span>
@@ -111,7 +108,6 @@ const hoverSoundMobile = () => {
                 <div className="navigation-arrow-box">
                   <i className="fa-solid fa-location-arrow"></i>
                 </div>
-                <div data-hover-bounds></div>
               </motion.button>
             </div>
           </div>

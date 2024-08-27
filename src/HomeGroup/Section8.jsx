@@ -65,8 +65,7 @@ const hoverSoundMobile = () => {
             <p className="description eight-title" >Let our projects speak for themselves and schedule your free consultation with us today.</p>
             <div className="eight-buttons">
                 <motion.button
-                  className="one-button btn menu-btn"
-                  data-hover
+                  className="one-button"
                   onClick={() => { hoverSoundMobile(); handleNavigateClick('/projects') }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
@@ -78,11 +77,9 @@ const hoverSoundMobile = () => {
                   <div className="navigation-arrow-box">
                     <i className="fa-solid fa-location-arrow"></i>
                   </div>
-                  <div data-hover-bounds></div>
                 </motion.button>
                 <motion.button
-                  className="one-button-transparent btn menu-btn"
-                  data-hover
+                  className="one-button-transparent"
                   onClick={() => {  handleNavigateClick('/contact'); hoverSoundMobile(); }}
                   onMouseEnter={hoverSoundStart}
                   onMouseLeave={hoverSoundEnd}
@@ -94,56 +91,18 @@ const hoverSoundMobile = () => {
                   <div className="navigation-arrow-box">
                     <i className="fa-solid fa-location-arrow"></i>
                   </div>
-                  <div data-hover-bounds></div>
                 </motion.button>
             </div>
           </div>
 
           <div className="experience-one">
-        <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
+        <Canvas camera={{ position: [0, 0, 7.5], fov: 35 }}>
           {/* <Sparkles position={[0, 0, -1]} scale={[10, 10, 3]} size={4} count={40} color={"#fefeff"} far={10} speed={1} /> */}
             <Sphere />
-            {!isMobile && (
-              <>
-                <Rig />
-                <EffectComposer>
-                <Fluid
-                radius={0.03}
-                curl={10}
-                swirl={5}
-                distortion={1}
-                force={2}
-                pressure={0.94}
-                densityDissipation={0.98}
-                velocityDissipation={0.99}
-                intensity={0.3}
-                rainbow={false}
-                blend={0}
-                showBackground={false}
-                fluidColor="black"
-                />
-              </EffectComposer>
-            </>
-          )}
           <Environment preset="night" />
         </Canvas>
       </div>
         </section>
       </>
     )
-}
-
-function Rig() {
-  useFrame((state, delta) => {
-    // Calculate the target camera position based on the pointer's x and y position
-    const targetX = state.pointer.x * 0.15; // Adjust this multiplier as needed for the desired horizontal movement
-    const targetY = state.pointer.y * 0.15;
-    const targetZ = 8 + Math.atan(state.pointer.x * 2);
-  
-    // Smoothly move the camera to the target position
-    easing.damp3(state.camera.position, [targetX, targetY, 7], 0.5, delta);
-  
-    // Make the camera look at a point slightly ahead of its current position to create a smooth look-at behavior
-    state.camera.lookAt(state.camera.position.x, state.camera.position.y * 0.9, state.camera.position.z - 4);
-  });
 }

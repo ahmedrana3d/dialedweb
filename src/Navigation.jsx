@@ -243,11 +243,10 @@ export const Navigation = () => {
 
       <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
         <motion.button
-          className="navigation-left btn menu-btn"
+          className="navigation-left"
           onClick={() => { setMenu(!menu); hoverSoundMobile(); }}
           onMouseEnter={hoverSoundStart}
           onMouseLeave={hoverSoundEnd}
-          data-hover
         >
             {isMobile ? (
               <i className="fa-solid fa-bars"></i>
@@ -259,7 +258,6 @@ export const Navigation = () => {
                 </div>
               </>
             )}
-          <div data-hover-bounds></div>
         </motion.button>
         <Link to="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }} className="navigation-center">
           <div className="navigation-center">
@@ -267,11 +265,10 @@ export const Navigation = () => {
           </div>
         </Link>
         <motion.button
-          className="navigation-right btn menu-btn"
+          className="navigation-right"
           onClick={() => { handleContactNavigate(); hoverSoundMobile(); }}
           onMouseEnter={hoverSoundStart}
           onMouseLeave={hoverSoundEnd}
-          data-hover
         >
             {isMobile ? (
               <i className="fa-solid fa-envelope"></i>
@@ -283,7 +280,6 @@ export const Navigation = () => {
                 </div>
               </>
             )}
-          <div data-hover-bounds></div>
         </motion.button>
       </div>
     </>
