@@ -80,7 +80,7 @@ export const Section3 = () => {
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container hover-area" data-cursor-text="SCROLL" onMouseMove={handleMouseMove} ref={containerRef}>
-              <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+              <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
             </div>
           </div>
         )}
@@ -97,7 +97,7 @@ export const Section3 = () => {
           {isMobile && (
             <div className="three-content-box-right">
               <div className="container" onMouseMove={handleMouseMove} ref={containerRef}>
-                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted="true" playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
+                <video className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline="true" data-wf-ignore="true" preload="auto" loop></video>
               </div>
             </div>
           )}
