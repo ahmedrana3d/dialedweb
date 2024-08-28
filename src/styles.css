@@ -3868,12 +3868,12 @@ input {
 
 .two-images-box-big {
   width: 100%;
-  height: 110vw;
+  height: 90vw;
 }
 
 .two-images-box-small {
   width: 100%;
-  height: 110vw;
+  height: 90vw;
 }
 
 
@@ -4124,7 +4124,6 @@ input {
   flex-direction: column;
   position: relative;
   z-index: auto;
-  margin-bottom: 35vw;
 }
 
 .four-content {
@@ -4813,7 +4812,7 @@ input {
   left: 0;
   height: 205vw;
   padding: 0 5vw;
-  padding-top: 25vw;
+  padding-top: 35vw;
 }
 
 .scroll-video-items-wrapper-inside {

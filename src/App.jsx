@@ -18,7 +18,6 @@ import Learnmorepage from "./LearnGroup/Learnmorepage";
 import { Policy } from "./HomeGroup/Policy";
 import { SectionAbout } from "./About";
 import { motion } from "framer-motion";
-import gsap from "gsap";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();

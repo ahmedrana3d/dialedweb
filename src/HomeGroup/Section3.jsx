@@ -17,19 +17,19 @@ export const Section3 = () => {
   const typewriterRef = useRef()
 
   useEffect(() => {
-    const split = new SplitText(descriptionRef.current, { type: "words" });
-    gsap.fromTo(split.words, 
-      { opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, {
-        ease: 'sine',
-        opacity: 1,
-        filter: 'blur(0px)',
-        stagger: 0.025,
-        scrollTrigger: {
-          trigger: descriptionRef.current,
-          start: "top bottom"
-        }
-      });
-    gsap.fromTo( typewriterRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2", scrollTrigger: { trigger: typewriterRef.current, start: "top bottom"}});
+    // const split = new SplitText(descriptionRef.current, { type: "words" });
+    // gsap.fromTo(split.words, 
+    //   { opacity: 0, willChange: 'filter, transform', filter: 'blur(8px)' }, {
+    //     ease: 'sine',
+    //     opacity: 1,
+    //     filter: 'blur(0px)',
+    //     stagger: 0.025,
+    //     scrollTrigger: {
+    //       trigger: descriptionRef.current,
+    //       start: "top bottom"
+    //     }
+    //   });
+    // gsap.fromTo( typewriterRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2", scrollTrigger: { trigger: typewriterRef.current, start: "top bottom"}});
   })
 
   return (
