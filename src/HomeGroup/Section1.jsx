@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { Link, useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import OneModel from "./OneModel";
+import { Item3 } from "./Coins";
 
 export const Section1 = ({ section3Ref }) => {
   useTextEffect(".anim");
@@ -113,10 +114,10 @@ const hoverSoundMobile = () => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-              <Canvas camera={{ position: [5, 20, 13], fov: 35 }}>
+              <Canvas camera={{ position: [ isMobile ? 0 : 5, 0, isMobile ? 8.5 : 10], fov: 35 }}>
                 <Suspense fallback>
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                    <OneModel colorIndex={colorIndex} rotate={rotate} setRotate={setRotate} />
+                    <Item3 />
                   </Float>
                 </Suspense>
                 <Environment preset="sunset" />
