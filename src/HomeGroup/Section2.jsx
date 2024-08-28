@@ -13,7 +13,6 @@ export const Section2 = () => {
 
     const floatingDiv = useRef();
     const [showFloatingDiv, setShowFloatingDiv] = useState(false);
-    const [floatingText, setFloatingText] = useState("DISCOVER");
 
     useEffect(() => {
         let mouseX = 0;

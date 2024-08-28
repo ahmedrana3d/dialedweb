@@ -36,13 +36,81 @@ export const Section6 = () => {
     gsap.fromTo( boxRef6.current, { scaleX: 0, rotate: 10 }, { delay: isMobile ? 0.25 : 0.5, scale: 1, rotate: 0, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef6.current, start: "top bottom"}});
   }, []);
 
+  const floatingDiv = useRef();
+  const [showFloatingDiv, setShowFloatingDiv] = useState(false);
+
+  useEffect(() => {
+      let mouseX = 0;
+      let mouseY = 0;
+      let ballX = 0;
+      let ballY = 0;
+      const speed = 0.1;
+
+      const handleMouseMove = (event) => {
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+      };
+
+      const animate = () => {
+          const distX = mouseX - ballX;
+          const distY = mouseY - ballY;
+
+          ballX += distX * speed;
+          ballY += distY * speed;
+
+          if (floatingDiv.current) {
+              floatingDiv.current.style.left = `${ballX}px`;
+              floatingDiv.current.style.top = `${ballY}px`;
+          }
+
+          requestAnimationFrame(animate);
+      };
+
+      animate();
+
+      window.addEventListener('mousemove', handleMouseMove);
+
+      return () => {
+          window.removeEventListener('mousemove', handleMouseMove);
+      };
+  }, []);
+
+  useEffect(() => {
+      if (showFloatingDiv) {
+          gsap.to(floatingDiv.current, {
+              autoAlpha: 1, // This sets both opacity and visibility
+              scale: 1,
+              duration: 0.3,
+              ease: 'power3.out',
+          });
+      } else {
+          gsap.to(floatingDiv.current, {
+              autoAlpha: 0, // This sets both opacity and visibility
+              scale: 0,
+              duration: 0.3,
+              ease: 'power3.in',
+          });
+      }
+  }, [showFloatingDiv]);
+  
+
+  const handleMouseEnter = () => {
+      console.log("Mouse entered"); // Debug log
+      setShowFloatingDiv(true);
+  };
+  
+  const handleMouseLeave = () => {
+      console.log("Mouse left"); // Debug log
+      setShowFloatingDiv(false);
+  };
+
   return (
     <>
       <section className="section six">
         <div className="six-content">
           <h1 className="headline six-content-headline">Our Services</h1>
           <div className="six-content-top">
-            <div className="six-content-row">
+            <div className="six-content-row" onMouseEnter={() => { handleMouseEnter(); }} onMouseLeave={() => { handleMouseLeave(); }} >
               {[
                 {
                   title: "Websites",
@@ -152,6 +220,9 @@ export const Section6 = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="floating-div" ref={floatingDiv}>
+          <h1>CLICK</h1>
         </div>
       </section>
     </>

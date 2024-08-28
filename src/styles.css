@@ -4632,6 +4632,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10vw;
+  overflow: hidden;
 }
 
 .footer-content {
