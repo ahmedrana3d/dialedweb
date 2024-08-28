@@ -9,7 +9,7 @@ export const CustomMaterial = forwardRef<
   MeshMatcapMaterialProps
 >((props, ref) => {
   // Load the "3.jpeg" texture directly
-  const texture = useTexture("3.jpeg");
+  const texture = useTexture("1.jpeg");
 
   return (
     <meshMatcapMaterial
