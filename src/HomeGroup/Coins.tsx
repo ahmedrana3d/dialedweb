@@ -1,66 +1,82 @@
-import { Center, Instance, Instances } from "@react-three/drei";
-import { GroupProps, useFrame } from "@react-three/fiber";
+import { useGSAP } from "@gsap/react";
+import { Center } from "@react-three/drei";
+import gsap from "gsap";
 import { useRef } from "react";
 import * as THREE from "three";
 import { CustomMaterial } from "./material";
 import React from "react";
 
-const radius = 3;
-const count = 8;
-
-function Item(props: GroupProps) {
-  const ref = useRef<THREE.Group>(null);
-
-  useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.x += 0.01;
-      ref.current.rotation.y += 0.01;
-      ref.current.rotation.z += 0.01;
-    }
-  });
-
-  return (
-    <group {...props}>
-      <group ref={ref} rotation={[0, Math.PI / count, Math.PI / 2]}>
-        <Instance />
-      </group>
-    </group>
-  );
-}
-
 export const Item3 = () => {
-  const groupRef = useRef<THREE.Group>(null!);
+  const ring1Ref = useRef<THREE.Mesh>(null);
+  const ring2Ref = useRef<THREE.Mesh>(null);
+  const cone1Ref = useRef<THREE.Mesh>(null);
+  const cone2Ref = useRef<THREE.Mesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
 
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.rotation.z -= 0.01;
+  useGSAP(() => {
+    if (
+      ring1Ref.current &&
+      ring2Ref.current &&
+      cone1Ref.current &&
+      cone2Ref.current &&
+      groupRef.current
+    ) {
+      gsap
+        .timeline({
+          repeat: -1,
+        })
+        .to(
+          ring1Ref.current.rotation,
+          {
+            z: `+=${Math.PI * 2}`,
+            x: `+=${Math.PI * 2}`,
+
+            duration: 4,
+            ease: "none",
+          },
+          0
+        )
+        .to(
+          ring2Ref.current.rotation,
+          {
+            z: `-=${Math.PI * 2}`,
+            x: `-=${Math.PI * 2}`,
+
+            ease: "none",
+            duration: 4,
+          },
+          0
+        )
+        .to(
+          groupRef.current.rotation,
+          {
+            y: Math.PI * 2,
+            duration: 4,
+            ease: "none",
+          },
+          0
+        );
     }
-  });
-
+  }, []);
   return (
-    <Center>
-      <group>
-        <group scale={0.6} ref={groupRef}>
-          <Instances>
-            <cylinderGeometry args={[1, 1, 0.1, 64]}></cylinderGeometry>
-            <CustomMaterial></CustomMaterial>
-            {Array.from({ length: 8 }).map((_, index) => {
-              return (
-                <Item
-                  position={[
-                    radius *
-                      Math.cos((index * 2 * Math.PI) / count + Math.PI / 4),
-                    radius *
-                      Math.sin((index * 2 * Math.PI) / count + Math.PI / 4),
-                    0,
-                  ]}
-                  rotation={[0, 0, (index * 2 * Math.PI) / count]}
-                  key={index}
-                ></Item>
-              );
-            })}
-          </Instances>
-        </group>
+    <Center ref={groupRef}>
+      <mesh ref={ring1Ref}>
+        <torusGeometry args={[2.1, 0.1]}></torusGeometry>
+        <CustomMaterial></CustomMaterial>
+      </mesh>
+      <mesh ref={ring2Ref} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[1.8, 0.1]}></torusGeometry>
+        <CustomMaterial></CustomMaterial>
+      </mesh>
+      <group scale={0.8}>
+        <mesh position={[0, 1, 0]} rotation={[0, 0, 0]} ref={cone1Ref}>
+          <coneGeometry args={[1, 1.41, 4]}></coneGeometry>
+          <CustomMaterial></CustomMaterial>
+        </mesh>
+        <mesh position={[0, -1, 0]} rotation={[-Math.PI, 0, 0]} ref={cone2Ref}>
+          <coneGeometry args={[1, 1.41, 4]}></coneGeometry>
+          <CustomMaterial></CustomMaterial>
+        </mesh>
       </group>
     </Center>
   );
