@@ -18,6 +18,7 @@ import Learnmorepage from "./LearnGroup/Learnmorepage";
 import { Policy } from "./HomeGroup/Policy";
 import { SectionAbout } from "./About";
 import { motion } from "framer-motion";
+import gsap from "gsap";
 
 const LoadingScreen = ({ onLoaded }) => {
   const { progress, active } = useProgress();
@@ -98,7 +99,13 @@ function App() {
     }
   };
 
-  const [showCookiesPopup, setShowCookiesPopup] = useState(true);
+  const [showCookiesPopup, setShowCookiesPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowCookiesPopup(true);
+    }, 4000)
+  }, []);
   const handleCookiesResponse = () => {
     setShowCookiesPopup(false);
   };

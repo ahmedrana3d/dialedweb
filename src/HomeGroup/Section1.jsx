@@ -98,13 +98,11 @@ const hoverSoundMobile = () => {
               </motion.button>
               <motion.button
                 className="one-button"
-                onClick={() => { handleInteractive(); hoverSoundMobile(); }}
-                onMouseEnter={hoverSoundStart}
-                onMouseLeave={hoverSoundEnd}
+                onClick={handleContactNavigate}
               >
                 <div className="navigation-left-content">
-                  <span className="navigation-text">INTERACT</span>
-                  <span className="navigation-text">INTERACT</span>
+                  <span className="navigation-text">GET IN TOUCH</span>
+                  <span className="navigation-text">GET IN TOUCH</span>
                 </div>
                 <div className="navigation-arrow-box">
                   <i className="fa-solid fa-location-arrow"></i>
@@ -114,7 +112,7 @@ const hoverSoundMobile = () => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-              <Canvas camera={{ position: [ isMobile ? 0 : 5, 0, isMobile ? 8.5 : 10], fov: 35 }}>
+              <Canvas camera={{ position: [ isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
                 <Suspense fallback>
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
                     <Item3 />

@@ -66,7 +66,7 @@ const SectionProjects = () => {
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
                     <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/archi.jpg" alt="Project 1" />
+                      <img src="/visualization.jpg" alt="Project 1" />
                     </Parallax>
                   </div>
                   <div className="project-text-container">
@@ -108,7 +108,7 @@ const SectionProjects = () => {
                       <p className="project-text-title" >Liran Stalik</p>
                     </div>
                     <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2023)</p>
+                    <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
               </ParallaxProvider>
@@ -123,6 +123,40 @@ const SectionProjects = () => {
                   <div className="project-text-container">
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Vita Lenta</p>
+                    </div>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
+                </div>
+              </ParallaxProvider>
+
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ecomwaveprojectmain.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ isMobile ? -5 : -10 } >
+                      <img src="/ecomwaveproject.jpg" alt="Project 3" />
+                    </Parallax>
+                  </div>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Ecomwave</p>
+                    </div>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
+                </div>
+              </ParallaxProvider>
+    
+              <ParallaxProvider>
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ring-configurator-lac.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                    <Parallax speed={ isMobile ? -5 : -10 } >
+                      <img src="/ringproject.jpg" alt="Project 4" />
+                    </Parallax>
+                  </div>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Dialedweb Jewelry</p>
                     </div>
                     <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>

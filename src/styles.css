@@ -2202,11 +2202,11 @@ a {
 }
 
 .footer-icon {
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   color: #010001;
   cursor: pointer;
-  height: 3vw;
-  width: 3vw;
+  height: 3.25vw;
+  width: 3.25vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3485,7 +3485,7 @@ html.lenis, html.lenis body {
 
 .menuNav {
   border-radius: 15px;
-  padding: 4vw 2vw;
+  padding: 4vw 4vw;
   gap: 2vw;
   width: 100%;
 }
