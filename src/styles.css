@@ -1639,8 +1639,7 @@ a {
 
 .why-us-title {
   font-size: 3vw;
-  font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+  font-family: "SFBOLD", sans-serif;
   margin: 0;
   line-height: 1;
   color: #fefeff;
@@ -2438,11 +2437,10 @@ a {
   object-fit: cover;
   transition: transform 0.5s ease;
   background-color: #111111;
-  transform: scale(1.5);
 }
 
 .project-image:hover img {
-  transform: scale(1.75); /* Adjust the scale value as needed */
+  transform: scale(1.25); /* Adjust the scale value as needed */
 }
 
 .project-text-container {
@@ -4158,8 +4156,7 @@ input {
 
 .why-us-title {
   font-size: 2rem;
-  font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+  font-family: "SFBOLD", sans-serif;
   margin: 0;
   line-height: 1;
   color: #fefeff;

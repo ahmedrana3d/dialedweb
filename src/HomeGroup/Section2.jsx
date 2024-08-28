@@ -131,7 +131,7 @@ export const Section2 = () => {
             <div className="two-images-container" onMouseEnter={() => { handleMouseEnter(); }} onMouseLeave={() => { handleMouseLeave(); }} >
                 <div className="two-images-container-row">
                     <div className="two-images-box-big  hover-area" ref={boxRef1} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                        <img className="two-images-box-big-image" src="/visualization.jpg" alt="" />
+                        <img loading="lazy" className="two-images-box-big-image" src="/visualization.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -148,7 +148,7 @@ export const Section2 = () => {
                         </div>
                     </div>
                     <div className="two-images-box-small  hover-area" ref={boxRef2} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                        <img className="two-images-box-big-image" src="/ecomwaveproject.jpg" alt="" />
+                        <img loading="lazy" className="two-images-box-big-image" src="/ecomwaveproject.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -167,7 +167,7 @@ export const Section2 = () => {
                 </div>
                 <div className="two-images-container-row">
                     <div className="two-images-box-small  hover-area" ref={boxRef3} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                        <img className="two-images-box-big-image" src="/project7.png" alt="" />
+                        <img loading="lazy" className="two-images-box-big-image" src="/project7.png" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>
@@ -184,7 +184,7 @@ export const Section2 = () => {
                         </div>
                     </div>
                     <div className="two-images-box-big  hover-area" ref={boxRef4} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                        <img className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
+                        <img loading="lazy" className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>

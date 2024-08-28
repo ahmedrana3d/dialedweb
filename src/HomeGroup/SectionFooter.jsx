@@ -51,7 +51,7 @@ export const SectionFooter = () => {
     <section className="footer">
         <div className="footer-content">
             <div className="footer-content-left">
-                <img ref={logoRef} className="footer-logo" src="/loading.png" alt="" />
+                <img loading="lazy" ref={logoRef} className="footer-logo" src="/loading.png" alt="" />
                 <h1 className="headline footer-main-title-text" >Dialedweb</h1>
                 <p className="description grey" ref={descriptionRef} >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             </div>

@@ -62,12 +62,9 @@ const SectionProjects = () => {
             </div>
             <div className="projects-section-container">
               
-              <ParallaxProvider>
                 <div className="project" onClick={() => { hoverSoundMobile(); handleNavigateClick("visualization") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/visualization.jpg" alt="Project 1" />
-                    </Parallax>
+                      <img loading="lazy" src="/visualization.jpg" alt="Project 1" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -77,14 +74,10 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
     
-              <ParallaxProvider>
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick("https://dialedwebseltzers.vercel.app/") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/project7.png" alt="Project 2" />
-                    </Parallax>
+                      <img loading="lazy" src="/project7.png" alt="Project 2" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -94,14 +87,10 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
     
-              <ParallaxProvider>
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.liranstalik.com/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://stalikenglish-main.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/stalikproject.jpg" alt="Project 3" />
-                    </Parallax>
+                      <img loading="lazy" src="/stalikproject.jpg" alt="Project 3" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -111,14 +100,10 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
     
-              <ParallaxProvider>
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://vitalenta.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/vitalentaproject.jpg" alt="Project 4" />
-                    </Parallax>
+                      <img loading="lazy" src="/vitalentaproject.jpg" alt="Project 4" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -128,14 +113,10 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
 
-              <ParallaxProvider>
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ecomwaveprojectmain.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/ecomwaveproject.jpg" alt="Project 3" />
-                    </Parallax>
+                      <img loading="lazy" src="/ecomwaveproject.jpg" alt="Project 3" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -145,14 +126,10 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
     
-              <ParallaxProvider>
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ring-configurator-lac.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
-                    <Parallax speed={ isMobile ? -5 : -10 } >
-                      <img src="/ringproject.jpg" alt="Project 4" />
-                    </Parallax>
+                      <img loading="lazy" src="/ringproject.jpg" alt="Project 4" />
                   </div>
                   <div className="project-text-container">
                     <div className="project-text-container-title">
@@ -162,7 +139,6 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-              </ParallaxProvider>
     
             </div>
           </div>
