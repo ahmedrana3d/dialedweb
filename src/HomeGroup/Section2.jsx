@@ -11,6 +11,75 @@ gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
 export const Section2 = () => {
 
+    const floatingDiv = useRef();
+    const [showFloatingDiv, setShowFloatingDiv] = useState(false);
+    const [floatingText, setFloatingText] = useState("DISCOVER");
+
+    useEffect(() => {
+        let mouseX = 0;
+        let mouseY = 0;
+        let ballX = 0;
+        let ballY = 0;
+        const speed = 0.1;
+
+        const handleMouseMove = (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        };
+
+        const animate = () => {
+            const distX = mouseX - ballX;
+            const distY = mouseY - ballY;
+
+            ballX += distX * speed;
+            ballY += distY * speed;
+
+            if (floatingDiv.current) {
+                floatingDiv.current.style.left = `${ballX}px`;
+                floatingDiv.current.style.top = `${ballY}px`;
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (showFloatingDiv) {
+            gsap.to(floatingDiv.current, {
+                autoAlpha: 1, // This sets both opacity and visibility
+                scale: 1,
+                duration: 0.3,
+                ease: 'power3.out',
+            });
+        } else {
+            gsap.to(floatingDiv.current, {
+                autoAlpha: 0, // This sets both opacity and visibility
+                scale: 0,
+                duration: 0.3,
+                ease: 'power3.in',
+            });
+        }
+    }, [showFloatingDiv]);
+    
+
+    const handleMouseEnter = () => {
+        console.log("Mouse entered"); // Debug log
+        setShowFloatingDiv(true);
+    };
+    
+    const handleMouseLeave = () => {
+        console.log("Mouse left"); // Debug log
+        setShowFloatingDiv(false);
+    };
+
     useAnimateText(".two-title");
 
     const navigate = useNavigate();
@@ -62,7 +131,7 @@ export const Section2 = () => {
             <h1 className="headline two-title">Featured Projects</h1>
             <div className="two-images-container">
                 <div className="two-images-container-row">
-                    <div className="two-images-box-big  hover-area" ref={boxRef1} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                    <div className="two-images-box-big  hover-area" ref={boxRef1} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={() => { handleMouseEnter(); hoverSoundStart(); }} onMouseLeave={() => { handleMouseLeave(); hoverSoundEnd(); }} >
                         <img className="two-images-box-big-image" src="/ecomwaveproject.jpg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
@@ -134,6 +203,9 @@ export const Section2 = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="floating-div" ref={floatingDiv}>
+            <h1>CLICK</h1>
         </div>
       </section>
     </>

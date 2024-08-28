@@ -251,6 +251,29 @@ a {
   transform: translateY(-100%);
 } 
 
+/* HOVER FLOATING DIV */
+
+.floating-div {
+  position: fixed;
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 50%;
+  background-color: #fefeff; /* Example color */
+  pointer-events: none; /* Allows interaction with underlying elements */
+  transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+  opacity: 0; /* Start invisible */
+  z-index: 9999; /* Ensures the div appears above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-div h1 {
+  font-size: 1vw;
+  color: #222222;
+  font-family: "TanPearl", sans-serif;
+}
+
 /* REAL ESTATE */
 
 .realestate {
