@@ -543,7 +543,6 @@ a {
   width: 80%;
   transition: transform 0.3s ease-out; /* Adjust the duration and easing function as needed */
   transform-style: preserve-3d;
-
 }
 
 .contact-options-box {
@@ -3684,7 +3683,7 @@ input {
 
 .contact-overlay {
   width: 100vw;
-  height: fit-content;
+  height: 225vw;
   z-index: 1;
   backdrop-filter: blur(10px);
   display: flex;
@@ -3760,6 +3759,7 @@ input {
   width: 100vw;
   height: 100vw;
   padding: 2vw;
+  display: none;
 }
 
 .contact-options-box {
