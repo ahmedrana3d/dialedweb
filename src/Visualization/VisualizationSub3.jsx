@@ -21,17 +21,10 @@ const VisualizationSub3 = () => {
 
     const navigate = useNavigate();
 
-      useEffect(() => {
-        initializeCursors();
-      }, []);
-
       useAnimateText(".hotel-title-text")
 
     return (
         <>
-
-<div className="cursor" id="ball"></div>
-<div className="cursor-text" id="cursor-text">Scroll</div>
 
 <section className="visualizationsub">
 

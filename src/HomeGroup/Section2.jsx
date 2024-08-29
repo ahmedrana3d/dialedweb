@@ -204,7 +204,7 @@ export const Section2 = () => {
             </div>
         </div>
         <div className="floating-div" ref={floatingDiv}>
-            <h1>CLICK</h1>
+            <h1>DISCOVER</h1>
         </div>
       </section>
     </>

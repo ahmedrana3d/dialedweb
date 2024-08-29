@@ -21,16 +21,8 @@ const VisualizationSub4 = () => {
 
     const navigate = useNavigate();
 
-      useEffect(() => {
-        initializeCursors();
-      }, []);
-
     return (
         <>
-
-<div className="cursor" id="ball"></div>
-<div className="cursor-text" id="cursor-text">Scroll</div>
-
 <section className="visualizationsub">
 
 <h1 className="headline hotel-title-text" >Minimalistic Studio</h1>

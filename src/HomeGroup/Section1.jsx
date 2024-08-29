@@ -98,7 +98,9 @@ const hoverSoundMobile = () => {
               </motion.button>
               <motion.button
                 className="one-button"
-                onClick={handleContactNavigate}
+                onClick={() => { handleContactNavigate(); hoverSoundMobile(); }}
+                onMouseEnter={hoverSoundStart}
+                onMouseLeave={hoverSoundEnd}
               >
                 <div className="navigation-left-content">
                   <span className="navigation-text">GET IN TOUCH</span>

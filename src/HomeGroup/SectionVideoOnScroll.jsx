@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useAnimateText } from "../ScrollAnimations";
+import gsap from "gsap";
 
 export const SectionScrollVideoOnScroll = () => {
     useEffect(() => {
@@ -26,9 +27,77 @@ export const SectionScrollVideoOnScroll = () => {
 
     useAnimateText(".scroll-headline-1, .scroll-headline-2, .scroll-headline-3, .scroll-headline-4, .scroll-headline-5, .scroll-headline-6, .scroll-headline-7, .scroll-headline-8, .box-between-words-image-1, .box-between-words-image-2, .box-between-words-image-3")
 
+    const floatingDiv = useRef();
+    const [showFloatingDiv, setShowFloatingDiv] = useState(false);
+
+    useEffect(() => {
+        let mouseX = 0;
+        let mouseY = 0;
+        let ballX = 0;
+        let ballY = 0;
+        const speed = 0.1;
+
+        const handleMouseMove = (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        };
+
+        const animate = () => {
+            const distX = mouseX - ballX;
+            const distY = mouseY - ballY;
+
+            ballX += distX * speed;
+            ballY += distY * speed;
+
+            if (floatingDiv.current) {
+                floatingDiv.current.style.left = `${ballX}px`;
+                floatingDiv.current.style.top = `${ballY}px`;
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (showFloatingDiv) {
+            gsap.to(floatingDiv.current, {
+                autoAlpha: 1, // This sets both opacity and visibility
+                scale: 1,
+                duration: 0.3,
+                ease: 'power3.out',
+            });
+        } else {
+            gsap.to(floatingDiv.current, {
+                autoAlpha: 0, // This sets both opacity and visibility
+                scale: 0,
+                duration: 0.3,
+                ease: 'power3.in',
+            });
+        }
+    }, [showFloatingDiv]);
+    
+
+    const handleMouseEnter = () => {
+        console.log("Mouse entered"); // Debug log
+        setShowFloatingDiv(true);
+    };
+    
+    const handleMouseLeave = () => {
+        console.log("Mouse left"); // Debug log
+        setShowFloatingDiv(false);
+    };
+
     return (
         <>
-            <section className="section scroll-video-on-scroll hover-area" data-cursor-text="SCROLL">
+            <section className="section scroll-video-on-scroll" onMouseEnter={() => { handleMouseEnter(); }} onMouseLeave={() => { handleMouseLeave(); }} >
                 <div className="scroll-video-on-scroll-items">
                     <div className="scroll-video-items-wrapper">
                         <h1 className="scroll-section-headline scroll-headline-1">Grow</h1>
@@ -44,6 +113,9 @@ export const SectionScrollVideoOnScroll = () => {
                     </div>
                 </div>
                 <div id="scrolly-video" className="video-background"></div>
+                <div className="floating-div" ref={floatingDiv}>
+                    <h1>SCROLL</h1>
+                </div>
             </section>
         </>
     )
