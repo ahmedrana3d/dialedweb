@@ -13,7 +13,7 @@ export function Sphere(props) {
 
   useLayoutEffect(() => {
 
-    const words = ["Inspire", "Revolutionize", "Enhace", "Impress", "Transform"];
+    const words = ["Inspire", "Revolutionize", "Enhance", "Impress", "Transform"];
 
     let masterTl = gsap.timeline({repeat: -1}).pause();
     

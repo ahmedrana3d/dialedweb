@@ -7,7 +7,6 @@ import { useTextEffect } from "../ScrollAnimations";
 import gsap from "gsap";
 import { Link, useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
-import OneModel from "./OneModel";
 import { Item3 } from "./Coins";
 
 export const Section1 = ({ section3Ref }) => {

@@ -6,7 +6,6 @@ import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import transition from "../Transition";
 import { useAnimateText } from "../ScrollAnimations";
-import { initializeCursors } from "../Cursor";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
