@@ -20,7 +20,6 @@ export const Section1 = ({ section3Ref }) => {
   };
 
   useEffect(() => {
-    // Fade in animation for the button when component mounts
     gsap.fromTo(
       ".one-button, .one-button-transparent, .one-description",
       { opacity: 0 },
