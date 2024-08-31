@@ -105,7 +105,7 @@ const ChessboardGrid = () => {
   }, []);
 
   return (
-    <div className="w-screen h-[100vh] flex justify-center items-center bg-transparent">
+    <div className="w-screen h-[200vw] sm:h-screen flex justify-center items-center bg-transparent">
       {/* <div className=" absolute w-full h-full background-dots -z-10"></div> */}
       <div className=" absolute w-full h-full background-dots  -z-10"></div>
 
@@ -191,7 +191,7 @@ const ChessboardGrid = () => {
         </div>
         <div className="bg-transparent col-span-1 md:col-span-2 row-span-1 md:row-span-3 flex justify-center items-center rounded-3xl relative canvas-chess">
           <Canvas
-            className="!w-full !h-[35vh] md:!h-[40vh] lg:!h-full z-10"
+            className="!w-full !h-[75vw] md:!h-[40vh] lg:!h-full z-10"
             camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 5, 11] }}
           >
             <group>

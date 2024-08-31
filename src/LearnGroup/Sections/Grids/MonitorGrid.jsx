@@ -71,7 +71,7 @@ const MonitorGrid = () => {
   }, []);
 
   return (
-    <div className="w-screen h-[100vh] flex justify-center items-center bg-transparent  ">
+    <div className="w-screen h-[200vw] sm:h-[100vh] flex justify-center items-center bg-transparent  ">
       <div className=" absolute w-full h-full background-dots  -z-10"></div>
 
       {/* <div class="absolute inset-0 size-full  " ></div> */}
@@ -87,7 +87,7 @@ const MonitorGrid = () => {
           />
 
           <Canvas
-            className="!w-full !h-[35vh] md:!h-[40vh] lg:!h-[50vh] xl:!h-[75vh]"
+            className="!w-full !h-[75vw] md:!h-[40vh] lg:!h-[50vh] xl:!h-[75vh]"
             camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 0, 11] }}
           >
             <group>

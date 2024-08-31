@@ -399,7 +399,7 @@ const Page4 = () => {
         </div>
       </section>
 
-      <section className=" flex justify-center items-center md:hidden h-screen w-screen">
+      <section className=" flex justify-center items-center md:hidden h-[200vw] sm:h-screen w-screen">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

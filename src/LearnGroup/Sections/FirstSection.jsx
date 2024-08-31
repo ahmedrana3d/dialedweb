@@ -64,7 +64,7 @@ const FirstSection = () => {
     <>
       <div
         ref={el}
-        className="w-screen !h-screen relative    flex justify-center items-center md:items-start flex-col    bg-black z-10"
+        className="w-screen h-[210vw] sm:h-screen relative    flex justify-center items-center md:items-start flex-col    bg-black z-10"
       >
         <Meteors number={20} />
 
