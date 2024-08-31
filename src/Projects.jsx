@@ -74,6 +74,45 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
+
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://www.peakcreations.ee/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                      <img loading="lazy" src="/peakcreations.jpeg" alt="Project 3" />
+                  </div>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Peak Creations</p>
+                    </div>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
+                </div>
+
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://vitalenta.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                      <img loading="lazy" src="/vitalentaproject.jpg" alt="Project 4" />
+                  </div>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Vita Lenta</p>
+                    </div>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
+                </div>
+
+                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ring-configurator-lac.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
+                  <div className="project-image hover-area" data-cursor-text="CLICK" >
+                      <img loading="lazy" src="/ringproject.jpg" alt="Project 4" />
+                  </div>
+                  <div className="project-text-container">
+                    <div className="project-text-container-title">
+                      <p className="project-text-title" >Dialedweb Jewelry</p>
+                    </div>
+                    <p className="project-text-description" >UI/UX Design, Development</p>
+                    <p className="project-text-description" >(2024)</p>
+                  </div>
+                </div>
     
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick("https://dialedwebseltzers.vercel.app/") }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
@@ -100,19 +139,6 @@ const SectionProjects = () => {
                     <p className="project-text-description" >(2024)</p>
                   </div>
                 </div>
-    
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://vitalenta.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                      <img loading="lazy" src="/vitalentaproject.jpg" alt="Project 4" />
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Vita Lenta</p>
-                    </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
 
                 <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ecomwaveprojectmain.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
                   <div className="project-image hover-area" data-cursor-text="CLICK" >
@@ -121,19 +147,6 @@ const SectionProjects = () => {
                   <div className="project-text-container">
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Ecomwave</p>
-                    </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
-                  </div>
-                </div>
-    
-                <div className="project" onClick={() => { hoverSoundMobile(); handleClick('https://ring-configurator-lac.vercel.app/'); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                  <div className="project-image hover-area" data-cursor-text="CLICK" >
-                      <img loading="lazy" src="/ringproject.jpg" alt="Project 4" />
-                  </div>
-                  <div className="project-text-container">
-                    <div className="project-text-container-title">
-                      <p className="project-text-title" >Dialedweb Jewelry</p>
                     </div>
                     <p className="project-text-description" >UI/UX Design, Development</p>
                     <p className="project-text-description" >(2024)</p>
