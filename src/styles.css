@@ -1371,7 +1371,7 @@ a {
 .two-images-box-big {
   width: 65%;
   height: 100%;
-  background-color: #070E2B;
+  background-color: #ccc;
   border-radius: 25px;
   background-size: cover;
   background-position: center;
@@ -1384,7 +1384,7 @@ a {
 .two-images-box-small {
   width: 35%;
   height: 100%;
-  background-color: #070E2B;
+  background-color: #ccc;
   border-radius: 25px;
   background-size: cover;
   background-position: center;
