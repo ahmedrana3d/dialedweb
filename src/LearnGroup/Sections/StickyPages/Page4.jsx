@@ -168,7 +168,17 @@ const Page4 = () => {
         },
         "<"
       );
+
+      return () => {
+        // Clean up ScrollTrigger and timeline
+        if (tl) tl.kill();
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      };
+
     }
+
+    
+
   }, []);
 
   function takeToElement(element) {

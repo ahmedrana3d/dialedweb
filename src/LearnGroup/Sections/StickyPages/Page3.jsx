@@ -4,6 +4,7 @@ import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
+
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Page3 = () => {
@@ -63,7 +64,18 @@ const Page3 = () => {
             // markers: true,
           }
         });
+
+        return () => {
+          // Clean up ScrollTrigger and timeline
+          if (tl) tl.kill();
+          ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+
       }
+
+      
+
+
     }, []);
               
               return (

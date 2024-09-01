@@ -15,7 +15,7 @@ const ThirdPage = () => {
     const splitHead1 = new SplitText(headText1Ref.current, { type: "words" });
     const splitHead2 = new SplitText(headText2Ref.current, { type: "words" });
 
-    gsap.fromTo(
+   const anim1 = gsap.fromTo(
       splitPara.words,
       {
         opacity: 0,
@@ -35,7 +35,7 @@ const ThirdPage = () => {
       }
     );
 
-    gsap.fromTo(
+    const anim2 = gsap.fromTo(
       splitHead1.words,
       {
         y: 250,
@@ -54,7 +54,7 @@ const ThirdPage = () => {
       }
     );
 
-    gsap.fromTo(
+    const anim3 = gsap.fromTo(
       splitHead2.words,
       {
         y: -250,
@@ -81,7 +81,7 @@ const ThirdPage = () => {
     path.style.strokeDasharray = pathLength;
     path.style.strokeDashoffset = pathLength;
 
-    gsap.fromTo(
+    const anim4 = gsap.fromTo(
       path,
       { strokeDashoffset: pathLength },
       {
@@ -95,7 +95,7 @@ const ThirdPage = () => {
       }
     );
 
-    gsap.to(headText1Ref.current, {
+    const anim5 = gsap.to(headText1Ref.current, {
       x: "18%",
       scrollTrigger: {
         trigger: headText1Ref.current,
@@ -105,6 +105,20 @@ const ThirdPage = () => {
         // markers: true,
       },
     });
+
+
+    return () => {
+      // Clean up each GSAP instance individually
+    anim1.kill();
+      anim2.kill();
+      anim3.kill();
+      anim4.kill();
+      anim5.kill();
+  
+      // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+
   }, []);
 
   return (

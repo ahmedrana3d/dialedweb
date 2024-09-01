@@ -29,7 +29,7 @@ const MonitorGrid = () => {
   useEffect(() => {
     const split = new SplitText(textRef.current, { type: "words, chars" });
 
-    gsap.fromTo(
+   const anim1 = gsap.fromTo(
       split.chars,
       { opacity: 0.1 },
       {
@@ -46,7 +46,7 @@ const MonitorGrid = () => {
       }
     );
 
-    gsap.fromTo(
+   const anim2= gsap.fromTo(
       numberRef.current,
       { innerText: "0%" },
       {
@@ -68,6 +68,18 @@ const MonitorGrid = () => {
         },
       }
     );
+
+
+    return () => {
+      // Clean up each GSAP instance individually
+    anim1.kill();
+      anim2.kill();
+  
+      // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+
+
   }, []);
 
   return (
