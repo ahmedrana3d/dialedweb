@@ -135,7 +135,7 @@ function App() {
 
         <Navigation scrollToSection6={scrollToSection6} />
 
-          <Routes >
+          <Switch >
             <Route path="/" element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
@@ -149,7 +149,7 @@ function App() {
             <Route path="/learn-more" element={ <Learnmorepage /> } />
             <Route path="/privacy-policy" element={ <Policy /> } />
             <Route path="/about" element={ <SectionAbout /> } />
-          </Routes>
+          </Switch>
 
       </>
   );
