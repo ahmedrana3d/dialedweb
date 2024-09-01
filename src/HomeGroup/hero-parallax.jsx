@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useAnimateText } from "../ScrollAnimations";
 
 
 export const HeroParallax = ({
@@ -14,7 +15,7 @@ export const HeroParallax = ({
     target: ref,
     offset: ["start start", "end start"],
   });
-
+  useAnimateText(".two-title");
   const springConfig = { stiffness: 400, damping: 30, bounce: 100 };
 
   const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1000]), springConfig);
