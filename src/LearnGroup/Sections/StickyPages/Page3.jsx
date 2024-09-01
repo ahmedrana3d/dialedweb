@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -11,7 +11,7 @@ const Page3 = () => {
     const meterContainer = useRef(null);
     const parent = useRef(null);
     // const svgPath = useRef(null);
-    useGSAP(() => {
+    useEffect(() => {
 
 
 
@@ -35,6 +35,10 @@ const Page3 = () => {
                     scrub: true,
                     pin: true,
                     // pinSpacing: true,
+                    onEnter: () => {
+                      ScrollTrigger.refresh(); 
+
+                    },
                 }
             });
     
@@ -98,7 +102,7 @@ gsap.to(".clip-path-svg", {
         }
 
 
-    });
+    },[]);
     
 
     return (
