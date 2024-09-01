@@ -8,6 +8,7 @@ import transition from "../Transition";
 import { useAnimateText } from "../ScrollAnimations";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -24,7 +25,7 @@ const VisualizationSub3 = () => {
 
     return (
         <>
-
+<ReactLenis root>
 <section className="visualizationsub">
 
 <h1 className="headline hotel-title-text" >Tropical Vacation Home</h1>
@@ -40,8 +41,9 @@ const VisualizationSub3 = () => {
   </div>
 
 </section>
+</ReactLenis>
         </>
       );
     };
 
-export default transition(VisualizationSub3);
+export default VisualizationSub3;

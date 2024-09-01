@@ -9,6 +9,7 @@ import { useAnimateText, useTextEffect } from "../ScrollAnimations";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -79,7 +80,7 @@ const Visualization = () => {
 
     return (
         <>
-
+  <ReactLenis root>
     <section className="introduction">
       <div className="introduction-content">
         <div className="introduction-text-box">
@@ -153,6 +154,7 @@ const Visualization = () => {
         </div>
       </div>
     </section>
+  </ReactLenis>
         </>
       );
     };

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useAnimateText } from "./ScrollAnimations";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
 export const SectionAbout = () => {
@@ -24,6 +25,7 @@ export const SectionAbout = () => {
   ];
 
   return (
+  <ReactLenis root>
     <section className="section five about" >
       <div className="five-content">
         <div className="five-content-textbox">
@@ -44,5 +46,6 @@ export const SectionAbout = () => {
         </div>
       </div>
     </section>
+  </ReactLenis>
   );
 };

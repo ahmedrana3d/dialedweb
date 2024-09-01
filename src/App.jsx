@@ -19,18 +19,12 @@ import { Policy } from "./HomeGroup/Policy";
 import { SectionAbout } from "./About";
 import { motion } from "framer-motion";
 
-const LoadingScreen = ({ onLoaded }) => {
+const LoadingScreen = () => {
   const { progress, active } = useProgress();
-
-  useEffect(() => {
-    if (progress === 100) {
-      onLoaded();
-    }
-  }, [progress, onLoaded]);
 
   return (
     <div className={`website-loading-screen ${active ? "" : "website-loading-screen--hidden"}`}>
-        <img className="website-loading-video" src="/loading.gif" alt="" />
+      <img className="website-loading-video" src="/loading.gif" alt="" />
     </div>
   );
 };
@@ -40,43 +34,6 @@ function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
-
-  const [lenis, setLenis] = useState(null);
-
-  useEffect(() => {
-
-    const lenis = new Lenis()
-    
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    
-    requestAnimationFrame(raf)
-    setLenis(lenis);
-
-    return () => {
-      lenisInstance.destroy();
-    };
-  }, []);
-
-  const handleLoaded = () => {
-    setTimeout(() => {
-      if (lenis) {
-        lenis.start();
-      }
-      document.body.style.overflow = 'auto';
-    }, 1000); // Delay for 1 second
-  };
-
-  useEffect(() => {
-    if (lenis) {
-      lenis.stop();
-    }
-    document.body.style.overflow = 'hidden';
-  }, [lenis]);
-
-  const location = useLocation()
 
   const navigate = useNavigate();
 
@@ -112,7 +69,7 @@ function App() {
 
   return (
       <>
-        <LoadingScreen onLoaded={handleLoaded} />
+        <LoadingScreen />
 
         <div className={`cookies-popup ${!showCookiesPopup ? 'fade-out' : ''}`}>
         <h1 className="cookies-title" >We value your privacy</h1>
@@ -135,7 +92,7 @@ function App() {
 
         <Navigation scrollToSection6={scrollToSection6} />
 
-          <Switch >
+          <Routes >
             <Route path="/" element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
@@ -149,7 +106,7 @@ function App() {
             <Route path="/learn-more" element={ <Learnmorepage /> } />
             <Route path="/privacy-policy" element={ <Policy /> } />
             <Route path="/about" element={ <SectionAbout /> } />
-          </Switch>
+          </Routes>
 
       </>
   );

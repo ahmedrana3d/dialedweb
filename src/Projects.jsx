@@ -4,6 +4,7 @@ import gsap from "gsap";
 import transition from "./Transition";
 import { useAnimateText } from "./ScrollAnimations";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 const SectionProjects = () => {
 
@@ -50,7 +51,7 @@ const SectionProjects = () => {
 
     return (
         <>
-
+      <ReactLenis root>
         <section className="projects-section">
           <div className="projects-section-content">
             <div className="projects-top-texts">
@@ -156,6 +157,7 @@ const SectionProjects = () => {
             </div>
           </div>
         </section>
+      </ReactLenis>
         </>
       );
     };

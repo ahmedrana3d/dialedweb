@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import transition from "./Transition";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 const Contact = () => {
 
@@ -37,7 +38,7 @@ const Contact = () => {
 
     return (
       <>
-
+      <ReactLenis root>
         <div className="contact-overlay" >
             <div className="contact-overlay-left">
               <h1 className="contact-overlay-title" >Get in Touch</h1>
@@ -88,7 +89,7 @@ const Contact = () => {
               <img className="contact-video" src="/loading.png" style={{ transform: `translate3d(${-position.x * 8}px, ${-position.y * 8}px, 0) rotateX(${position.x}deg) rotateY(${position.y}deg)`,}}/>
             </div>
         </div>
-
+      </ReactLenis>
       </>
     )
 }

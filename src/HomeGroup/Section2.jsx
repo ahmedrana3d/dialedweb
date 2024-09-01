@@ -148,7 +148,7 @@ export const Section2 = () => {
                         </div>
                     </div>
                     <div className="two-images-box-small  hover-area" ref={boxRef2} data-cursor-text="CLICK" onClick={() => { handleProjectsNavigate(); hoverSoundMobile(); }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} >
-                        <img loading="lazy" className="two-images-box-big-image" src="/ecomwaveproject.jpg" alt="" />
+                        <img loading="lazy" className="two-images-box-big-image" src="/peakcreations.jpeg" alt="" />
                         <div className="two-images-box-content">
                             <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                 <h1 className="two-images-box-content-item-text" >Websites</h1>

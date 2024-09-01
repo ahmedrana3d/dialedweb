@@ -11,6 +11,7 @@ import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
 import '../styles.css'
 import { SectionFooter } from "./SectionFooter";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 const Home = () => {
   const section3Ref = useRef(null);
@@ -40,6 +41,7 @@ const Home = () => {
 
   return (
     <>
+    <ReactLenis root>
       <Section1 section3Ref={section3Ref} />
       <div ref={section3Ref} >
         <Section3 />
@@ -52,6 +54,7 @@ const Home = () => {
       {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
       <Section8 />
       <SectionFooter />
+    </ReactLenis>
     </>
   );
 };
