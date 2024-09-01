@@ -11,6 +11,7 @@ import { Section2 } from "./Section2";
 import { SectionVideoMobile } from "./SectionVideoMobile";
 import '../styles.css'
 import { SectionFooter } from "./SectionFooter";
+import Section2Paralax from "./Section2Paralax";
 
 const Home = () => {
   const section3Ref = useRef(null);
@@ -44,7 +45,11 @@ const Home = () => {
       <div ref={section3Ref} >
         <Section3 />
       </div>
-      <Section2 />
+      {/* <Section2/> */}
+{isMobile ? <Section2/> : <Section2Paralax/>}
+      {/* <Section2Paralax/> */}
+
+
       <div ref={section6Ref} id="section6">
         <Section6 />
       </div>
