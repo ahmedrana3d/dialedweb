@@ -15,4 +15,4 @@ const Learnmorepage = () => {
   );
 };
 
-export default transition(Learnmorepage);
+export default Learnmorepage;

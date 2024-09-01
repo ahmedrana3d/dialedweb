@@ -135,9 +135,8 @@ function App() {
 
         <Navigation scrollToSection6={scrollToSection6} />
 
-        <AnimatePresence mode="wait" >
-          <Routes location={location} key={location.pathname} >
-            <Route index element={ <Home section6Ref={section6Ref} /> } />
+          <Routes >
+            <Route path="/" element={ <Home section6Ref={section6Ref} /> } />
             <Route path="/contact" element={ <Contact /> } />
             <Route path="/projects" element={ <SectionProjects /> } />
             <Route path="/projects/visualization" element={ <Visualization /> } />
@@ -151,10 +150,6 @@ function App() {
             <Route path="/privacy-policy" element={ <Policy /> } />
             <Route path="/about" element={ <SectionAbout /> } />
           </Routes>
-        </AnimatePresence>
-{/* 
-        <div className="cursor" id="ball"></div>
-        <div className="cursor-text" id="cursor-text">Scroll</div> */}
 
       </>
   );

@@ -160,4 +160,4 @@ const SectionProjects = () => {
       );
     };
 
-export default transition(SectionProjects);
+export default SectionProjects;

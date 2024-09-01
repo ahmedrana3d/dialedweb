@@ -157,4 +157,4 @@ const Visualization = () => {
       );
     };
 
-export default transition(Visualization);
+export default Visualization;

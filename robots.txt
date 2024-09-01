@@ -1,0 +1,5 @@
+user-agent: * 
+Disallow: 
+
+# Sitemap location
+Sitemap: https://dialedweb.com/sitemap.xml
