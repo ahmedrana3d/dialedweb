@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -11,101 +12,62 @@ const Page3 = () => {
     const meterContainer = useRef(null);
     const parent = useRef(null);
     // const svgPath = useRef(null);
-    useEffect(() => {
-
-
-
-
-
-
-
-
-
-
-
-
-        if (meterContainer.current) {
-            // GSAP Timeline Configuration
-            const tl = gsap.timeline({
-                ease: "power0",
-                scrollTrigger: {
-                    trigger: ".parent-web-stats",
-                    start: "top top",
-                    end: `+=280%`,
-                    scrub: true,
-                    pin: true,
-                    // pinSpacing: true,
-                    onEnter: () => {
-                      ScrollTrigger.refresh(); 
-
-                    },
-                }
-            });
+    useEffect(()=>{
+      if (meterContainer.current) {
+        // GSAP Timeline Configuration
+        const tl = gsap.timeline({
+          ease: "power0",
+          scrollTrigger: {
+            trigger: ".parent-web-stats",
+            start: "top top",
+            end: `+=280%`,
+            scrub: true,
+            pin: true,
+            // pinSpacing: true,
+            onEnter: () => {
+              if (window.innerWidth > 768) {
+                ScrollTrigger.refresh(); 
+              }
+             
+            },
+          }
+        });
     
-            // Animate .number-stats from x: 130% to x: -130%
-            tl.fromTo(".number-stats", 
-                { x: "130%" },
-                { x: "-120%", duration: 1 }
-                ,"<"
-            );
+        // Animate .number-stats from x: 130% to x: -130%
+        tl.fromTo(".number-stats", 
+          { x: "130%" },
+          { x: "-120%", duration: 1 },
+          "<"
+        );
     
-            // Animate .odo-meter and .make-your opacity in parallel to the .number-stats animation
-            tl.to(".odo-meter", {
-                opacity: 0,
-                duration: 0.1,
-                ease: "none"
-            }, "-=0.7"); // Start the opacity change 0.7 seconds before the end of the number-stats animation
-    
-            tl.to(".make-your", {
-                opacity: 1,
-                duration: 0.1,
-                ease: "none"
-            }, "-=0.7"); // Start the opacity change 0.7 seconds before the end of the number-stats animation
-
-
-
-
-
-
-            // const path = svgPath.current;
-            // const pathLength = path.getTotalLength();
-            // path.style.strokeDasharray = pathLength;
-            // path.style.strokeDashoffset = pathLength;
+        // Animate .odo-meter and .make-your opacity in parallel to the .number-stats animation
+        tl.to(".odo-meter", {
+          opacity: 0,
+          duration: 0.1,
+          ease: "none"
+        }, "-=0.7"); // Start the opacity change 0.7 seconds before the end of the number-stats animation
         
-            // gsap.fromTo(
-            //   path,
-            //   { strokeDashoffset: pathLength },
-            //   {
-            //     strokeDashoffset: 0,
-            //     scrollTrigger: {
-            //       trigger: path,
-            //       start: "top center",
-            //       end: "bottom top",
-            //       scrub: true,
-            //     },
-            //   }
-            // );
-
-
-
-gsap.to(".clip-path-svg", {
-    duration: 1,
-    clipPath: "inset(0px 0px calc(10%))",
-    scrollTrigger: {
-        trigger: ".clip-path-svg",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-        // markers: true,
-}
-})
-        }
-
-
-    },[]);
-    
-
-    return (
+        tl.to(".make-your", {
+          opacity: 1,
+          duration: 0.1,
+          ease: "none"
+        }, "-=0.7"); // Start the opacity change 0.7 seconds before the end of the number-stats animation
+        
+        gsap.to(".clip-path-svg", {
+          duration: 1,
+          clipPath: "inset(0px 0px calc(10%))",
+          scrollTrigger: {
+            trigger: ".clip-path-svg",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            // markers: true,
+          }
+        });
+      }
+    }, []);
+              
+              return (
         <div ref={parent} className='z-10 relative w-screen md:h-screen parent-web-stats'>
 
 
